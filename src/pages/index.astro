@@ -1,6 +1,6 @@
 ---
 // src/pages/index.astro
-// Home page.
+// Home page. Order: Hero → About → Indices teaser.
 import Base from "../layouts/Base.astro";
 import MiniChart from "../components/MiniChart.astro";
 import { RHIX_SERIES, RITIX_SERIES, latestLevel } from "../data/timeseries";
@@ -45,7 +45,31 @@ const ritixYtd = ((ritix.level / 1000 - 1) * 100).toFixed(2);
     </div>
   </section>
 
-  <!-- ── INDICES OVERVIEW ─────────────────────────────────────── -->
+  <!-- ── ABOUT ────────────────────────────────────────────────── -->
+  <section class="container-wide py-24 border-t border-rule">
+    <div class="section-label">About</div>
+    <h2 class="display font-normal text-display-md max-w-[800px] m-0 mb-10">
+      A career across <em>sell-side research</em>, institutional sales, and portfolio construction.
+    </h2>
+    <p class="text-[18px] leading-relaxed max-w-[760px] text-ink-soft mb-6">
+      My work focuses on the construction of transparent, rules-based
+      equity benchmarks for under-covered market segments, and on the
+      management of discretionary portfolios that are benchmarked to those
+      indices. Methodologies are published openly; data and constituent
+      weights are updated on a fixed schedule.
+    </p>
+    <p class="text-[18px] leading-relaxed max-w-[760px] text-ink-soft mb-10">
+      I currently serve as Executive Director, Private Banking at
+      Gazprombank Private, following a decade at Citibank where I led the
+      financial advisory team as Vice President. Earlier in my career, I
+      was a senior financial advisor at BCS Brokerage. I hold the CFA
+      Charter and have completed professional rotations at Citibank in
+      New York and Singapore.
+    </p>
+    <a href="/cv" class="editorial-link text-[15px]">Read full CV →</a>
+  </section>
+
+  <!-- ── INDICES TEASER ───────────────────────────────────────── -->
   <section class="container-wide py-24 border-t border-rule">
     <div class="section-label">Indices</div>
     <h2 class="display font-normal text-display-md max-w-[800px] m-0 mb-14">
@@ -129,22 +153,10 @@ const ritixYtd = ((ritix.level / 1000 - 1) * 100).toFixed(2);
       </div>
       <MiniChart id="ritix-hero-chart" data={RITIX_SERIES} color="#3D3D3A" />
     </div>
-  </section>
 
-  <!-- ── ABOUT BLOCK ──────────────────────────────────────────── -->
-  <section class="container-wide py-24 border-t border-rule">
-    <div class="section-label">About</div>
-    <h2 class="display font-normal text-display-md max-w-[800px] m-0 mb-10">
-      A career across <em>sell-side research</em>, institutional sales, and portfolio construction.
-    </h2>
-    <p class="text-[18px] leading-relaxed max-w-[760px] text-ink-soft mb-8">
-      My work focuses on the construction of transparent, rules-based
-      equity benchmarks for under-covered market segments, and on the
-      management of discretionary portfolios that are benchmarked to those
-      indices. Methodologies are published openly; data and constituent
-      weights are updated on a fixed schedule.
+    <p class="mt-10">
+      <a href="/indices" class="editorial-link text-[15px]">All indices →</a>
     </p>
-    <a href="/cv" class="editorial-link text-[15px]">Read full CV →</a>
   </section>
 
 </Base>

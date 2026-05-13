@@ -1,81 +1,141 @@
 ---
 // src/pages/cv.astro
-// Full CV page. Photo goes in /public/images/photo.jpg.
+// Full CV page. Data sourced from votoropin.ru — adjust freely below.
+// Photo: drop your portrait at /public/images/photo.jpg (3:4, ~800×1067)
+// and switch the placeholder block below to the <img> variant.
 import Base from "../layouts/Base.astro";
+
+// ── Edit me ────────────────────────────────────────────────────
+// Set USE_REAL_PHOTO to true once you've uploaded /public/images/photo.jpg
+const USE_REAL_PHOTO = false;
 
 const experience = [
   {
-    role: "Portfolio Manager",
-    company: "Independent · Frankfurt",
+    role: "Executive Director, Private Banking",
+    company: "Gazprombank Private",
     dates: "2024 — Present",
-    body: "Construction and ongoing maintenance of two rules-based equity indices — RHIX (Russian Healthcare) and RITIX (Russia IT). Discretionary management of model portfolios benchmarked to the indices.",
+    body:
+      "Senior client coverage and portfolio advisory for high-net-worth " +
+      "clients. Lead investment process for discretionary and advisory " +
+      "mandates across global asset classes.",
   },
   {
-    role: "Vice President, Equity Sales",
-    company: "Major International Bank",
-    dates: "2015 — 2023",
-    body: "Sales coverage of institutional clients in Russian and CIS equities. Cross-product execution including cash equities, derivatives, and structured solutions.",
+    role: "Vice President · Head of Financial Advisory",
+    company: "Citibank (AO KB Citibank)",
+    dates: "2013 — 2024",
+    body:
+      "Progressed from advisor to Vice President and Head of the Financial " +
+      "Advisory team. Built and led the advisory practice serving Citigold " +
+      "and Citigold Private clients across Russia. Cross-product execution " +
+      "including cash equities, fixed income, derivatives, and structured " +
+      "solutions.",
   },
   {
-    role: "Equity Research Analyst",
-    company: "Sell-side Brokerage",
-    dates: "2009 — 2014",
-    body: "Coverage of Russian consumer and healthcare sectors. Initiation reports, quarterly updates, and bespoke client work on M&A and IPO transactions.",
+    role: "Senior Financial Advisor",
+    company: "BCS Brokerage (BrokerCreditService)",
+    dates: "2011 — 2013",
+    body:
+      "Investment advisory and brokerage services for retail and " +
+      "high-net-worth clients of one of Russia's largest brokerages.",
   },
 ];
 
+// International rotations & training assignments
+const rotations = [
+  { year: "2018", org: "Citibank GCB", location: "Singapore" },
+  { year: "2016", org: "Citibank N.A.", location: "New York, USA" },
+];
+
+// Certifications & education
 const credentials = [
-  { name: "Chartered Financial Analyst", org: "CFA Institute" },
-  { name: "MSc Finance", org: "Russian Economic University" },
-  { name: "FCA Approved Person", org: "Financial Conduct Authority, UK" },
-  { name: "Languages", org: "English (fluent) · Russian (native)" },
+  {
+    name: "Chartered Financial Analyst (CFA)",
+    org: "CFA Institute · 2023",
+  },
+  {
+    name: "American Finance Association (AFA)",
+    org: "Active member · 2022",
+  },
+  {
+    name: "FSFR 1.0 Certified Securities Markets Specialist",
+    org: "Federal Service for Financial Markets, Russia · 2012",
+  },
+  {
+    name: "Languages",
+    org: "Russian (native) · English (fluent)",
+  },
 ];
 ---
 
-<Base title="Curriculum Vitae">
+<Base
+  title="Curriculum Vitae"
+  description="Curriculum Vitae of Dmitry Votoropin, CFA — Executive Director, Private Banking at Gazprombank Private. 15+ years in investment advisory, portfolio management, and equity index construction."
+>
 
   <section class="container-wide pt-24 pb-20">
     <div class="section-label">Curriculum Vitae</div>
     <h1 class="display font-normal text-[48px] sm:text-[56px] leading-[1.05] tracking-tighter max-w-[820px] m-0 mb-14">
-      A career in <em>capital markets</em>, from sell-side research to portfolio construction.
+      A career in <em>investment advisory</em>, portfolio management, and index construction.
     </h1>
 
     <div class="grid md:grid-cols-[340px_1fr] gap-12 items-start">
-      <!-- Photo column -->
+
+      <!-- ── Photo column ───────────────────────────────────── -->
       <div>
-        <!--
-          Replace the placeholder div below with an <img> once you have
-          the photo. Recommended: 800×1067 (3:4 portrait), webp + jpg
-          fallback in /public/images/.
-        -->
-        <div
-          class="aspect-[3/4] rounded-sm relative overflow-hidden"
-          style="
-            background:
-              linear-gradient(135deg, rgba(107,31,46,0.85), rgba(26,26,26,0.7)),
-              repeating-linear-gradient(45deg, #2a2a2a 0 2px, #1a1a1a 2px 4px);
-          "
-          aria-label="Photo placeholder — replace with actual portrait"
-        >
-          <span class="absolute bottom-5 left-5 font-mono text-[10px] tracking-[0.2em] text-white/50">PHOTO</span>
-        </div>
-        <!-- Alternative once photo is uploaded:
-             <img src="/images/photo.jpg" alt="Dmitry Votoropin"
-                  class="aspect-[3/4] w-full object-cover rounded-sm" />
-        -->
+        {USE_REAL_PHOTO ? (
+          <img
+            src="/images/photo.jpg"
+            alt="Dmitry Votoropin"
+            class="aspect-[3/4] w-full object-cover rounded-sm"
+            width="800"
+            height="1067"
+          />
+        ) : (
+          <div
+            class="aspect-[3/4] rounded-sm relative overflow-hidden"
+            style="
+              background:
+                linear-gradient(135deg, rgba(107,31,46,0.85), rgba(26,26,26,0.7)),
+                repeating-linear-gradient(45deg, #2a2a2a 0 2px, #1a1a1a 2px 4px);
+            "
+            aria-label="Photo placeholder — replace with actual portrait"
+          >
+            <span class="absolute bottom-5 left-5 font-mono text-[10px] tracking-[0.2em] text-white/50">PHOTO</span>
+          </div>
+        )}
         <p class="mt-4 text-[12px] text-ink-mute italic leading-relaxed m-0">
-          Dmitry Votoropin, CFA<br>
-          Portfolio Manager · Index Constructor
+          Dmitry Votoropin, CFA<br />
+          Executive Director · Private Banking
         </p>
+
+        <!-- Quick facts panel -->
+        <dl class="mt-8 pt-6 border-t border-rule grid grid-cols-1 gap-4 text-[13px]">
+          <div class="flex justify-between gap-4">
+            <dt class="text-ink-mute uppercase tracking-[0.1em] text-[10px]">Location</dt>
+            <dd class="m-0 text-ink">Frankfurt a.M.</dd>
+          </div>
+          <div class="flex justify-between gap-4">
+            <dt class="text-ink-mute uppercase tracking-[0.1em] text-[10px]">Experience</dt>
+            <dd class="m-0 text-ink">15+ years</dd>
+          </div>
+          <div class="flex justify-between gap-4">
+            <dt class="text-ink-mute uppercase tracking-[0.1em] text-[10px]">Designation</dt>
+            <dd class="m-0 text-ink">CFA</dd>
+          </div>
+          <div class="flex justify-between gap-4">
+            <dt class="text-ink-mute uppercase tracking-[0.1em] text-[10px]">Available</dt>
+            <dd class="m-0 text-accent">Open to mandates</dd>
+          </div>
+        </dl>
       </div>
 
-      <!-- Content column -->
+      <!-- ── Content column ─────────────────────────────────── -->
       <div>
         <!-- Experience -->
         <div class="mb-14">
-          <h3 class="font-sans text-[11px] uppercase tracking-[0.18em] text-ink-mute font-medium m-0 mb-6 pb-3 border-b border-rule">
+          <h2 class="font-sans text-[11px] uppercase tracking-[0.18em] text-ink-mute font-medium m-0 mb-6 pb-3 border-b border-rule">
             Selected Experience
-          </h3>
+          </h2>
           {
             experience.map((e) => (
               <article class="mb-8">
@@ -88,11 +148,29 @@ const credentials = [
           }
         </div>
 
+        <!-- International Rotations -->
+        <div class="mb-14">
+          <h2 class="font-sans text-[11px] uppercase tracking-[0.18em] text-ink-mute font-medium m-0 mb-6 pb-3 border-b border-rule">
+            International Rotations
+          </h2>
+          <ul class="list-none p-0 m-0">
+            {
+              rotations.map((r) => (
+                <li class="grid grid-cols-[80px_1fr_auto] gap-4 py-3 border-b border-rule items-baseline">
+                  <span class="font-mono text-[12px] text-accent">{r.year}</span>
+                  <span class="font-display text-[16px] font-medium">{r.org}</span>
+                  <span class="text-[13px] text-ink-mute">{r.location}</span>
+                </li>
+              ))
+            }
+          </ul>
+        </div>
+
         <!-- Credentials -->
         <div class="mb-14">
-          <h3 class="font-sans text-[11px] uppercase tracking-[0.18em] text-ink-mute font-medium m-0 mb-6 pb-3 border-b border-rule">
-            Credentials &amp; Education
-          </h3>
+          <h2 class="font-sans text-[11px] uppercase tracking-[0.18em] text-ink-mute font-medium m-0 mb-6 pb-3 border-b border-rule">
+            Certifications &amp; Memberships
+          </h2>
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {
               credentials.map((c) => (
@@ -107,16 +185,17 @@ const credentials = [
 
         <!-- Capabilities -->
         <div class="mb-14">
-          <h3 class="font-sans text-[11px] uppercase tracking-[0.18em] text-ink-mute font-medium m-0 mb-6 pb-3 border-b border-rule">
+          <h2 class="font-sans text-[11px] uppercase tracking-[0.18em] text-ink-mute font-medium m-0 mb-6 pb-3 border-b border-rule">
             Capabilities
-          </h3>
+          </h2>
           <p class="text-ink-soft text-[15px] leading-[1.7] m-0">
-            Index methodology design · Free-float-adjusted market
-            capitalisation weighting and alternative weighting schemes ·
-            Quantitative portfolio construction and rebalancing · Performance
-            attribution · Python (pandas, NumPy) for index calculation and
-            back-testing · Familiarity with FCA, ESMA, and IOSCO benchmark
-            frameworks.
+            Investment advisory · Portfolio construction and management ·
+            Equity index design (free-float-adjusted market-cap and
+            alternative weighting schemes including square-root) · Quantitative
+            rebalancing and performance attribution · Structured solutions
+            and derivatives · Cross-asset client coverage · Python (pandas,
+            NumPy) for index calculation and back-testing · Working knowledge
+            of FCA, ESMA, and IOSCO benchmark frameworks.
           </p>
         </div>
 
