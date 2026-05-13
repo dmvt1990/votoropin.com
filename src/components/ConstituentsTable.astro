@@ -1,0 +1,59 @@
+---
+// src/components/ConstituentsTable.astro
+// Renders the constituents of an index with sortable columns
+// (server-rendered, no JS sort for now — can add later if needed).
+
+import type { Constituent } from "../data/rhix-constituents";
+
+export interface Props {
+  constituents: Constituent[];
+  asOf: string;
+  /** Show shares column (some indices don't track it) */
+  showShares?: boolean;
+}
+
+const { constituents, asOf, showShares = true } = Astro.props;
+const formattedAsOf = new Date(asOf).toLocaleDateString("en-GB", {
+  day: "2-digit", month: "short", year: "numeric",
+});
+---
+
+<div>
+  <h3 class="font-display text-[28px] font-normal m-0 mb-6">
+    Constituents — as of {formattedAsOf}
+  </h3>
+  <div class="overflow-x-auto bg-bg border border-rule">
+    <table class="w-full border-collapse">
+      <thead>
+        <tr class="bg-bg-sunken">
+          <th class="text-left px-5 py-4 text-[11px] uppercase tracking-wider2 text-ink-mute font-medium border-b border-rule">Ticker</th>
+          <th class="text-left px-5 py-4 text-[11px] uppercase tracking-wider2 text-ink-mute font-medium border-b border-rule">Company</th>
+          <th class="text-left px-5 py-4 text-[11px] uppercase tracking-wider2 text-ink-mute font-medium border-b border-rule">Sub-industry</th>
+          {showShares && (
+            <th class="text-right px-5 py-4 text-[11px] uppercase tracking-wider2 text-ink-mute font-medium border-b border-rule">Shares (M)</th>
+          )}
+          <th class="text-right px-5 py-4 text-[11px] uppercase tracking-wider2 text-ink-mute font-medium border-b border-rule">Free Float</th>
+          <th class="text-right px-5 py-4 text-[11px] uppercase tracking-wider2 text-ink-mute font-medium border-b border-rule">Weight</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          constituents.map((c) => (
+            <tr class="border-b border-rule last:border-b-0">
+              <td class="px-5 py-4 font-mono text-[14px] text-accent tracking-wide">{c.ticker}</td>
+              <td class="px-5 py-4 font-display text-[16px]">{c.name}</td>
+              <td class="px-5 py-4 text-[13px] text-ink-mute">{c.subIndustry}</td>
+              {showShares && (
+                <td class="px-5 py-4 font-mono text-[14px] text-right numeric">
+                  {c.sharesMillions ? c.sharesMillions.toFixed(1) : "—"}
+                </td>
+              )}
+              <td class="px-5 py-4 font-mono text-[14px] text-right numeric">{c.freeFloatPct}%</td>
+              <td class="px-5 py-4 font-mono text-[14px] text-right numeric font-medium">{c.weightPct.toFixed(1)}%</td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,115 @@
+---
+// src/pages/indices/[slug].astro
+// Dynamic page that renders an index detail page for each MDX file
+// in src/content/indices/. URLs: /indices/rhix, /indices/ritix.
+
+import { getCollection, getEntry } from "astro:content";
+import Base from "../../layouts/Base.astro";
+import IndexLevelChart from "../../components/IndexLevelChart.astro";
+import ConstituentsTable from "../../components/ConstituentsTable.astro";
+import Ribbon from "../../components/Ribbon.astro";
+
+import { RHIX_CONSTITUENTS, RHIX_AS_OF } from "../../data/rhix-constituents";
+import { RITIX_CONSTITUENTS, RITIX_AS_OF, RITIX_PERFORMANCE_2025 } from "../../data/ritix-constituents";
+import { RHIX_SERIES, RITIX_SERIES, latestLevel } from "../../data/timeseries";
+
+export async function getStaticPaths() {
+  const indices = await getCollection("indices");
+  return indices.map((i) => ({ params: { slug: i.slug }, props: { entry: i } }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+
+const isRhix = entry.slug === "rhix";
+const isRitix = entry.slug === "ritix";
+
+const series  = isRhix ? RHIX_SERIES : RITIX_SERIES;
+const consts  = isRhix ? RHIX_CONSTITUENTS : RITIX_CONSTITUENTS;
+const asOf    = isRhix ? RHIX_AS_OF : RITIX_AS_OF;
+const showShares = isRhix; // RITIX shares are 0-placeholders
+
+const latest  = latestLevel(series);
+const ytdPct  = ((latest.level / entry.data.baseValue - 1) * 100);
+const ytdStr  = `${ytdPct >= 0 ? '+' : ''}${ytdPct.toFixed(2)}%`;
+
+const ribbonCells = [
+  { k: "Current Level", v: latest.level.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) },
+  {
+    k: isRitix ? "2025 Return" : "Period Return",
+    v: isRitix ? `${RITIX_PERFORMANCE_2025.totalReturnPct.toFixed(2)}%` : ytdStr,
+    tone: ((isRitix ? RITIX_PERFORMANCE_2025.totalReturnPct : ytdPct) >= 0 ? "positive" : "negative") as "positive" | "negative",
+  },
+  { k: "Constituents", v: String(consts.length) },
+  { k: "Version", v: entry.data.version },
+];
+---
+
+<Base title={entry.data.name} description={entry.data.tagline}>
+
+  <!-- ── HEADER ───────────────────────────────────────────────── -->
+  <section class="container-wide pt-20 pb-12">
+    <div class="text-[12px] text-ink-mute tracking-wide mb-8">
+      <a href="/indices/rhix" class="text-ink-mute no-underline">Indices</a> /
+      <span>{entry.data.name}</span>
+    </div>
+    <div class="font-mono text-[14px] tracking-wider2 text-accent mb-4">
+      {entry.data.ticker}
+    </div>
+    <h1 class="display font-light text-[48px] sm:text-[68px] leading-[1.0] tracking-tightest m-0 mb-3">
+      {entry.data.name.replace(/^(Russian|Russia)/, "")
+        .startsWith(" ") ? entry.data.name : entry.data.name}
+    </h1>
+    <p class="display italic text-[22px] text-ink-soft m-0 mb-14">
+      {entry.data.ticker} · Version {entry.data.version} · {entry.data.versionDate}
+    </p>
+
+    <Ribbon cells={ribbonCells} />
+
+    <IndexLevelChart
+      id={`${entry.data.ticker.toLowerCase()}-big-chart`}
+      data={series}
+      label="Index Level — since inception"
+      color={isRhix ? "#6B1F2E" : "#3D3D3A"}
+    />
+
+    <ConstituentsTable constituents={consts} asOf={asOf} showShares={showShares} />
+  </section>
+
+  <!-- ── METHODOLOGY (from MDX) ───────────────────────────────── -->
+  <section class="bg-bg-sunken border-t border-rule">
+    <div class="container-narrow py-20">
+      <div class="section-label">Methodology</div>
+      <article class="prose prose-stone max-w-none
+                      prose-headings:font-display prose-headings:font-normal prose-headings:tracking-tight
+                      prose-h2:text-[32px] prose-h2:mt-12 prose-h2:mb-5
+                      prose-h3:text-[22px]
+                      prose-p:text-[16px] prose-p:leading-relaxed prose-p:text-ink-soft
+                      prose-strong:text-ink prose-strong:font-medium
+                      prose-a:text-accent prose-a:no-underline hover:prose-a:underline
+                      prose-blockquote:border-l-accent prose-blockquote:text-ink prose-blockquote:not-italic prose-blockquote:font-mono prose-blockquote:text-[14px]
+                      prose-table:text-[14px]
+                      prose-th:text-ink-mute prose-th:text-[11px] prose-th:uppercase prose-th:tracking-wider2 prose-th:font-medium
+                      prose-td:py-3
+                      prose-code:bg-bg prose-code:text-accent prose-code:px-1 prose-code:rounded-sm
+                      prose-li:text-ink-soft">
+        <Content />
+      </article>
+
+      <!-- Source documents -->
+      <div class="mt-14 pt-8 border-t border-rule">
+        <h3 class="font-sans text-[11px] uppercase tracking-[0.18em] text-ink-mute font-medium m-0 mb-4">
+          Source documents
+        </h3>
+        <ul class="list-none p-0 m-0 text-[14px] text-ink-soft">
+          <li class="py-2 border-b border-rule">
+            <a href={`/downloads/${entry.data.ticker.toLowerCase()}-methodology-v${entry.data.version}.pdf`} class="editorial-link">
+              {entry.data.name} — Methodology v{entry.data.version} (PDF) →
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+</Base>

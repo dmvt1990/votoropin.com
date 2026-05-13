@@ -1,0 +1,46 @@
+---
+// src/pages/notes/index.astro
+// List of all notes (excluding drafts), sorted by date desc.
+import Base from "../../layouts/Base.astro";
+import { getCollection } from "astro:content";
+
+const notes = (await getCollection("notes", ({ data }) => !data.draft))
+  .sort((a, b) => +b.data.date - +a.data.date);
+---
+
+<Base
+  title="Notes"
+  description="Occasional writing on index design, portfolio construction, and market structure."
+>
+  <section class="container-wide pt-24 pb-20">
+    <div class="section-label">Notes</div>
+    <h1 class="display font-normal text-display-md max-w-[820px] m-0 mb-14">
+      Occasional <em>writing</em> on index design, portfolio construction, and market structure.
+    </h1>
+
+    {notes.length === 0 && (
+      <p class="text-ink-mute italic text-[16px]">
+        No notes published yet. The first ones are in draft.
+      </p>
+    )}
+
+    {notes.length > 0 && (
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-rule border border-rule">
+        {
+          notes.map((n) => (
+            <a href={`/notes/${n.slug}`} class="bg-bg p-9 transition-colors duration-200 hover:bg-bg-sunken no-underline group">
+              <div class="font-mono text-[11px] tracking-wide text-ink-mute mb-4">
+                {new Date(n.data.date).toLocaleDateString("en-GB", { year: "numeric", month: "short", day: "2-digit" })} · {n.data.tag}
+              </div>
+              <h4 class="display font-medium text-[22px] tracking-tight leading-tight m-0 mb-3 text-ink group-hover:text-accent transition-colors">
+                {n.data.title}
+              </h4>
+              <p class="text-ink-soft text-[14px] leading-relaxed m-0">{n.data.summary}</p>
+              <div class="mt-4 text-[11px] text-ink-mute">{n.data.readMinutes} min read</div>
+            </a>
+          ))
+        }
+      </div>
+    )}
+  </section>
+</Base>

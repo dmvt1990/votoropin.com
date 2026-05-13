@@ -1,0 +1,88 @@
+---
+// src/components/MiniChart.astro
+// Inline sparkline-style chart. Renders on the client.
+//
+// Props:
+//   id      — unique DOM id
+//   data    — array of [date, value]
+//   color   — line colour (default accent)
+//   height  — px (default 280)
+
+export interface Props {
+  id: string;
+  data: [string, number][];
+  color?: string;
+  height?: number;
+}
+
+const { id, data, color = "#6B1F2E", height = 280 } = Astro.props;
+const dataJSON = JSON.stringify(data);
+---
+
+<div
+  id={id}
+  class="bg-bg-sunken rounded-sm"
+  style={`width: 100%; height: ${height}px;`}
+  data-chart-data={dataJSON}
+  data-chart-color={color}
+></div>
+
+<script>
+  let echartsPromise: Promise<typeof import("echarts")> | null = null;
+  const load = () => echartsPromise ??= import("echarts");
+
+  async function mount(el: HTMLElement) {
+    const echarts = await load();
+    const data = JSON.parse(el.dataset.chartData || "[]");
+    const color = el.dataset.chartColor || "#6B1F2E";
+
+    const chart = echarts.init(el);
+    chart.setOption({
+      grid: { left: 0, right: 0, top: 10, bottom: 0 },
+      xAxis: { type: "time", show: false },
+      yAxis: { type: "value", show: false, scale: true },
+      series: [{
+        type: "line",
+        data,
+        showSymbol: false,
+        smooth: 0.2,
+        lineStyle: { color, width: 1.8 },
+        areaStyle: {
+          color: {
+            type: "linear", x: 0, y: 0, x2: 0, y2: 1,
+            colorStops: [
+              { offset: 0, color: color + "40" },
+              { offset: 1, color: color + "00" },
+            ],
+          },
+        },
+      }],
+      animation: false,
+    });
+
+    new ResizeObserver(() => chart.resize()).observe(el);
+  }
+
+  function init() {
+    const els = document.querySelectorAll<HTMLElement>("[data-chart-data]:not([data-bigchart])");
+    if (!els.length) return;
+
+    // IntersectionObserver to lazy-mount when scrolled into view
+    const io = new IntersectionObserver((entries) => {
+      for (const e of entries) {
+        if (e.isIntersecting) {
+          const el = e.target as HTMLElement;
+          if ((el as any)._chartMounted) continue;
+          (el as any)._chartMounted = true;
+          mount(el);
+          io.unobserve(el);
+        }
+      }
+    }, { rootMargin: "200px" });
+
+    els.forEach((el) => io.observe(el));
+  }
+
+  init();
+  document.addEventListener("astro:page-load", init);
+</script>

@@ -1,0 +1,43 @@
+---
+// src/components/Ribbon.astro
+// Horizontal strip of key index stats. Used on index detail pages.
+
+export interface Cell {
+  k: string;
+  v: string;
+  tone?: "default" | "positive" | "negative";
+}
+
+export interface Props {
+  cells: Cell[];
+}
+
+const { cells } = Astro.props;
+---
+
+<div class="grid grid-cols-2 md:grid-cols-4 bg-bg border border-rule mb-12">
+  {
+    cells.map((c, i) => (
+      <div
+        class:list={[
+          "p-7 border-rule",
+          i % 2 === 0 ? "border-r" : "",
+          "md:border-r md:last:border-r-0",
+          "border-b md:border-b-0",
+          i >= cells.length - 2 ? "md:border-b-0" : "",
+        ]}
+      >
+        <div class="text-[11px] uppercase tracking-[0.16em] text-ink-mute mb-2.5">{c.k}</div>
+        <div
+          class:list={[
+            "font-display text-[28px] tracking-tighter",
+            c.tone === "positive" ? "text-positive" : "",
+            c.tone === "negative" ? "text-negative" : "",
+          ]}
+        >
+          {c.v}
+        </div>
+      </div>
+    ))
+  }
+</div>

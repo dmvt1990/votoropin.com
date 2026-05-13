@@ -1,0 +1,23 @@
+{
+  "name": "votoropin-com",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Personal site of Dmitry Votoropin, CFA — CV and rules-based equity indices (RHIX, RITIX).",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "deploy": "bash deploy/deploy.sh"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.9.4",
+    "@astrojs/mdx": "^3.1.9",
+    "@astrojs/tailwind": "^5.1.2",
+    "astro": "^4.16.13",
+    "echarts": "^5.5.1",
+    "tailwindcss": "^3.4.14",
+    "typescript": "^5.6.3"
+  }
+}

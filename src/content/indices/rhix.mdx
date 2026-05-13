@@ -1,0 +1,98 @@
+---
+ticker: "RHIX"
+name: "Russian Healthcare Index"
+tagline: "Healthcare & biotech, MOEX-listed."
+version: "2.0"
+versionDate: "May 2026"
+inceptionDate: "2025-01-01"
+baseValue: 1000
+weightingScheme: "free-float-market-cap"
+rebalanceFrequency: "semi-annual"
+currency: "RUB"
+order: 1
+---
+
+## Overview
+
+The Russian Healthcare Index (RHIX) is a free-float market-capitalisation
+weighted equity index tracking the performance of core healthcare,
+pharmaceutical, and biotechnology companies listed on the Moscow Exchange
+(MOEX). The index is designed to serve as a transparent, rules-based
+benchmark for the Russian healthcare sector.
+
+RHIX provides a representative, investable, and replicable measure of the
+performance of publicly listed Russian healthcare companies. The index is
+constructed using GICS Sector 35 (Health Care) classification as the
+primary eligibility screen, with additional criteria to ensure constituent
+quality and independence.
+
+## Eligibility
+
+To be eligible for inclusion in RHIX, a security must satisfy **all** of
+the following criteria at the time of each semi-annual review:
+
+- Listed and actively traded on **MOEX** in the TQBR (T+2 main market)
+  regime. Securities listed solely on SPB Exchange, OTC venues, or foreign
+  exchanges are not eligible.
+- The issuer must derive significant revenues from one or more **GICS
+  Sector 35** sub-industries: Health Care Equipment & Supplies, Health
+  Care Providers & Services, Biotechnology, Pharmaceuticals, or Life
+  Sciences Tools & Services.
+- **Related-company rule.** Where a parent company and one or more of its
+  subsidiaries are separately listed on MOEX and both qualify, only the
+  parent company is included. Subsidiaries and controlled affiliates are
+  excluded to prevent hidden concentration risk and double-counting.
+
+Version 2.0 of this methodology does not impose a minimum free-float
+market-cap or minimum average daily trading value threshold. This policy
+will be reviewed at the first annual methodology review.
+
+## Index calculation
+
+The index level at time _t_ is calculated as:
+
+> **RHIX(t) = [ Σ Pᵢ(t) × Sᵢ × FFᵢ ] ÷ Divisor(t)**
+
+Where _Pᵢ(t)_ is the closing price of constituent _i_, _Sᵢ_ is shares
+outstanding (fixed between rebalancings), _FFᵢ_ is the free-float factor
+(0–1), and _Divisor(t)_ is the index divisor adjusted at each rebalancing
+and for corporate actions.
+
+At the base date (1 January 2025), the divisor is set such that the index
+equals 1,000. Whenever a constituent change or corporate action would
+cause a discontinuous jump in the index level, the divisor is adjusted to
+maintain continuity.
+
+## Rebalancing
+
+RHIX is rebalanced **semi-annually**:
+
+| Review            | Reference date | Announcement | Effective date |
+| ----------------- | -------------- | ------------ | -------------- |
+| March review      | 28 February    | 15 March     | 31 March       |
+| September review  | 31 August      | 15 September | 30 September   |
+
+A buffer rule applies: a current constituent that fails eligibility is
+retained for one additional review period before removal, unless it has
+been delisted or suspended. The buffer rule does not apply to the
+related-company rule — subsidiary exclusions are applied immediately.
+
+## Corporate actions
+
+| Corporate action       | Treatment                                                    |
+| ---------------------- | ------------------------------------------------------------ |
+| Cash dividend          | Price-only index; dividends are not reinvested.              |
+| Stock split            | Shares updated and price adjusted; divisor preserves level.  |
+| Rights issue           | New shares added; divisor adjusted.                          |
+| Share buyback          | Shares reduced; divisor adjusted.                            |
+| M&A / merger           | Surviving entity assessed; removed if ineligible.            |
+| Delisting              | Removed at last available price; divisor adjusted.           |
+| Spin-off               | Assessed against related-company rule at next review.        |
+
+## Version history
+
+- **v1.0** — January 2025. Initial launch. Nine constituents.
+- **v2.0** — May 2026. Revised to five core constituents. Applied the
+  related-company rule (removed GEMA and GECO as ABIO subsidiaries).
+  Removed APTK (non-core sector) and LIFE (marginal quality). Added
+  explicit buffer rules and a corporate-action table.

@@ -1,0 +1,71 @@
+---
+title: "Why the related-company rule matters more than it looks"
+summary: "When a parent and subsidiary are both listed, naive sector indices double-count the same economic exposure. A short note on how RHIX v2.0 handles this."
+date: "2026-05-12"
+tag: "Methodology"
+readMinutes: 4
+draft: false
+---
+
+## The problem hiding in plain sight
+
+A common assumption when constructing a sector index is that each listed
+company in the relevant sector represents a distinct economic exposure.
+For most names on most markets, that assumption holds. But it breaks down
+the moment a parent company and one or more of its listed subsidiaries
+both qualify under the index's eligibility rules.
+
+In that case, a naive market-cap-weighted index will count the
+subsidiary's economic value **twice**: once through the parent's
+consolidated market cap, and again through the subsidiary's standalone
+listing. The result is a hidden concentration risk that doesn't show up
+in the published weights.
+
+## A concrete example
+
+Take Artgen Biotech (ABIO), a Russian biotechnology issuer with two
+separately listed subsidiaries — Gemabank (GEMA) and Genetico (GECO).
+In RHIX v1.0, all three names independently passed the sector
+eligibility screen and were included in the index.
+
+The hidden exposure: the value of GEMA and GECO is already reflected in
+ABIO's parent-level market cap. By including all three, the index gave
+roughly **double weight** to that single economic story — and a hit to
+GEMA or GECO's price would propagate through the index twice: once
+through the standalone constituent, and once through ABIO's
+consolidated valuation.
+
+## The v2.0 fix
+
+RHIX v2.0 introduces an explicit related-company rule:
+
+> Where a parent company and one or more of its subsidiaries are
+> separately listed on MOEX and both qualify under the sector criteria,
+> only the parent company (ultimate controlling entity) shall be
+> included.
+
+This is a hard rule, not a soft cap. It is also exempt from the buffer
+mechanism that ordinarily delays removals by one review cycle — a
+double-counted exposure should not persist for six additional months
+just because the rest of eligibility is satisfied.
+
+The trade-off is loss of two index members and slightly more
+concentration in the remaining five. The benefit is that the index now
+represents what it claims to represent: five distinct economic
+exposures, not five constituents containing three overlapping ones.
+
+## When this matters in practice
+
+The rule is most material in indices covering markets with significant
+holding-company structures — Russian, Korean, Italian, Indian — where
+listed conglomerates frequently carry listed subsidiaries. For users
+benchmarking active portfolios against the index, the difference
+between v1.0 and v2.0 weights is large enough to matter for tracking
+error.
+
+For ETF replication, the rule also reduces operational risk: fewer
+overlapping cash flows on dividend dates, fewer simultaneous corporate
+actions to process.
+
+It's an unglamorous rule that no one will notice on a quiet quarter. It
+will matter on a noisy one.

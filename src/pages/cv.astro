@@ -1,0 +1,130 @@
+---
+// src/pages/cv.astro
+// Full CV page. Photo goes in /public/images/photo.jpg.
+import Base from "../layouts/Base.astro";
+
+const experience = [
+  {
+    role: "Portfolio Manager",
+    company: "Independent · Frankfurt",
+    dates: "2024 — Present",
+    body: "Construction and ongoing maintenance of two rules-based equity indices — RHIX (Russian Healthcare) and RITIX (Russia IT). Discretionary management of model portfolios benchmarked to the indices.",
+  },
+  {
+    role: "Vice President, Equity Sales",
+    company: "Major International Bank",
+    dates: "2015 — 2023",
+    body: "Sales coverage of institutional clients in Russian and CIS equities. Cross-product execution including cash equities, derivatives, and structured solutions.",
+  },
+  {
+    role: "Equity Research Analyst",
+    company: "Sell-side Brokerage",
+    dates: "2009 — 2014",
+    body: "Coverage of Russian consumer and healthcare sectors. Initiation reports, quarterly updates, and bespoke client work on M&A and IPO transactions.",
+  },
+];
+
+const credentials = [
+  { name: "Chartered Financial Analyst", org: "CFA Institute" },
+  { name: "MSc Finance", org: "Russian Economic University" },
+  { name: "FCA Approved Person", org: "Financial Conduct Authority, UK" },
+  { name: "Languages", org: "English (fluent) · Russian (native)" },
+];
+---
+
+<Base title="Curriculum Vitae">
+
+  <section class="container-wide pt-24 pb-20">
+    <div class="section-label">Curriculum Vitae</div>
+    <h1 class="display font-normal text-[48px] sm:text-[56px] leading-[1.05] tracking-tighter max-w-[820px] m-0 mb-14">
+      A career in <em>capital markets</em>, from sell-side research to portfolio construction.
+    </h1>
+
+    <div class="grid md:grid-cols-[340px_1fr] gap-12 items-start">
+      <!-- Photo column -->
+      <div>
+        <!--
+          Replace the placeholder div below with an <img> once you have
+          the photo. Recommended: 800×1067 (3:4 portrait), webp + jpg
+          fallback in /public/images/.
+        -->
+        <div
+          class="aspect-[3/4] rounded-sm relative overflow-hidden"
+          style="
+            background:
+              linear-gradient(135deg, rgba(107,31,46,0.85), rgba(26,26,26,0.7)),
+              repeating-linear-gradient(45deg, #2a2a2a 0 2px, #1a1a1a 2px 4px);
+          "
+          aria-label="Photo placeholder — replace with actual portrait"
+        >
+          <span class="absolute bottom-5 left-5 font-mono text-[10px] tracking-[0.2em] text-white/50">PHOTO</span>
+        </div>
+        <!-- Alternative once photo is uploaded:
+             <img src="/images/photo.jpg" alt="Dmitry Votoropin"
+                  class="aspect-[3/4] w-full object-cover rounded-sm" />
+        -->
+        <p class="mt-4 text-[12px] text-ink-mute italic leading-relaxed m-0">
+          Dmitry Votoropin, CFA<br>
+          Portfolio Manager · Index Constructor
+        </p>
+      </div>
+
+      <!-- Content column -->
+      <div>
+        <!-- Experience -->
+        <div class="mb-14">
+          <h3 class="font-sans text-[11px] uppercase tracking-[0.18em] text-ink-mute font-medium m-0 mb-6 pb-3 border-b border-rule">
+            Selected Experience
+          </h3>
+          {
+            experience.map((e) => (
+              <article class="mb-8">
+                <div class="font-display text-[22px] font-medium tracking-tight mb-1">{e.role}</div>
+                <div class="text-accent text-[15px] mb-2">{e.company}</div>
+                <div class="font-mono text-[12px] text-ink-mute tracking-wide mb-3">{e.dates}</div>
+                <p class="m-0 text-[15px] text-ink-soft leading-relaxed">{e.body}</p>
+              </article>
+            ))
+          }
+        </div>
+
+        <!-- Credentials -->
+        <div class="mb-14">
+          <h3 class="font-sans text-[11px] uppercase tracking-[0.18em] text-ink-mute font-medium m-0 mb-6 pb-3 border-b border-rule">
+            Credentials &amp; Education
+          </h3>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            {
+              credentials.map((c) => (
+                <div class="py-5 border-t border-rule">
+                  <div class="font-display text-[18px] font-medium mb-1">{c.name}</div>
+                  <div class="text-[13px] text-ink-mute">{c.org}</div>
+                </div>
+              ))
+            }
+          </div>
+        </div>
+
+        <!-- Capabilities -->
+        <div class="mb-14">
+          <h3 class="font-sans text-[11px] uppercase tracking-[0.18em] text-ink-mute font-medium m-0 mb-6 pb-3 border-b border-rule">
+            Capabilities
+          </h3>
+          <p class="text-ink-soft text-[15px] leading-[1.7] m-0">
+            Index methodology design · Free-float-adjusted market
+            capitalisation weighting and alternative weighting schemes ·
+            Quantitative portfolio construction and rebalancing · Performance
+            attribution · Python (pandas, NumPy) for index calculation and
+            back-testing · Familiarity with FCA, ESMA, and IOSCO benchmark
+            frameworks.
+          </p>
+        </div>
+
+        <a href="/downloads/votoropin-cv.pdf" class="editorial-link text-[14px]" download>
+          Download full CV (PDF) →
+        </a>
+      </div>
+    </div>
+  </section>
+
+</Base>

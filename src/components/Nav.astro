@@ -1,0 +1,67 @@
+---
+// src/components/Nav.astro
+// Sticky top navigation. Active page link gets the accent colour.
+const path = Astro.url.pathname.replace(/\/$/, "") || "/";
+
+const links = [
+  { href: "/", label: "Home" },
+  { href: "/cv", label: "CV" },
+  { href: "/indices/rhix", label: "RHIX" },
+  { href: "/indices/ritix", label: "RITIX" },
+  { href: "/notes", label: "Notes" },
+  { href: "/contact", label: "Contact" },
+];
+
+function isActive(href: string) {
+  if (href === "/") return path === "/";
+  return path === href || path.startsWith(href + "/");
+}
+---
+
+<nav class="sticky top-0 z-50 backdrop-blur-md bg-bg/85 border-b border-rule">
+  <div class="container-wide flex items-center justify-between py-4">
+    <a href="/" class="font-display text-[20px] tracking-tight text-ink no-underline">
+      Dmitry Votoropin<span class="text-accent italic font-normal">,</span> CFA
+    </a>
+    <ul class="hidden md:flex gap-9 list-none m-0 p-0">
+      {
+        links.map((l) => (
+          <li>
+            <a
+              href={l.href}
+              class:list={[
+                "text-sm tracking-wide no-underline transition-colors duration-200",
+                isActive(l.href) ? "text-accent" : "text-ink-soft hover:text-accent",
+              ]}
+            >
+              {l.label}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+    <!-- Mobile: a single dropdown trigger -->
+    <details class="md:hidden relative">
+      <summary class="list-none cursor-pointer text-ink-soft text-sm select-none">
+        Menu ↓
+      </summary>
+      <ul class="absolute right-0 mt-3 w-48 bg-bg border border-rule shadow-lg list-none p-0 m-0 z-50">
+        {
+          links.map((l) => (
+            <li>
+              <a
+                href={l.href}
+                class:list={[
+                  "block px-4 py-3 text-sm no-underline border-b border-rule last:border-b-0",
+                  isActive(l.href) ? "text-accent" : "text-ink-soft hover:text-accent hover:bg-bg-sunken",
+                ]}
+              >
+                {l.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </details>
+  </div>
+</nav>

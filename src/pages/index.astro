@@ -1,0 +1,150 @@
+---
+// src/pages/index.astro
+// Home page.
+import Base from "../layouts/Base.astro";
+import MiniChart from "../components/MiniChart.astro";
+import { RHIX_SERIES, RITIX_SERIES, latestLevel } from "../data/timeseries";
+
+const rhix = latestLevel(RHIX_SERIES);
+const ritix = latestLevel(RITIX_SERIES);
+
+const rhixYtd = ((rhix.level / 1000 - 1) * 100).toFixed(2);
+const ritixYtd = ((ritix.level / 1000 - 1) * 100).toFixed(2);
+---
+
+<Base title="Dmitry Votoropin, CFA — Portfolio Manager">
+
+  <!-- ── HERO ─────────────────────────────────────────────────── -->
+  <section class="container-wide pt-32 pb-24">
+    <div class="text-[12px] uppercase tracking-[0.18em] text-ink-mute mb-8 fade-up">
+      Portfolio Manager · Frankfurt am Main
+    </div>
+    <h1 class="display font-light text-display-xl m-0 mb-9 fade-up fade-up-2">
+      Building <em>rules-based</em> equity<br>
+      indices and managing<br>
+      portfolios with discipline.
+    </h1>
+    <p class="text-[21px] leading-[1.5] max-w-[640px] text-ink-soft mb-12 fade-up fade-up-3">
+      Fifteen years in capital markets, covering Russian and CIS equities,
+      derivatives, and structured products. Currently constructing and
+      publishing rules-based benchmarks for under-covered market segments.
+    </p>
+    <div class="flex flex-wrap gap-12 pt-7 border-t border-rule max-w-[640px] fade-up fade-up-4">
+      <div class="flex flex-col gap-1">
+        <span class="text-[11px] uppercase tracking-[0.14em] text-ink-mute">Designation</span>
+        <span class="text-[15px]">CFA Charterholder</span>
+      </div>
+      <div class="flex flex-col gap-1">
+        <span class="text-[11px] uppercase tracking-[0.14em] text-ink-mute">Experience</span>
+        <span class="text-[15px]">15+ years</span>
+      </div>
+      <div class="flex flex-col gap-1">
+        <span class="text-[11px] uppercase tracking-[0.14em] text-ink-mute">Focus</span>
+        <span class="text-[15px]">Index construction · Portfolio mgmt</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── INDICES OVERVIEW ─────────────────────────────────────── -->
+  <section class="container-wide py-24 border-t border-rule">
+    <div class="section-label">Indices</div>
+    <h2 class="display font-normal text-display-md max-w-[800px] m-0 mb-14">
+      Two rules-based <em>equity benchmarks</em>, published openly with full methodology.
+    </h2>
+
+    <!-- RHIX card -->
+    <div class="grid md:grid-cols-2 gap-12 items-center py-14 border-t border-rule">
+      <div>
+        <div class="font-mono text-[14px] tracking-wider2 text-accent mb-4">
+          RHIX · Russian Healthcare Index
+        </div>
+        <h3 class="display font-normal text-[38px] leading-[1.05] tracking-tighter m-0 mb-5">
+          <em>Healthcare</em> &amp; biotech, MOEX-listed.
+        </h3>
+        <p class="text-ink-soft text-[15px] leading-relaxed mb-7">
+          Free-float market-cap weighted index of five core healthcare,
+          pharmaceutical, and biotechnology issuers on the Moscow Exchange.
+          Constructed under GICS Sector 35 with a related-company rule to
+          prevent hidden concentration.
+        </p>
+        <div class="grid grid-cols-3 gap-6 pt-6 border-t border-rule">
+          <div>
+            <div class="text-[11px] uppercase tracking-[0.14em] text-ink-mute mb-1.5">Constituents</div>
+            <div class="font-display text-[24px] tracking-tight">5</div>
+          </div>
+          <div>
+            <div class="text-[11px] uppercase tracking-[0.14em] text-ink-mute mb-1.5">YTD</div>
+            <div class={`font-display text-[24px] tracking-tight ${parseFloat(rhixYtd) >= 0 ? 'text-positive' : 'text-negative'}`}>
+              {parseFloat(rhixYtd) >= 0 ? '+' : ''}{rhixYtd}%
+            </div>
+          </div>
+          <div>
+            <div class="text-[11px] uppercase tracking-[0.14em] text-ink-mute mb-1.5">Rebalance</div>
+            <div class="font-display text-[24px] tracking-tight">Semi-ann.</div>
+          </div>
+        </div>
+        <p class="mt-7">
+          <a href="/indices/rhix" class="editorial-link text-[14px]">
+            Methodology &amp; live levels →
+          </a>
+        </p>
+      </div>
+      <MiniChart id="rhix-hero-chart" data={RHIX_SERIES} color="#6B1F2E" />
+    </div>
+
+    <!-- RITIX card -->
+    <div class="grid md:grid-cols-2 gap-12 items-center py-14 border-t border-b border-rule">
+      <div>
+        <div class="font-mono text-[14px] tracking-wider2 text-accent mb-4">
+          RITIX · Russia IT Index
+        </div>
+        <h3 class="display font-normal text-[38px] leading-[1.05] tracking-tighter m-0 mb-5">
+          <em>Russian technology</em>, square-root weighted.
+        </h3>
+        <p class="text-ink-soft text-[15px] leading-relaxed mb-7">
+          Square-root free-float-adjusted market-cap weighted index of ten
+          Russian IT issuers on the Moscow Exchange. Quarterly rebalancing.
+          Designed as a diversified benchmark across the domestic technology
+          stack.
+        </p>
+        <div class="grid grid-cols-3 gap-6 pt-6 border-t border-rule">
+          <div>
+            <div class="text-[11px] uppercase tracking-[0.14em] text-ink-mute mb-1.5">Constituents</div>
+            <div class="font-display text-[24px] tracking-tight">10</div>
+          </div>
+          <div>
+            <div class="text-[11px] uppercase tracking-[0.14em] text-ink-mute mb-1.5">2025 Return</div>
+            <div class="font-display text-[24px] tracking-tight text-negative">−27.31%</div>
+          </div>
+          <div>
+            <div class="text-[11px] uppercase tracking-[0.14em] text-ink-mute mb-1.5">Volatility</div>
+            <div class="font-display text-[24px] tracking-tight">23.7%</div>
+          </div>
+        </div>
+        <p class="mt-7">
+          <a href="/indices/ritix" class="editorial-link text-[14px]">
+            Methodology &amp; performance →
+          </a>
+        </p>
+      </div>
+      <MiniChart id="ritix-hero-chart" data={RITIX_SERIES} color="#3D3D3A" />
+    </div>
+  </section>
+
+  <!-- ── ABOUT BLOCK ──────────────────────────────────────────── -->
+  <section class="container-wide py-24 border-t border-rule">
+    <div class="section-label">About</div>
+    <h2 class="display font-normal text-display-md max-w-[800px] m-0 mb-10">
+      A career across <em>sell-side research</em>, institutional sales, and portfolio construction.
+    </h2>
+    <p class="text-[18px] leading-relaxed max-w-[760px] text-ink-soft mb-8">
+      My work focuses on the construction of transparent, rules-based
+      equity benchmarks for under-covered market segments, and on the
+      management of discretionary portfolios that are benchmarked to those
+      indices. Methodologies are published openly; data and constituent
+      weights are updated on a fixed schedule.
+    </p>
+    <a href="/cv" class="editorial-link text-[15px]">Read full CV →</a>
+  </section>
+
+</Base>

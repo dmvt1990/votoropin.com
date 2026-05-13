@@ -1,0 +1,126 @@
+---
+ticker: "RITIX"
+name: "Russia IT Index"
+tagline: "Russian technology, square-root weighted."
+version: "1.4"
+versionDate: "April 2026"
+inceptionDate: "2025-01-01"
+baseValue: 1000
+weightingScheme: "square-root-free-float-market-cap"
+rebalanceFrequency: "quarterly"
+currency: "RUB"
+order: 2
+---
+
+## Overview
+
+The Russia IT Index (RITIX) is a rules-based equity benchmark measuring
+the performance of publicly traded Russian technology companies. Its
+constituents are common shares with primary listings on the Moscow
+Exchange. The index is intended to serve as an internal benchmark for
+portfolios and advisory mandates focused on Russian information
+technology equities, and as a reference point for research and model
+portfolios. It is not designed to function as the underlying index for
+publicly offered investment products.
+
+## Eligibility
+
+To be eligible for inclusion, a security must satisfy **all** of the
+following:
+
+- The issuer is incorporated in the Russian Federation or is
+  predominantly Russia-linked.
+- The security is a common share with a primary listing on the
+  **Moscow Exchange**.
+- The issuer is classified in the **GICS Information Technology** sector,
+  or — for issuers not classified as IT under GICS — derives **more than
+  50%** of its revenue from technology activities (software, IT services,
+  cybersecurity, internet platforms, digital infrastructure, data
+  processing, semiconductors, hardware, and related digital services).
+- Minimum **free-float of 5%**.
+
+No standalone liquidity filter is applied. No sanctions-exclusion filter
+is applied. No single-name concentration limit is applied as an
+eligibility condition.
+
+## Weighting
+
+RITIX is a **square-root free-float-adjusted market-capitalisation
+weighted** index. At each rebalancing, the target weight of each
+component is:
+
+> **wᵢ = √Mᵢ ÷ Σⱼ √Mⱼ**
+
+where _Mᵢ_ is the free-float-adjusted market capitalisation of component
+_i_, computed from MOEX price data, shares outstanding, and free-float
+data, and the sum is taken across all index constituents.
+
+Under this scheme, a component with free-float-adjusted market cap 100×
+larger than another receives approximately **10× the weight** — rather
+than 100× as it would under standard cap-weighting. The natural
+compression of the square-root function acts as a diversification
+mechanism; no individual or aggregate weight caps are applied.
+
+The Index Committee notes that the resulting weight distribution does
+**not** satisfy the UCITS 5/10/40 diversification rule applicable to
+certain pooled vehicles. The index is intended as an internal benchmark,
+not as the underlying index for publicly offered investment products.
+
+## Index calculation
+
+The index is computed as a price-return, market-cap-weighted index in RUB
+using the divisor methodology:
+
+> **Iₜ = ( Σᵢ Mᵢ,ₜ ) ÷ D**
+
+where _Mᵢ,ₜ_ is the free-float-adjusted market value of constituent _i_
+at time _t_ and _D_ is the index divisor. The initial divisor is fixed
+at the base date such that _I₀ = 1,000_ by construction. The divisor is
+adjusted at constituent changes, corporate actions, and other
+non-market events that would otherwise produce a discontinuous jump in
+the index level.
+
+## Rebalancing
+
+The index composition and weights are reviewed **quarterly**. Changes
+take effect on the first trading day of the following calendar quarter.
+The cut-off date for the quarterly review is **10 trading days** before
+the effective date.
+
+An issuer that becomes eligible after the base date (for example,
+through an IPO) is **not** added until the first quarterly review
+following the start of trading on MOEX.
+
+## Corporate actions
+
+Corporate actions are reflected in a way that preserves continuity of
+the index level and ensures the index reflects market dynamics rather
+than mechanical changes in capital structure.
+
+- **Splits, reverse splits, bonus issues.** Shares and reference prices
+  adjusted; divisor unchanged.
+- **Rights issues.** Treated as market-cap-neutral; divisor adjusted as
+  needed for continuity.
+- **Spin-offs.** Spun-off entity reviewed at the next composition
+  review. Temporary inclusion permitted at Committee discretion.
+- **Special dividends** causing a non-market price drop. Price and
+  divisor adjusted to avoid an artificial level reduction.
+- **Delisting.** Removed at the last available market price; divisor
+  adjusted.
+- **Cash takeovers.** Target removed on the effective date; cash treated
+  as reinvested in remaining components via divisor adjustment.
+- **Share-for-share M&A.** Handled per the transaction terms and
+  Committee determination.
+
+## Version history
+
+- **v1.0** — April 2026. Initial methodology. Free-float cap-weighted
+  with a 20% soft cap; fixed initial divisor of 10.
+- **v1.1** — April 2026. Flexible-divisor revision. Initial divisor
+  computed at the base date as _D₀ = M₀ ÷ I₀_, ensuring _I₀ = 1,000_
+  by construction.
+- **v1.2** — April 2026. UCITS-like diversification limits (15% / 60%);
+  superseded by v1.4.
+- **v1.4** — April 2026. **Current.** Square-root weighting replaces
+  the UCITS-like limits regime. Section 7.1 clarified for new-issuer
+  treatment. Section 5.1 ("Diversification limits") of v1.2 deleted.
