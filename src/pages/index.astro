@@ -1,6 +1,8 @@
 ---
 // src/pages/index.astro
-// Home page. Order: Hero → About → Indices teaser.
+// Home page. CV is the primary asset; indices are a secondary block
+// clearly labelled as personal research prototypes.
+// Order: Hero → About → Research prototypes teaser.
 import Base from "../layouts/Base.astro";
 import MiniChart from "../components/MiniChart.astro";
 import { RHIX_SERIES, RITIX_SERIES, latestLevel } from "../data/timeseries";
@@ -12,34 +14,35 @@ const rhixYtd = ((rhix.level / 1000 - 1) * 100).toFixed(2);
 const ritixYtd = ((ritix.level / 1000 - 1) * 100).toFixed(2);
 ---
 
-<Base title="Dmitry Votoropin, CFA — Portfolio Manager">
+<Base title="Dmitrii Votoropin, CFA — Investment Counsellor">
 
   <!-- ── HERO ─────────────────────────────────────────────────── -->
   <section class="container-wide pt-32 pb-24">
     <div class="text-[12px] uppercase tracking-[0.18em] text-ink-mute mb-8 fade-up">
-      Portfolio Manager · Investment Advisor
+      Investment Counsellor, CFA · Moscow · Open to relocation
     </div>
     <h1 class="display font-light text-display-xl m-0 mb-9 fade-up fade-up-2">
-      Delivering <em>evidence-based</em> <br>
-      investment advisory service<br>
-      to HNWI and institutional clients.
+      Private banking, <em>wealth management</em>,<br>
+      and investment advisory<br>
+      for HNW &amp; UHNW clients.
     </h1>
-    <p class="text-[21px] leading-[1.5] max-w-[640px] text-ink-soft mb-12 fade-up fade-up-3">
-      Fifteen years in capital markets, covering international bonds, equities,
-      derivatives, and structured products. 
+    <p class="text-[21px] leading-[1.5] max-w-[680px] text-ink-soft mb-12 fade-up fade-up-3">
+      14+ years across Citi and Gazprombank, building portfolio-based
+      advice across global fixed income, equities, structured notes, and
+      alternatives.
     </p>
-    <div class="flex flex-wrap gap-12 pt-7 border-t border-rule max-w-[640px] fade-up fade-up-4">
+    <div class="flex flex-wrap gap-12 pt-7 border-t border-rule max-w-[680px] fade-up fade-up-4">
       <div class="flex flex-col gap-1">
         <span class="text-[11px] uppercase tracking-[0.14em] text-ink-mute">Designation</span>
         <span class="text-[15px]">CFA Charterholder</span>
       </div>
       <div class="flex flex-col gap-1">
         <span class="text-[11px] uppercase tracking-[0.14em] text-ink-mute">Experience</span>
-        <span class="text-[15px]">15+ years</span>
+        <span class="text-[15px]">14+ years</span>
       </div>
       <div class="flex flex-col gap-1">
         <span class="text-[11px] uppercase tracking-[0.14em] text-ink-mute">Focus</span>
-        <span class="text-[15px]">Investment Advisory · Portfolio mgmt</span>
+        <span class="text-[15px]">Private banking · Investment advisory</span>
       </div>
     </div>
   </section>
@@ -47,48 +50,55 @@ const ritixYtd = ((ritix.level / 1000 - 1) * 100).toFixed(2);
   <!-- ── ABOUT ────────────────────────────────────────────────── -->
   <section class="container-wide py-24 border-t border-rule">
     <div class="section-label">About</div>
-    <h2 class="display font-normal text-display-md max-w-[800px] m-0 mb-10">
-      A career across <em>sell-side research</em>, institutional sales, and portfolio construction.
+    <h2 class="display font-normal text-display-md max-w-[820px] m-0 mb-10">
+      A career across <em>private banking</em>, wealth management, and investment advisory.
     </h2>
     <p class="text-[18px] leading-relaxed max-w-[760px] text-ink-soft mb-6">
-      My work focuses on the construction of transparent, rules-based
-      equity benchmarks for under-covered market segments, and on the
-      management of discretionary portfolios that are benchmarked to those
-      indices. Methodologies are published openly; data and constituent
-      weights are updated on a fixed schedule.
+      I currently serve as Executive Director, Investment Counsellor at
+      Gazprombank Private Banking, building portfolio-based advice across
+      global fixed income, equities, structured notes, deposits, and
+      alternatives. Prior to that, I spent more than a decade at Citi —
+      most recently as Vice President and Head of Portfolio Counsellors
+      &amp; Analytics for Russia.
     </p>
     <p class="text-[18px] leading-relaxed max-w-[760px] text-ink-soft mb-10">
-      I currently serve as Executive Director, Private Banking at
-      Gazprombank Private, following a decade at Citibank where I led the
-      financial advisory team as Vice President. Earlier in my career, I
-      was a senior financial advisor at BCS Brokerage. I hold the CFA
-      Charter and have completed professional rotations at Citibank in
-      New York and Singapore.
+      I work with relationship managers on portfolio reviews,
+      rebalancing decisions, and tactical asset-allocation tilts; deliver
+      market updates and internal trainings; and contribute to
+      recommended-product platform and advisory-workflow initiatives.
+      I hold the CFA Charter and am a member of the American Finance
+      Association.
     </p>
     <a href="/cv" class="editorial-link text-[15px]">Read full CV →</a>
   </section>
 
-  <!-- ── INDICES TEASER ───────────────────────────────────────── -->
+  <!-- ── RESEARCH PROTOTYPES TEASER ───────────────────────────── -->
   <section class="container-wide py-24 border-t border-rule">
-    <div class="section-label">Indices</div>
-    <h2 class="display font-normal text-display-md max-w-[800px] m-0 mb-14">
-      Two rules-based <em>equity benchmarks</em>, published openly with full methodology.
+    <div class="section-label">Research prototypes</div>
+    <h2 class="display font-normal text-display-md max-w-[820px] m-0 mb-6">
+      Two <em>personal research</em> projects on rules-based equity index design.
     </h2>
+    <p class="text-[16px] leading-relaxed max-w-[760px] text-ink-soft mb-14">
+      RHIX and RITIX are personal research prototypes maintained outside
+      of professional capacity. They are not investment products, not
+      regulated benchmarks, and not affiliated with any employer. Levels
+      and constituent histories are published here for research and
+      educational purposes only.
+    </p>
 
-    <!-- RHIX card -->
+    <!-- RHIX teaser -->
     <div class="grid md:grid-cols-2 gap-12 items-center py-14 border-t border-rule">
       <div>
         <div class="font-mono text-[14px] tracking-wider2 text-accent mb-4">
           RHIX · Russian Healthcare Index
         </div>
-        <h3 class="display font-normal text-[38px] leading-[1.05] tracking-tighter m-0 mb-5">
-          <em>Healthcare</em> &amp; biotech, MOEX-listed.
+        <h3 class="display font-normal text-[36px] leading-[1.05] tracking-tighter m-0 mb-5">
+          Healthcare &amp; biotech sector concept.
         </h3>
         <p class="text-ink-soft text-[15px] leading-relaxed mb-7">
-          Free-float market-cap weighted index of five core healthcare,
-          pharmaceutical, and biotechnology issuers on the Moscow Exchange.
-          Constructed under GICS Sector 35 with a related-company rule to
-          prevent hidden concentration.
+          A free-float market-cap weighted index concept covering core
+          healthcare, pharmaceutical, and biotechnology issuers listed on
+          the Moscow Exchange.
         </p>
         <div class="grid grid-cols-3 gap-6 pt-6 border-t border-rule">
           <div>
@@ -108,27 +118,25 @@ const ritixYtd = ((ritix.level / 1000 - 1) * 100).toFixed(2);
         </div>
         <p class="mt-7">
           <a href="/indices/rhix" class="editorial-link text-[14px]">
-            Methodology &amp; live levels →
+            Composition &amp; levels →
           </a>
         </p>
       </div>
       <MiniChart id="rhix-hero-chart" data={RHIX_SERIES} color="#6B1F2E" />
     </div>
 
-    <!-- RITIX card -->
+    <!-- RITIX teaser -->
     <div class="grid md:grid-cols-2 gap-12 items-center py-14 border-t border-b border-rule">
       <div>
         <div class="font-mono text-[14px] tracking-wider2 text-accent mb-4">
           RITIX · Russia IT Index
         </div>
-        <h3 class="display font-normal text-[38px] leading-[1.05] tracking-tighter m-0 mb-5">
-          <em>Russian technology</em>, square-root weighted.
+        <h3 class="display font-normal text-[36px] leading-[1.05] tracking-tighter m-0 mb-5">
+          Russian technology sector concept.
         </h3>
         <p class="text-ink-soft text-[15px] leading-relaxed mb-7">
-          Square-root free-float-adjusted market-cap weighted index of ten
-          Russian IT issuers on the Moscow Exchange. Quarterly rebalancing.
-          Designed as a diversified benchmark across the domestic technology
-          stack.
+          A square-root free-float-adjusted market-cap weighted index
+          concept covering ten Russian IT issuers on the Moscow Exchange.
         </p>
         <div class="grid grid-cols-3 gap-6 pt-6 border-t border-rule">
           <div>
@@ -146,7 +154,7 @@ const ritixYtd = ((ritix.level / 1000 - 1) * 100).toFixed(2);
         </div>
         <p class="mt-7">
           <a href="/indices/ritix" class="editorial-link text-[14px]">
-            Methodology &amp; performance →
+            Composition &amp; performance →
           </a>
         </p>
       </div>
@@ -154,7 +162,7 @@ const ritixYtd = ((ritix.level / 1000 - 1) * 100).toFixed(2);
     </div>
 
     <p class="mt-10">
-      <a href="/indices" class="editorial-link text-[15px]">All indices →</a>
+      <a href="/indices" class="editorial-link text-[15px]">All research prototypes →</a>
     </p>
   </section>
 

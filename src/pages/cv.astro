@@ -1,91 +1,130 @@
 ---
 // src/pages/cv.astro
-// Full CV page. Data sourced from votoropin.ru — adjust freely below.
+// Full CV. Data sourced from the author's professional resume.
 // Photo: drop your portrait at /public/images/photo.jpg (3:4, ~800×1067)
-// and switch the placeholder block below to the <img> variant.
+// and switch USE_REAL_PHOTO below to true.
 import Base from "../layouts/Base.astro";
 
-// ── Edit me ────────────────────────────────────────────────────
-// Set USE_REAL_PHOTO to true once you've uploaded /public/images/photo.jpg
-const USE_REAL_PHOTO = true;
+// ── Toggle once you've uploaded /public/images/photo.jpg ─────────
+const USE_REAL_PHOTO = false;
 
+// ── Experience (most recent first) ────────────────────────────────
 const experience = [
   {
-    role: "Executive Director, Private Banking",
-    company: "Gazprombank Private",
-    dates: "2024 — Present",
-    body:
-      "Senior client coverage and portfolio advisory for high-net-worth " +
-      "clients. Lead investment process for discretionary and advisory " +
-      "mandates across global asset classes.",
+    role: "Executive Director, Investment Counsellor",
+    company: "Gazprombank · Private Banking",
+    dates: "Jun 2024 — Present",
+    location: "Moscow",
+    bullets: [
+      "Investment counselling and portfolio advice for HNW clients; build and monitor diversified portfolios across global fixed income, equities, structured products, deposits, and alternatives, aligned to each client's risk profile.",
+      "Drive portfolio reviews, rebalancing decisions, and tactical asset-allocation tilts using a qualitative portfolio framework, in close partnership with relationship managers.",
+      "Deliver market updates and investment views to clients and internal stakeholders; contribute to recommended-list, product-platform, and advisory-workflow initiatives.",
+    ],
   },
   {
-    role: "Vice President · Head of Financial Advisory",
-    company: "Citibank (AO KB Citibank)",
-    dates: "2013 — 2024",
-    body:
-      "Progressed from advisor to Vice President and Head of the Financial " +
-      "Advisory team. Built and led the advisory practice serving Citigold " +
-      "and Citigold Private clients across Russia. Cross-product execution " +
-      "including cash equities, fixed income, derivatives, and structured " +
-      "solutions.",
+    role: "VP, Head of Portfolio Counsellors & Analytics",
+    company: "Citi · Wealth Management",
+    dates: "Jan 2022 — Jun 2024",
+    location: "Moscow",
+    bullets: [
+      "Led the Russia portfolio counsellors and analytics team — hiring, mentoring, and performance management — responsible for advisory quality and analytical output for Citi's HNW and UHNW client base.",
+      "Owned both quantitative (revenue) and qualitative (diversification index) advisory KPIs; ensured portfolio-quality and investment-revenue targets were met; coordinated with brokerage, treasury, mutual funds, sales management, and analytics teams.",
+      "Defined and launched advisory products, structured solutions, and recommended strategies across DM/EM bonds, equities, structured notes, deposits, and alternatives.",
+    ],
+  },
+  {
+    role: "Senior Business Development Manager / Senior Investment Counsellor",
+    company: "Citi · Wealth Management",
+    dates: "Apr 2019 — Jan 2022",
+    location: "Moscow",
+    bullets: [
+      "Drove client acquisition, AUM growth, and investment-revenue generation across Citi's wealth segment; structured solutions across Citi's full global product shelf — DM/EM bonds, equities, capital-protected and yield-enhancement notes, deposits, and alternatives.",
+      "Built advisory product platform and cross-team workflows with brokerage, treasury, mutual funds, and sales management; partnered with bankers to prospect new investment business.",
+      "Received the 2020 Citi Chairman's Council Award (Singapore) — top 5% of regional BDMs globally for investment-revenue generation and portfolio-quality metrics.",
+    ],
+  },
+  {
+    role: "Senior Citigold Executive · Deputy Branch Manager",
+    company: "Citi · Citigold Wealth Management",
+    dates: "Oct 2013 — Mar 2019",
+    location: "Ekaterinburg",
+    bullets: [
+      "Managed a portfolio of Citigold affluent clients; delivered investment advisory, portfolio reviews, and cross-sell of wealth and banking products. Consistently exceeded acquisition and AUM-growth targets, earning promotion to Senior BDM.",
+      "Owned KYC for the client base and adherence to Citi's sales-process and control framework.",
+      "Achievement Recognition: AHS 2016 (USA) and Star Awards 2018 (Singapore).",
+    ],
   },
   {
     role: "Senior Financial Advisor",
-    company: "BCS Brokerage (BrokerCreditService)",
-    dates: "2011 — 2013",
-    body:
-      "Investment advisory and brokerage services for retail and " +
-      "high-net-worth clients of one of Russia's largest brokerages.",
+    company: "BCS · Brokerage & Wealth",
+    dates: "Oct 2011 — Oct 2013",
+    location: "Ekaterinburg",
+    bullets: [
+      "Advised retail and affluent clients on brokerage, mutual funds, and structured investment products; led a team of financial advisors, drove acquisition and cross-sell.",
+    ],
   },
 ];
 
-// International rotations & training assignments
-const rotations = [
-  { year: "2018", org: "Citibank GCB", location: "Singapore" },
-  { year: "2016", org: "Citibank N.A.", location: "New York, USA" },
+// ── Education ────────────────────────────────────────────────────
+const education = [
+  {
+    degree: "Master of Science, Economics & Social Science",
+    institution: "Russian Academy of National Economy and Public Administration",
+    dates: "2013 — 2015",
+  },
+  {
+    degree: "Bachelor's Degree, International Relations",
+    institution: "Ural State University",
+    dates: "2007 — 2011",
+  },
 ];
 
-// Certifications & education
+// ── Credentials & memberships ────────────────────────────────────
 const credentials = [
   {
-    name: "Chartered Financial Analyst (CFA)",
-    org: "CFA Institute · 2023",
+    name: "CFA Charterholder",
+    org: "CFA Institute · charter awarded 2023; membership to be reactivated upon relocation, in line with CFA Institute sanctions guidance.",
   },
   {
-    name: "American Finance Association (AFA)",
-    org: "Active member · 2022",
+    name: "Member, American Finance Association (AFA)",
+    org: "Published academic researcher and financial-press contributor.",
   },
   {
-    name: "FSFR 1.0 Certified Securities Markets Specialist",
-    org: "Federal Service for Financial Markets, Russia · 2012",
-  },
-  {
-    name: "Languages",
-    org: "Russian (native) · English (fluent) · Spanish (intermediate)",
+    name: "FSCM 1.0 Certified",
+    org: "Russian Federal Securities Markets Specialist Certificate.",
   },
 ];
+
+// ── Awards & recognition ─────────────────────────────────────────
+const awards = [
+  { year: "2020", name: "Citi Chairman's Council Award", location: "Singapore" },
+  { year: "2018", name: "Citi Star Awards", location: "Singapore" },
+  { year: "2016", name: "Citi AHS Award", location: "USA" },
+];
+
+// ── Languages ────────────────────────────────────────────────────
+const languages = "Russian (native) · English (full professional fluency) · Spanish (elementary)";
 ---
 
 <Base
   title="Curriculum Vitae"
-  description="Curriculum Vitae of Dmitry Votoropin, CFA — Executive Director, Private Banking at Gazprombank Private. 15+ years in investment advisory, portfolio management, and equity index construction."
+  description="Curriculum Vitae of Dmitrii Votoropin, CFA — Executive Director, Investment Counsellor at Gazprombank Private Banking. 14+ years in private banking, wealth management, and investment advisory across Citi and Gazprombank."
 >
 
   <section class="container-wide pt-24 pb-20">
     <div class="section-label">Curriculum Vitae</div>
-    <h1 class="display font-normal text-[48px] sm:text-[56px] leading-[1.05] tracking-tighter max-w-[820px] m-0 mb-14">
-      A career in <em>investment advisory</em>, portfolio management, and private banking.
+    <h1 class="display font-normal text-[44px] sm:text-[56px] leading-[1.05] tracking-tighter max-w-[860px] m-0 mb-14">
+      A career across <em>private banking</em>, wealth management, and investment advisory.
     </h1>
 
     <div class="grid md:grid-cols-[340px_1fr] gap-12 items-start">
 
-      <!-- ── Photo column ───────────────────────────────────── -->
+      <!-- ── Photo + quick facts ─────────────────────────────── -->
       <div>
         {USE_REAL_PHOTO ? (
           <img
             src="/images/photo.jpg"
-            alt="Dmitry Votoropin"
+            alt="Dmitrii Votoropin, CFA"
             class="aspect-[3/4] w-full object-cover rounded-sm"
             width="800"
             height="1067"
@@ -104,83 +143,106 @@ const credentials = [
           </div>
         )}
         <p class="mt-4 text-[12px] text-ink-mute italic leading-relaxed m-0">
-          Dmitry Votoropin, CFA<br />
-          Executive Director · Private Banking
+          Dmitrii Votoropin, CFA<br />
+          Executive Director · Investment Counsellor
         </p>
 
-        <!-- Quick facts panel -->
         <dl class="mt-8 pt-6 border-t border-rule grid grid-cols-1 gap-4 text-[13px]">
           <div class="flex justify-between gap-4">
             <dt class="text-ink-mute uppercase tracking-[0.1em] text-[10px]">Location</dt>
-            <dd class="m-0 text-ink">Dubai, UAE</dd>
+            <dd class="m-0 text-ink">Moscow</dd>
+          </div>
+          <div class="flex justify-between gap-4">
+            <dt class="text-ink-mute uppercase tracking-[0.1em] text-[10px]">Mobility</dt>
+            <dd class="m-0 text-ink">Open to relocation</dd>
           </div>
           <div class="flex justify-between gap-4">
             <dt class="text-ink-mute uppercase tracking-[0.1em] text-[10px]">Experience</dt>
-            <dd class="m-0 text-ink">15+ years</dd>
+            <dd class="m-0 text-ink">14+ years</dd>
           </div>
           <div class="flex justify-between gap-4">
             <dt class="text-ink-mute uppercase tracking-[0.1em] text-[10px]">Designation</dt>
             <dd class="m-0 text-ink">CFA</dd>
           </div>
-          <div class="flex justify-between gap-4">
-            <dt class="text-ink-mute uppercase tracking-[0.1em] text-[10px]">E-mail</dt>
-            <dd class="m-0 text-accent">d@votoropin.com</dd>
-          </div>
         </dl>
+
+        <div class="mt-8 pt-6 border-t border-rule text-[13px]">
+          <a href="/downloads/votoropin-cv.pdf" class="editorial-link" download>
+            Download full CV (PDF) →
+          </a>
+        </div>
       </div>
 
-      <!-- ── Content column ─────────────────────────────────── -->
+      <!-- ── Main column ─────────────────────────────────────── -->
       <div>
+
         <!-- Experience -->
         <div class="mb-14">
           <h2 class="font-sans text-[11px] uppercase tracking-[0.18em] text-ink-mute font-medium m-0 mb-6 pb-3 border-b border-rule">
-            Selected Experience
+            Experience
           </h2>
-          {
-            experience.map((e) => (
-              <article class="mb-8">
-                <div class="font-display text-[22px] font-medium tracking-tight mb-1">{e.role}</div>
-                <div class="text-accent text-[15px] mb-2">{e.company}</div>
-                <div class="font-mono text-[12px] text-ink-mute tracking-wide mb-3">{e.dates}</div>
-                <p class="m-0 text-[15px] text-ink-soft leading-relaxed">{e.body}</p>
-              </article>
-            ))
-          }
+          {experience.map((e) => (
+            <article class="mb-10">
+              <div class="font-display text-[22px] font-medium tracking-tight mb-1 leading-snug">
+                {e.role}
+              </div>
+              <div class="text-accent text-[15px] mb-1">{e.company}</div>
+              <div class="font-mono text-[12px] text-ink-mute tracking-wide mb-3">
+                {e.dates} · {e.location}
+              </div>
+              <ul class="list-none p-0 m-0">
+                {e.bullets.map((b) => (
+                  <li class="relative pl-5 mb-2 text-[15px] text-ink-soft leading-relaxed">
+                    <span class="absolute left-0 top-0 text-accent">·</span>
+                    {b}
+                  </li>
+                ))}
+              </ul>
+            </article>
+          ))}
         </div>
 
-        <!-- International Rotations -->
+        <!-- Education -->
         <div class="mb-14">
           <h2 class="font-sans text-[11px] uppercase tracking-[0.18em] text-ink-mute font-medium m-0 mb-6 pb-3 border-b border-rule">
-            International Rotations
+            Education
           </h2>
-          <ul class="list-none p-0 m-0">
-            {
-              rotations.map((r) => (
-                <li class="grid grid-cols-[80px_1fr_auto] gap-4 py-3 border-b border-rule items-baseline">
-                  <span class="font-mono text-[12px] text-accent">{r.year}</span>
-                  <span class="font-display text-[16px] font-medium">{r.org}</span>
-                  <span class="text-[13px] text-ink-mute">{r.location}</span>
-                </li>
-              ))
-            }
-          </ul>
+          {education.map((ed) => (
+            <article class="mb-6">
+              <div class="font-display text-[18px] font-medium tracking-tight mb-1">{ed.degree}</div>
+              <div class="text-accent text-[14px] mb-1">{ed.institution}</div>
+              <div class="font-mono text-[12px] text-ink-mute tracking-wide">{ed.dates}</div>
+            </article>
+          ))}
         </div>
 
         <!-- Credentials -->
         <div class="mb-14">
           <h2 class="font-sans text-[11px] uppercase tracking-[0.18em] text-ink-mute font-medium m-0 mb-6 pb-3 border-b border-rule">
-            Certifications &amp; Memberships
+            Credentials &amp; Memberships
           </h2>
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            {
-              credentials.map((c) => (
-                <div class="py-5 border-t border-rule">
-                  <div class="font-display text-[18px] font-medium mb-1">{c.name}</div>
-                  <div class="text-[13px] text-ink-mute">{c.org}</div>
-                </div>
-              ))
-            }
-          </div>
+          {credentials.map((c) => (
+            <article class="mb-6">
+              <div class="font-display text-[18px] font-medium mb-1">{c.name}</div>
+              <div class="text-[13px] text-ink-soft leading-relaxed">{c.org}</div>
+            </article>
+          ))}
+        </div>
+
+        <!-- Awards -->
+        <div class="mb-14">
+          <h2 class="font-sans text-[11px] uppercase tracking-[0.18em] text-ink-mute font-medium m-0 mb-6 pb-3 border-b border-rule">
+            Awards &amp; Recognition
+          </h2>
+          <ul class="list-none p-0 m-0">
+            {awards.map((a) => (
+              <li class="grid grid-cols-[60px_1fr_auto] gap-4 py-3 border-b border-rule items-baseline">
+                <span class="font-mono text-[12px] text-accent">{a.year}</span>
+                <span class="font-display text-[16px] font-medium">{a.name}</span>
+                <span class="text-[13px] text-ink-mute">{a.location}</span>
+              </li>
+            ))}
+          </ul>
         </div>
 
         <!-- Capabilities -->
@@ -189,19 +251,41 @@ const credentials = [
             Capabilities
           </h2>
           <p class="text-ink-soft text-[15px] leading-[1.7] m-0">
-            Investment advisory · Portfolio construction and management ·
-            Equity index design (free-float-adjusted market-cap and
-            alternative weighting schemes including square-root) · Quantitative
-            rebalancing and performance attribution · Structured solutions
-            and derivatives · Cross-asset client coverage · Python (pandas,
-            NumPy) for index calculation and back-testing · Working knowledge
-            of FCA, ESMA, and IOSCO benchmark frameworks.
+            Investment advisory · Qualitative portfolio framework · Asset allocation,
+            portfolio monitoring &amp; rebalancing for HNW/UHNW · DM and EM bonds ·
+            Equities · Structured notes (capital-protected, yield-enhancement) ·
+            Deposits and DCDs · Mutual funds and alternatives · Global markets and
+            macro commentary · RM partnership and joint client coverage ·
+            Recommended-product platform and advisory workflow design · KYC and
+            controls · Internal trainings, conferences, and webinars.
           </p>
         </div>
 
-        <a href="/downloads/votoropin-cv.pdf" class="editorial-link text-[14px]" download>
-          Download full CV (PDF) →
-        </a>
+        <!-- Languages -->
+        <div class="mb-14">
+          <h2 class="font-sans text-[11px] uppercase tracking-[0.18em] text-ink-mute font-medium m-0 mb-6 pb-3 border-b border-rule">
+            Languages
+          </h2>
+          <p class="text-ink-soft text-[15px] leading-relaxed m-0">{languages}</p>
+        </div>
+
+        <!-- Open-to-mandates block (positioning C) -->
+        <div class="mt-16 p-8 bg-bg-sunken border-l-2 border-accent">
+          <h3 class="font-sans text-[11px] uppercase tracking-[0.18em] text-accent font-medium m-0 mb-3">
+            Open to conversations
+          </h3>
+          <p class="text-[16px] leading-relaxed text-ink m-0 mb-4">
+            Currently exploring senior investment advisory and portfolio
+            counsellor opportunities at international private banks and
+            wealth-management institutions.
+          </p>
+          <p class="text-[14px] text-ink-soft m-0">
+            <a href="mailto:d@votoropin.com" class="editorial-link">d@votoropin.com</a>
+            ·
+            <a href="https://www.linkedin.com/in/dmitrii-votoropin-cfa-808ba43a" class="editorial-link" rel="me noopener">LinkedIn</a>
+          </p>
+        </div>
+
       </div>
     </div>
   </section>

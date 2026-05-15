@@ -15,13 +15,13 @@ export interface Props {
 
 const {
   title,
-  description = "Dmitry Votoropin, CFA — portfolio manager and constructor of rules-based equity indices RHIX (Russian Healthcare) and RITIX (Russia IT).",
+  description = "Dmitrii Votoropin, CFA — 14+ years in private banking, wealth management, and investment advisory across Citi and Gazprombank.",
   ogImage = "/og-default.png",
   nav = true,
 } = Astro.props;
 
 const canonical = new URL(Astro.url.pathname, Astro.site).toString();
-const fullTitle = title.includes("Votoropin") ? title : `${title} — Dmitry Votoropin, CFA`;
+const fullTitle = title.includes("Votoropin") ? title : `${title} — Dmitrii Votoropin, CFA`;
 ---
 
 <!doctype html>
@@ -50,19 +50,52 @@ const fullTitle = title.includes("Votoropin") ? title : `${title} — Dmitry Vot
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={new URL(ogImage, Astro.site).toString()} />
 
-    <!-- Schema.org Person -->
+    <!-- Schema.org Person — only verifiable, public information -->
     <script type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",
       "@type": "Person",
-      "name": "Dmitry Votoropin",
-      "jobTitle": "Portfolio Manager, CFA",
+      "name": "Dmitrii Votoropin",
+      "jobTitle": "Investment Counsellor, CFA",
       "url": "https://votoropin.com",
+      "email": "d@votoropin.com",
       "sameAs": [
-        "https://www.linkedin.com/in/votoropin/",
+        "https://www.linkedin.com/in/dmitrii-votoropin-cfa-808ba43a"
       ],
-      "alumniOf": "Russian Economic University",
-      "hasCredential": "CFA Charter",
-      "knowsAbout": ["Equity indices", "Portfolio management", "Quantitative finance"]
+      "alumniOf": [
+        {
+          "@type": "EducationalOrganization",
+          "name": "Russian Academy of National Economy and Public Administration"
+        },
+        {
+          "@type": "EducationalOrganization",
+          "name": "Ural State University"
+        }
+      ],
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Chartered Financial Analyst (CFA)",
+          "credentialCategory": "Professional Charter",
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "CFA Institute"
+          }
+        }
+      ],
+      "memberOf": [
+        {
+          "@type": "Organization",
+          "name": "American Finance Association"
+        }
+      ],
+      "knowsAbout": [
+        "Private banking",
+        "Wealth management",
+        "Investment advisory",
+        "Portfolio construction",
+        "Fixed income",
+        "Structured products"
+      ]
     })} />
   </head>
   <body>

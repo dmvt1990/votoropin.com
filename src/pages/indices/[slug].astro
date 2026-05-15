@@ -1,9 +1,12 @@
 ---
 // src/pages/indices/[slug].astro
-// Dynamic page that renders an index detail page for each MDX file
-// in src/content/indices/. URLs: /indices/rhix, /indices/ritix.
+// Dynamic page that renders a detail page for each MDX file in
+// src/content/indices/. URLs: /indices/rhix, /indices/ritix.
+//
+// The MDX file now contains a short description (not a full methodology
+// document). A disclaimer block is shown on every index page.
 
-import { getCollection, getEntry } from "astro:content";
+import { getCollection } from "astro:content";
 import Base from "../../layouts/Base.astro";
 import IndexLevelChart from "../../components/IndexLevelChart.astro";
 import ConstituentsTable from "../../components/ConstituentsTable.astro";
@@ -27,7 +30,7 @@ const isRitix = entry.slug === "ritix";
 const series  = isRhix ? RHIX_SERIES : RITIX_SERIES;
 const consts  = isRhix ? RHIX_CONSTITUENTS : RITIX_CONSTITUENTS;
 const asOf    = isRhix ? RHIX_AS_OF : RITIX_AS_OF;
-const showShares = isRhix; // RITIX shares are 0-placeholders
+const showShares = isRhix;
 
 const latest  = latestLevel(series);
 const ytdPct  = ((latest.level / entry.data.baseValue - 1) * 100);
@@ -41,8 +44,20 @@ const ribbonCells = [
     tone: ((isRitix ? RITIX_PERFORMANCE_2025.totalReturnPct : ytdPct) >= 0 ? "positive" : "negative") as "positive" | "negative",
   },
   { k: "Constituents", v: String(consts.length) },
-  { k: "Version", v: entry.data.version },
+  { k: "Inception", v: entry.data.inceptionDate },
 ];
+
+// ── Placeholder rebalancing history ────────────────────────────
+// Replace with real entries as you actually rebalance the prototype.
+const rebalanceHistory = isRhix
+  ? [
+      { date: entry.data.versionDate, note: "Latest review — current composition published." },
+      { date: entry.data.inceptionDate, note: "Inception — initial composition fixed; base value 1,000." },
+    ]
+  : [
+      { date: entry.data.versionDate, note: "Latest quarterly review — current composition published." },
+      { date: entry.data.inceptionDate, note: "Inception — initial composition fixed; base value 1,000." },
+    ];
 ---
 
 <Base title={entry.data.name} description={entry.data.tagline}>
@@ -50,18 +65,18 @@ const ribbonCells = [
   <!-- ── HEADER ───────────────────────────────────────────────── -->
   <section class="container-wide pt-20 pb-12">
     <div class="text-[12px] text-ink-mute tracking-wide mb-8">
-      <a href="/indices/rhix" class="text-ink-mute no-underline">Indices</a> /
+      <a href="/indices" class="text-ink-mute no-underline hover:text-accent">Research prototypes</a>
+      <span class="mx-2">/</span>
       <span>{entry.data.name}</span>
     </div>
     <div class="font-mono text-[14px] tracking-wider2 text-accent mb-4">
       {entry.data.ticker}
     </div>
     <h1 class="display font-light text-[48px] sm:text-[68px] leading-[1.0] tracking-tightest m-0 mb-3">
-      {entry.data.name.replace(/^(Russian|Russia)/, "")
-        .startsWith(" ") ? entry.data.name : entry.data.name}
+      {entry.data.name}
     </h1>
     <p class="display italic text-[22px] text-ink-soft m-0 mb-14">
-      {entry.data.ticker} · Version {entry.data.version} · {entry.data.versionDate}
+      {entry.data.ticker} · Personal research prototype · Inception {entry.data.inceptionDate}
     </p>
 
     <Ribbon cells={ribbonCells} />
@@ -76,38 +91,66 @@ const ribbonCells = [
     <ConstituentsTable constituents={consts} asOf={asOf} showShares={showShares} />
   </section>
 
-  <!-- ── METHODOLOGY (from MDX) ───────────────────────────────── -->
+  <!-- ── DESCRIPTION (from MDX) ───────────────────────────────── -->
   <section class="bg-bg-sunken border-t border-rule">
     <div class="container-narrow py-20">
-      <div class="section-label">Methodology</div>
+      <div class="section-label">Description</div>
       <article class="prose prose-stone max-w-none
                       prose-headings:font-display prose-headings:font-normal prose-headings:tracking-tight
-                      prose-h2:text-[32px] prose-h2:mt-12 prose-h2:mb-5
-                      prose-h3:text-[22px]
+                      prose-h2:text-[28px] prose-h2:mt-12 prose-h2:mb-5
+                      prose-h3:text-[20px]
                       prose-p:text-[16px] prose-p:leading-relaxed prose-p:text-ink-soft
                       prose-strong:text-ink prose-strong:font-medium
                       prose-a:text-accent prose-a:no-underline hover:prose-a:underline
-                      prose-blockquote:border-l-accent prose-blockquote:text-ink prose-blockquote:not-italic prose-blockquote:font-mono prose-blockquote:text-[14px]
-                      prose-table:text-[14px]
-                      prose-th:text-ink-mute prose-th:text-[11px] prose-th:uppercase prose-th:tracking-wider2 prose-th:font-medium
-                      prose-td:py-3
-                      prose-code:bg-bg prose-code:text-accent prose-code:px-1 prose-code:rounded-sm
                       prose-li:text-ink-soft">
         <Content />
       </article>
+    </div>
+  </section>
 
-      <!-- Source documents -->
-      <div class="mt-14 pt-8 border-t border-rule">
-        <h3 class="font-sans text-[11px] uppercase tracking-[0.18em] text-ink-mute font-medium m-0 mb-4">
-          Source documents
-        </h3>
-        <ul class="list-none p-0 m-0 text-[14px] text-ink-soft">
-          <li class="py-2 border-b border-rule">
-            <a href={`/downloads/${entry.data.ticker.toLowerCase()}-methodology-v${entry.data.version}.pdf`} class="editorial-link">
-              {entry.data.name} — Methodology v{entry.data.version} (PDF) →
-            </a>
+  <!-- ── REBALANCING HISTORY ──────────────────────────────────── -->
+  <section class="border-t border-rule">
+    <div class="container-narrow py-20">
+      <div class="section-label">Rebalancing history</div>
+      <h2 class="display font-normal text-[28px] tracking-tight m-0 mb-8">
+        Changes to constituents and weights, most recent first.
+      </h2>
+      <ul class="list-none p-0 m-0 border-t border-rule">
+        {rebalanceHistory.map((r) => (
+          <li class="grid grid-cols-[120px_1fr] gap-6 py-4 border-b border-rule items-baseline">
+            <span class="font-mono text-[12px] text-accent tracking-wide">{r.date}</span>
+            <span class="text-[15px] text-ink-soft leading-relaxed">{r.note}</span>
           </li>
-        </ul>
+        ))}
+      </ul>
+      <p class="mt-6 text-[13px] text-ink-mute italic">
+        This is a placeholder log. As real rebalancings occur, they will
+        be listed here with the date, the change to the constituent set,
+        and a brief rationale.
+      </p>
+    </div>
+  </section>
+
+  <!-- ── DISCLAIMER ───────────────────────────────────────────── -->
+  <section class="border-t border-rule">
+    <div class="container-narrow py-16">
+      <div class="bg-bg-sunken border-l-2 border-accent p-6">
+        <div class="font-sans text-[11px] uppercase tracking-[0.18em] text-accent font-medium mb-3">
+          Disclaimer
+        </div>
+        <p class="text-[14px] leading-relaxed text-ink-soft m-0">
+          {entry.data.name} ({entry.data.ticker}) is a personal research
+          prototype maintained by the author in his personal capacity. It
+          is <strong class="text-ink">not</strong> an investment product,
+          <strong class="text-ink">not</strong> a regulated benchmark
+          under IOSCO, ESMA, or any other framework, and is
+          <strong class="text-ink">not</strong> affiliated with, sponsored by,
+          or endorsed by any current or former employer of the author. All
+          constituent weights, index levels, and historical data are
+          published for research and educational purposes only. Nothing on
+          this page constitutes investment advice, a solicitation, or a
+          recommendation to buy or sell any security.
+        </p>
       </div>
     </div>
   </section>

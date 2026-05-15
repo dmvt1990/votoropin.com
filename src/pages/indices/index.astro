@@ -1,7 +1,7 @@
 ---
 // src/pages/indices/index.astro
-// Indices overview page — lists RHIX and RITIX with mini charts.
-// Each card links to /indices/rhix or /indices/ritix for the full page.
+// Indices overview page — personal research prototypes, RHIX and RITIX.
+// Includes a disclaimer at the top so the framing is unmistakable.
 import Base from "../../layouts/Base.astro";
 import MiniChart from "../../components/MiniChart.astro";
 import { RHIX_SERIES, RITIX_SERIES, latestLevel } from "../../data/timeseries";
@@ -14,23 +14,46 @@ const ritixYtd = ((ritix.level / 1000 - 1) * 100).toFixed(2);
 ---
 
 <Base
-  title="Indices — RHIX, RITIX"
-  description="Two rules-based equity indices published openly with full methodology: RHIX (Russian Healthcare) and RITIX (Russia IT)."
+  title="Research Prototypes — RHIX, RITIX"
+  description="Personal research prototypes on rules-based equity index design — RHIX (Russian Healthcare) and RITIX (Russia IT). Not investment products, not regulated benchmarks."
 >
 
   <!-- ── HEADER ───────────────────────────────────────────────── -->
   <section class="container-wide pt-32 pb-12">
     <div class="text-[12px] uppercase tracking-[0.18em] text-ink-mute mb-8">
-      Indices
+      Research prototypes
     </div>
-    <h1 class="display font-light text-display-lg m-0 mb-9 max-w-[900px]">
-      Two rules-based <em>equity benchmarks</em>, published openly with full methodology.
+    <h1 class="display font-light text-display-lg m-0 mb-9 max-w-[920px]">
+      Two <em>personal research</em> projects on rules-based equity index design.
     </h1>
-    <p class="text-[18px] leading-relaxed max-w-[760px] text-ink-soft mb-0">
-      Both indices cover under-followed segments of the Moscow Exchange and are
-      maintained on fixed rebalance schedules. Methodology documents, current
-      constituents, and level histories are all published on this site.
+    <p class="text-[18px] leading-relaxed max-w-[760px] text-ink-soft m-0">
+      RHIX and RITIX are research prototypes I maintain in my personal
+      capacity. Both explore rules-based weighting schemes applied to
+      under-followed segments of the Moscow Exchange. Levels, constituent
+      compositions, and rebalancing histories are published here for
+      research and educational purposes.
     </p>
+  </section>
+
+  <!-- ── DISCLAIMER ───────────────────────────────────────────── -->
+  <section class="container-wide pb-12">
+    <div class="bg-bg-sunken border-l-2 border-accent p-6 max-w-[920px]">
+      <div class="font-sans text-[11px] uppercase tracking-[0.18em] text-accent font-medium mb-3">
+        Disclaimer
+      </div>
+      <p class="text-[14px] leading-relaxed text-ink-soft m-0">
+        RHIX and RITIX are personal research prototypes maintained by the
+        author in his personal capacity. They are <strong class="text-ink">not</strong>
+        investment products, <strong class="text-ink">not</strong> regulated
+        benchmarks under IOSCO, ESMA, or any other framework, and are
+        <strong class="text-ink">not</strong> affiliated with, sponsored by, or
+        endorsed by any current or former employer of the author. All
+        constituent weights, index levels, and historical data are
+        published for research and educational purposes only. Nothing on
+        this site constitutes investment advice, a solicitation, or a
+        recommendation to buy or sell any security.
+      </p>
+    </div>
   </section>
 
   <!-- ── INDEX CARDS ──────────────────────────────────────────── -->
@@ -42,14 +65,14 @@ const ritixYtd = ((ritix.level / 1000 - 1) * 100).toFixed(2);
         <div class="font-mono text-[14px] tracking-wider2 text-accent mb-4">
           RHIX · Russian Healthcare Index
         </div>
-        <h2 class="display font-normal text-[38px] leading-[1.05] tracking-tighter m-0 mb-5">
-          <em>Healthcare</em> &amp; biotech, MOEX-listed.
+        <h2 class="display font-normal text-[36px] leading-[1.05] tracking-tighter m-0 mb-5">
+          Healthcare &amp; biotech sector concept.
         </h2>
         <p class="text-ink-soft text-[15px] leading-relaxed mb-7">
-          Free-float market-cap weighted index of five core healthcare,
-          pharmaceutical, and biotechnology issuers on the Moscow Exchange.
-          Constructed under GICS Sector 35 with a related-company rule to
-          prevent hidden concentration.
+          A free-float market-cap weighted index concept covering core
+          healthcare, pharmaceutical, and biotechnology issuers listed on
+          the Moscow Exchange. Constructed under GICS Sector 35
+          with a related-company adjustment to limit hidden concentration.
         </p>
         <div class="grid grid-cols-3 gap-6 pt-6 border-t border-rule">
           <div>
@@ -69,7 +92,7 @@ const ritixYtd = ((ritix.level / 1000 - 1) * 100).toFixed(2);
         </div>
         <p class="mt-7">
           <a href="/indices/rhix" class="editorial-link text-[14px]">
-            Methodology &amp; live levels →
+            Composition &amp; levels →
           </a>
         </p>
       </div>
@@ -82,14 +105,14 @@ const ritixYtd = ((ritix.level / 1000 - 1) * 100).toFixed(2);
         <div class="font-mono text-[14px] tracking-wider2 text-accent mb-4">
           RITIX · Russia IT Index
         </div>
-        <h2 class="display font-normal text-[38px] leading-[1.05] tracking-tighter m-0 mb-5">
-          <em>Russian technology</em>, square-root weighted.
+        <h2 class="display font-normal text-[36px] leading-[1.05] tracking-tighter m-0 mb-5">
+          Russian technology sector concept.
         </h2>
         <p class="text-ink-soft text-[15px] leading-relaxed mb-7">
-          Square-root free-float-adjusted market-cap weighted index of ten
-          Russian IT issuers on the Moscow Exchange. Quarterly rebalancing.
-          Designed as a diversified benchmark across the domestic technology
-          stack.
+          A square-root free-float-adjusted market-cap weighted index
+          concept covering ten Russian IT issuers on the Moscow Exchange.
+          The square-root scheme moderates concentration in the largest
+          names compared to a pure cap-weighted approach.
         </p>
         <div class="grid grid-cols-3 gap-6 pt-6 border-t border-rule">
           <div>
@@ -107,7 +130,7 @@ const ritixYtd = ((ritix.level / 1000 - 1) * 100).toFixed(2);
         </div>
         <p class="mt-7">
           <a href="/indices/ritix" class="editorial-link text-[14px]">
-            Methodology &amp; performance →
+            Composition &amp; performance →
           </a>
         </p>
       </div>
