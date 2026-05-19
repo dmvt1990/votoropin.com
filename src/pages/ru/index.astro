@@ -1,0 +1,142 @@
+---
+// src/pages/ru/index.astro
+// Russian version of the home page — uses same components, RU strings from i18n
+import Base from '../../layouts/Base.astro';
+import MiniChart from '../../components/MiniChart.astro';
+import { RHIX_SERIES, RITIX_SERIES, latestLevel } from '../../data/timeseries';
+import { useTranslations } from '../../i18n/utils';
+
+const t = useTranslations('ru');
+
+const rhix = latestLevel(RHIX_SERIES);
+const ritix = latestLevel(RITIX_SERIES);
+
+const rhixYtd = ((rhix.level / 1000 - 1) * 100).toFixed(2);
+const ritixYtd = ((ritix.level / 1000 - 1) * 100).toFixed(2);
+---
+
+<Base title="Дмитрий Вотороп, CFA — Инвестиционный советник">
+
+  <!-- ── HERO ─────────────────────────────────────────────────── -->
+  <section class="container-wide pt-32 pb-24">
+    <div class="text-[12px] uppercase tracking-[0.18em] text-ink-mute mb-8 fade-up">
+      {t('hero.eyebrow')}
+    </div>
+    <h1 class="display font-light text-display-xl m-0 mb-9 fade-up fade-up-2"
+      set:html={t('hero.headline').replace(/\n/g, '<br>')} />
+    <p class="text-[21px] leading-[1.5] max-w-[680px] text-ink-soft mb-12 fade-up fade-up-3">
+      {t('hero.body')}
+    </p>
+    <div class="flex flex-wrap gap-12 pt-7 border-t border-rule max-w-[680px] fade-up fade-up-4">
+      <div class="flex flex-col gap-1">
+        <span class="text-[11px] uppercase tracking-[0.14em] text-ink-mute">{t('hero.label.designation')}</span>
+        <span class="text-[15px]">{t('hero.value.designation')}</span>
+      </div>
+      <div class="flex flex-col gap-1">
+        <span class="text-[11px] uppercase tracking-[0.14em] text-ink-mute">{t('hero.label.experience')}</span>
+        <span class="text-[15px]">{t('hero.value.experience')}</span>
+      </div>
+      <div class="flex flex-col gap-1">
+        <span class="text-[11px] uppercase tracking-[0.14em] text-ink-mute">{t('hero.label.focus')}</span>
+        <span class="text-[15px]">{t('hero.value.focus')}</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── ABOUT ────────────────────────────────────────────────── -->
+  <section class="container-wide py-24 border-t border-rule">
+    <div class="section-label">{t('about.label')}</div>
+    <h2 class="display font-normal text-display-md max-w-[820px] m-0 mb-10"
+      set:html={t('about.headline')} />
+    <p class="text-[18px] leading-relaxed max-w-[760px] text-ink-soft mb-6">
+      {t('about.p1')}
+    </p>
+    <p class="text-[18px] leading-relaxed max-w-[760px] text-ink-soft mb-10">
+      {t('about.p2')}
+    </p>
+    <a href="/ru/cv" class="editorial-link text-[15px]">{t('about.cta')}</a>
+  </section>
+
+  <!-- ── RESEARCH PROTOTYPES TEASER ───────────────────────────── -->
+  <section class="container-wide py-24 border-t border-rule">
+    <div class="section-label">{t('research.label')}</div>
+    <h2 class="display font-normal text-display-md max-w-[820px] m-0 mb-6"
+      set:html={t('research.headline')} />
+    <p class="text-[16px] leading-relaxed max-w-[760px] text-ink-soft mb-14">
+      {t('research.disclaimer')}
+    </p>
+
+    <!-- RHIX teaser -->
+    <div class="grid md:grid-cols-2 gap-12 items-center py-14 border-t border-rule">
+      <div>
+        <div class="font-mono text-[14px] tracking-wider2 text-accent mb-4">
+          {t('rhix.ticker')}
+        </div>
+        <h3 class="display font-normal text-[36px] leading-[1.05] tracking-tighter m-0 mb-5">
+          {t('rhix.headline')}
+        </h3>
+        <p class="text-ink-soft text-[15px] leading-relaxed mb-7">
+          {t('rhix.body')}
+        </p>
+        <div class="grid grid-cols-3 gap-6 pt-6 border-t border-rule">
+          <div>
+            <div class="text-[11px] uppercase tracking-[0.14em] text-ink-mute mb-1.5">{t('rhix.label.constituents')}</div>
+            <div class="font-display text-[24px] tracking-tight">5</div>
+          </div>
+          <div>
+            <div class="text-[11px] uppercase tracking-[0.14em] text-ink-mute mb-1.5">{t('rhix.label.ytd')}</div>
+            <div class={`font-display text-[24px] tracking-tight ${parseFloat(rhixYtd) >= 0 ? 'text-positive' : 'text-negative'}`}>
+              {parseFloat(rhixYtd) >= 0 ? '+' : ''}{rhixYtd}%
+            </div>
+          </div>
+          <div>
+            <div class="text-[11px] uppercase tracking-[0.14em] text-ink-mute mb-1.5">{t('rhix.label.rebalance')}</div>
+            <div class="font-display text-[24px] tracking-tight">{t('rhix.value.rebalance')}</div>
+          </div>
+        </div>
+        <p class="mt-7">
+          <a href="/ru/indices/rhix" class="editorial-link text-[14px]">{t('rhix.cta')}</a>
+        </p>
+      </div>
+      <MiniChart id="rhix-hero-chart-ru" data={RHIX_SERIES} color="#6B1F2E" />
+    </div>
+
+    <!-- RITIX teaser -->
+    <div class="grid md:grid-cols-2 gap-12 items-center py-14 border-t border-b border-rule">
+      <div>
+        <div class="font-mono text-[14px] tracking-wider2 text-accent mb-4">
+          {t('ritix.ticker')}
+        </div>
+        <h3 class="display font-normal text-[36px] leading-[1.05] tracking-tighter m-0 mb-5">
+          {t('ritix.headline')}
+        </h3>
+        <p class="text-ink-soft text-[15px] leading-relaxed mb-7">
+          {t('ritix.body')}
+        </p>
+        <div class="grid grid-cols-3 gap-6 pt-6 border-t border-rule">
+          <div>
+            <div class="text-[11px] uppercase tracking-[0.14em] text-ink-mute mb-1.5">{t('ritix.label.constituents')}</div>
+            <div class="font-display text-[24px] tracking-tight">10</div>
+          </div>
+          <div>
+            <div class="text-[11px] uppercase tracking-[0.14em] text-ink-mute mb-1.5">{t('ritix.label.return')}</div>
+            <div class="font-display text-[24px] tracking-tight text-negative">−27.31%</div>
+          </div>
+          <div>
+            <div class="text-[11px] uppercase tracking-[0.14em] text-ink-mute mb-1.5">{t('ritix.label.volatility')}</div>
+            <div class="font-display text-[24px] tracking-tight">23.7%</div>
+          </div>
+        </div>
+        <p class="mt-7">
+          <a href="/ru/indices/ritix" class="editorial-link text-[14px]">{t('ritix.cta')}</a>
+        </p>
+      </div>
+      <MiniChart id="ritix-hero-chart-ru" data={RITIX_SERIES} color="#3D3D3A" />
+    </div>
+
+    <p class="mt-10">
+      <a href="/ru/indices" class="editorial-link text-[15px]">{t('research.allCta')}</a>
+    </p>
+  </section>
+
+</Base>

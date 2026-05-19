@@ -1,0 +1,45 @@
+---
+// src/pages/ru/contact.astro
+import Base from '../../layouts/Base.astro';
+import { useTranslations } from '../../i18n/utils';
+
+const t = useTranslations('ru');
+---
+
+<Base
+  title="Контакты"
+  description="Свяжитесь со мной — инвестиционное консультирование и позиции портфельного советника."
+>
+  <section class="container-narrow pt-32 pb-32 text-center">
+    <h1 class="display font-light text-[44px] sm:text-[64px] leading-[1.05] tracking-tightest m-0 mb-8"
+      set:html={t('contact.headline').replace(/\n/g, '<br>')} />
+
+    <a
+      href="mailto:d@votoropin.com"
+      class="display italic text-[26px] sm:text-[32px] text-accent no-underline border-b border-accent pb-1 inline-block"
+    >
+      d@votoropin.com
+    </a>
+
+    <div class="mt-12 flex flex-wrap gap-8 justify-center text-[14px]">
+      <a
+        href="https://www.linkedin.com/in/dmitrii-votoropin-cfa-808ba43a"
+        rel="me noopener"
+        class="text-ink-soft no-underline border-b border-rule pb-1 hover:text-accent hover:border-accent"
+      >
+        {t('contact.linkedin')}
+      </a>
+      <a
+        href="/downloads/votoropin-cv.pdf"
+        download
+        class="text-ink-soft no-underline border-b border-rule pb-1 hover:text-accent hover:border-accent"
+      >
+        {t('contact.downloadCv')}
+      </a>
+    </div>
+
+    <p class="mt-16 text-ink-mute text-[13px] max-w-[460px] mx-auto">
+      {t('contact.reply')}
+    </p>
+  </section>
+</Base>

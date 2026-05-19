@@ -1,0 +1,52 @@
+{
+  "nav.home": "Home",
+  "nav.cv": "CV",
+  "nav.indices": "Indices",
+  "nav.notes": "Notes",
+  "nav.contact": "Contact",
+
+  "hero.eyebrow": "Investment Counsellor, CFA · Moscow · Open to relocation",
+  "hero.headline": "Private banking, <em>wealth management</em>,\nand investment advisory\nfor HNW & UHNW clients.",
+  "hero.body": "14+ years across Citi and Gazprombank, building portfolio-based advice across global fixed income, equities, structured notes, and alternatives.",
+  "hero.label.designation": "Designation",
+  "hero.label.experience": "Experience",
+  "hero.label.focus": "Focus",
+  "hero.value.designation": "CFA Charterholder",
+  "hero.value.experience": "14+ years",
+  "hero.value.focus": "Private banking · Investment advisory",
+
+  "about.label": "About",
+  "about.headline": "A career across <em>private banking</em>, wealth management, and investment advisory.",
+  "about.p1": "I currently serve as Executive Director, Investment Counsellor at Gazprombank Private Banking, building portfolio-based advice across global fixed income, equities, structured notes, deposits, and alternatives. Prior to that, I spent more than a decade at Citi — most recently as Vice President and Head of Portfolio Counsellors & Analytics for Russia.",
+  "about.p2": "I work with relationship managers on portfolio reviews, rebalancing decisions, and tactical asset-allocation tilts; deliver market updates and internal trainings; and contribute to recommended-product platform and advisory-workflow initiatives. I hold the CFA Charter and am a member of the American Finance Association.",
+  "about.cta": "Read full CV →",
+
+  "research.label": "Research prototypes",
+  "research.headline": "Two <em>personal research</em> projects on rules-based equity index design.",
+  "research.disclaimer": "RHIX and RITIX are personal research prototypes maintained outside of professional capacity. They are not investment products, not regulated benchmarks, and not affiliated with any employer. Levels and constituent histories are published here for research and educational purposes only.",
+  "research.allCta": "All research prototypes →",
+
+  "rhix.ticker": "RHIX · Russian Healthcare Index",
+  "rhix.headline": "Healthcare & biotech sector concept.",
+  "rhix.body": "A free-float market-cap weighted index concept covering core healthcare, pharmaceutical, and biotechnology issuers listed on the Moscow Exchange.",
+  "rhix.label.constituents": "Constituents",
+  "rhix.label.ytd": "YTD",
+  "rhix.label.rebalance": "Rebalance",
+  "rhix.value.rebalance": "Semi-ann.",
+  "rhix.cta": "Composition & levels →",
+
+  "ritix.ticker": "RITIX · Russia IT Index",
+  "ritix.headline": "Russian technology sector concept.",
+  "ritix.body": "A square-root free-float-adjusted market-cap weighted index concept covering ten Russian IT issuers on the Moscow Exchange.",
+  "ritix.label.constituents": "Constituents",
+  "ritix.label.return": "2025 Return",
+  "ritix.label.volatility": "Volatility",
+  "ritix.cta": "Composition & performance →",
+
+  "contact.headline": "Open to <em>conversations</em>\non investment advisory\nand portfolio counsellor roles.",
+  "contact.reply": "Replies typically within 48 hours. For role-specific enquiries, please include the position or institution in the subject line.",
+  "contact.linkedin": "LinkedIn",
+  "contact.downloadCv": "Download CV (PDF)",
+
+  "footer.disclaimer": "RHIX · RITIX are personal research prototypes — not investment advice"
+}
