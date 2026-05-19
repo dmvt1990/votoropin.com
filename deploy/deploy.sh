@@ -1,35 +1,44 @@
 #!/usr/bin/env bash
+# deploy.sh
 #
-# deploy/deploy.sh — Build & deploy votoropin.com to the VPS.
+# Builds votoropin.com and deploys to the VPS.
 #
-# Prerequisites on your local machine:
-#   - SSH access to the VPS configured in ~/.ssh/config under host "votoropin"
-#     (e.g. `Host votoropin` block with HostName, User, IdentityFile)
-#   - rsync installed
-#
-# Prerequisites on the VPS (first time only — see deploy/SETUP.md):
-#   - /var/www/votoropin owned by the deploy user
-#   - Nginx + certbot configured (deploy/nginx.conf, see SETUP.md)
+# Steps:
+#   1. Pull latest index level CSVs from /opt/indices/state/ on the VPS.
+#   2. Build the Astro site (data is baked in at build time).
+#   3. Rsync the built dist/ to the VPS web root.
 #
 # Usage:
 #   ./deploy/deploy.sh
 #
+# Requirements: ssh key for root@153.80.196.164 must be in your ssh-agent.
+
 set -euo pipefail
 
-HOST="${DEPLOY_HOST:-votoropin}"        # ssh host alias
-TARGET="${DEPLOY_TARGET:-/var/www/votoropin/dist}"
+VPS="root@153.80.196.164"
+REMOTE_STATE="/opt/indices/state"
+REMOTE_WEBROOT="/var/www/votoropin/dist"
+DATA_DIR="$(dirname "$0")/../src/data"
 
-echo "→ Building site..."
+# ── Step 1: Pull fresh index levels ─────────────────────────────────────────
+echo "=== [1/3] Pulling index levels from VPS ==="
+
+scp "$VPS:$REMOTE_STATE/ritix_levels.csv" "$DATA_DIR/ritix_levels.csv"
+echo "  ✓ ritix_levels.csv"
+
+scp "$VPS:$REMOTE_STATE/rhix_levels.csv" "$DATA_DIR/rhix_levels.csv"
+echo "  ✓ rhix_levels.csv"
+
+# ── Step 2: Build ────────────────────────────────────────────────────────────
+echo ""
+echo "=== [2/3] Building ==="
+cd "$(dirname "$0")/.."
 npm run build
 
-echo "→ Deploying to $HOST:$TARGET ..."
-rsync -avz --delete \
-    --exclude '.DS_Store' \
-    dist/ "$HOST:$TARGET/"
+# ── Step 3: Deploy ───────────────────────────────────────────────────────────
+echo ""
+echo "=== [3/3] Deploying to VPS ==="
+rsync -avz --delete dist/ "$VPS:$REMOTE_WEBROOT/"
 
-echo "→ Reloading Nginx (no-op if config unchanged)..."
-ssh "$HOST" 'sudo nginx -t && sudo systemctl reload nginx' || {
-  echo "  (Nginx reload skipped — set up passwordless sudo for nginx if you want this)"
-}
-
-echo "✓ Deployed."
+echo ""
+echo "=== Done. Site is live at https://votoropin.com ==="

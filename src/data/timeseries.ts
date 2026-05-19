@@ -1,67 +1,59 @@
-// src/data/timeseries.ts
-// Index level time-series data.
-//
-// At launch this uses a synthetic placeholder generator so the chart
-// renders during development. To replace with real data:
-//   1. Drop a CSV with columns date,level into src/data/<index>.csv
-//   2. Import it as a string?raw, parse it, and export instead of
-//      the synthetic series.
-//
-// Reproducibility: the seed is fixed so the chart is stable in dev.
+/**
+ * timeseries.ts
+ *
+ * Exports historical index level series for RITIX and RHIX.
+ *
+ * Data source: CSV files pulled from /opt/indices/state/ on the VPS by
+ * deploy/deploy.sh before each build. Format: date,level,divisor,total_ff_mcap
+ *
+ * For local development: run `npm run fetch-levels` to pull current data,
+ * or leave the committed placeholder files in place (charts will show
+ * whatever data is currently in src/data/*.csv).
+ */
 
-export type Point = [string, number]; // [ISO date, level]
+import ritixRaw from "./ritix_levels.csv?raw";
+import rhixRaw from "./rhix_levels.csv?raw";
 
-function pseudoRandom(seed: number) {
-  let s = seed;
-  return () => {
-    s = (s * 9301 + 49297) % 233280;
-    return s / 233280 - 0.5;
-  };
+/** Parse a level CSV (date,level,... format) into [date, level] pairs. */
+function parseLevelsCsv(raw: string): [string, number][] {
+  return raw
+    .trim()
+    .split("\n")
+    .slice(1) // skip header row
+    .filter(Boolean)
+    .map((row): [string, number] | null => {
+      const parts = row.split(",");
+      if (parts.length < 2) return null;
+      const d = parts[0].trim();
+      const l = parseFloat(parts[1].trim());
+      if (!d || isNaN(l)) return null;
+      return [d, l];
+    })
+    .filter((x): x is [string, number] => x !== null);
 }
 
-function generate(
-  startISO: string,
-  days: number,
-  startLevel: number,
-  driftPerDay: number,
-  volPerDay: number,
-  seed: number,
-): Point[] {
-  const rng = pseudoRandom(seed);
-  const out: Point[] = [];
-  let v = startLevel;
-  const start = new Date(startISO);
-  for (let i = 0; i < days; i++) {
-    v *= 1 + driftPerDay + volPerDay * rng();
-    const d = new Date(start);
-    d.setUTCDate(start.getUTCDate() + i);
-    out.push([d.toISOString().slice(0, 10), Math.round(v * 100) / 100]);
-  }
-  return out;
+export const RITIX_SERIES: [string, number][] = parseLevelsCsv(ritixRaw);
+export const RHIX_SERIES: [string, number][] = parseLevelsCsv(rhixRaw);
+
+/**
+ * Latest level for quick display (e.g. hero cards on the index page).
+ * Returns null if no data is available.
+ */
+export function latestLevel(
+  series: [string, number][]
+): { date: string; level: number } | null {
+  if (series.length === 0) return null;
+  const [date, level] = series[series.length - 1];
+  return { date, level };
 }
 
-// RHIX synthetic series — slight positive drift, low vol
-export const RHIX_SERIES: Point[] = generate(
-  "2025-01-03",
-  500, // ~2 years of trading days
-  1000,
-  0.00035,
-  0.012,
-  7,
-);
-
-// RITIX synthetic series — calibrated to roughly hit the 2025 -27% return
-export const RITIX_SERIES: Point[] = generate(
-  "2025-01-03",
-  500,
-  1000,
-  -0.0015,
-  0.015,
-  13,
-);
-
-// Latest level helpers — convenient for hero / ribbon
-export function latestLevel(series: Point[]): { level: number; date: string } {
-  const last = series[series.length - 1];
-  return { level: last[1], date: last[0] };
+/**
+ * Performance since inception as a percentage.
+ * Returns null if fewer than 2 data points.
+ */
+export function inceptionReturn(series: [string, number][]): number | null {
+  if (series.length < 2) return null;
+  const [, first] = series[0];
+  const [, last] = series[series.length - 1];
+  return ((last - first) / first) * 100;
 }

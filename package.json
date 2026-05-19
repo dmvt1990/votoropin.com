@@ -9,7 +9,8 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "deploy": "bash deploy/deploy.sh"
+    "deploy": "bash deploy/deploy.sh",
+    "fetch-levels": "bash scripts/fetch-levels.sh"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
