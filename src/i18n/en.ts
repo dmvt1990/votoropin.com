@@ -70,7 +70,7 @@ export const en = {
   home: {
     pageTitle: "Dmitrii Votoropin — Investment Counsellor",
     hero: {
-      eyebrow:    "Investment Counsellor · Moscow · Open to relocation",
+      eyebrow:    "Investment Counsellor · Moscow",
       h1line1:    "Private banking, ",
       h1em:       "wealth management",
       h1line2:    ",",
@@ -207,6 +207,13 @@ export const en = {
         ],
       },
       {
+        role:     "Unpaid Intern",
+        company:  "Citi · International Personal Bank",
+        dates:    "May 2016",
+        location: "New York",
+        bullets:  [],
+      },
+      {
         role:     "Senior Financial Advisor",
         company:  "BCS · Brokerage & Wealth",
         dates:    "Oct 2011 — Oct 2013",
@@ -248,11 +255,11 @@ export const en = {
   // ── Contact page ──────────────────────────────────────────────────────────
   contact: {
     pageTitle:       "Contact",
-    pageDescription: "Get in touch — investment advisory and portfolio counsellor opportunities.",
-    h1part1:  "Open to ",
-    h1em:     "conversations",
-    h1part2:  "on investment advisory",
-    h1part3:  "and portfolio counsellor roles.",
+    pageDescription: "Get in touch with Dmitrii Votoropin — investment professional.",
+    h1part1:  "Contact me ",
+    h1em:     "personally",
+    h1part2:  "",
+    h1part3:  "",
     linkedIn: "LinkedIn",
     downloadCv: "Download CV (PDF)",
     replyNote: "Replies typically within 48 hours. For role-specific enquiries, please include the position or institution in the subject line.",

@@ -10,7 +10,7 @@ const links = [
   { href: "/indices", label: t.nav.links.indices },
   { href: "/notes",   label: t.nav.links.notes },
   { href: "/contact", label: t.nav.links.contact },
-];
+].filter(l => l.label);
 
 function isActive(href: string) {
   if (href === "/") return path === "/";

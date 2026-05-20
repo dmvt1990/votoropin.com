@@ -10,9 +10,9 @@ import { t } from "../i18n";
 >
   <section class="container-narrow pt-32 pb-32 text-center">
     <h1 class="display font-light text-[44px] sm:text-[64px] leading-[1.05] tracking-tightest m-0 mb-8">
-      {t.contact.h1part1}<em>{t.contact.h1em}</em><br>
-      {t.contact.h1part2}<br>
-      {t.contact.h1part3}
+      {t.contact.h1part1}<em>{t.contact.h1em}</em>
+      {t.contact.h1part2 && <><br>{t.contact.h1part2}</>}
+      {t.contact.h1part3 && <><br>{t.contact.h1part3}</>}
     </h1>
 
     <a

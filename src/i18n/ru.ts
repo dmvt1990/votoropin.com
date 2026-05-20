@@ -14,7 +14,7 @@ export const ru = {
     mobileToggle: "Меню ↓",
     links: {
       home:    "Главная",
-      cv:      "Резюме",
+      cv:      "",
       indices: "Индексы",
       notes:   "Заметки",
       contact: "Контакты",
@@ -70,7 +70,7 @@ export const ru = {
   home: {
     pageTitle: "Дмитрий Воторопин — Инвестиционный советник",
     hero: {
-      eyebrow:    "Инвестиционный советник · Москва · Готов к переезду",
+      eyebrow:    "Инвестиционный советник · Москва",
       h1line1:    "Private banking, ",
       h1em:       "управление капиталом",
       h1line2:    "",
@@ -140,7 +140,7 @@ export const ru = {
       locationLabel:    "Местоположение",
       locationValue:    "Москва",
       mobilityLabel:    "Мобильность",
-      mobilityValue:    "Готов к переезду",
+      mobilityValue:    "",
       experienceLabel:  "Опыт",
       experienceValue:  "14+ лет",
       designationLabel: "Квалификация",
@@ -207,6 +207,13 @@ export const ru = {
         ],
       },
       {
+        role:     "Стажёр (без оплаты)",
+        company:  "Citi · International Personal Bank",
+        dates:    "Май 2016",
+        location: "Нью-Йорк",
+        bullets:  [],
+      },
+      {
         role:     "Старший финансовый советник",
         company:  "БКС · Брокерское обслуживание и управление капиталом",
         dates:    "Окт 2011 — Окт 2013",
@@ -248,11 +255,11 @@ export const ru = {
   // ── Contact page ──────────────────────────────────────────────────────────
   contact: {
     pageTitle:       "Контакты",
-    pageDescription: "Связаться — позиции инвестиционного советника и портфельного консультанта.",
-    h1part1:  "Открыт к ",
-    h1em:     "разговору",
-    h1part2:  "об инвестиционном консультировании",
-    h1part3:  "и позициях портфельного советника.",
+    pageDescription: "Связаться с Дмитрием Воторопиным — инвестиционный профессионал.",
+    h1part1:  "Свяжитесь со мной ",
+    h1em:     "лично",
+    h1part2:  "",
+    h1part3:  "",
     linkedIn: "LinkedIn",
     downloadCv: "Скачать резюме (PDF)",
     replyNote: "Отвечаю, как правило, в течение 48 часов. По вопросам конкретных позиций, пожалуйста, укажите название должности или организацию в теме письма.",
