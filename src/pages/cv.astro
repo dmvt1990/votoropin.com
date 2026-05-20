@@ -57,10 +57,12 @@ const USE_REAL_PHOTO = true;
             <dt class="text-ink-mute uppercase tracking-[0.1em] text-[10px]">{t.cv.quickFacts.experienceLabel}</dt>
             <dd class="m-0 text-ink">{t.cv.quickFacts.experienceValue}</dd>
           </div>
-          <div class="flex justify-between gap-4">
-            <dt class="text-ink-mute uppercase tracking-[0.1em] text-[10px]">{t.cv.quickFacts.designationLabel}</dt>
-            <dd class="m-0 text-ink">{t.cv.quickFacts.designationValue}</dd>
-          </div>
+          {t.cv.quickFacts.designationValue && (
+            <div class="flex justify-between gap-4">
+              <dt class="text-ink-mute uppercase tracking-[0.1em] text-[10px]">{t.cv.quickFacts.designationLabel}</dt>
+              <dd class="m-0 text-ink">{t.cv.quickFacts.designationValue}</dd>
+            </div>
+          )}
         </dl>
 
         <div class="mt-8 pt-6 border-t border-rule text-[13px]">

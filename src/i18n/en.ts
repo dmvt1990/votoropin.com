@@ -10,7 +10,7 @@ export const en = {
   // ── Navigation ──────────────────────────────────────────────────────────
   nav: {
     brand: "Dmitrii Votoropin",
-    brandSuffix: "CFA",
+    brandSuffix: "",
     mobileToggle: "Menu ↓",
     links: {
       home:    "Home",
@@ -30,13 +30,13 @@ export const en = {
   meta: {
     locale:             "en_US",
     siteUrl:            "https://votoropin.com",
-    defaultDescription: "Dmitrii Votoropin, CFA — 14+ years in private banking, wealth management, and investment advisory across Citi and Gazprombank.",
-    titleSuffix:        "— Dmitrii Votoropin, CFA",
+    defaultDescription: "Dmitrii Votoropin — 14+ years in private banking, wealth management, and investment advisory across Citi and Gazprombank.",
+    titleSuffix:        "— Dmitrii Votoropin",
   },
 
   // ── Schema.org Person ────────────────────────────────────────────────────
   schema: {
-    jobTitle:   "Investment Counsellor, CFA",
+    jobTitle:   "Investment Counsellor",
     knowsAbout: [
       "Private banking",
       "Wealth management",
@@ -68,9 +68,9 @@ export const en = {
 
   // ── Home page ─────────────────────────────────────────────────────────────
   home: {
-    pageTitle: "Dmitrii Votoropin, CFA — Investment Counsellor",
+    pageTitle: "Dmitrii Votoropin — Investment Counsellor",
     hero: {
-      eyebrow:    "Investment Counsellor, CFA · Moscow · Open to relocation",
+      eyebrow:    "Investment Counsellor · Moscow · Open to relocation",
       h1line1:    "Private banking, ",
       h1em:       "wealth management",
       h1line2:    ",",
@@ -79,7 +79,7 @@ export const en = {
       intro:      "14+ years across Citi and Gazprombank, building portfolio-based advice across global fixed income, equities, structured notes, and alternatives.",
       stats: {
         designationLabel: "Designation",
-        designationValue: "CFA Charterholder",
+        designationValue: "",
         experienceLabel:  "Experience",
         experienceValue:  "14+ years",
         focusLabel:       "Focus",
@@ -92,7 +92,7 @@ export const en = {
       h2em:         "private banking",
       h2part2:      ", wealth management, and investment advisory.",
       p1: "I currently serve as Executive Director, Investment Counsellor at Gazprombank Private Banking, building portfolio-based advice across global fixed income, equities, structured notes, deposits, and alternatives. Prior to that, I spent more than a decade at Citi — most recently as Vice President and Head of Portfolio Counsellors & Analytics for Russia.",
-      p2: "I work with relationship managers on portfolio reviews, rebalancing decisions, and tactical asset-allocation tilts; deliver market updates and internal trainings; and contribute to recommended-product platform and advisory-workflow initiatives. I hold the CFA Charter and am a member of the American Finance Association.",
+      p2: "I work with relationship managers on portfolio reviews, rebalancing decisions, and tactical asset-allocation tilts; deliver market updates and internal trainings; and contribute to recommended-product platform and advisory-workflow initiatives. I am a member of the American Finance Association.",
       readCv: "Read full CV →",
     },
     research: {
@@ -128,13 +128,13 @@ export const en = {
   // ── CV page ───────────────────────────────────────────────────────────────
   cv: {
     pageTitle:       "Curriculum Vitae",
-    pageDescription: "Curriculum Vitae of Dmitrii Votoropin, CFA — Executive Director, Investment Counsellor at Gazprombank Private Banking. 14+ years in private banking, wealth management, and investment advisory across Citi and Gazprombank.",
+    pageDescription: "Curriculum Vitae of Dmitrii Votoropin — Executive Director, Investment Counsellor at Gazprombank Private Banking. 14+ years in private banking, wealth management, and investment advisory across Citi and Gazprombank.",
     sectionLabel:    "Curriculum Vitae",
     h1part1:         "A career across ",
     h1em:            "private banking",
     h1part2:         ", wealth management, and investment advisory.",
-    photoAlt:        "Dmitrii Votoropin, CFA",
-    photoCaption1:   "Dmitrii Votoropin, CFA",
+    photoAlt:        "Dmitrii Votoropin",
+    photoCaption1:   "Dmitrii Votoropin",
     photoCaption2:   "Executive Director · Investment Counsellor",
     quickFacts: {
       locationLabel:    "Location",
@@ -144,7 +144,7 @@ export const en = {
       experienceLabel:  "Experience",
       experienceValue:  "14+ years",
       designationLabel: "Designation",
-      designationValue: "CFA",
+      designationValue: "",
     },
     downloadCv: "Download full CV (PDF) →",
     sections: {
@@ -229,10 +229,6 @@ export const en = {
       },
     ],
     credentials: [
-      {
-        name: "CFA Charterholder",
-        org:  "CFA Institute · charter awarded 2023; membership to be reactivated upon relocation, in line with CFA Institute sanctions guidance.",
-      },
       {
         name: "Member, American Finance Association (AFA)",
         org:  "Published academic researcher and financial-press contributor.",
