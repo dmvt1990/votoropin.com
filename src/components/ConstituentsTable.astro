@@ -4,6 +4,7 @@
 // (server-rendered, no JS sort for now — can add later if needed).
 
 import type { Constituent } from "../data/rhix-constituents";
+import { t } from "../i18n";
 
 export interface Props {
   constituents: Constituent[];
@@ -13,27 +14,27 @@ export interface Props {
 }
 
 const { constituents, asOf, showShares = true } = Astro.props;
-const formattedAsOf = new Date(asOf).toLocaleDateString("en-GB", {
+const formattedAsOf = new Date(asOf).toLocaleDateString(t.dateLocale, {
   day: "2-digit", month: "short", year: "numeric",
 });
 ---
 
 <div>
   <h3 class="font-display text-[28px] font-normal m-0 mb-6">
-    Constituents — as of {formattedAsOf}
+    {t.constituents.headingPrefix} {formattedAsOf}
   </h3>
   <div class="overflow-x-auto bg-bg border border-rule">
     <table class="w-full border-collapse">
       <thead>
         <tr class="bg-bg-sunken">
-          <th class="text-left px-5 py-4 text-[11px] uppercase tracking-wider2 text-ink-mute font-medium border-b border-rule">Ticker</th>
-          <th class="text-left px-5 py-4 text-[11px] uppercase tracking-wider2 text-ink-mute font-medium border-b border-rule">Company</th>
-          <th class="text-left px-5 py-4 text-[11px] uppercase tracking-wider2 text-ink-mute font-medium border-b border-rule">Sub-industry</th>
+          <th class="text-left px-5 py-4 text-[11px] uppercase tracking-wider2 text-ink-mute font-medium border-b border-rule">{t.constituents.th.ticker}</th>
+          <th class="text-left px-5 py-4 text-[11px] uppercase tracking-wider2 text-ink-mute font-medium border-b border-rule">{t.constituents.th.company}</th>
+          <th class="text-left px-5 py-4 text-[11px] uppercase tracking-wider2 text-ink-mute font-medium border-b border-rule">{t.constituents.th.subIndustry}</th>
           {showShares && (
-            <th class="text-right px-5 py-4 text-[11px] uppercase tracking-wider2 text-ink-mute font-medium border-b border-rule">Shares (M)</th>
+            <th class="text-right px-5 py-4 text-[11px] uppercase tracking-wider2 text-ink-mute font-medium border-b border-rule">{t.constituents.th.sharesM}</th>
           )}
-          <th class="text-right px-5 py-4 text-[11px] uppercase tracking-wider2 text-ink-mute font-medium border-b border-rule">Free Float</th>
-          <th class="text-right px-5 py-4 text-[11px] uppercase tracking-wider2 text-ink-mute font-medium border-b border-rule">Weight</th>
+          <th class="text-right px-5 py-4 text-[11px] uppercase tracking-wider2 text-ink-mute font-medium border-b border-rule">{t.constituents.th.freeFloat}</th>
+          <th class="text-right px-5 py-4 text-[11px] uppercase tracking-wider2 text-ink-mute font-medium border-b border-rule">{t.constituents.th.weight}</th>
         </tr>
       </thead>
       <tbody>

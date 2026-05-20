@@ -5,12 +5,18 @@
   "private": true,
   "description": "Personal site of Dmitry Votoropin, CFA — CV and rules-based equity indices (RHIX, RITIX).",
   "scripts": {
+    "fetch-levels": "bash scripts/fetch-levels.sh",
     "dev": "astro dev",
+    "dev:ru": "PUBLIC_LANG=ru astro dev",
     "build": "astro build",
+    "build:en": "PUBLIC_LANG=en ASTRO_OUT_DIR=dist-en astro build",
+    "build:ru": "PUBLIC_LANG=ru ASTRO_OUT_DIR=dist-ru astro build",
     "preview": "astro preview",
     "astro": "astro",
     "deploy": "bash deploy/deploy.sh",
-    "fetch-levels": "bash scripts/fetch-levels.sh"
+    "deploy:en": "bash deploy/deploy.sh en",
+    "deploy:ru": "bash deploy/deploy.sh ru",
+    "deploy:both": "bash deploy/deploy.sh both"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",

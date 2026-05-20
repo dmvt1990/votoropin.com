@@ -4,6 +4,7 @@
 import "../styles/global.css";
 import Nav from "../components/Nav.astro";
 import Footer from "../components/Footer.astro";
+import { t } from "../i18n";
 
 export interface Props {
   title: string;
@@ -15,17 +16,19 @@ export interface Props {
 
 const {
   title,
-  description = "Dmitrii Votoropin, CFA — 14+ years in private banking, wealth management, and investment advisory across Citi and Gazprombank.",
+  description = t.meta.defaultDescription,
   ogImage = "/og-default.png",
   nav = true,
 } = Astro.props;
 
 const canonical = new URL(Astro.url.pathname, Astro.site).toString();
-const fullTitle = title.includes("Votoropin") ? title : `${title} — Dmitrii Votoropin, CFA`;
+const namePresent = title.includes("Votoropin") || title.includes("Воторопин");
+const fullTitle = namePresent ? title : `${title} ${t.meta.titleSuffix}`;
+const htmlLang = t.meta.locale.slice(0, 2);
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={htmlLang}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -42,7 +45,7 @@ const fullTitle = title.includes("Votoropin") ? title : `${title} — Dmitrii Vo
     <meta property="og:title" content={fullTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={new URL(ogImage, Astro.site).toString()} />
-    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale" content={t.meta.locale} />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -55,8 +58,8 @@ const fullTitle = title.includes("Votoropin") ? title : `${title} — Dmitrii Vo
       "@context": "https://schema.org",
       "@type": "Person",
       "name": "Dmitrii Votoropin",
-      "jobTitle": "Investment Counsellor, CFA",
-      "url": "https://votoropin.com",
+      "jobTitle": t.schema.jobTitle,
+      "url": t.meta.siteUrl,
       "email": "d@votoropin.com",
       "sameAs": [
         "https://www.linkedin.com/in/dmitrii-votoropin-cfa-808ba43a"
@@ -88,14 +91,7 @@ const fullTitle = title.includes("Votoropin") ? title : `${title} — Dmitrii Vo
           "name": "American Finance Association"
         }
       ],
-      "knowsAbout": [
-        "Private banking",
-        "Wealth management",
-        "Investment advisory",
-        "Portfolio construction",
-        "Fixed income",
-        "Structured products"
-      ]
+      "knowsAbout": t.schema.knowsAbout
     })} />
   </head>
   <body>

@@ -45,17 +45,8 @@ const dataJSON = JSON.stringify(data);
         type: "line",
         data,
         showSymbol: false,
-        smooth: 0.2,
+        smooth: false,
         lineStyle: { color, width: 1.8 },
-        areaStyle: {
-          color: {
-            type: "linear", x: 0, y: 0, x2: 0, y2: 1,
-            colorStops: [
-              { offset: 0, color: color + "40" },
-              { offset: 1, color: color + "00" },
-            ],
-          },
-        },
       }],
       animation: false,
     });

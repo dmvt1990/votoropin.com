@@ -36,4 +36,9 @@ const notes = defineCollection({
   }),
 });
 
-export const collections = { indices, notes };
+export const collections = {
+  indices,
+  "indices-ru": indices,
+  notes,
+  "notes-ru": notes,
+};

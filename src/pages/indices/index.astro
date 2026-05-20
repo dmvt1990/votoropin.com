@@ -5,6 +5,7 @@
 import Base from "../../layouts/Base.astro";
 import MiniChart from "../../components/MiniChart.astro";
 import { RHIX_SERIES, RITIX_SERIES, latestLevel } from "../../data/timeseries";
+import { t } from "../../i18n";
 
 const rhix = latestLevel(RHIX_SERIES);
 const ritix = latestLevel(RITIX_SERIES);
@@ -14,24 +15,20 @@ const ritixYtd = ((ritix.level / 1000 - 1) * 100).toFixed(2);
 ---
 
 <Base
-  title="Research Prototypes — RHIX, RITIX"
-  description="Personal research prototypes on rules-based equity index design — RHIX (Russian Healthcare) and RITIX (Russia IT). Not investment products, not regulated benchmarks."
+  title={t.indicesOverview.pageTitle}
+  description={t.indicesOverview.pageDescription}
 >
 
   <!-- ── HEADER ───────────────────────────────────────────────── -->
   <section class="container-wide pt-32 pb-12">
     <div class="text-[12px] uppercase tracking-[0.18em] text-ink-mute mb-8">
-      Research prototypes
+      {t.indicesOverview.eyebrow}
     </div>
     <h1 class="display font-light text-display-lg m-0 mb-9 max-w-[920px]">
-      Two <em>personal research</em> projects on rules-based equity index design.
+      {t.indicesOverview.h1part1}<em>{t.indicesOverview.h1em}</em>{t.indicesOverview.h1part2}
     </h1>
     <p class="text-[18px] leading-relaxed max-w-[760px] text-ink-soft m-0">
-      RHIX and RITIX are research prototypes I maintain in my personal
-      capacity. Both explore rules-based weighting schemes applied to
-      under-followed segments of the Moscow Exchange. Levels, constituent
-      compositions, and rebalancing histories are published here for
-      research and educational purposes.
+      {t.indicesOverview.intro}
     </p>
   </section>
 
@@ -39,19 +36,10 @@ const ritixYtd = ((ritix.level / 1000 - 1) * 100).toFixed(2);
   <section class="container-wide pb-12">
     <div class="bg-bg-sunken border-l-2 border-accent p-6 max-w-[920px]">
       <div class="font-sans text-[11px] uppercase tracking-[0.18em] text-accent font-medium mb-3">
-        Disclaimer
+        {t.indicesOverview.disclaimer.label}
       </div>
       <p class="text-[14px] leading-relaxed text-ink-soft m-0">
-        RHIX and RITIX are personal research prototypes maintained by the
-        author in his personal capacity. They are <strong class="text-ink">not</strong>
-        investment products, <strong class="text-ink">not</strong> regulated
-        benchmarks under IOSCO, ESMA, or any other framework, and are
-        <strong class="text-ink">not</strong> affiliated with, sponsored by, or
-        endorsed by any current or former employer of the author. All
-        constituent weights, index levels, and historical data are
-        published for research and educational purposes only. Nothing on
-        this site constitutes investment advice, a solicitation, or a
-        recommendation to buy or sell any security.
+        {t.indicesOverview.disclaimer.text}
       </p>
     </div>
   </section>
@@ -59,82 +47,78 @@ const ritixYtd = ((ritix.level / 1000 - 1) * 100).toFixed(2);
   <!-- ── INDEX CARDS ──────────────────────────────────────────── -->
   <section class="container-wide pb-24">
 
-    <!-- RHIX card -->
+    <!-- RITIX card -->
     <div class="grid md:grid-cols-2 gap-12 items-center py-14 border-t border-rule">
       <div>
         <div class="font-mono text-[14px] tracking-wider2 text-accent mb-4">
-          RHIX · Russian Healthcare Index
+          {t.home.research.ritix.ticker}
         </div>
         <h2 class="display font-normal text-[36px] leading-[1.05] tracking-tighter m-0 mb-5">
-          Healthcare &amp; biotech sector concept.
+          {t.home.research.ritix.h3}
         </h2>
         <p class="text-ink-soft text-[15px] leading-relaxed mb-7">
-          A free-float market-cap weighted index concept covering core
-          healthcare, pharmaceutical, and biotechnology issuers listed on
-          the Moscow Exchange. Constructed under GICS Sector 35
-          with a related-company adjustment to limit hidden concentration.
+          {t.home.research.ritix.desc}
         </p>
         <div class="grid grid-cols-3 gap-6 pt-6 border-t border-rule">
           <div>
-            <div class="text-[11px] uppercase tracking-[0.14em] text-ink-mute mb-1.5">Constituents</div>
+            <div class="text-[11px] uppercase tracking-[0.14em] text-ink-mute mb-1.5">{t.home.research.ritix.constituentsLabel}</div>
+            <div class="font-display text-[24px] tracking-tight">10</div>
+          </div>
+          <div>
+            <div class="text-[11px] uppercase tracking-[0.14em] text-ink-mute mb-1.5">{t.home.research.ritix.sinceInceptionLabel}</div>
+            <div class={`font-display text-[24px] tracking-tight ${parseFloat(ritixYtd) >= 0 ? 'text-positive' : 'text-negative'}`}>
+              {parseFloat(ritixYtd) >= 0 ? '+' : ''}{ritixYtd}%
+            </div>
+          </div>
+          <div>
+            <div class="text-[11px] uppercase tracking-[0.14em] text-ink-mute mb-1.5">{t.home.research.ritix.rebalanceLabel}</div>
+            <div class="font-display text-[24px] tracking-tight">{t.home.research.ritix.rebalanceValue}</div>
+          </div>
+        </div>
+        <p class="mt-7">
+          <a href="/indices/ritix" class="editorial-link text-[14px]">
+            {t.home.research.ritix.link}
+          </a>
+        </p>
+      </div>
+      <MiniChart id="ritix-overview-chart" data={RITIX_SERIES} color="#3D3D3A" />
+    </div>
+
+    <!-- RHIX card -->
+    <div class="grid md:grid-cols-2 gap-12 items-center py-14 border-t border-b border-rule">
+      <div>
+        <div class="font-mono text-[14px] tracking-wider2 text-accent mb-4">
+          {t.home.research.rhix.ticker}
+        </div>
+        <h2 class="display font-normal text-[36px] leading-[1.05] tracking-tighter m-0 mb-5">
+          {t.home.research.rhix.h3}
+        </h2>
+        <p class="text-ink-soft text-[15px] leading-relaxed mb-7">
+          {t.home.research.rhix.desc}
+        </p>
+        <div class="grid grid-cols-3 gap-6 pt-6 border-t border-rule">
+          <div>
+            <div class="text-[11px] uppercase tracking-[0.14em] text-ink-mute mb-1.5">{t.home.research.rhix.constituentsLabel}</div>
             <div class="font-display text-[24px] tracking-tight">5</div>
           </div>
           <div>
-            <div class="text-[11px] uppercase tracking-[0.14em] text-ink-mute mb-1.5">YTD</div>
+            <div class="text-[11px] uppercase tracking-[0.14em] text-ink-mute mb-1.5">{t.home.research.rhix.ytdLabel}</div>
             <div class={`font-display text-[24px] tracking-tight ${parseFloat(rhixYtd) >= 0 ? 'text-positive' : 'text-negative'}`}>
               {parseFloat(rhixYtd) >= 0 ? '+' : ''}{rhixYtd}%
             </div>
           </div>
           <div>
-            <div class="text-[11px] uppercase tracking-[0.14em] text-ink-mute mb-1.5">Rebalance</div>
-            <div class="font-display text-[24px] tracking-tight">Semi-ann.</div>
+            <div class="text-[11px] uppercase tracking-[0.14em] text-ink-mute mb-1.5">{t.home.research.rhix.rebalanceLabel}</div>
+            <div class="font-display text-[24px] tracking-tight">{t.home.research.rhix.rebalanceValue}</div>
           </div>
         </div>
         <p class="mt-7">
           <a href="/indices/rhix" class="editorial-link text-[14px]">
-            Composition &amp; levels →
+            {t.home.research.rhix.link}
           </a>
         </p>
       </div>
       <MiniChart id="rhix-overview-chart" data={RHIX_SERIES} color="#6B1F2E" />
-    </div>
-
-    <!-- RITIX card -->
-    <div class="grid md:grid-cols-2 gap-12 items-center py-14 border-t border-b border-rule">
-      <div>
-        <div class="font-mono text-[14px] tracking-wider2 text-accent mb-4">
-          RITIX · Russia IT Index
-        </div>
-        <h2 class="display font-normal text-[36px] leading-[1.05] tracking-tighter m-0 mb-5">
-          Russian technology sector concept.
-        </h2>
-        <p class="text-ink-soft text-[15px] leading-relaxed mb-7">
-          A square-root free-float-adjusted market-cap weighted index
-          concept covering ten Russian IT issuers on the Moscow Exchange.
-          The square-root scheme moderates concentration in the largest
-          names compared to a pure cap-weighted approach.
-        </p>
-        <div class="grid grid-cols-3 gap-6 pt-6 border-t border-rule">
-          <div>
-            <div class="text-[11px] uppercase tracking-[0.14em] text-ink-mute mb-1.5">Constituents</div>
-            <div class="font-display text-[24px] tracking-tight">10</div>
-          </div>
-          <div>
-            <div class="text-[11px] uppercase tracking-[0.14em] text-ink-mute mb-1.5">2025 Return</div>
-            <div class="font-display text-[24px] tracking-tight text-negative">−27.31%</div>
-          </div>
-          <div>
-            <div class="text-[11px] uppercase tracking-[0.14em] text-ink-mute mb-1.5">Volatility</div>
-            <div class="font-display text-[24px] tracking-tight">23.7%</div>
-          </div>
-        </div>
-        <p class="mt-7">
-          <a href="/indices/ritix" class="editorial-link text-[14px]">
-            Composition &amp; performance →
-          </a>
-        </p>
-      </div>
-      <MiniChart id="ritix-overview-chart" data={RITIX_SERIES} color="#3D3D3A" />
     </div>
   </section>
 

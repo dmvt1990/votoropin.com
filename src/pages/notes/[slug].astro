@@ -3,9 +3,11 @@
 // Single note page.
 import { getCollection } from "astro:content";
 import Base from "../../layouts/Base.astro";
+import { t } from "../../i18n";
 
 export async function getStaticPaths() {
-  const notes = await getCollection("notes", ({ data }) => !data.draft);
+  const collectionName = import.meta.env.PUBLIC_LANG === "ru" ? "notes-ru" : "notes";
+  const notes = await getCollection(collectionName as "notes", ({ data }) => !data.draft);
   return notes.map((n) => ({ params: { slug: n.slug }, props: { entry: n } }));
 }
 
@@ -16,7 +18,7 @@ const { Content } = await entry.render();
 <Base title={entry.data.title} description={entry.data.summary}>
   <article class="container-narrow pt-20 pb-20">
     <div class="font-mono text-[11px] tracking-wide text-ink-mute mb-4">
-      <a href="/notes" class="text-ink-mute no-underline hover:text-accent">← All notes</a>
+      <a href="/notes" class="text-ink-mute no-underline hover:text-accent">{t.noteDetail.backLink}</a>
     </div>
     <div class="font-mono text-[11px] tracking-wider2 uppercase text-accent mb-4">
       {entry.data.tag}
@@ -25,8 +27,8 @@ const { Content } = await entry.render();
       {entry.data.title}
     </h1>
     <div class="font-mono text-[12px] text-ink-mute mb-10">
-      {new Date(entry.data.date).toLocaleDateString("en-GB", { year: "numeric", month: "long", day: "2-digit" })}
-      &nbsp;·&nbsp; {entry.data.readMinutes} min read
+      {new Date(entry.data.date).toLocaleDateString(t.dateLocale, { year: "numeric", month: "long", day: "2-digit" })}
+      &nbsp;·&nbsp; {entry.data.readMinutes} {t.noteDetail.minRead}
     </div>
 
     <div class="prose prose-stone max-w-none

@@ -1,11 +1,9 @@
 ---
 // src/pages/index.astro
-// Home page. CV is the primary asset; indices are a secondary block
-// clearly labelled as personal research prototypes.
-// Order: Hero → About → Research prototypes teaser.
 import Base from "../layouts/Base.astro";
 import MiniChart from "../components/MiniChart.astro";
 import { RHIX_SERIES, RITIX_SERIES, latestLevel } from "../data/timeseries";
+import { t } from "../i18n";
 
 const rhix = latestLevel(RHIX_SERIES);
 const ritix = latestLevel(RITIX_SERIES);
@@ -14,155 +12,138 @@ const rhixYtd = ((rhix.level / 1000 - 1) * 100).toFixed(2);
 const ritixYtd = ((ritix.level / 1000 - 1) * 100).toFixed(2);
 ---
 
-<Base title="Dmitrii Votoropin, CFA — Investment Counsellor">
+<Base title={t.home.pageTitle}>
 
   <!-- ── HERO ─────────────────────────────────────────────────── -->
   <section class="container-wide pt-32 pb-24">
     <div class="text-[12px] uppercase tracking-[0.18em] text-ink-mute mb-8 fade-up">
-      Investment Counsellor, CFA · Moscow · Open to relocation
+      {t.home.hero.eyebrow}
     </div>
     <h1 class="display font-light text-display-xl m-0 mb-9 fade-up fade-up-2">
-      Private banking, <em>wealth management</em>,<br>
-      and investment advisory<br>
-      for HNW &amp; UHNW clients.
+      {t.home.hero.h1line1}<em>{t.home.hero.h1em}</em>{t.home.hero.h1line2}<br>
+      {t.home.hero.h1line3}<br>
+      {t.home.hero.h1line4}
     </h1>
     <p class="text-[21px] leading-[1.5] max-w-[680px] text-ink-soft mb-12 fade-up fade-up-3">
-      14+ years across Citi and Gazprombank, building portfolio-based
-      advice across global fixed income, equities, structured notes, and
-      alternatives.
+      {t.home.hero.intro}
     </p>
     <div class="flex flex-wrap gap-12 pt-7 border-t border-rule max-w-[680px] fade-up fade-up-4">
       <div class="flex flex-col gap-1">
-        <span class="text-[11px] uppercase tracking-[0.14em] text-ink-mute">Designation</span>
-        <span class="text-[15px]">CFA Charterholder</span>
+        <span class="text-[11px] uppercase tracking-[0.14em] text-ink-mute">{t.home.hero.stats.designationLabel}</span>
+        <span class="text-[15px]">{t.home.hero.stats.designationValue}</span>
       </div>
       <div class="flex flex-col gap-1">
-        <span class="text-[11px] uppercase tracking-[0.14em] text-ink-mute">Experience</span>
-        <span class="text-[15px]">14+ years</span>
+        <span class="text-[11px] uppercase tracking-[0.14em] text-ink-mute">{t.home.hero.stats.experienceLabel}</span>
+        <span class="text-[15px]">{t.home.hero.stats.experienceValue}</span>
       </div>
       <div class="flex flex-col gap-1">
-        <span class="text-[11px] uppercase tracking-[0.14em] text-ink-mute">Focus</span>
-        <span class="text-[15px]">Private banking · Investment advisory</span>
+        <span class="text-[11px] uppercase tracking-[0.14em] text-ink-mute">{t.home.hero.stats.focusLabel}</span>
+        <span class="text-[15px]">{t.home.hero.stats.focusValue}</span>
       </div>
     </div>
   </section>
 
   <!-- ── ABOUT ────────────────────────────────────────────────── -->
   <section class="container-wide py-24 border-t border-rule">
-    <div class="section-label">About</div>
+    <div class="section-label">{t.home.about.sectionLabel}</div>
     <h2 class="display font-normal text-display-md max-w-[820px] m-0 mb-10">
-      A career across <em>private banking</em>, wealth management, and investment advisory.
+      {t.home.about.h2part1}<em>{t.home.about.h2em}</em>{t.home.about.h2part2}
     </h2>
     <p class="text-[18px] leading-relaxed max-w-[760px] text-ink-soft mb-6">
-      I currently serve as Executive Director, Investment Counsellor at
-      Gazprombank Private Banking, building portfolio-based advice across
-      global fixed income, equities, structured notes, deposits, and
-      alternatives. Prior to that, I spent more than a decade at Citi —
-      most recently as Vice President and Head of Portfolio Counsellors
-      &amp; Analytics for Russia.
+      {t.home.about.p1}
     </p>
     <p class="text-[18px] leading-relaxed max-w-[760px] text-ink-soft mb-10">
-      I work with relationship managers on portfolio reviews,
-      rebalancing decisions, and tactical asset-allocation tilts; deliver
-      market updates and internal trainings; and contribute to
-      recommended-product platform and advisory-workflow initiatives.
-      I hold the CFA Charter and am a member of the American Finance
-      Association.
+      {t.home.about.p2}
     </p>
-    <a href="/cv" class="editorial-link text-[15px]">Read full CV →</a>
+    <a href="/cv" class="editorial-link text-[15px]">{t.home.about.readCv}</a>
   </section>
 
   <!-- ── RESEARCH PROTOTYPES TEASER ───────────────────────────── -->
   <section class="container-wide py-24 border-t border-rule">
-    <div class="section-label">Research prototypes</div>
+    <div class="section-label">{t.home.research.sectionLabel}</div>
     <h2 class="display font-normal text-display-md max-w-[820px] m-0 mb-6">
-      Two <em>personal research</em> projects on rules-based equity index design.
+      {t.home.research.h2part1}<em>{t.home.research.h2em}</em>{t.home.research.h2part2}
     </h2>
     <p class="text-[16px] leading-relaxed max-w-[760px] text-ink-soft mb-14">
-      RHIX and RITIX are personal research prototypes maintained outside
-      of professional capacity. They are not investment products, not
-      regulated benchmarks, and not affiliated with any employer. Levels
-      and constituent histories are published here for research and
-      educational purposes only.
+      {t.home.research.disclaimer}
     </p>
 
-    <!-- RHIX teaser -->
+    <!-- RITIX teaser -->
     <div class="grid md:grid-cols-2 gap-12 items-center py-14 border-t border-rule">
       <div>
         <div class="font-mono text-[14px] tracking-wider2 text-accent mb-4">
-          RHIX · Russian Healthcare Index
+          {t.home.research.ritix.ticker}
         </div>
         <h3 class="display font-normal text-[36px] leading-[1.05] tracking-tighter m-0 mb-5">
-          Healthcare &amp; biotech sector concept.
+          {t.home.research.ritix.h3}
         </h3>
         <p class="text-ink-soft text-[15px] leading-relaxed mb-7">
-          A free-float market-cap weighted index concept covering core
-          healthcare, pharmaceutical, and biotechnology issuers listed on
-          the Moscow Exchange.
+          {t.home.research.ritix.desc}
         </p>
         <div class="grid grid-cols-3 gap-6 pt-6 border-t border-rule">
           <div>
-            <div class="text-[11px] uppercase tracking-[0.14em] text-ink-mute mb-1.5">Constituents</div>
-            <div class="font-display text-[24px] tracking-tight">5</div>
-          </div>
-          <div>
-            <div class="text-[11px] uppercase tracking-[0.14em] text-ink-mute mb-1.5">YTD</div>
-            <div class={`font-display text-[24px] tracking-tight ${parseFloat(rhixYtd) >= 0 ? 'text-positive' : 'text-negative'}`}>
-              {parseFloat(rhixYtd) >= 0 ? '+' : ''}{rhixYtd}%
-            </div>
-          </div>
-          <div>
-            <div class="text-[11px] uppercase tracking-[0.14em] text-ink-mute mb-1.5">Rebalance</div>
-            <div class="font-display text-[24px] tracking-tight">Semi-ann.</div>
-          </div>
-        </div>
-        <p class="mt-7">
-          <a href="/indices/rhix" class="editorial-link text-[14px]">
-            Composition &amp; levels →
-          </a>
-        </p>
-      </div>
-      <MiniChart id="rhix-hero-chart" data={RHIX_SERIES} color="#6B1F2E" />
-    </div>
-
-    <!-- RITIX teaser -->
-    <div class="grid md:grid-cols-2 gap-12 items-center py-14 border-t border-b border-rule">
-      <div>
-        <div class="font-mono text-[14px] tracking-wider2 text-accent mb-4">
-          RITIX · Russia IT Index
-        </div>
-        <h3 class="display font-normal text-[36px] leading-[1.05] tracking-tighter m-0 mb-5">
-          Russian technology sector concept.
-        </h3>
-        <p class="text-ink-soft text-[15px] leading-relaxed mb-7">
-          A square-root free-float-adjusted market-cap weighted index
-          concept covering ten Russian IT issuers on the Moscow Exchange.
-        </p>
-        <div class="grid grid-cols-3 gap-6 pt-6 border-t border-rule">
-          <div>
-            <div class="text-[11px] uppercase tracking-[0.14em] text-ink-mute mb-1.5">Constituents</div>
+            <div class="text-[11px] uppercase tracking-[0.14em] text-ink-mute mb-1.5">{t.home.research.ritix.constituentsLabel}</div>
             <div class="font-display text-[24px] tracking-tight">10</div>
           </div>
           <div>
-            <div class="text-[11px] uppercase tracking-[0.14em] text-ink-mute mb-1.5">2025 Return</div>
-            <div class="font-display text-[24px] tracking-tight text-negative">−27.31%</div>
+            <div class="text-[11px] uppercase tracking-[0.14em] text-ink-mute mb-1.5">{t.home.research.ritix.sinceInceptionLabel}</div>
+            <div class={`font-display text-[24px] tracking-tight ${parseFloat(ritixYtd) >= 0 ? 'text-positive' : 'text-negative'}`}>
+              {parseFloat(ritixYtd) >= 0 ? '+' : ''}{ritixYtd}%
+            </div>
           </div>
           <div>
-            <div class="text-[11px] uppercase tracking-[0.14em] text-ink-mute mb-1.5">Volatility</div>
-            <div class="font-display text-[24px] tracking-tight">23.7%</div>
+            <div class="text-[11px] uppercase tracking-[0.14em] text-ink-mute mb-1.5">{t.home.research.ritix.rebalanceLabel}</div>
+            <div class="font-display text-[24px] tracking-tight">{t.home.research.ritix.rebalanceValue}</div>
           </div>
         </div>
         <p class="mt-7">
           <a href="/indices/ritix" class="editorial-link text-[14px]">
-            Composition &amp; performance →
+            {t.home.research.ritix.link}
           </a>
         </p>
       </div>
       <MiniChart id="ritix-hero-chart" data={RITIX_SERIES} color="#3D3D3A" />
     </div>
 
+    <!-- RHIX teaser -->
+    <div class="grid md:grid-cols-2 gap-12 items-center py-14 border-t border-b border-rule">
+      <div>
+        <div class="font-mono text-[14px] tracking-wider2 text-accent mb-4">
+          {t.home.research.rhix.ticker}
+        </div>
+        <h3 class="display font-normal text-[36px] leading-[1.05] tracking-tighter m-0 mb-5">
+          {t.home.research.rhix.h3}
+        </h3>
+        <p class="text-ink-soft text-[15px] leading-relaxed mb-7">
+          {t.home.research.rhix.desc}
+        </p>
+        <div class="grid grid-cols-3 gap-6 pt-6 border-t border-rule">
+          <div>
+            <div class="text-[11px] uppercase tracking-[0.14em] text-ink-mute mb-1.5">{t.home.research.rhix.constituentsLabel}</div>
+            <div class="font-display text-[24px] tracking-tight">5</div>
+          </div>
+          <div>
+            <div class="text-[11px] uppercase tracking-[0.14em] text-ink-mute mb-1.5">{t.home.research.rhix.ytdLabel}</div>
+            <div class={`font-display text-[24px] tracking-tight ${parseFloat(rhixYtd) >= 0 ? 'text-positive' : 'text-negative'}`}>
+              {parseFloat(rhixYtd) >= 0 ? '+' : ''}{rhixYtd}%
+            </div>
+          </div>
+          <div>
+            <div class="text-[11px] uppercase tracking-[0.14em] text-ink-mute mb-1.5">{t.home.research.rhix.rebalanceLabel}</div>
+            <div class="font-display text-[24px] tracking-tight">{t.home.research.rhix.rebalanceValue}</div>
+          </div>
+        </div>
+        <p class="mt-7">
+          <a href="/indices/rhix" class="editorial-link text-[14px]">
+            {t.home.research.rhix.link}
+          </a>
+        </p>
+      </div>
+      <MiniChart id="rhix-hero-chart" data={RHIX_SERIES} color="#6B1F2E" />
+    </div>
+
     <p class="mt-10">
-      <a href="/indices" class="editorial-link text-[15px]">All research prototypes →</a>
+      <a href="/indices" class="editorial-link text-[15px]">{t.home.research.allLink}</a>
     </p>
   </section>
 

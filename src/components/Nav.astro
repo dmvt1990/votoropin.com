@@ -1,14 +1,15 @@
 ---
 // src/components/Nav.astro
 // Sticky top navigation. Active page link gets the accent colour.
+import { t } from "../i18n";
 const path = Astro.url.pathname.replace(/\/$/, "") || "/";
 
 const links = [
-  { href: "/", label: "Home" },
-  { href: "/cv", label: "CV" },
-  { href: "/indices", label: "Indices" },
-  { href: "/notes", label: "Notes" },
-  { href: "/contact", label: "Contact" },
+  { href: "/",        label: t.nav.links.home },
+  { href: "/cv",      label: t.nav.links.cv },
+  { href: "/indices", label: t.nav.links.indices },
+  { href: "/notes",   label: t.nav.links.notes },
+  { href: "/contact", label: t.nav.links.contact },
 ];
 
 function isActive(href: string) {
@@ -20,7 +21,7 @@ function isActive(href: string) {
 <nav class="sticky top-0 z-50 backdrop-blur-md bg-bg/85 border-b border-rule">
   <div class="container-wide flex items-center justify-between py-4">
     <a href="/" class="font-display text-[20px] tracking-tight text-ink no-underline">
-      Dmitrii Votoropin<span class="text-accent italic font-normal">,</span> CFA
+      {t.nav.brand}<span class="text-accent italic font-normal">,</span> {t.nav.brandSuffix}
     </a>
     <ul class="hidden md:flex gap-9 list-none m-0 p-0">
       {
@@ -42,7 +43,7 @@ function isActive(href: string) {
     <!-- Mobile: a single dropdown trigger -->
     <details class="md:hidden relative">
       <summary class="list-none cursor-pointer text-ink-soft text-sm select-none">
-        Menu ↓
+        {t.nav.mobileToggle}
       </summary>
       <ul class="absolute right-0 mt-3 w-48 bg-bg border border-rule shadow-lg list-none p-0 m-0 z-50">
         {

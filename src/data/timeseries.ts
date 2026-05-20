@@ -1,25 +1,35 @@
 /**
  * timeseries.ts
  *
- * Exports historical index level series for RITIX and RHIX.
+ * Exports historical level series for RITIX, RHIX, and the benchmark
+ * indices (IMOEX, MOEXIT). All series are pulled from the VPS by
+ * deploy/deploy.sh before each build.
  *
- * Data source: CSV files pulled from /opt/indices/state/ on the VPS by
- * deploy/deploy.sh before each build. Format: date,level,divisor,total_ff_mcap
+ * Index CSVs (date,level,divisor,total_ff_mcap):
+ *   src/data/ritix_levels.csv  ← /opt/indices/state/ritix_levels.csv
+ *   src/data/rhix_levels.csv   ← /opt/indices/state/rhix_levels.csv
  *
- * For local development: run `npm run fetch-levels` to pull current data,
- * or leave the committed placeholder files in place (charts will show
- * whatever data is currently in src/data/*.csv).
+ * Benchmark CSVs (date,level — already rebased to 1000 at inception):
+ *   src/data/imoex_levels.csv  ← /opt/indices/state/imoex_levels.csv
+ *   src/data/moexit_levels.csv ← /opt/indices/state/moexit_levels.csv
+ *
+ * For local dev: run `npm run fetch-levels` to pull fresh data from the VPS.
  */
 
-import ritixRaw from "./ritix_levels.csv?raw";
-import rhixRaw from "./rhix_levels.csv?raw";
+import ritixRaw  from "./ritix_levels.csv?raw";
+import rhixRaw   from "./rhix_levels.csv?raw";
+import imoexRaw  from "./imoex_levels.csv?raw";
+import moexitRaw from "./moexit_levels.csv?raw";
 
-/** Parse a level CSV (date,level,... format) into [date, level] pairs. */
+/** Parse a CSV with at least two columns (date, level) into [date, level] pairs.
+ *  Sorts ascending by date so the series is always in chronological order,
+ *  regardless of the order rows appear in the CSV file.
+ */
 function parseLevelsCsv(raw: string): [string, number][] {
   return raw
     .trim()
     .split("\n")
-    .slice(1) // skip header row
+    .slice(1)              // skip header row
     .filter(Boolean)
     .map((row): [string, number] | null => {
       const parts = row.split(",");
@@ -29,15 +39,34 @@ function parseLevelsCsv(raw: string): [string, number][] {
       if (!d || isNaN(l)) return null;
       return [d, l];
     })
-    .filter((x): x is [string, number] => x !== null);
+    .filter((x): x is [string, number] => x !== null)
+    .sort((a, b) => (a[0] < b[0] ? -1 : a[0] > b[0] ? 1 : 0));
 }
 
-export const RITIX_SERIES: [string, number][] = parseLevelsCsv(ritixRaw);
-export const RHIX_SERIES: [string, number][] = parseLevelsCsv(rhixRaw);
+/**
+ * Rebase a series so the first data point equals exactly 1000.
+ * Preserves all daily return ratios; only shifts the absolute level.
+ */
+function rebaseTo1000(series: [string, number][]): [string, number][] {
+  if (series.length === 0) return [];
+  const base = series[0][1];
+  if (base === 0) return series;
+  return series.map(([d, v]) => [d, (v / base) * 1000]);
+}
+
+// ── Index series (rebased so first point = 1000) ────────────────────────────
+export const RITIX_SERIES: [string, number][] = rebaseTo1000(parseLevelsCsv(ritixRaw));
+export const RHIX_SERIES:  [string, number][] = rebaseTo1000(parseLevelsCsv(rhixRaw));
+
+// ── Benchmark series (already rebased by export_benchmarks.py on the VPS) ───
+export const IMOEX_SERIES:  [string, number][] = parseLevelsCsv(imoexRaw);
+export const MOEXIT_SERIES: [string, number][] = parseLevelsCsv(moexitRaw);
+
+// ── Helpers ─────────────────────────────────────────────────────────────────
 
 /**
- * Latest level for quick display (e.g. hero cards on the index page).
- * Returns null if no data is available.
+ * Return the most recent [date, level] in a series.
+ * Returns null when the series is empty.
  */
 export function latestLevel(
   series: [string, number][]
@@ -48,12 +77,12 @@ export function latestLevel(
 }
 
 /**
- * Performance since inception as a percentage.
- * Returns null if fewer than 2 data points.
+ * Total return since inception as a percentage.
+ * Returns null when fewer than 2 data points are available.
  */
 export function inceptionReturn(series: [string, number][]): number | null {
   if (series.length < 2) return null;
   const [, first] = series[0];
-  const [, last] = series[series.length - 1];
+  const [, last]  = series[series.length - 1];
   return ((last - first) / first) * 100;
 }

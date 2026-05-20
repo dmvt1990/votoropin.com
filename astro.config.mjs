@@ -3,9 +3,14 @@ import { defineConfig } from "astro/config";
 import mdx from "@astrojs/mdx";
 import tailwind from "@astrojs/tailwind";
 
+const lang    = process.env.PUBLIC_LANG === "ru" ? "ru" : "en";
+const siteUrl = lang === "ru" ? "https://votoropin.ru" : "https://votoropin.com";
+const outDir  = process.env.ASTRO_OUT_DIR || "dist";
+
 // https://astro.build/config
 export default defineConfig({
-  site: "https://votoropin.com",
+  site: siteUrl,
+  outDir,
   build: {
     format: "directory",
   },

@@ -3,6 +3,8 @@ node_modules/
 
 # Build output
 dist/
+dist-en/
+dist-ru/
 
 # Astro cache
 .astro/
