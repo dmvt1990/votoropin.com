@@ -52,16 +52,29 @@ const ritixYtd = ((ritix.level / 1000 - 1) * 100).toFixed(2);
   <!-- ── ABOUT ────────────────────────────────────────────────── -->
   <section class="container-wide py-24 border-t border-rule">
     <div class="section-label">{t.home.about.sectionLabel}</div>
-    <h2 class="display font-normal text-display-md max-w-[820px] m-0 mb-10">
-      {t.home.about.h2part1}<em>{t.home.about.h2em}</em>{t.home.about.h2part2}
-    </h2>
-    <p class="text-[18px] leading-relaxed max-w-[760px] text-ink-soft mb-6">
-      {t.home.about.p1}
-    </p>
-    <p class="text-[18px] leading-relaxed max-w-[760px] text-ink-soft mb-10">
-      {t.home.about.p2}
-    </p>
-    <a href="/cv" class="editorial-link text-[15px]">{t.home.about.readCv}</a>
+    <div class="grid md:grid-cols-[1fr_240px] gap-16 items-start">
+      <div>
+        <h2 class="display font-normal text-display-md max-w-[820px] m-0 mb-10">
+          {t.home.about.h2part1}<em>{t.home.about.h2em}</em>{t.home.about.h2part2}
+        </h2>
+        <p class="text-[18px] leading-relaxed max-w-[760px] text-ink-soft mb-6">
+          {t.home.about.p1}
+        </p>
+        <p class="text-[18px] leading-relaxed max-w-[760px] text-ink-soft mb-10">
+          {t.home.about.p2}
+        </p>
+        <a href="/cv" class="editorial-link text-[15px]">{t.home.about.readCv}</a>
+      </div>
+      <div class="hidden md:block pt-2">
+        <img
+          src="/images/photo.jpg"
+          alt={t.cv.photoAlt}
+          class="w-full aspect-[3/4] object-cover rounded-sm"
+          width="240"
+          height="320"
+        />
+      </div>
+    </div>
   </section>
 
   <!-- ── RESEARCH PROTOTYPES TEASER ───────────────────────────── -->
