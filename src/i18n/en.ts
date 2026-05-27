@@ -69,7 +69,8 @@ export const en = {
 
   // ── Home page ─────────────────────────────────────────────────────────────
   home: {
-    pageTitle: "Dmitrii Votoropin — Investment Counsellor",
+    pageTitle:       "Dmitrii Votoropin — Investment Counsellor",
+    pageDescription: "Dmitrii Votoropin, CFA — Investment Counsellor with 14+ years in private banking and wealth management at Citi and Gazprombank. Personal research on rules-based index design: RITIX and RHIX." as string,
     hero: {
       eyebrow:    "Investment Counsellor · Moscow",
       h1line1:    "Private banking, ",

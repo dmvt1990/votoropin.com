@@ -25,6 +25,8 @@ const canonical = new URL(Astro.url.pathname, Astro.site).toString();
 const namePresent = title.includes("Votoropin") || title.includes("Воторопин");
 const fullTitle = namePresent ? title : `${title} ${t.meta.titleSuffix}`;
 const htmlLang = t.meta.locale.slice(0, 2);
+const enHref = new URL(Astro.url.pathname, "https://votoropin.com").toString();
+const ruHref = new URL(Astro.url.pathname, "https://votoropin.ru").toString();
 ---
 
 <!doctype html>
@@ -38,6 +40,9 @@ const htmlLang = t.meta.locale.slice(0, 2);
     <title>{fullTitle}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
+    <link rel="alternate" hreflang="en" href={enHref} />
+    <link rel="alternate" hreflang="ru" href={ruHref} />
+    <link rel="alternate" hreflang="x-default" href={enHref} />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />

@@ -2,6 +2,7 @@
 import { defineConfig } from "astro/config";
 import mdx from "@astrojs/mdx";
 import tailwind from "@astrojs/tailwind";
+import sitemap from "@astrojs/sitemap";
 
 const lang    = process.env.PUBLIC_LANG === "ru" ? "ru" : "en";
 const siteUrl = lang === "ru" ? "https://votoropin.ru" : "https://votoropin.com";
@@ -15,6 +16,7 @@ export default defineConfig({
     format: "directory",
   },
   integrations: [
+    sitemap(),
     mdx(),
     tailwind({
       applyBaseStyles: false, // we apply our own base styles via src/styles/global.css

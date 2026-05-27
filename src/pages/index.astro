@@ -12,7 +12,7 @@ const rhixYtd = ((rhix.level / 1000 - 1) * 100).toFixed(2);
 const ritixYtd = ((ritix.level / 1000 - 1) * 100).toFixed(2);
 ---
 
-<Base title={t.home.pageTitle}>
+<Base title={t.home.pageTitle} description={t.home.pageDescription}>
 
   <!-- ── HERO ─────────────────────────────────────────────────── -->
   <section class="container-wide pt-32 pb-24">
@@ -52,7 +52,7 @@ const ritixYtd = ((ritix.level / 1000 - 1) * 100).toFixed(2);
   <!-- ── ABOUT ────────────────────────────────────────────────── -->
   <section class="container-wide py-24 border-t border-rule">
     <div class="section-label">{t.home.about.sectionLabel}</div>
-    <div class="grid md:grid-cols-[1fr_240px] gap-16 items-start">
+    <div class="grid md:grid-cols-[1fr_320px] gap-16 items-start">
       <div>
         <h2 class="display font-normal text-display-md max-w-[820px] m-0 mb-10">
           {t.home.about.h2part1}<em>{t.home.about.h2em}</em>{t.home.about.h2part2}
@@ -60,9 +60,11 @@ const ritixYtd = ((ritix.level / 1000 - 1) * 100).toFixed(2);
         <p class="text-[18px] leading-relaxed max-w-[760px] text-ink-soft mb-6">
           {t.home.about.p1}
         </p>
-        <p class="text-[18px] leading-relaxed max-w-[760px] text-ink-soft mb-10">
-          {t.home.about.p2}
-        </p>
+        {t.home.about.p2 && (
+          <p class="text-[18px] leading-relaxed max-w-[760px] text-ink-soft mb-10">
+            {t.home.about.p2}
+          </p>
+        )}
         <a href="/cv" class="editorial-link text-[15px]">{t.home.about.readCv}</a>
       </div>
       <div class="hidden md:block pt-2">
@@ -70,8 +72,9 @@ const ritixYtd = ((ritix.level / 1000 - 1) * 100).toFixed(2);
           src="/images/photo2.jpg"
           alt={t.cv.photoAlt}
           class="w-full aspect-[3/4] object-cover rounded-sm"
-          width="240"
-          height="320"
+          loading="lazy"
+          width="320"
+          height="427"
         />
       </div>
     </div>
