@@ -82,16 +82,7 @@ const ribbonCells = [
 // ── Performance stats ───────────────────────────────────────────────────────
 const stats = (isRhix ? rhixStatsRaw : ritixStatsRaw) as StatsData;
 
-// ── Rebalancing history placeholder ────────────────────────────────────────
-const rebalanceHistory = isRhix
-  ? [
-      { date: entry.data.versionDate,   note: t.indexDetail.rebalancingNotes.latestReview },
-      { date: entry.data.inceptionDate, note: t.indexDetail.rebalancingNotes.inception },
-    ]
-  : [
-      { date: entry.data.versionDate,   note: t.indexDetail.rebalancingNotes.latestQuarterlyReview },
-      { date: entry.data.inceptionDate, note: t.indexDetail.rebalancingNotes.inception },
-    ];
+const rebalanceHistory = entry.data.rebalancingLog;
 ---
 
 <Base title={entry.data.name} description={entry.data.tagline}>
@@ -161,9 +152,6 @@ const rebalanceHistory = isRhix
           </li>
         ))}
       </ul>
-      <p class="mt-6 text-[13px] text-ink-mute italic">
-        {t.indexDetail.rebalancingPlaceholder}
-      </p>
     </div>
   </section>
 

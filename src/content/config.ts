@@ -21,6 +21,10 @@ const indices = defineCollection({
     rebalanceFrequency: z.enum(["quarterly", "semi-annual", "annual"]),
     currency: z.string().default("RUB"),
     order: z.number().default(99),
+    rebalancingLog: z.array(z.object({
+      date: z.string(),
+      note: z.string(),
+    })).default([]),
   }),
 });
 
@@ -30,9 +34,9 @@ const notes = defineCollection({
     title: z.string(),
     summary: z.string(),
     date: z.coerce.date(),
-    tag: z.enum(["Methodology", "Weighting", "Data", "Markets", "Portfolio"]),
+    tag: z.enum(["Methodology", "Weighting", "Data", "Markets", "Portfolio", "Commentary"]),
     readMinutes: z.number().default(5),
-    draft: z.boolean().default(false),
+    draft: z.boolean().default(true),
   }),
 });
 
