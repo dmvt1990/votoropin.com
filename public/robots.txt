@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://votoropin.com/sitemap-index.xml
