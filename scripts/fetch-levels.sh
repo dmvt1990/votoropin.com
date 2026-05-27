@@ -15,13 +15,17 @@ VPS="root@153.80.196.164"
 REMOTE_STATE="/opt/indices/state"
 DATA_DIR="$(dirname "$0")/../src/data"
 
-echo "Pulling index levels from VPS..."
-scp "$VPS:$REMOTE_STATE/ritix_levels.csv" "$DATA_DIR/ritix_levels.csv"
-scp "$VPS:$REMOTE_STATE/rhix_levels.csv"  "$DATA_DIR/rhix_levels.csv"
+echo "Pulling index levels and stats from VPS..."
+scp "$VPS:$REMOTE_STATE/ritix_levels.csv"  "$DATA_DIR/ritix_levels.csv"
+scp "$VPS:$REMOTE_STATE/rhix_levels.csv"   "$DATA_DIR/rhix_levels.csv"
+scp "$VPS:$REMOTE_STATE/ritix_stats.json"  "$DATA_DIR/ritix_stats.json"
+scp "$VPS:$REMOTE_STATE/rhix_stats.json"   "$DATA_DIR/rhix_stats.json"
 
 RITIX_ROWS=$(tail -n +2 "$DATA_DIR/ritix_levels.csv" | wc -l | tr -d ' ')
 RHIX_ROWS=$(tail -n +2 "$DATA_DIR/rhix_levels.csv" | wc -l | tr -d ' ')
 
 echo "  ✓ ritix_levels.csv — $RITIX_ROWS trading days"
 echo "  ✓ rhix_levels.csv  — $RHIX_ROWS trading days"
+echo "  ✓ ritix_stats.json"
+echo "  ✓ rhix_stats.json"
 echo "Done. Run 'npm run dev' to preview with real data."

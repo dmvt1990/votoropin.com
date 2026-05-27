@@ -6,6 +6,7 @@ import Base from "../../layouts/Base.astro";
 import IndexLevelChart from "../../components/IndexLevelChart.astro";
 import ConstituentsTable from "../../components/ConstituentsTable.astro";
 import Ribbon from "../../components/Ribbon.astro";
+import PerformanceStats from "../../components/PerformanceStats.astro";
 import { t } from "../../i18n";
 
 import { RHIX_CONSTITUENTS, RHIX_AS_OF } from "../../data/rhix-constituents";
@@ -17,6 +18,10 @@ import {
   MOEXIT_SERIES,
   latestLevel,
 } from "../../data/timeseries";
+
+import ritixStatsRaw from "../../data/ritix_stats.json";
+import rhixStatsRaw  from "../../data/rhix_stats.json";
+import type { StatsData } from "../../components/PerformanceStats.astro";
 
 export async function getStaticPaths() {
   const collectionName = import.meta.env.PUBLIC_LANG === "ru" ? "indices-ru" : "indices";
@@ -74,6 +79,9 @@ const ribbonCells = [
   { k: t.indexDetail.ribbon.inception,    v: entry.data.inceptionDate },
 ];
 
+// ── Performance stats ───────────────────────────────────────────────────────
+const stats = (isRhix ? rhixStatsRaw : ritixStatsRaw) as StatsData;
+
 // ── Rebalancing history placeholder ────────────────────────────────────────
 const rebalanceHistory = isRhix
   ? [
@@ -117,6 +125,9 @@ const rebalanceHistory = isRhix
 
     <ConstituentsTable constituents={consts} asOf={asOf} showShares={showShares} />
   </section>
+
+  <!-- ── PERFORMANCE STATISTICS ───────────────────────────────────────────── -->
+  <PerformanceStats stats={stats} indexTicker={entry.data.ticker} />
 
   <!-- ── DESCRIPTION (from MDX) ─────────────────────────────────────────── -->
   <section class="bg-bg-sunken border-t border-rule">

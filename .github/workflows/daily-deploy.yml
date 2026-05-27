@@ -35,12 +35,14 @@ jobs:
           ssh root@153.80.196.164 \
             "cd /opt/indices && ./venv/bin/python3 export_benchmarks.py"
 
-      - name: Pull level CSVs
+      - name: Pull level CSVs and stats
         run: |
           scp root@153.80.196.164:/opt/indices/state/ritix_levels.csv  src/data/ritix_levels.csv
           scp root@153.80.196.164:/opt/indices/state/rhix_levels.csv   src/data/rhix_levels.csv
           scp root@153.80.196.164:/opt/indices/state/imoex_levels.csv  src/data/imoex_levels.csv
           scp root@153.80.196.164:/opt/indices/state/moexit_levels.csv src/data/moexit_levels.csv
+          scp root@153.80.196.164:/opt/indices/state/ritix_stats.json  src/data/ritix_stats.json
+          scp root@153.80.196.164:/opt/indices/state/rhix_stats.json   src/data/rhix_stats.json
 
       - name: Install dependencies
         run: npm ci

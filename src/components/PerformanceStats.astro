@@ -1,0 +1,149 @@
+---
+// src/components/PerformanceStats.astro
+
+import { t } from "../i18n";
+
+interface ReturnPair { index: number; benchmark: number; }
+interface DrawdownInfo { value_pct: number; peak_date: string; trough_date: string; }
+
+export interface StatsData {
+  as_of:              string;
+  inception_date:     string;
+  benchmark_ticker:   string;
+  returns: {
+    "1m":       ReturnPair;
+    "3m":       ReturnPair;
+    ytd:        ReturnPair;
+    "1y":       ReturnPair;
+    inception:  ReturnPair;
+  };
+  ann_vol_pct:        number;
+  bench_ann_vol_pct:  number;
+  max_drawdown:       DrawdownInfo;
+  bench_max_drawdown: DrawdownInfo;
+  beta:               number;
+  sharpe:             number;
+  bench_sharpe:       number;
+  sortino:            number;
+  calmar:             number;
+  rf_instrument:      string;
+  rf_frequency:       string;
+  rf_type:            string;
+}
+
+export interface Props {
+  stats:       StatsData;
+  indexTicker: string;
+}
+
+const { stats, indexTicker } = Astro.props;
+const s = t.performanceStats;
+
+type Tone = "positive" | "negative" | "neutral";
+function tone(v: number): Tone { return v > 0 ? "positive" : v < 0 ? "negative" : "neutral"; }
+function fmt(v: number): string { return (v >= 0 ? "+" : "") + v.toFixed(2) + "%"; }
+function fmtDD(dd: DrawdownInfo): string {
+  return dd.value_pct.toFixed(2) + "% (" + dd.peak_date + " to " + dd.trough_date + ")";
+}
+
+const periodRows: Array<{ label: string; iv: number; bv: number }> = [
+  { label: s.periodReturns["1m"], iv: stats.returns["1m"].index, bv: stats.returns["1m"].benchmark },
+  { label: s.periodReturns["3m"], iv: stats.returns["3m"].index, bv: stats.returns["3m"].benchmark },
+  { label: s.periodReturns.ytd,   iv: stats.returns.ytd.index,   bv: stats.returns.ytd.benchmark },
+  { label: s.periodReturns["1y"], iv: stats.returns["1y"].index, bv: stats.returns["1y"].benchmark },
+  { label: s.periodReturns.si,    iv: stats.returns.inception.index, bv: stats.returns.inception.benchmark },
+];
+
+const ratioRows: Array<{ label: string; iv: number; bv: number | null }> = [
+  { label: s.riskAdjusted.sharpe,  iv: stats.sharpe,  bv: stats.bench_sharpe },
+  { label: s.riskAdjusted.sortino, iv: stats.sortino, bv: null },
+  { label: s.riskAdjusted.calmar,  iv: stats.calmar,  bv: null },
+];
+---
+
+<section class="border-t border-rule">
+  <div class="container-narrow py-20">
+
+    <div class="section-label">{s.sectionLabel}</div>
+    <h2 class="display font-normal text-[28px] tracking-tight m-0 mb-2">{s.h2}</h2>
+    <p class="text-[13px] text-ink-mute mb-10">{s.asOf} {stats.as_of}</p>
+
+    <!-- Column headers -->
+    <div class="grid grid-cols-[1fr_120px_120px] gap-x-4 mb-1 pb-2 border-b border-rule">
+      <div></div>
+      <div class="text-[11px] uppercase tracking-[0.16em] text-ink-mute text-right">
+        {s.index}<br/>
+        <span class="font-mono text-accent">{indexTicker}</span>
+      </div>
+      <div class="text-[11px] uppercase tracking-[0.16em] text-ink-mute text-right">
+        {s.benchmark}<br/>
+        <span class="font-mono text-accent">{stats.benchmark_ticker}</span>
+      </div>
+    </div>
+
+    <!-- Period returns -->
+    <div class="text-[11px] uppercase tracking-[0.16em] text-ink-mute mt-6 mb-2">{s.periodReturns.label}</div>
+    {periodRows.map((r) => (
+      <div class="grid grid-cols-[1fr_120px_120px] gap-x-4 py-2.5 border-b border-rule items-baseline">
+        <span class="text-[14px] text-ink-soft">{r.label}</span>
+        <span class:list={[
+          "text-[16px] font-display tracking-tight text-right",
+          tone(r.iv) === "positive" ? "text-positive" : tone(r.iv) === "negative" ? "text-negative" : "text-ink",
+        ]}>{fmt(r.iv)}</span>
+        <span class:list={[
+          "text-[14px] font-display tracking-tight text-right text-ink-mute",
+          tone(r.bv) === "positive" ? "text-positive/70" : tone(r.bv) === "negative" ? "text-negative/70" : "",
+        ]}>{fmt(r.bv)}</span>
+      </div>
+    ))}
+
+    <!-- Risk & drawdown -->
+    <div class="text-[11px] uppercase tracking-[0.16em] text-ink-mute mt-8 mb-2">{s.riskStats.label}</div>
+
+    <div class="grid grid-cols-[1fr_120px_120px] gap-x-4 py-2.5 border-b border-rule items-baseline">
+      <span class="text-[14px] text-ink-soft">{s.riskStats.vol}</span>
+      <span class="text-[16px] font-display tracking-tight text-right text-ink">{stats.ann_vol_pct.toFixed(2)}%</span>
+      <span class="text-[14px] font-display tracking-tight text-right text-ink-mute">{stats.bench_ann_vol_pct.toFixed(2)}%</span>
+    </div>
+
+    <div class="grid grid-cols-[1fr_auto] gap-x-4 py-2.5 border-b border-rule items-baseline">
+      <span class="text-[14px] text-ink-soft">{s.riskStats.maxDD} &mdash; {indexTicker}</span>
+      <span class="text-[14px] font-display tracking-tight text-right text-negative">{fmtDD(stats.max_drawdown)}</span>
+    </div>
+    <div class="grid grid-cols-[1fr_auto] gap-x-4 py-2.5 border-b border-rule items-baseline">
+      <span class="text-[14px] text-ink-soft">{s.riskStats.maxDD} &mdash; {stats.benchmark_ticker}</span>
+      <span class="text-[14px] font-display tracking-tight text-right text-negative">{fmtDD(stats.bench_max_drawdown)}</span>
+    </div>
+
+    <div class="grid grid-cols-[1fr_120px_120px] gap-x-4 py-2.5 border-b border-rule items-baseline">
+      <span class="text-[14px] text-ink-soft">{s.riskStats.beta}</span>
+      <span class="text-[16px] font-display tracking-tight text-right text-ink">{stats.beta.toFixed(3)}</span>
+      <span class="text-[14px] font-display tracking-tight text-right text-ink-mute">1.000</span>
+    </div>
+
+    <!-- Risk-adjusted ratios -->
+    <div class="text-[11px] uppercase tracking-[0.16em] text-ink-mute mt-8 mb-2">{s.riskAdjusted.label}</div>
+
+    {ratioRows.map((r) => (
+      <div class="grid grid-cols-[1fr_120px_120px] gap-x-4 py-2.5 border-b border-rule items-baseline">
+        <span class="text-[14px] text-ink-soft">{r.label}</span>
+        <span class:list={[
+          "text-[16px] font-display tracking-tight text-right",
+          r.iv >= 0 ? "text-ink" : "text-negative",
+        ]}>{r.iv.toFixed(3)}</span>
+        <span class="text-[14px] font-display tracking-tight text-right text-ink-mute">
+          {r.bv !== null ? r.bv.toFixed(3) : "—"}
+        </span>
+      </div>
+    ))}
+
+    <!-- Disclosure -->
+    <div class="mt-10 bg-bg-sunken border-l-2 border-rule p-5">
+      <div class="font-sans text-[11px] uppercase tracking-[0.18em] text-ink-mute font-medium mb-2">
+        {s.disclosure.label}
+      </div>
+      <p class="text-[12px] leading-relaxed text-ink-mute m-0">{s.disclosure.text}</p>
+    </div>
+
+  </div>
+</section>

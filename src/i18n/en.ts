@@ -13,11 +13,12 @@ export const en = {
     brandSuffix: "",
     mobileToggle: "Menu ↓",
     links: {
-      home:    "Home",
-      cv:      "CV",
-      indices: "Indices",
-      notes:   "Notes",
-      contact: "Contact",
+      home:      "Home" as string,
+      cv:        "CV" as string,
+      indices:   "Indices" as string,
+      notes:     "Notes" as string,
+      contact:   "Contact" as string,
+      dashboard: "" as string,
     },
   },
 
@@ -147,6 +148,7 @@ export const en = {
       designationValue: "",
     },
     downloadCv: "Download full CV (PDF) →",
+    cvPdfPath: "/downloads/votoropin-cv.pdf" as string,
     sections: {
       experience:   "Experience",
       education:    "Education",
@@ -313,22 +315,55 @@ export const en = {
     },
   },
 
+  // ── Performance statistics (index detail pages) ──────────────────────────
+  performanceStats: {
+    sectionLabel: "Performance statistics",
+    h2:           "Risk-adjusted returns vs benchmark.",
+    asOf:         "As of",
+    index:        "Index",
+    benchmark:    "Benchmark",
+    periodReturns: {
+      label: "Period returns",
+      "1m":  "1 Month",
+      "3m":  "3 Months",
+      ytd:   "YTD",
+      "1y":  "1 Year",
+      si:    "Since inception",
+    },
+    riskStats: {
+      label:    "Risk & drawdown",
+      vol:      "Ann. Volatility",
+      maxDD:    "Max Drawdown",
+      beta:     "Beta",
+    },
+    riskAdjusted: {
+      label:   "Risk-adjusted ratios",
+      sharpe:  "Sharpe Ratio",
+      sortino: "Sortino Ratio",
+      calmar:  "Calmar Ratio",
+    },
+    disclosure: {
+      label: "Methodology disclosure",
+      text:  "Sharpe Ratio computed using the Sharpe (1994) ex-post formula: mean(Ra − Rf) / σ(Ra − Rf) × √12, where Ra and Rf are monthly nominal returns. Rf = CBR Key Rate (annual, end-of-month), converted to monthly decimal. Denominator is the standard deviation of the excess-return series (not return standard deviation). Monthly frequency; periods shorter than 12 months use available observations. Sortino Ratio: annualised return / (downside semi-deviation × √12), MAR = 0. Calmar Ratio: annualised return / |Max Drawdown|. Beta: covariance(daily index return, daily benchmark return) / variance(daily benchmark return), computed over full history. Annualised Volatility: σ(daily log returns) × √252.",
+    },
+  },
+
   // ── Notes index page ──────────────────────────────────────────────────────
   notesOverview: {
-    pageTitle:       "Notes",
-    pageDescription: "Occasional writing on index design, portfolio construction, and market structure.",
-    sectionLabel:    "Notes",
-    h1part1:         "Occasional ",
-    h1em:            "writing",
-    h1part2:         " on index design, portfolio construction, and market structure.",
-    emptyMessage:    "No notes published yet. The first ones are in draft.",
-    minRead:         "min read",
+    pageTitle:       "Notes" as string,
+    pageDescription: "Occasional writing on index design, portfolio construction, and market structure." as string,
+    sectionLabel:    "Notes" as string,
+    h1part1:         "Occasional " as string,
+    h1em:            "writing" as string,
+    h1part2:         " on index design, portfolio construction, and market structure." as string,
+    emptyMessage:    "No notes published yet. The first ones are in draft." as string,
+    minRead:         "min read" as string,
   },
 
   // ── Note detail page ([slug].astro) ───────────────────────────────────────
   noteDetail: {
-    backLink: "← All notes",
-    minRead:  "min read",
+    backLink: "← All notes" as string,
+    minRead:  "min read" as string,
   },
 
 } as const;

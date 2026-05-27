@@ -40,6 +40,12 @@ echo "  ✓ imoex_levels.csv"
 scp "$VPS:$REMOTE_STATE/moexit_levels.csv" "$DATA_DIR/moexit_levels.csv"
 echo "  ✓ moexit_levels.csv"
 
+scp "$VPS:$REMOTE_STATE/ritix_stats.json"  "$DATA_DIR/ritix_stats.json"
+echo "  ✓ ritix_stats.json"
+
+scp "$VPS:$REMOTE_STATE/rhix_stats.json"   "$DATA_DIR/rhix_stats.json"
+echo "  ✓ rhix_stats.json"
+
 # ── Step 3: Build ─────────────────────────────────────────────────────────────
 echo ""
 echo "=== [3/4] Building ==="
