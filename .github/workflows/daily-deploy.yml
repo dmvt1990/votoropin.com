@@ -1,0 +1,57 @@
+name: Daily index data refresh
+
+on:
+  schedule:
+    # 16:00 UTC = 19:00 МСК — 10 min after MOEX main session closes
+    - cron: '0 16 * * 1-5'
+  workflow_dispatch: # allow manual trigger from GitHub UI
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - name: Configure SSH
+        run: |
+          mkdir -p ~/.ssh
+          printf '%s\n' "${{ secrets.VPS_SSH_KEY }}" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          ssh-keyscan -H 153.80.196.164 >> ~/.ssh/known_hosts
+
+      - name: Refresh index data on VPS
+        run: |
+          ssh root@153.80.196.164 \
+            "cd /opt/indices && ./venv/bin/python3 export_benchmarks.py"
+
+      - name: Pull level CSVs
+        run: |
+          scp root@153.80.196.164:/opt/indices/state/ritix_levels.csv  src/data/ritix_levels.csv
+          scp root@153.80.196.164:/opt/indices/state/rhix_levels.csv   src/data/rhix_levels.csv
+          scp root@153.80.196.164:/opt/indices/state/imoex_levels.csv  src/data/imoex_levels.csv
+          scp root@153.80.196.164:/opt/indices/state/moexit_levels.csv src/data/moexit_levels.csv
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build EN
+        run: PUBLIC_LANG=en ASTRO_OUT_DIR=dist-en npx astro build
+
+      - name: Build RU
+        run: PUBLIC_LANG=ru ASTRO_OUT_DIR=dist-ru npx astro build
+
+      - name: Deploy EN to VPS
+        run: |
+          rsync -avz --delete dist-en/ root@153.80.196.164:/var/www/votoropin/dist/
+
+      - name: Deploy RU to VPS
+        run: |
+          rsync -avz --delete dist-ru/ root@153.80.196.164:/var/www/votoropin-ru/dist/
