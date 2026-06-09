@@ -86,3 +86,32 @@ export function inceptionReturn(series: [string, number][]): number | null {
   const [, last]  = series[series.length - 1];
   return ((last - first) / first) * 100;
 }
+
+/**
+ * Year-to-date return as a percentage.
+ *
+ * Uses the first available trading day on or after Jan 1 of the current
+ * calendar year as the base — consistent with compute_stats.py on the VPS.
+ * Returns null when there is no data for the current year yet.
+ */
+export function ytdReturn(series: [string, number][]): number | null {
+  if (series.length < 2) return null;
+  const jan1 = `${new Date().getFullYear()}-01-01`;
+
+  // First trading day on or after Jan 1 of the current year
+  let baseLevel: number | null = null;
+  let baseIndex = -1;
+  for (let i = 0; i < series.length; i++) {
+    if (series[i][0] >= jan1) {
+      baseLevel = series[i][1];
+      baseIndex = i;
+      break;
+    }
+  }
+
+  // No data for current year yet
+  if (baseLevel === null || baseLevel === 0 || baseIndex === series.length - 1) return null;
+
+  const [, last] = series[series.length - 1];
+  return ((last / baseLevel) - 1) * 100;
+}
