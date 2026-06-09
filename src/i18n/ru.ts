@@ -16,6 +16,7 @@ export const ru = {
       home:      "Главная",
       cv:        "CV",
       indices:   "Индексы",
+      scanner:   "Сканер",
       notes:     "Блог",
       contact:   "Контакты",
       dashboard: "Дашборд",

@@ -5,11 +5,13 @@ import { t } from "../i18n";
 const path = Astro.url.pathname.replace(/\/$/, "") || "/";
 
 const links = [
-  { href: "/",        label: t.nav.links.home },
-  { href: "/cv",      label: t.nav.links.cv },
-  { href: "/indices", label: t.nav.links.indices },
-  { href: "/notes",   label: t.nav.links.notes },
-  { href: "/contact", label: t.nav.links.contact },
+  { href: "/",          label: t.nav.links.home },
+  { href: "/cv",        label: t.nav.links.cv },
+  { href: "/indices",   label: t.nav.links.indices },
+  { href: "/scanner/",  label: t.nav.links.scanner },
+  { href: "/notes",     label: t.nav.links.notes },
+  { href: "/contact",   label: t.nav.links.contact },
+  { href: "/dashboard/dashboard.html", label: t.nav.links.dashboard },
 ].filter(l => l.label);
 
 function isActive(href: string) {

@@ -16,6 +16,7 @@ export const en = {
       home:      "Home" as string,
       cv:        "CV" as string,
       indices:   "Indices" as string,
+      scanner:   "" as string,
       notes:     "Notes" as string,
       contact:   "Contact" as string,
       dashboard: "" as string,
