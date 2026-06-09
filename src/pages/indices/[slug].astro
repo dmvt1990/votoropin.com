@@ -1,1 +1,179 @@
+---
+// src/pages/indices/[slug].astro
 
+import { getCollection } from "astro:content";
+import Base from "../../layouts/Base.astro";
+import IndexLevelChart from "../../components/IndexLevelChart.astro";
+import ConstituentsTable from "../../components/ConstituentsTable.astro";
+import Ribbon from "../../components/Ribbon.astro";
+import PerformanceStats from "../../components/PerformanceStats.astro";
+import { t } from "../../i18n";
+
+import { RHIX_CONSTITUENTS, RHIX_AS_OF } from "../../data/rhix-constituents";
+import { RITIX_CONSTITUENTS, RITIX_AS_OF } from "../../data/ritix-constituents";
+import {
+  RHIX_SERIES,
+  RITIX_SERIES,
+  IMOEX_SERIES,
+  MOEXIT_SERIES,
+  latestLevel,
+  ytdReturn,
+} from "../../data/timeseries";
+
+import ritixStatsRaw from "../../data/ritix_stats.json";
+import rhixStatsRaw  from "../../data/rhix_stats.json";
+import type { StatsData } from "../../components/PerformanceStats.astro";
+
+export async function getStaticPaths() {
+  const collectionName = import.meta.env.PUBLIC_LANG === "ru" ? "indices-ru" : "indices";
+  const indices = await getCollection(collectionName as "indices");
+  return indices.map((i) => ({ params: { slug: i.slug }, props: { entry: i } }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+
+const isRhix  = entry.slug === "rhix";
+const isRitix = entry.slug === "ritix";
+
+const series = isRhix ? RHIX_SERIES : RITIX_SERIES;
+const consts = isRhix ? RHIX_CONSTITUENTS : RITIX_CONSTITUENTS;
+const asOf   = new Date().toLocaleDateString(t.dateLocale, { day: "numeric", month: "short", year: "numeric" });
+const showShares = isRhix;
+
+// ── Benchmark configuration per index ──────────────────────────────────────
+//
+// RITIX: compared against MOEXIT (sector peer) and IMOEX (broad market)
+// RHIX:  compared against IMOEX (broad market)
+//
+// Colors are muted so benchmarks stay clearly secondary to the main index line.
+const benchmarks = isRitix
+  ? [
+      { ticker: "MOEXIT", data: MOEXIT_SERIES, color: "#7B9E9B" },  // muted teal
+      { ticker: "IMOEX",  data: IMOEX_SERIES,  color: "#B0A58A" },  // warm sand
+    ]
+  : [
+      { ticker: "IMOEX", data: IMOEX_SERIES, color: "#B0A58A" },    // warm sand
+    ];
+
+// ── Ribbon stats ────────────────────────────────────────────────────────────
+const latest = latestLevel(series);
+const ytdPct = ytdReturn(series) ?? 0;
+const ytdStr = `${ytdPct >= 0 ? "+" : ""}${ytdPct.toFixed(2)}%`;
+
+const ribbonCells = [
+  {
+    k: t.indexDetail.ribbon.currentLevel,
+    v: latest
+      ? latest.level.toLocaleString("en-US", {
+          minimumFractionDigits: 2,
+          maximumFractionDigits: 2,
+        })
+      : "—",
+  },
+  {
+    k: isRitix ? t.indexDetail.ribbon.sinceInception : t.indexDetail.ribbon.periodReturn,
+    v: ytdStr,
+    tone: (ytdPct >= 0 ? "positive" : "negative") as "positive" | "negative",
+  },
+  { k: t.indexDetail.ribbon.constituents, v: String(consts.length) },
+  { k: t.indexDetail.ribbon.inception,    v: entry.data.inceptionDate },
+];
+
+// ── Performance stats ───────────────────────────────────────────────────────
+const stats = (isRhix ? rhixStatsRaw : ritixStatsRaw) as StatsData;
+
+const rebalanceHistory = entry.data.rebalancingLog;
+---
+
+<Base title={entry.data.name} description={entry.data.tagline}>
+
+  <!-- ── HEADER ─────────────────────────────────────────────────────────── -->
+  <section class="container-wide pt-20 pb-12">
+    <div class="text-[12px] text-ink-mute tracking-wide mb-8">
+      <a href="/indices" class="text-ink-mute no-underline hover:text-accent">{t.indexDetail.breadcrumb}</a>
+      <span class="mx-2">/</span>
+      <span>{entry.data.name}</span>
+    </div>
+    <div class="font-mono text-[14px] tracking-wider2 text-accent mb-4">
+      {entry.data.ticker}
+    </div>
+    <h1 class="display font-light text-[48px] sm:text-[68px] leading-[1.0] tracking-tightest m-0 mb-3">
+      {entry.data.name}
+    </h1>
+    <p class="display italic text-[22px] text-ink-soft m-0 mb-14">
+      {entry.data.ticker} · {t.indexDetail.subtitleMiddle} {entry.data.inceptionDate}
+    </p>
+
+    <Ribbon cells={ribbonCells} />
+
+    <IndexLevelChart
+      id={`${entry.data.ticker.toLowerCase()}-big-chart`}
+      data={series}
+      label={t.indexDetail.chartLabel}
+      color={isRhix ? "#6B1F2E" : "#3D3D3A"}
+      benchmarks={benchmarks}
+    />
+
+    <ConstituentsTable constituents={consts} asOf={asOf} showShares={showShares} />
+  </section>
+
+  <!-- ── PERFORMANCE STATISTICS ───────────────────────────────────────────── -->
+  <PerformanceStats stats={stats} indexTicker={entry.data.ticker} />
+
+  <!-- ── DESCRIPTION (from MDX) ─────────────────────────────────────────── -->
+  <section class="bg-bg-sunken border-t border-rule">
+    <div class="container-narrow py-20">
+      <div class="section-label">{t.indexDetail.descriptionLabel}</div>
+      <article class="prose prose-stone max-w-none
+                      prose-headings:font-display prose-headings:font-normal prose-headings:tracking-tight
+                      prose-h2:text-[28px] prose-h2:mt-12 prose-h2:mb-5
+                      prose-h3:text-[20px]
+                      prose-p:text-[16px] prose-p:leading-relaxed prose-p:text-ink-soft
+                      prose-strong:text-ink prose-strong:font-medium
+                      prose-a:text-accent prose-a:no-underline hover:prose-a:underline
+                      prose-li:text-ink-soft">
+        <Content />
+      </article>
+    </div>
+  </section>
+
+  <!-- ── REBALANCING HISTORY ─────────────────────────────────────────────── -->
+  <section class="border-t border-rule">
+    <div class="container-narrow py-20">
+      <div class="section-label">{t.indexDetail.rebalancingLabel}</div>
+      <h2 class="display font-normal text-[28px] tracking-tight m-0 mb-8">
+        {t.indexDetail.rebalancingH2}
+      </h2>
+      <ul class="list-none p-0 m-0 border-t border-rule">
+        {rebalanceHistory.map((r) => (
+          <li class="grid grid-cols-[120px_1fr] gap-6 py-4 border-b border-rule items-baseline">
+            <span class="font-mono text-[12px] text-accent tracking-wide">{r.date}</span>
+            <span class="text-[15px] text-ink-soft leading-relaxed">{r.note}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <!-- ── DISCLAIMER ─────────────────────────────────────────────────────── -->
+  <section class="border-t border-rule">
+    <div class="container-narrow py-16">
+      <div class="bg-bg-sunken border-l-2 border-accent p-6">
+        <div class="font-sans text-[11px] uppercase tracking-[0.18em] text-accent font-medium mb-3">
+          {t.indexDetail.disclaimer.label}
+        </div>
+        <p class="text-[14px] leading-relaxed text-ink-soft m-0">
+          {entry.data.name} ({entry.data.ticker}) {t.indexDetail.disclaimer.isNotPart1}
+          <strong class="text-ink">{t.indexDetail.disclaimer.notProduct}</strong>
+          {t.indexDetail.disclaimer.isNotPart2}
+          <strong class="text-ink">{t.indexDetail.disclaimer.notBench}</strong>
+          {t.indexDetail.disclaimer.isNotPart3}
+          <strong class="text-ink">{t.indexDetail.disclaimer.notAffiliated}</strong>
+          {t.indexDetail.disclaimer.isNotPart4}
+        </p>
+      </div>
+    </div>
+  </section>
+
+</Base>
