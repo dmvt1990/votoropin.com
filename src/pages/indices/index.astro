@@ -4,14 +4,17 @@
 // Includes a disclaimer at the top so the framing is unmistakable.
 import Base from "../../layouts/Base.astro";
 import MiniChart from "../../components/MiniChart.astro";
-import { RHIX_SERIES, RITIX_SERIES, latestLevel } from "../../data/timeseries";
+import { RHIX_SERIES, RITIX_SERIES, ytdReturn } from "../../data/timeseries";
 import { t } from "../../i18n";
 
-const rhix = latestLevel(RHIX_SERIES);
-const ritix = latestLevel(RITIX_SERIES);
+const rhixYtdRaw  = ytdReturn(RHIX_SERIES);
+const ritixYtdRaw = ytdReturn(RITIX_SERIES);
 
-const rhixYtd = ((rhix.level / 1000 - 1) * 100).toFixed(2);
-const ritixYtd = ((ritix.level / 1000 - 1) * 100).toFixed(2);
+const fmt = (v: number | null) =>
+  v === null ? "—" : `${v >= 0 ? "+" : ""}${v.toFixed(2)}%`;
+
+const rhixYtd  = fmt(rhixYtdRaw);
+const ritixYtd = fmt(ritixYtdRaw);
 ---
 
 <Base
@@ -66,8 +69,8 @@ const ritixYtd = ((ritix.level / 1000 - 1) * 100).toFixed(2);
           </div>
           <div>
             <div class="text-[11px] uppercase tracking-[0.14em] text-ink-mute mb-1.5">{t.home.research.ritix.sinceInceptionLabel}</div>
-            <div class={`font-display text-[24px] tracking-tight ${parseFloat(ritixYtd) >= 0 ? 'text-positive' : 'text-negative'}`}>
-              {parseFloat(ritixYtd) >= 0 ? '+' : ''}{ritixYtd}%
+            <div class={`font-display text-[24px] tracking-tight ${ritixYtdRaw !== null && ritixYtdRaw >= 0 ? 'text-positive' : 'text-negative'}`}>
+              {ritixYtd}
             </div>
           </div>
           <div>
@@ -103,8 +106,8 @@ const ritixYtd = ((ritix.level / 1000 - 1) * 100).toFixed(2);
           </div>
           <div>
             <div class="text-[11px] uppercase tracking-[0.14em] text-ink-mute mb-1.5">{t.home.research.rhix.ytdLabel}</div>
-            <div class={`font-display text-[24px] tracking-tight ${parseFloat(rhixYtd) >= 0 ? 'text-positive' : 'text-negative'}`}>
-              {parseFloat(rhixYtd) >= 0 ? '+' : ''}{rhixYtd}%
+            <div class={`font-display text-[24px] tracking-tight ${rhixYtdRaw !== null && rhixYtdRaw >= 0 ? 'text-positive' : 'text-negative'}`}>
+              {rhixYtd}
             </div>
           </div>
           <div>
