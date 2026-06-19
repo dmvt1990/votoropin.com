@@ -27,7 +27,7 @@ const notes = (await getCollection(collectionName as "notes", ({ data }) => !dat
     )}
 
     {notes.length > 0 && (
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-rule border border-rule">
+      <div class={`grid gap-px bg-rule border border-rule ${notes.length >= 3 ? "sm:grid-cols-2 lg:grid-cols-3" : notes.length === 2 ? "sm:grid-cols-2" : ""}`}>
         {
           notes.map((n) => (
             <a href={`/notes/${n.slug}`} class="bg-bg p-9 transition-colors duration-200 hover:bg-bg-sunken no-underline group">
