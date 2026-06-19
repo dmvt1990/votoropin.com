@@ -10,7 +10,7 @@ export const ru = {
   // ── Navigation ──────────────────────────────────────────────────────────
   nav: {
     brand: "Дмитрий Воторопин",
-    brandSuffix: "",
+    brandSuffix: "CFA",
     mobileToggle: "Меню ↓",
     links: {
       home:      "Главная",
@@ -32,8 +32,8 @@ export const ru = {
   meta: {
     locale:             "ru_RU",
     siteUrl:            "https://votoropin.ru",
-    defaultDescription: "Дмитрий Воторопин — 14+ лет в private banking, управлении капиталом и инвестиционном консультировании в Ситибанке и Газпромбанке.",
-    titleSuffix:        "— Дмитрий Воторопин",
+    defaultDescription: "Дмитрий Воторопин, CFA — 14+ лет в private banking, управлении капиталом и инвестиционном консультировании в Ситибанке и Газпромбанке.",
+    titleSuffix:        "— Дмитрий Воторопин, CFA",
   },
 
   // ── Schema.org Person ────────────────────────────────────────────────────
@@ -70,7 +70,7 @@ export const ru = {
 
   // ── Home page ─────────────────────────────────────────────────────────────
   home: {
-    pageTitle:       "Дмитрий Воторопин — Инвестиционный советник",
+    pageTitle:       "Дмитрий Воторопин, CFA — Инвестиционный советник",
     pageDescription: "Дмитрий Воторопин, CFA — инвестиционный советник с 14-летним опытом в private banking и управлении капиталом в Ситибанке и Газпромбанке. Личные исследования по построению правил-ориентированных индексов: RITIX и RHIX.",
     hero: {
       eyebrow:    "Инвестиционный советник · Москва",
@@ -82,7 +82,7 @@ export const ru = {
       intro:      "14+ лет в Ситибанке и Газпромбанке: портфельное консультирование по глобальным облигациям, акциям, структурным продуктам и альтернативным инвестициям.",
       stats: {
         designationLabel: "Квалификация",
-        designationValue: "",
+        designationValue: "CFA",
         experienceLabel:  "Опыт",
         experienceValue:  "",
         focusLabel:       "Специализация",
@@ -131,13 +131,13 @@ export const ru = {
   // ── CV page ───────────────────────────────────────────────────────────────
   cv: {
     pageTitle:       "Резюме",
-    pageDescription: "Резюме Дмитрия Воторопина — исполнительного директора, инвестиционного советника Газпромбанка (Private Banking). 14+ лет в private banking, управлении капиталом и инвестиционном консультировании в Ситибанке и Газпромбанке.",
+    pageDescription: "Резюме Дмитрия Воторопина, CFA — исполнительного директора, инвестиционного советника Газпромбанка (Private Banking). 14+ лет в private banking, управлении капиталом и инвестиционном консультировании в Ситибанке и Газпромбанке.",
     sectionLabel:    "Резюме",
     h1part1:         "Карьера в ",
     h1em:            "private banking",
     h1part2:         ", управлении капиталом и инвестиционном консультировании.",
-    photoAlt:        "Дмитрий Воторопин",
-    photoCaption1:   "Дмитрий Воторопин",
+    photoAlt:        "Дмитрий Воторопин, CFA",
+    photoCaption1:   "Дмитрий Воторопин, CFA",
     photoCaption2:   "Исполнительный директор · Инвестиционный советник",
     quickFacts: {
       locationLabel:    "Местоположение",
@@ -147,7 +147,7 @@ export const ru = {
       experienceLabel:  "Опыт",
       experienceValue:  "14+ лет",
       designationLabel: "Квалификация",
-      designationValue: "",
+      designationValue: "CFA",
     },
     downloadCv: "Скачать резюме (PDF) →",
     cvPdfPath: "/downloads/votoropin-cv-ru.pdf",
@@ -241,6 +241,10 @@ export const ru = {
     ],
     credentials: [
       {
+        name: "CFA Charterholder",
+        org:  "CFA Institute.",
+      },
+      {
         name: "Член Американской финансовой ассоциации (AFA)",
         org:  "Публикующийся академический исследователь и автор публикаций в финансовой прессе.",
       },
@@ -259,7 +263,7 @@ export const ru = {
   // ── Contact page ──────────────────────────────────────────────────────────
   contact: {
     pageTitle:       "Контакты",
-    pageDescription: "Связаться с Дмитрием Воторопиным — инвестиционный профессионал.",
+    pageDescription: "Связаться с Дмитрием Воторопиным, CFA — инвестиционный профессионал.",
     h1part1:  "Свяжитесь со мной ",
     h1em:     "лично",
     h1part2:  "",

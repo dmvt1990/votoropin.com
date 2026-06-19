@@ -10,7 +10,7 @@ export const en = {
   // ── Navigation ──────────────────────────────────────────────────────────
   nav: {
     brand: "Dmitrii Votoropin",
-    brandSuffix: "",
+    brandSuffix: "CFA",
     mobileToggle: "Menu ↓",
     links: {
       home:      "Home" as string,
@@ -32,8 +32,8 @@ export const en = {
   meta: {
     locale:             "en_US",
     siteUrl:            "https://votoropin.com",
-    defaultDescription: "Dmitrii Votoropin — 14+ years in private banking, wealth management, and investment advisory across Citi and Gazprombank.",
-    titleSuffix:        "— Dmitrii Votoropin",
+    defaultDescription: "Dmitrii Votoropin, CFA — 14+ years in private banking, wealth management, and investment advisory across Citi and Gazprombank.",
+    titleSuffix:        "— Dmitrii Votoropin, CFA",
   },
 
   // ── Schema.org Person ────────────────────────────────────────────────────
@@ -70,7 +70,7 @@ export const en = {
 
   // ── Home page ─────────────────────────────────────────────────────────────
   home: {
-    pageTitle:       "Dmitrii Votoropin — Investment Counsellor",
+    pageTitle:       "Dmitrii Votoropin, CFA — Investment Counsellor",
     pageDescription: "Dmitrii Votoropin, CFA — Investment Counsellor with 14+ years in private banking and wealth management at Citi and Gazprombank. Personal research on rules-based index design: RITIX and RHIX." as string,
     hero: {
       eyebrow:    "Investment Counsellor · Moscow",
@@ -82,7 +82,7 @@ export const en = {
       intro:      "14+ years across Citi and Gazprombank, building portfolio-based advice across global fixed income, equities, structured notes, and alternatives.",
       stats: {
         designationLabel: "Designation",
-        designationValue: "",
+        designationValue: "CFA",
         experienceLabel:  "Experience",
         experienceValue:  "14+ years",
         focusLabel:       "Focus",
@@ -131,13 +131,13 @@ export const en = {
   // ── CV page ───────────────────────────────────────────────────────────────
   cv: {
     pageTitle:       "Curriculum Vitae",
-    pageDescription: "Curriculum Vitae of Dmitrii Votoropin — Executive Director, Investment Counsellor at Gazprombank Private Banking. 14+ years in private banking, wealth management, and investment advisory across Citi and Gazprombank.",
+    pageDescription: "Curriculum Vitae of Dmitrii Votoropin, CFA — Executive Director, Investment Counsellor at Gazprombank Private Banking. 14+ years in private banking, wealth management, and investment advisory across Citi and Gazprombank.",
     sectionLabel:    "Curriculum Vitae",
     h1part1:         "A career across ",
     h1em:            "private banking",
     h1part2:         ", wealth management, and investment advisory.",
-    photoAlt:        "Dmitrii Votoropin",
-    photoCaption1:   "Dmitrii Votoropin",
+    photoAlt:        "Dmitrii Votoropin, CFA",
+    photoCaption1:   "Dmitrii Votoropin, CFA",
     photoCaption2:   "Executive Director · Investment Counsellor",
     quickFacts: {
       locationLabel:    "Location",
@@ -147,7 +147,7 @@ export const en = {
       experienceLabel:  "Experience",
       experienceValue:  "14+ years",
       designationLabel: "Designation",
-      designationValue: "",
+      designationValue: "CFA",
     },
     downloadCv: "Download full CV (PDF) →",
     cvPdfPath: "/downloads/votoropin-cv.pdf" as string,
@@ -241,6 +241,10 @@ export const en = {
     ],
     credentials: [
       {
+        name: "CFA Charterholder",
+        org:  "CFA Institute.",
+      },
+      {
         name: "Member, American Finance Association (AFA)",
         org:  "Published academic researcher and financial-press contributor.",
       },
@@ -259,7 +263,7 @@ export const en = {
   // ── Contact page ──────────────────────────────────────────────────────────
   contact: {
     pageTitle:       "Contact",
-    pageDescription: "Get in touch with Dmitrii Votoropin — investment professional.",
+    pageDescription: "Get in touch with Dmitrii Votoropin, CFA — investment professional.",
     h1part1:  "Contact me ",
     h1em:     "personally",
     h1part2:  "",
