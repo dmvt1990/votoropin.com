@@ -1,46 +1,46 @@
 {
-  "as_of": "2026-06-18",
+  "as_of": "2026-06-30",
   "inception_date": "2025-01-03",
   "benchmark_ticker": "MOEXIT",
   "returns": {
     "1m": {
-      "index": -4.54,
-      "benchmark": -7.47
+      "index": -12.84,
+      "benchmark": -14.63
     },
     "3m": {
-      "index": -14.14,
-      "benchmark": -15.69
+      "index": -20.9,
+      "benchmark": -21.66
     },
     "ytd": {
-      "index": -13.17,
-      "benchmark": -12.6
+      "index": -22.49,
+      "benchmark": -22.18
     },
     "1y": {
-      "index": -3.38,
-      "benchmark": -14.82
+      "index": -21.48,
+      "benchmark": -26.45
     },
     "inception": {
-      "index": 1.17,
-      "benchmark": -28.56
+      "index": -20.85,
+      "benchmark": -36.39
     }
   },
-  "ann_vol_pct": 24.22,
-  "bench_ann_vol_pct": 21.07,
+  "ann_vol_pct": 23.3,
+  "bench_ann_vol_pct": 22.11,
   "max_drawdown": {
-    "value_pct": -20.63,
-    "peak_date": "2026-02-16",
-    "trough_date": "2026-06-08"
+    "value_pct": -33.33,
+    "peak_date": "2025-02-25",
+    "trough_date": "2026-06-25"
   },
   "bench_max_drawdown": {
-    "value_pct": -33.65,
+    "value_pct": -42.15,
     "peak_date": "2025-01-17",
-    "trough_date": "2026-06-08"
+    "trough_date": "2026-06-24"
   },
-  "beta": 0.704,
-  "sharpe": -0.902,
-  "bench_sharpe": -2.17,
-  "sortino": 0.043,
-  "calmar": 0.039,
+  "beta": 0.72,
+  "sharpe": -1.794,
+  "bench_sharpe": -2.353,
+  "sortino": -0.636,
+  "calmar": -0.436,
   "rf_instrument": "CBR Key Rate (annual, end-of-month)",
   "rf_frequency": "monthly",
   "rf_type": "nominal"

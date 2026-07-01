@@ -1,22 +1,23 @@
 // src/data/ritix-constituents.ts
 // Constituents of RITIX as of the last quarterly rebalancing.
-// Source: performance report dated 2026-04-29.
+// Source: 2026-07-01 Q3 rebalance; weights from the production methodology.py
+// sqrt(ff_mcap) basis at Jul-1 prices. No membership change from Q2.
 
 import type { Constituent } from "./rhix-constituents";
 
-export const RITIX_AS_OF = "2025-10-01";
+export const RITIX_AS_OF = "2026-07-01";
 
 export const RITIX_CONSTITUENTS: Constituent[] = [
-  { ticker: "YDEX", name: "Yandex (MKPAO)",         subIndustry: "Internet / Software",  sharesMillions: 0, freeFloatPct: 40, weightPct: 35.40 },
-  { ticker: "OZON", name: "Ozon Holdings",          subIndustry: "Internet / E-commerce", sharesMillions: 0, freeFloatPct: 32, weightPct: 23.22 },
-  { ticker: "HEAD", name: "HeadHunter (MKPAO)",     subIndustry: "Internet / Services",   sharesMillions: 0, freeFloatPct: 25, weightPct: 12.77 },
-  { ticker: "POSI", name: "Positive Technologies",  subIndustry: "Cybersecurity",         sharesMillions: 0, freeFloatPct: 18, weightPct:  7.33 },
-  { ticker: "VKCO", name: "VK Company",             subIndustry: "Internet platforms",    sharesMillions: 0, freeFloatPct: 15, weightPct:  5.68 },
-  { ticker: "ASTR", name: "Astra Group",            subIndustry: "Enterprise software",   sharesMillions: 0, freeFloatPct: 12, weightPct:  4.37 },
-  { ticker: "SOFL", name: "Softline",               subIndustry: "IT services",           sharesMillions: 0, freeFloatPct: 10, weightPct:  4.25 },
-  { ticker: "DIAS", name: "Diasoft",                subIndustry: "Enterprise software",   sharesMillions: 0, freeFloatPct:  8, weightPct:  3.63 },
-  { ticker: "CNRU", name: "CIAN",                   subIndustry: "Internet / Marketplace", sharesMillions: 0, freeFloatPct:  7, weightPct:  2.54 },
-  { ticker: "IVAT", name: "IVA Technologies",       subIndustry: "Enterprise software",   sharesMillions: 0, freeFloatPct:  6, weightPct:  0.82 },
+  { ticker: "YDEX", name: "Yandex (MKPAO)",         subIndustry: "Internet / Software",  sharesMillions: 0, freeFloatPct: 40, weightPct: 40.75 },
+  { ticker: "OZON", name: "Ozon Holdings",          subIndustry: "Internet / E-commerce", sharesMillions: 0, freeFloatPct: 32, weightPct: 26.23 },
+  { ticker: "HEAD", name: "HeadHunter (MKPAO)",     subIndustry: "Internet / Services",   sharesMillions: 0, freeFloatPct: 25, weightPct:  9.41 },
+  { ticker: "VKCO", name: "VK Company",             subIndustry: "Internet platforms",    sharesMillions: 0, freeFloatPct: 15, weightPct:  6.92 },
+  { ticker: "POSI", name: "Positive Technologies",  subIndustry: "Cybersecurity",         sharesMillions: 0, freeFloatPct: 18, weightPct:  5.48 },
+  { ticker: "ASTR", name: "Astra Group",            subIndustry: "Enterprise software",   sharesMillions: 0, freeFloatPct: 12, weightPct:  3.55 },
+  { ticker: "CNRU", name: "CIAN",                   subIndustry: "Internet / Marketplace", sharesMillions: 0, freeFloatPct:  7, weightPct:  2.79 },
+  { ticker: "SOFL", name: "Softline",               subIndustry: "IT services",           sharesMillions: 0, freeFloatPct: 10, weightPct:  2.28 },
+  { ticker: "DIAS", name: "Diasoft",                subIndustry: "Enterprise software",   sharesMillions: 0, freeFloatPct:  8, weightPct:  1.58 },
+  { ticker: "IVAT", name: "IVA Technologies",       subIndustry: "Enterprise software",   sharesMillions: 0, freeFloatPct:  6, weightPct:  1.01 },
 ];
 
 // Aggregate performance metrics from the 2025 performance report.
