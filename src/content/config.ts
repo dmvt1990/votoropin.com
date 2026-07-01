@@ -17,6 +17,7 @@ const indices = defineCollection({
       "free-float-market-cap",
       "square-root-free-float-market-cap",
       "equal-weight",
+      "composite-score",
     ]),
     rebalanceFrequency: z.enum(["quarterly", "semi-annual", "annual"]),
     currency: z.string().default("RUB"),

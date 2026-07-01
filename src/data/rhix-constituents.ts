@@ -5,7 +5,9 @@
 export type Constituent = {
   ticker: string;
   name: string;
+  nameRu?: string;
   subIndustry: string;
+  subIndustryRu?: string;
   sharesMillions: number;
   freeFloatPct: number;     // 0–100
   weightPct: number;        // 0–100

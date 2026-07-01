@@ -1,0 +1,76 @@
+---
+ticker: "RDIX"
+name: "Russian Dividend Index"
+tagline: "Dividend-quality concept on the Moscow Exchange."
+version: "2.1"
+versionDate: "Jun 2026"
+inceptionDate: "2018-08-01"
+baseValue: 1000
+weightingScheme: "composite-score"
+rebalanceFrequency: "annual"
+currency: "RUB"
+order: 3
+rebalancingLog:
+  - date: "2026-06-26"
+    note: "Methodology v2.1 — factor set finalised to reliability + income + payout sustainability; dual-class merge rule and dividend cash-flow profile added."
+  - date: "2018-08-01"
+    note: "Backtest start — first reconstitution with sufficient dividend history. Base value 1,000, net total return basis. (Formal methodology base date is 1 Jan 2025.)"
+---
+
+## Concept
+
+RDIX is a personal research prototype exploring a rules-based,
+**dividend-quality** index for the Moscow Exchange. Companies are
+selected and weighted by a composite score that combines dividend
+reliability, income, and payout sustainability. Unlike the author's
+other prototypes, RDIX is computed on a **net total return** basis —
+dividends are reinvested net of withholding tax, because a price-only
+construction would strip out the very cash flows the index is meant to
+capture.
+
+The index is **reconstituted annually**, with semi-annual weight
+reviews.
+
+## Selection
+
+The eligible universe is MOEX-listed ordinary and preferred shares that
+pass liquidity and dividend-history gates: a minimum average daily
+trading value, a dividend-consistency floor, and a recent-payment
+requirement. The 2022–2023 dividend disruption is treated as a
+force-majeure window so that fundamentally sound payers are not
+penalised for it.
+
+Ordinary and preferred lines of the same issuer are **merged to the more
+liquid line** when their dividends per share are materially identical
+(for example Sberbank), while genuinely different dual-class dividends
+(for example Surgutneftegas preferred) are kept separate.
+
+## Factor model
+
+Constituents are weighted by a composite of three factor groups —
+**Reliability** (payment consistency and predictability), **Income**
+(yield and dividend growth), and **Payout sustainability**. Two further
+factors, book-value growth and leverage, were tested and **excluded**
+after they detracted from the backtested result; the leaner set proved
+both higher-returning and no less diversified. A 10% single-issuer cap
+applies, with no sector cap.
+
+## Income
+
+As a dividend index, RDIX is built around its cash-flow profile. Across
+the backtested history its constituents distributed a realized dividend
+yield averaging roughly **6.8% net** in full years, with cyclical upside
+in strong years for the metals names. The realized yield by year is shown
+in the table above the constituents.
+
+## Notes on the level history
+
+The level history shown is **backtested**. The index was formalised in
+2026; levels before that date are a historical simulation of the
+published methodology applied point-in-time, not a live track record.
+Methodology decisions, factor research, and the income profile are
+documented in the index methodology document.
+
+> RDIX is a research prototype. It is not an investment product, not a
+> regulated benchmark, and not affiliated with any current or former
+> employer of the author.

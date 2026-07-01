@@ -6,6 +6,7 @@ export interface Cell {
   k: string;
   v: string;
   tone?: "default" | "positive" | "negative";
+  dataAttrs?: Record<string, string>;
 }
 
 export interface Props {
@@ -34,6 +35,7 @@ const { cells } = Astro.props;
             c.tone === "positive" ? "text-positive" : "",
             c.tone === "negative" ? "text-negative" : "",
           ]}
+          {...(c.dataAttrs ?? {})}
         >
           {c.v}
         </div>

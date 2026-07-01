@@ -65,7 +65,7 @@ export const en = {
   // ── Chart ────────────────────────────────────────────────────────────────
   chart: {
     locale:  "en",
-    periods: { "1M": "1M", "3M": "3M", ytd: "YTD", "1Y": "1Y", all: "All" },
+    periods: { "1M": "1M", "3M": "3M", ytd: "YTD", "1Y": "1Y", "3Y": "3Y", "5Y": "5Y", all: "All" },
   },
 
   // ── Home page ─────────────────────────────────────────────────────────────
@@ -100,10 +100,10 @@ export const en = {
     },
     research: {
       sectionLabel: "Research prototypes",
-      h2part1:      "Two ",
+      h2part1:      "Three ",
       h2em:         "personal research",
       h2part2:      " projects on rules-based equity index design.",
-      disclaimer:   "RHIX and RITIX are personal research prototypes maintained outside of professional capacity. They are not investment products, not regulated benchmarks, and not affiliated with any employer. Levels and constituent histories are published here for research and educational purposes only.",
+      disclaimer:   "RHIX, RITIX and RDIX are personal research prototypes maintained outside of professional capacity. They are not investment products, not regulated benchmarks, and not affiliated with any employer. Levels and constituent histories are published here for research and educational purposes only.",
       ritix: {
         ticker:           "RITIX · Russia IT Index",
         h3:               "Russian technology sector concept.",
@@ -122,6 +122,16 @@ export const en = {
         ytdLabel:         "YTD",
         rebalanceLabel:   "Rebalance",
         rebalanceValue:   "Semi-ann.",
+        link:             "Composition & levels →",
+      },
+      rdix: {
+        ticker:           "RDIX · Russian Dividend Index",
+        h3:               "Dividend-quality concept.",
+        desc:             "A composite-score dividend index concept on the Moscow Exchange — weighting reliable, sustainable payers and reinvesting dividends on a net total return basis.",
+        constituentsLabel: "Constituents",
+        sinceInceptionLabel: "Since inception",
+        rebalanceLabel:   "Rebalance",
+        rebalanceValue:   "Annual",
         link:             "Composition & levels →",
       },
       allLink: "All research prototypes →",
@@ -284,7 +294,7 @@ export const en = {
     intro:   "RHIX and RITIX are research prototypes I maintain in my personal capacity. Both explore rules-based weighting schemes applied to under-followed segments of the Moscow Exchange. Levels, constituent compositions, and rebalancing histories are published here for research and educational purposes.",
     disclaimer: {
       label: "Disclaimer",
-      text:  "RHIX and RITIX are personal research prototypes maintained by the author in his personal capacity. They are not investment products, not regulated benchmarks under IOSCO, ESMA, or any other framework, and are not affiliated with, sponsored by, or endorsed by any current or former employer of the author. All constituent weights, index levels, and historical data are published for research and educational purposes only. Nothing on this site constitutes investment advice, a solicitation, or a recommendation to buy or sell any security.",
+      text:  "RHIX, RITIX and RDIX are personal research prototypes maintained by the author in his personal capacity. They are not investment products, not regulated benchmarks under IOSCO, ESMA, or any other framework, and are not affiliated with, sponsored by, or endorsed by any current or former employer of the author. All constituent weights, index levels, and historical data are published for research and educational purposes only. Nothing on this site constitutes investment advice, a solicitation, or a recommendation to buy or sell any security.",
     },
   },
 
@@ -300,6 +310,14 @@ export const en = {
       inception:      "Inception",
     },
     chartLabel:         "Index Level — rebased to 1,000 at period start",
+    dividendYield: {
+      heading: "Historical dividend yield",
+      year:  "Year",
+      gross: "Gross",
+      net:   "Net (after 15% tax)",
+      avg:   "Average 2019\u20132025",
+      note:  "Realized dividend income (dividends collected \u00f7 index value). 2018 and 2026 excluded as partial years.",
+    },
     descriptionLabel:   "Description",
     rebalancingLabel:   "Rebalancing history",
     rebalancingH2:      "Changes to constituents and weights, most recent first.",

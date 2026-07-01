@@ -2,11 +2,12 @@
 // src/pages/index.astro
 import Base from "../layouts/Base.astro";
 import MiniChart from "../components/MiniChart.astro";
-import { RHIX_SERIES, RITIX_SERIES, ytdReturn } from "../data/timeseries";
+import { RHIX_SERIES, RITIX_SERIES, RDIX_SERIES, ytdReturn } from "../data/timeseries";
 import { t } from "../i18n";
 
 const rhixYtd  = (ytdReturn(RHIX_SERIES)  ?? 0).toFixed(2);
 const ritixYtd = (ytdReturn(RITIX_SERIES) ?? 0).toFixed(2);
+const rdixYtd  = (ytdReturn(RDIX_SERIES)  ?? 0).toFixed(2);
 ---
 
 <Base title={t.home.pageTitle} description={t.home.pageDescription}>
@@ -125,7 +126,7 @@ const ritixYtd = (ytdReturn(RITIX_SERIES) ?? 0).toFixed(2);
     </div>
 
     <!-- RHIX teaser -->
-    <div class="grid md:grid-cols-2 gap-12 items-center py-14 border-t border-b border-rule">
+    <div class="grid md:grid-cols-2 gap-12 items-center py-14 border-t border-rule">
       <div>
         <div class="font-mono text-[14px] tracking-wider2 text-accent mb-4">
           {t.home.research.rhix.ticker}
@@ -159,6 +160,43 @@ const ritixYtd = (ytdReturn(RITIX_SERIES) ?? 0).toFixed(2);
         </p>
       </div>
       <MiniChart id="rhix-hero-chart" data={RHIX_SERIES} color="#6B1F2E" />
+    </div>
+
+    <!-- RDIX teaser -->
+    <div class="grid md:grid-cols-2 gap-12 items-center py-14 border-t border-b border-rule">
+      <div>
+        <div class="font-mono text-[14px] tracking-wider2 text-accent mb-4">
+          {t.home.research.rdix.ticker}
+        </div>
+        <h3 class="display font-normal text-[36px] leading-[1.05] tracking-tighter m-0 mb-5">
+          {t.home.research.rdix.h3}
+        </h3>
+        <p class="text-ink-soft text-[15px] leading-relaxed mb-7">
+          {t.home.research.rdix.desc}
+        </p>
+        <div class="grid grid-cols-3 gap-6 pt-6 border-t border-rule">
+          <div>
+            <div class="text-[11px] uppercase tracking-[0.14em] text-ink-mute mb-1.5">{t.home.research.rdix.constituentsLabel}</div>
+            <div class="font-display text-[24px] tracking-tight">19</div>
+          </div>
+          <div>
+            <div class="text-[11px] uppercase tracking-[0.14em] text-ink-mute mb-1.5">{t.home.research.rdix.sinceInceptionLabel}</div>
+            <div class={`font-display text-[24px] tracking-tight ${parseFloat(rdixYtd) >= 0 ? 'text-positive' : 'text-negative'}`}>
+              {parseFloat(rdixYtd) >= 0 ? '+' : ''}{rdixYtd}%
+            </div>
+          </div>
+          <div>
+            <div class="text-[11px] uppercase tracking-[0.14em] text-ink-mute mb-1.5">{t.home.research.rdix.rebalanceLabel}</div>
+            <div class="font-display text-[24px] tracking-tight">{t.home.research.rdix.rebalanceValue}</div>
+          </div>
+        </div>
+        <p class="mt-7">
+          <a href="/indices/rdix" class="editorial-link text-[14px]">
+            {t.home.research.rdix.link}
+          </a>
+        </p>
+      </div>
+      <MiniChart id="rdix-hero-chart" data={RDIX_SERIES} color="#2E5E3A" />
     </div>
 
     <p class="mt-10">

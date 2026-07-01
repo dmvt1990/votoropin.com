@@ -20,6 +20,8 @@ import ritixRaw  from "./ritix_levels.csv?raw";
 import rhixRaw   from "./rhix_levels.csv?raw";
 import imoexRaw  from "./imoex_levels.csv?raw";
 import moexitRaw from "./moexit_levels.csv?raw";
+import rdixRaw   from "./rdix_levels.csv?raw";
+import mcftrrRaw from "./mcftrr_levels.csv?raw";
 
 /** Parse a CSV with at least two columns (date, level) into [date, level] pairs.
  *  Sorts ascending by date so the series is always in chronological order,
@@ -57,10 +59,13 @@ function rebaseTo1000(series: [string, number][]): [string, number][] {
 // ── Index series (rebased so first point = 1000) ────────────────────────────
 export const RITIX_SERIES: [string, number][] = rebaseTo1000(parseLevelsCsv(ritixRaw));
 export const RHIX_SERIES:  [string, number][] = rebaseTo1000(parseLevelsCsv(rhixRaw));
+export const RDIX_SERIES:  [string, number][] = rebaseTo1000(parseLevelsCsv(rdixRaw));
 
 // ── Benchmark series (already rebased by export_benchmarks.py on the VPS) ───
 export const IMOEX_SERIES:  [string, number][] = parseLevelsCsv(imoexRaw);
 export const MOEXIT_SERIES: [string, number][] = parseLevelsCsv(moexitRaw);
+// RDIX benchmark: MOEX net total return (MCFTRR), pre-rebased to 1000 at RDIX inception.
+export const MCFTRR_SERIES: [string, number][] = parseLevelsCsv(mcftrrRaw);
 
 // ── Helpers ─────────────────────────────────────────────────────────────────
 
@@ -114,4 +119,28 @@ export function ytdReturn(series: [string, number][]): number | null {
 
   const [, last] = series[series.length - 1];
   return ((last / baseLevel) - 1) * 100;
+}
+
+/**
+ * Return over a trailing window ('1M','3M','YTD','1Y','3Y','5Y','ALL'),
+ * measured from the last point. Mirrors the chart's range logic so the
+ * adjustable period-return figure matches the visible chart window.
+ */
+export function windowReturn(series: [string, number][], range: string): number | null {
+  if (series.length === 0) return null;
+  const last = series[series.length - 1];
+  let from: string | null = null;
+  if (range !== "ALL") {
+    const d = new Date(last[0]); const c = new Date(d);
+    if (range === "1M") c.setMonth(c.getMonth() - 1);
+    else if (range === "3M") c.setMonth(c.getMonth() - 3);
+    else if (range === "1Y") c.setFullYear(c.getFullYear() - 1);
+    else if (range === "3Y") c.setFullYear(c.getFullYear() - 3);
+    else if (range === "5Y") c.setFullYear(c.getFullYear() - 5);
+    else if (range === "YTD") c.setFullYear(d.getFullYear(), 0, 1);
+    from = c.toISOString().slice(0, 10);
+  }
+  const win = from ? series.filter(([dd]) => dd >= from) : series;
+  if (win.length < 2) return null;
+  return (win[win.length - 1][1] / win[0][1] - 1) * 100;
 }

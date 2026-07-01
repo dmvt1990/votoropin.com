@@ -11,17 +11,22 @@ import { t } from "../../i18n";
 
 import { RHIX_CONSTITUENTS, RHIX_AS_OF } from "../../data/rhix-constituents";
 import { RITIX_CONSTITUENTS, RITIX_AS_OF } from "../../data/ritix-constituents";
+import { RDIX_CONSTITUENTS, RDIX_AS_OF, RDIX_DIV_YIELD, RDIX_DIV_YIELD_AVG } from "../../data/rdix-constituents";
 import {
   RHIX_SERIES,
   RITIX_SERIES,
+  RDIX_SERIES,
   IMOEX_SERIES,
   MOEXIT_SERIES,
+  MCFTRR_SERIES,
   latestLevel,
   ytdReturn,
+  windowReturn,
 } from "../../data/timeseries";
 
 import ritixStatsRaw from "../../data/ritix_stats.json";
 import rhixStatsRaw  from "../../data/rhix_stats.json";
+import rdixStatsRaw  from "../../data/rdix_stats.json";
 import type { StatsData } from "../../components/PerformanceStats.astro";
 
 export async function getStaticPaths() {
@@ -35,9 +40,10 @@ const { Content } = await entry.render();
 
 const isRhix  = entry.slug === "rhix";
 const isRitix = entry.slug === "ritix";
+const isRdix  = entry.slug === "rdix";
 
-const series = isRhix ? RHIX_SERIES : RITIX_SERIES;
-const consts = isRhix ? RHIX_CONSTITUENTS : RITIX_CONSTITUENTS;
+const series = isRdix ? RDIX_SERIES : isRhix ? RHIX_SERIES : RITIX_SERIES;
+const consts = isRdix ? RDIX_CONSTITUENTS : isRhix ? RHIX_CONSTITUENTS : RITIX_CONSTITUENTS;
 const asOf   = new Date().toLocaleDateString(t.dateLocale, { day: "numeric", month: "short", year: "numeric" });
 const showShares = isRhix;
 
@@ -47,7 +53,11 @@ const showShares = isRhix;
 // RHIX:  compared against IMOEX (broad market)
 //
 // Colors are muted so benchmarks stay clearly secondary to the main index line.
-const benchmarks = isRitix
+const benchmarks = isRdix
+  ? [
+      { ticker: "MCFTRR", data: MCFTRR_SERIES, color: "#B0A58A" },  // MOEX net total return
+    ]
+  : isRitix
   ? [
       { ticker: "MOEXIT", data: MOEXIT_SERIES, color: "#7B9E9B" },  // muted teal
       { ticker: "IMOEX",  data: IMOEX_SERIES,  color: "#B0A58A" },  // warm sand
@@ -61,6 +71,15 @@ const latest = latestLevel(series);
 const ytdPct = ytdReturn(series) ?? 0;
 const ytdStr = `${ytdPct >= 0 ? "+" : ""}${ytdPct.toFixed(2)}%`;
 
+// Adjustable period return (RDIX): initial value matches the chart's default 1Y window;
+// the chart's period buttons update it client-side via the data-period-return hook.
+const chartId = `${entry.data.ticker.toLowerCase()}-big-chart`;
+// Dynamic period-return cell: value tracks the chart's selected horizon
+// (1M/3M/YTD/1Y/ALL) client-side via the data-period-return hook in IndexLevelChart.
+const dynamicReturn = isRdix || isRitix;
+const initRet = dynamicReturn ? (windowReturn(series, "1Y") ?? 0) : ytdPct;
+const initRetStr = `${initRet >= 0 ? "+" : ""}${initRet.toFixed(2)}%`;
+
 const ribbonCells = [
   {
     k: t.indexDetail.ribbon.currentLevel,
@@ -72,16 +91,17 @@ const ribbonCells = [
       : "—",
   },
   {
-    k: isRitix ? t.indexDetail.ribbon.sinceInception : t.indexDetail.ribbon.periodReturn,
-    v: ytdStr,
-    tone: (ytdPct >= 0 ? "positive" : "negative") as "positive" | "negative",
+    k: t.indexDetail.ribbon.periodReturn,
+    v: dynamicReturn ? initRetStr : ytdStr,
+    tone: ((dynamicReturn ? initRet : ytdPct) >= 0 ? "positive" : "negative") as "positive" | "negative",
+    ...(dynamicReturn ? { dataAttrs: { "data-period-return": "", "data-target": chartId } } : {}),
   },
   { k: t.indexDetail.ribbon.constituents, v: String(consts.length) },
   { k: t.indexDetail.ribbon.inception,    v: entry.data.inceptionDate },
 ];
 
 // ── Performance stats ───────────────────────────────────────────────────────
-const stats = (isRhix ? rhixStatsRaw : ritixStatsRaw) as StatsData;
+const stats = (isRdix ? rdixStatsRaw : isRhix ? rhixStatsRaw : ritixStatsRaw) as StatsData;
 
 const rebalanceHistory = entry.data.rebalancingLog;
 ---
@@ -108,14 +128,47 @@ const rebalanceHistory = entry.data.rebalancingLog;
     <Ribbon cells={ribbonCells} />
 
     <IndexLevelChart
-      id={`${entry.data.ticker.toLowerCase()}-big-chart`}
+      id={chartId}
       data={series}
       label={t.indexDetail.chartLabel}
-      color={isRhix ? "#6B1F2E" : "#3D3D3A"}
+      color={isRdix ? "#2E5E3A" : isRhix ? "#6B1F2E" : "#3D3D3A"}
       benchmarks={benchmarks}
+      longPeriods={isRdix}
     />
 
-    <ConstituentsTable constituents={consts} asOf={asOf} showShares={showShares} />
+    {isRdix && (
+      <div class="mb-12">
+        <h3 class="font-display text-[28px] font-normal m-0 mb-6">{t.indexDetail.dividendYield.heading}</h3>
+        <div class="overflow-x-auto bg-bg border border-rule">
+          <table class="w-full border-collapse">
+            <thead>
+              <tr class="bg-bg-sunken">
+                <th class="text-left px-5 py-4 text-[11px] uppercase tracking-wider2 text-ink-mute font-medium border-b border-rule">{t.indexDetail.dividendYield.year}</th>
+                <th class="text-right px-5 py-4 text-[11px] uppercase tracking-wider2 text-ink-mute font-medium border-b border-rule">{t.indexDetail.dividendYield.gross}</th>
+                <th class="text-right px-5 py-4 text-[11px] uppercase tracking-wider2 text-ink-mute font-medium border-b border-rule">{t.indexDetail.dividendYield.net}</th>
+              </tr>
+            </thead>
+            <tbody>
+              {RDIX_DIV_YIELD.map((d) => (
+                <tr class="border-b border-rule">
+                  <td class="px-5 py-4 font-mono text-[14px] text-accent tracking-wide">{d.year}</td>
+                  <td class="px-5 py-4 font-mono text-[14px] text-right numeric">{d.gross.toFixed(1)}%</td>
+                  <td class="px-5 py-4 font-mono text-[14px] text-right numeric">{d.net.toFixed(1)}%</td>
+                </tr>
+              ))}
+              <tr class="border-b border-rule last:border-b-0 bg-bg-sunken">
+                <td class="px-5 py-4 font-display text-[15px] font-medium">{t.indexDetail.dividendYield.avg}</td>
+                <td class="px-5 py-4 font-mono text-[14px] text-right numeric font-medium">{RDIX_DIV_YIELD_AVG.gross.toFixed(1)}%</td>
+                <td class="px-5 py-4 font-mono text-[14px] text-right numeric font-medium">{RDIX_DIV_YIELD_AVG.net.toFixed(1)}%</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="mt-3 text-[13px] text-ink-mute italic">{t.indexDetail.dividendYield.note}</p>
+      </div>
+    )}
+
+    <ConstituentsTable constituents={consts} asOf={asOf} showShares={showShares} showFreeFloat={!isRdix} />
   </section>
 
   <!-- ── PERFORMANCE STATISTICS ───────────────────────────────────────────── -->

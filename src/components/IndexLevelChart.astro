@@ -19,10 +19,12 @@ export interface Props {
   label: string;
   color?: string;
   benchmarks?: BenchmarkSeries[];
+  /** Show 3Y / 5Y period buttons (longer-history indices only) */
+  longPeriods?: boolean;
 }
 
 import { t } from "../i18n";
-const { id, data, label, color = "#6B1F2E", benchmarks = [] } = Astro.props;
+const { id, data, label, color = "#6B1F2E", benchmarks = [], longPeriods = false } = Astro.props;
 const dataJSON       = JSON.stringify(data);
 const benchmarksJSON = JSON.stringify(benchmarks);
 ---
@@ -36,6 +38,8 @@ const benchmarksJSON = JSON.stringify(benchmarks);
       <button data-range="3M"  class="px-2.5 py-1 text-ink-mute hover:text-ink">{t.chart.periods["3M"]}</button>
       <button data-range="YTD" class="px-2.5 py-1 text-ink-mute hover:text-ink">{t.chart.periods.ytd}</button>
       <button data-range="1Y"  class="px-2.5 py-1 bg-ink text-bg" aria-pressed="true">{t.chart.periods["1Y"]}</button>
+      {longPeriods && <button data-range="3Y" class="px-2.5 py-1 text-ink-mute hover:text-ink">{t.chart.periods["3Y"]}</button>}
+      {longPeriods && <button data-range="5Y" class="px-2.5 py-1 text-ink-mute hover:text-ink">{t.chart.periods["5Y"]}</button>}
       <button data-range="ALL" class="px-2.5 py-1 text-ink-mute hover:text-ink">{t.chart.periods.all}</button>
     </div>
   </div>
@@ -45,7 +49,7 @@ const benchmarksJSON = JSON.stringify(benchmarks);
     <div class="flex gap-5 pt-2 pb-4 font-mono text-[11px] text-ink-mute">
       <span class="flex items-center gap-1.5">
         <span style={`display:inline-block;width:18px;border-top:2px solid ${color};`}></span>
-        {id.startsWith("rhix") ? "RHIX" : "RITIX"}
+        {id.split("-")[0].toUpperCase()}
       </span>
       {benchmarks.map((b) => (
         <span class="flex items-center gap-1.5">
@@ -106,6 +110,8 @@ const benchmarksJSON = JSON.stringify(benchmarks);
       case "1M":  cutoff.setMonth(cutoff.getMonth() - 1);          break;
       case "3M":  cutoff.setMonth(cutoff.getMonth() - 3);          break;
       case "1Y":  cutoff.setFullYear(cutoff.getFullYear() - 1);    break;
+      case "3Y":  cutoff.setFullYear(cutoff.getFullYear() - 3);    break;
+      case "5Y":  cutoff.setFullYear(cutoff.getFullYear() - 5);    break;
       case "YTD": cutoff.setFullYear(lastDate.getFullYear(), 0, 1); break;
       default:    return null;
     }
@@ -146,6 +152,15 @@ const benchmarksJSON = JSON.stringify(benchmarks);
     const from        = rangeStart(main, range);
     const mainSlice   = from ? sliceFrom(main, from) : main;
     const mainRebased = rebase(mainSlice);
+
+    // Update the linked period-return figure in the ribbon, if present.
+    const retEl = document.querySelector(`[data-period-return][data-target="${chartId}"]`);
+    if (retEl) {
+      const r = mainRebased.length ? mainRebased[mainRebased.length - 1][1] / 1000 - 1 : 0;
+      retEl.textContent = `${r >= 0 ? "+" : ""}${(r * 100).toFixed(2)}%`;
+      retEl.classList.toggle("text-positive", r >= 0);
+      retEl.classList.toggle("text-negative", r < 0);
+    }
 
     // Each benchmark is also sliced to the same date window, then rebased
     // independently (so each line starts at 1000 on the first visible date).
@@ -235,7 +250,7 @@ const benchmarksJSON = JSON.stringify(benchmarks);
       series: [
         // ── Main index series ──────────────────────────────────────────────
         {
-          name: chartId.startsWith("rhix") ? "RHIX" : "RITIX",
+          name: chartId.split("-")[0].toUpperCase(),
           type: "line",
           data: mainRebased,
           showSymbol: false,

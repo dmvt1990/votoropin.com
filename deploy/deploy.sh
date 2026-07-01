@@ -46,6 +46,15 @@ echo "  ✓ ritix_stats.json"
 scp "$VPS:$REMOTE_STATE/rhix_stats.json"   "$DATA_DIR/rhix_stats.json"
 echo "  ✓ rhix_stats.json"
 
+scp "$VPS:$REMOTE_STATE/rdix_levels.csv"   "$DATA_DIR/rdix_levels.csv"
+echo "  ✓ rdix_levels.csv"
+
+scp "$VPS:$REMOTE_STATE/mcftrr_levels.csv" "$DATA_DIR/mcftrr_levels.csv"
+echo "  ✓ mcftrr_levels.csv"
+
+scp "$VPS:$REMOTE_STATE/rdix_stats.json"   "$DATA_DIR/rdix_stats.json"
+echo "  ✓ rdix_stats.json"
+
 # ── Step 3: Build ─────────────────────────────────────────────────────────────
 echo ""
 echo "=== [3/4] Building ==="

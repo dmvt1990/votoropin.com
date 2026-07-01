@@ -4,17 +4,19 @@
 // Includes a disclaimer at the top so the framing is unmistakable.
 import Base from "../../layouts/Base.astro";
 import MiniChart from "../../components/MiniChart.astro";
-import { RHIX_SERIES, RITIX_SERIES, ytdReturn } from "../../data/timeseries";
+import { RHIX_SERIES, RITIX_SERIES, RDIX_SERIES, ytdReturn } from "../../data/timeseries";
 import { t } from "../../i18n";
 
 const rhixYtdRaw  = ytdReturn(RHIX_SERIES);
 const ritixYtdRaw = ytdReturn(RITIX_SERIES);
+const rdixYtdRaw  = ytdReturn(RDIX_SERIES);
 
 const fmt = (v: number | null) =>
   v === null ? "—" : `${v >= 0 ? "+" : ""}${v.toFixed(2)}%`;
 
 const rhixYtd  = fmt(rhixYtdRaw);
 const ritixYtd = fmt(ritixYtdRaw);
+const rdixYtd  = fmt(rdixYtdRaw);
 ---
 
 <Base
@@ -88,7 +90,7 @@ const ritixYtd = fmt(ritixYtdRaw);
     </div>
 
     <!-- RHIX card -->
-    <div class="grid md:grid-cols-2 gap-12 items-center py-14 border-t border-b border-rule">
+    <div class="grid md:grid-cols-2 gap-12 items-center py-14 border-t border-rule">
       <div>
         <div class="font-mono text-[14px] tracking-wider2 text-accent mb-4">
           {t.home.research.rhix.ticker}
@@ -122,6 +124,43 @@ const ritixYtd = fmt(ritixYtdRaw);
         </p>
       </div>
       <MiniChart id="rhix-overview-chart" data={RHIX_SERIES} color="#6B1F2E" />
+    </div>
+
+    <!-- RDIX card -->
+    <div class="grid md:grid-cols-2 gap-12 items-center py-14 border-t border-b border-rule">
+      <div>
+        <div class="font-mono text-[14px] tracking-wider2 text-accent mb-4">
+          {t.home.research.rdix.ticker}
+        </div>
+        <h2 class="display font-normal text-[36px] leading-[1.05] tracking-tighter m-0 mb-5">
+          {t.home.research.rdix.h3}
+        </h2>
+        <p class="text-ink-soft text-[15px] leading-relaxed mb-7">
+          {t.home.research.rdix.desc}
+        </p>
+        <div class="grid grid-cols-3 gap-6 pt-6 border-t border-rule">
+          <div>
+            <div class="text-[11px] uppercase tracking-[0.14em] text-ink-mute mb-1.5">{t.home.research.rdix.constituentsLabel}</div>
+            <div class="font-display text-[24px] tracking-tight">19</div>
+          </div>
+          <div>
+            <div class="text-[11px] uppercase tracking-[0.14em] text-ink-mute mb-1.5">{t.home.research.rdix.sinceInceptionLabel}</div>
+            <div class={`font-display text-[24px] tracking-tight ${rdixYtdRaw !== null && rdixYtdRaw >= 0 ? 'text-positive' : 'text-negative'}`}>
+              {rdixYtd}
+            </div>
+          </div>
+          <div>
+            <div class="text-[11px] uppercase tracking-[0.14em] text-ink-mute mb-1.5">{t.home.research.rdix.rebalanceLabel}</div>
+            <div class="font-display text-[24px] tracking-tight">{t.home.research.rdix.rebalanceValue}</div>
+          </div>
+        </div>
+        <p class="mt-7">
+          <a href="/indices/rdix" class="editorial-link text-[14px]">
+            {t.home.research.rdix.link}
+          </a>
+        </p>
+      </div>
+      <MiniChart id="rdix-overview-chart" data={RDIX_SERIES} color="#2E5E3A" />
     </div>
   </section>
 

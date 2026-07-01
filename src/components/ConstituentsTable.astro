@@ -11,12 +11,14 @@ export interface Props {
   asOf: string;
   /** Show shares column (some indices don't track it) */
   showShares?: boolean;
+  /** Show free-float column (some indices don't track it) */
+  showFreeFloat?: boolean;
 }
 
-const { constituents, asOf, showShares = true } = Astro.props;
-const formattedAsOf = new Date(asOf).toLocaleDateString(t.dateLocale, {
-  day: "2-digit", month: "short", year: "numeric",
-});
+const { constituents, asOf, showShares = true, showFreeFloat = true } = Astro.props;
+const ru = import.meta.env.PUBLIC_LANG === "ru";
+// asOf is already a formatted date string from the page; display as-is.
+const formattedAsOf = asOf;
 ---
 
 <div>
@@ -33,8 +35,10 @@ const formattedAsOf = new Date(asOf).toLocaleDateString(t.dateLocale, {
           {showShares && (
             <th class="text-right px-5 py-4 text-[11px] uppercase tracking-wider2 text-ink-mute font-medium border-b border-rule">{t.constituents.th.sharesM}</th>
           )}
-          <th class="text-right px-5 py-4 text-[11px] uppercase tracking-wider2 text-ink-mute font-medium border-b border-rule">{t.constituents.th.freeFloat}</th>
-          <th class="text-right px-5 py-4 text-[11px] uppercase tracking-wider2 text-ink-mute font-medium border-b border-rule">{t.constituents.th.weight}</th>
+          {showFreeFloat && (
+            <th class="text-center px-5 py-4 text-[11px] uppercase tracking-wider2 text-ink-mute font-medium border-b border-rule">{t.constituents.th.freeFloat}</th>
+          )}
+          <th class="text-center px-5 py-4 text-[11px] uppercase tracking-wider2 text-ink-mute font-medium border-b border-rule">{t.constituents.th.weight}</th>
         </tr>
       </thead>
       <tbody>
@@ -42,15 +46,17 @@ const formattedAsOf = new Date(asOf).toLocaleDateString(t.dateLocale, {
           constituents.map((c) => (
             <tr class="border-b border-rule last:border-b-0">
               <td class="px-5 py-4 font-mono text-[14px] text-accent tracking-wide">{c.ticker}</td>
-              <td class="px-5 py-4 font-display text-[16px]">{c.name}</td>
-              <td class="px-5 py-4 text-[13px] text-ink-mute">{c.subIndustry}</td>
+              <td class="px-5 py-4 font-display text-[16px]">{ru && c.nameRu ? c.nameRu : c.name}</td>
+              <td class="px-5 py-4 text-[13px] text-ink-mute">{ru && c.subIndustryRu ? c.subIndustryRu : c.subIndustry}</td>
               {showShares && (
                 <td class="px-5 py-4 font-mono text-[14px] text-right numeric">
                   {c.sharesMillions ? c.sharesMillions.toFixed(1) : "—"}
                 </td>
               )}
-              <td class="px-5 py-4 font-mono text-[14px] text-right numeric">{c.freeFloatPct}%</td>
-              <td class="px-5 py-4 font-mono text-[14px] text-right numeric font-medium">{c.weightPct.toFixed(1)}%</td>
+              {showFreeFloat && (
+                <td class="px-5 py-4 font-mono text-[14px] text-center numeric">{c.freeFloatPct}%</td>
+              )}
+              <td class="px-5 py-4 font-mono text-[14px] text-center numeric font-medium">{c.weightPct.toFixed(1)}%</td>
             </tr>
           ))
         }
