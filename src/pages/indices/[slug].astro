@@ -137,6 +137,10 @@ const rebalanceHistory = entry.data.rebalancingLog;
     />
 
     {isRdix && (
+      <p class="mt-2 mb-8 text-[12px] text-ink-mute italic">{t.indexDetail.rdixDataNote}</p>
+    )}
+
+    {isRdix && (
       <div class="mb-12">
         <h3 class="font-display text-[28px] font-normal m-0 mb-6">{t.indexDetail.dividendYield.heading}</h3>
         <div class="overflow-x-auto bg-bg border border-rule">

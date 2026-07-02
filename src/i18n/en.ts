@@ -310,6 +310,7 @@ export const en = {
       inception:      "Inception",
     },
     chartLabel:         "Index Level — rebased to 1,000 at period start",
+    rdixDataNote:       "Data delayed by one trading day · updated automatically after market close",
     dividendYield: {
       heading: "Historical dividend yield",
       year:  "Year",

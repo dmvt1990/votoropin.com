@@ -43,6 +43,9 @@ jobs:
           scp root@153.80.196.164:/opt/indices/state/moexit_levels.csv src/data/moexit_levels.csv
           scp root@153.80.196.164:/opt/indices/state/ritix_stats.json  src/data/ritix_stats.json
           scp root@153.80.196.164:/opt/indices/state/rhix_stats.json   src/data/rhix_stats.json
+          scp root@153.80.196.164:/opt/indices/state/rdix_levels.csv   src/data/rdix_levels.csv
+          scp root@153.80.196.164:/opt/indices/state/mcftrr_levels.csv src/data/mcftrr_levels.csv
+          scp root@153.80.196.164:/opt/indices/state/rdix_stats.json   src/data/rdix_stats.json
 
       - name: Install dependencies
         run: npm ci
