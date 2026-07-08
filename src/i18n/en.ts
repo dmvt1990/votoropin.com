@@ -25,7 +25,7 @@ export const en = {
 
   // ── Footer ───────────────────────────────────────────────────────────────
   footer: {
-    disclaimer: "RHIX · RITIX are personal research prototypes — not investment advice",
+    disclaimer: "RHIX · RITIX · RDIX are personal research prototypes — not investment advice",
   },
 
   // ── Base layout / meta ───────────────────────────────────────────────────
@@ -71,7 +71,7 @@ export const en = {
   // ── Home page ─────────────────────────────────────────────────────────────
   home: {
     pageTitle:       "Dmitrii Votoropin, CFA — Investment Counsellor",
-    pageDescription: "Dmitrii Votoropin, CFA — Investment Counsellor with 14+ years in private banking and wealth management at Citi and Gazprombank. Personal research on rules-based index design: RITIX and RHIX." as string,
+    pageDescription: "Dmitrii Votoropin, CFA — Investment Counsellor with 14+ years in private banking and wealth management at Citi and Gazprombank. Personal research on rules-based index design: RITIX, RHIX, and RDIX." as string,
     hero: {
       eyebrow:    "Investment Counsellor · Moscow",
       h1line1:    "Private banking, ",
@@ -285,13 +285,13 @@ export const en = {
 
   // ── Indices overview page ─────────────────────────────────────────────────
   indicesOverview: {
-    pageTitle:       "Research Prototypes — RHIX, RITIX",
-    pageDescription: "Personal research prototypes on rules-based equity index design — RHIX (Russian Healthcare) and RITIX (Russia IT). Not investment products, not regulated benchmarks.",
+    pageTitle:       "Research Prototypes — RHIX, RITIX, RDIX",
+    pageDescription: "Personal research prototypes on rules-based equity index design — RHIX (Russian Healthcare), RITIX (Russia IT), and RDIX. Not investment products, not regulated benchmarks.",
     eyebrow: "Research prototypes",
-    h1part1: "Two ",
+    h1part1: "Three ",
     h1em:    "personal research",
     h1part2: " projects on rules-based equity index design.",
-    intro:   "RHIX and RITIX are research prototypes I maintain in my personal capacity. Both explore rules-based weighting schemes applied to under-followed segments of the Moscow Exchange. Levels, constituent compositions, and rebalancing histories are published here for research and educational purposes.",
+    intro:   "RHIX, RITIX, and RDIX are research prototypes I maintain in my personal capacity. All three explore rules-based weighting schemes applied to under-followed segments of the Moscow Exchange. Levels, constituent compositions, and rebalancing histories are published here for research and educational purposes.",
     disclaimer: {
       label: "Disclaimer",
       text:  "RHIX, RITIX and RDIX are personal research prototypes maintained by the author in his personal capacity. They are not investment products, not regulated benchmarks under IOSCO, ESMA, or any other framework, and are not affiliated with, sponsored by, or endorsed by any current or former employer of the author. All constituent weights, index levels, and historical data are published for research and educational purposes only. Nothing on this site constitutes investment advice, a solicitation, or a recommendation to buy or sell any security.",
