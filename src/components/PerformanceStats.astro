@@ -39,11 +39,13 @@ export interface Props {
 const { stats, indexTicker } = Astro.props;
 const s = t.performanceStats;
 
+const ru = import.meta.env.PUBLIC_LANG === "ru";
 type Tone = "positive" | "negative" | "neutral";
 function tone(v: number): Tone { return v > 0 ? "positive" : v < 0 ? "negative" : "neutral"; }
-function fmt(v: number): string { return (v >= 0 ? "+" : "") + v.toFixed(2) + "%"; }
+function pct(v: number): string { const s = v.toFixed(2); return ru ? s.replace(".", ",") : s; }
+function fmt(v: number): string { return (v >= 0 ? "+" : "") + pct(v) + "%"; }
 function fmtDD(dd: DrawdownInfo): string {
-  return dd.value_pct.toFixed(2) + "% (" + dd.peak_date + " to " + dd.trough_date + ")";
+  return pct(dd.value_pct) + "% (" + dd.peak_date + (ru ? " — " : " to ") + dd.trough_date + ")";
 }
 
 const periodRows: Array<{ label: string; iv: number; bv: number }> = [
@@ -102,8 +104,8 @@ const ratioRows: Array<{ label: string; iv: number; bv: number | null }> = [
 
     <div class="grid grid-cols-[1fr_120px_120px] gap-x-4 py-2.5 border-b border-rule items-baseline">
       <span class="text-[14px] text-ink-soft">{s.riskStats.vol}</span>
-      <span class="text-[16px] font-display tracking-tight text-right text-ink">{stats.ann_vol_pct.toFixed(2)}%</span>
-      <span class="text-[14px] font-display tracking-tight text-right text-ink-mute">{stats.bench_ann_vol_pct.toFixed(2)}%</span>
+      <span class="text-[16px] font-display tracking-tight text-right text-ink">{pct(stats.ann_vol_pct)}%</span>
+      <span class="text-[14px] font-display tracking-tight text-right text-ink-mute">{pct(stats.bench_ann_vol_pct)}%</span>
     </div>
 
     <div class="grid grid-cols-[1fr_auto] gap-x-4 py-2.5 border-b border-rule items-baseline">

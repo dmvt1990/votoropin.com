@@ -41,10 +41,11 @@ const { Content } = await entry.render();
 const isRhix  = entry.slug === "rhix";
 const isRitix = entry.slug === "ritix";
 const isRdix  = entry.slug === "rdix";
+const isRu    = import.meta.env.PUBLIC_LANG === "ru";
 
 const series = isRdix ? RDIX_SERIES : isRhix ? RHIX_SERIES : RITIX_SERIES;
 const consts = isRdix ? RDIX_CONSTITUENTS : isRhix ? RHIX_CONSTITUENTS : RITIX_CONSTITUENTS;
-const asOf   = new Date().toLocaleDateString(t.dateLocale, { day: "numeric", month: "short", year: "numeric" });
+const asOf   = isRdix ? RDIX_AS_OF : isRhix ? RHIX_AS_OF : RITIX_AS_OF;
 const showShares = isRhix;
 
 // ── Benchmark configuration per index ──────────────────────────────────────
@@ -84,10 +85,9 @@ const ribbonCells = [
   {
     k: t.indexDetail.ribbon.currentLevel,
     v: latest
-      ? latest.level.toLocaleString("en-US", {
-          minimumFractionDigits: 2,
-          maximumFractionDigits: 2,
-        })
+      ? latest.level
+          .toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 })
+          .replace(/,/g, isRu ? " " : ",")
       : "—",
   },
   {
@@ -142,7 +142,7 @@ const rebalanceHistory = entry.data.rebalancingLog;
 
     {isRdix && (
       <div class="mb-12">
-        <h3 class="font-display text-[28px] font-normal m-0 mb-6">{t.indexDetail.dividendYield.heading}</h3>
+        <h2 class="font-display text-[28px] font-normal m-0 mb-6">{t.indexDetail.dividendYield.heading}</h2>
         <div class="overflow-x-auto bg-bg border border-rule">
           <table class="w-full border-collapse">
             <thead>

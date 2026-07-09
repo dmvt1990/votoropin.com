@@ -11,8 +11,9 @@ const rhixYtdRaw  = ytdReturn(RHIX_SERIES);
 const ritixYtdRaw = ytdReturn(RITIX_SERIES);
 const rdixYtdRaw  = ytdReturn(RDIX_SERIES);
 
+const ru = import.meta.env.PUBLIC_LANG === "ru";
 const fmt = (v: number | null) =>
-  v === null ? "—" : `${v >= 0 ? "+" : ""}${v.toFixed(2)}%`;
+  v === null ? "—" : `${v >= 0 ? "+" : ""}${ru ? v.toFixed(2).replace(".", ",") : v.toFixed(2)}%`;
 
 const rhixYtd  = fmt(rhixYtdRaw);
 const ritixYtd = fmt(ritixYtdRaw);

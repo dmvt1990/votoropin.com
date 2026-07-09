@@ -7,16 +7,17 @@ const path = Astro.url.pathname.replace(/\/$/, "") || "/";
 const links = [
   { href: "/",          label: t.nav.links.home },
   { href: "/cv",        label: t.nav.links.cv },
-  { href: "/indices",   label: t.nav.links.indices },
+  { href: "/indices/",  label: t.nav.links.indices },
   { href: "/scanner/",  label: t.nav.links.scanner },
-  { href: "/notes",     label: t.nav.links.notes },
+  { href: "/notes/",    label: t.nav.links.notes },
   { href: "/contact",   label: t.nav.links.contact },
   { href: "/dashboard/dashboard.html", label: t.nav.links.dashboard },
 ].filter(l => l.label);
 
 function isActive(href: string) {
-  if (href === "/") return path === "/";
-  return path === href || path.startsWith(href + "/");
+  const h = href.replace(/\/$/, "") || "/";
+  if (h === "/") return path === "/";
+  return path === h || path.startsWith(h + "/");
 }
 ---
 

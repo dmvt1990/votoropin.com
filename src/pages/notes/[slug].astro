@@ -21,7 +21,7 @@ const { Content } = await entry.render();
       <a href="/notes" class="text-ink-mute no-underline hover:text-accent">{t.noteDetail.backLink}</a>
     </div>
     <div class="font-mono text-[11px] tracking-wider2 uppercase text-accent mb-4">
-      {entry.data.tag}
+      {t.noteTags[entry.data.tag]}
     </div>
     <h1 class="display font-normal text-[40px] sm:text-[52px] leading-[1.05] tracking-tightest m-0 mb-4">
       {entry.data.title}

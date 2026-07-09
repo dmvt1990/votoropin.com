@@ -11,13 +11,13 @@ export const RITIX_CONSTITUENTS: Constituent[] = [
   { ticker: "YDEX", name: "Yandex (MKPAO)",         subIndustry: "Internet / Software",  sharesMillions: 0, freeFloatPct: 40, weightPct: 40.75 },
   { ticker: "OZON", name: "Ozon Holdings",          subIndustry: "Internet / E-commerce", sharesMillions: 0, freeFloatPct: 32, weightPct: 26.23 },
   { ticker: "HEAD", name: "HeadHunter (MKPAO)",     subIndustry: "Internet / Services",   sharesMillions: 0, freeFloatPct: 25, weightPct:  9.41 },
-  { ticker: "VKCO", name: "VK Company",             subIndustry: "Internet platforms",    sharesMillions: 0, freeFloatPct: 15, weightPct:  6.92 },
+  { ticker: "VKCO", name: "VK Company",             subIndustry: "Internet Platforms",    sharesMillions: 0, freeFloatPct: 15, weightPct:  6.92 },
   { ticker: "POSI", name: "Positive Technologies",  subIndustry: "Cybersecurity",         sharesMillions: 0, freeFloatPct: 18, weightPct:  5.48 },
-  { ticker: "ASTR", name: "Astra Group",            subIndustry: "Enterprise software",   sharesMillions: 0, freeFloatPct: 12, weightPct:  3.55 },
+  { ticker: "ASTR", name: "Astra Group",            subIndustry: "Enterprise Software",   sharesMillions: 0, freeFloatPct: 12, weightPct:  3.55 },
   { ticker: "CNRU", name: "CIAN",                   subIndustry: "Internet / Marketplace", sharesMillions: 0, freeFloatPct:  7, weightPct:  2.79 },
-  { ticker: "SOFL", name: "Softline",               subIndustry: "IT services",           sharesMillions: 0, freeFloatPct: 10, weightPct:  2.28 },
-  { ticker: "DIAS", name: "Diasoft",                subIndustry: "Enterprise software",   sharesMillions: 0, freeFloatPct:  8, weightPct:  1.58 },
-  { ticker: "IVAT", name: "IVA Technologies",       subIndustry: "Enterprise software",   sharesMillions: 0, freeFloatPct:  6, weightPct:  1.01 },
+  { ticker: "SOFL", name: "Softline",               subIndustry: "IT Services",           sharesMillions: 0, freeFloatPct: 10, weightPct:  2.28 },
+  { ticker: "DIAS", name: "Diasoft",                subIndustry: "Enterprise Software",   sharesMillions: 0, freeFloatPct:  8, weightPct:  1.58 },
+  { ticker: "IVAT", name: "IVA Technologies",       subIndustry: "Enterprise Software",   sharesMillions: 0, freeFloatPct:  6, weightPct:  1.01 },
 ];
 
 // Aggregate performance metrics from the 2025 performance report.

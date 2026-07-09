@@ -32,11 +32,11 @@ const notes = (await getCollection(collectionName as "notes", ({ data }) => !dat
           notes.map((n) => (
             <a href={`/notes/${n.slug}`} class="bg-bg p-9 transition-colors duration-200 hover:bg-bg-sunken no-underline group">
               <div class="font-mono text-[11px] tracking-wide text-ink-mute mb-4">
-                {new Date(n.data.date).toLocaleDateString(t.dateLocale, { year: "numeric", month: "short", day: "2-digit" })} · {n.data.tag}
+                {new Date(n.data.date).toLocaleDateString(t.dateLocale, { year: "numeric", month: "short", day: "2-digit" })} · {t.noteTags[n.data.tag]}
               </div>
-              <h4 class="display font-medium text-[22px] tracking-tight leading-tight m-0 mb-3 text-ink group-hover:text-accent transition-colors">
+              <h2 class="display font-medium text-[22px] tracking-tight leading-tight m-0 mb-3 text-ink group-hover:text-accent transition-colors">
                 {n.data.title}
-              </h4>
+              </h2>
               <p class="text-ink-soft text-[14px] leading-relaxed m-0">{n.data.summary}</p>
               <div class="mt-4 text-[11px] text-ink-mute">{n.data.readMinutes} {t.notesOverview.minRead}</div>
             </a>

@@ -32,7 +32,7 @@ const benchmarksJSON = JSON.stringify(benchmarks);
 <div class="bg-bg border border-rule p-6 mb-8">
   <!-- Header row: title + period buttons -->
   <div class="flex justify-between items-baseline pb-4 mb-2 border-b border-rule">
-    <h4 class="font-display text-[18px] font-medium m-0">{label}</h4>
+    <h2 class="font-display text-[18px] font-medium m-0">{label}</h2>
     <div class="flex gap-1 font-mono text-[11px]" data-periods data-target={id}>
       <button data-range="1M"  class="px-2.5 py-1 text-ink-mute hover:text-ink">{t.chart.periods["1M"]}</button>
       <button data-range="3M"  class="px-2.5 py-1 text-ink-mute hover:text-ink">{t.chart.periods["3M"]}</button>
