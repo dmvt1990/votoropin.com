@@ -102,6 +102,25 @@ const INK  = ["#FAF7F0", "#FAF7F0", "#FAF7F0", "#FAF7F0", "#1A1A1A"];
 
 const byTicker = new Map(constituents.map((c) => [c.ticker, c]));
 
+// Fail the build rather than draw a map that quietly disagrees with the
+// constituents table above it. A name added at a reconstitution but not filed
+// into a sub-sector would otherwise just vanish from the treemap, and the
+// sub-sector weights would stop summing to 100% with nothing to show for it.
+const grouped = subSectors.flatMap((g) => g.tickers);
+const missing = constituents.map((c) => c.ticker).filter((tk) => !grouped.includes(tk));
+const unknown = grouped.filter((tk) => !byTicker.has(tk));
+const duplicated = grouped.filter((tk, i) => grouped.indexOf(tk) !== i);
+
+if (missing.length || unknown.length || duplicated.length) {
+  throw new Error(
+    "SubSectorMap: sub-sector grouping is out of sync with the constituents list.\n" +
+      (missing.length ? `  In the index but in no sub-sector: ${missing.join(", ")}\n` : "") +
+      (unknown.length ? `  In a sub-sector but not in the index: ${unknown.join(", ")}\n` : "") +
+      (duplicated.length ? `  Filed under more than one sub-sector: ${duplicated.join(", ")}\n` : "") +
+      "  Fix the grouping beside the constituents it describes (e.g. RITIX_SUBSECTORS).",
+  );
+}
+
 const groups = subSectors
   .map((g) => {
     const members = g.tickers
