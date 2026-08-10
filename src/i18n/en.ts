@@ -62,6 +62,15 @@ export const en = {
     },
   },
 
+  // ── Sub-sector map ───────────────────────────────────────────────────────
+  subSectorMap: {
+    heading:    "Sub-sector map",
+    legendLow:  "Smaller sub-sector",
+    legendHigh: "Larger",
+    note:
+      "Tile area is index weight at the last rebalance. The sub-sector grouping is editorial: the methodology screens a single GICS Information Technology universe and does not itself divide the index into sub-sectors.",
+  },
+
   // ── Chart ────────────────────────────────────────────────────────────────
   chart: {
     locale:  "en",

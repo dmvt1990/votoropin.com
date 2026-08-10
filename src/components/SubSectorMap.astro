@@ -1,0 +1,297 @@
+---
+// src/components/SubSectorMap.astro
+// Treemap of index weight grouped into editorial sub-sectors.
+// Tile area is index weight at the as-of date carried by the constituents file,
+// so the map and the constituents table above it always agree.
+//
+// Colour is a single-hue ordinal ramp in the site accent (maroon): darker means
+// a larger sub-sector. Validated light→dark, adjacent ΔL ≥ 0.06, lightest step
+// 2.73:1 against the page surface (#FAF7F0).
+
+import type { Constituent } from "../data/rhix-constituents";
+import { t } from "../i18n";
+
+export type SubSector = {
+  key: string;
+  name: string;
+  nameRu?: string;
+  tickers: string[];
+};
+
+export interface Props {
+  constituents: Constituent[];
+  subSectors: SubSector[];
+  /** Kept for signature parity with ConstituentsTable; the date is shown there. */
+  asOf?: string;
+}
+
+const { constituents, subSectors } = Astro.props;
+const ru = import.meta.env.PUBLIC_LANG === "ru";
+
+// ── Geometry ────────────────────────────────────────────────────────────────
+const W = 1060;
+const H = 600;
+const GAP = 18;     // gutter between sub-sector blocks (keeps adjacent labels apart)
+const HEADER = 26;  // room for the sub-sector label above its tiles
+
+type Rect = { x: number; y: number; w: number; h: number };
+
+/** Squarified treemap (Bruls, Huizing & van Wijk). */
+function squarify<T extends { key: string; value: number }>(
+  items: T[],
+  box: Rect,
+): Array<{ key: string; rect: Rect }> {
+  let { x, y, w, h } = box;
+  let rest = [...items];
+  let total = rest.reduce((s, i) => s + i.value, 0);
+  const out: Array<{ key: string; rect: Rect }> = [];
+  if (total <= 0 || w <= 0 || h <= 0) return out;
+
+  while (rest.length) {
+    const short = Math.min(w, h);
+    const scale = (w * h) / total;
+    let row: T[] = [];
+    let best = Infinity;
+
+    while (rest.length) {
+      const cand = [...row, rest[0]];
+      const area = cand.reduce((s, i) => s + i.value, 0) * scale;
+      const side = area / short;
+      const worst = Math.max(
+        ...cand.map((i) => {
+          const other = (i.value * scale) / side;
+          return Math.max(side / other, other / side);
+        }),
+      );
+      if (row.length && worst > best) break;
+      row = cand;
+      best = worst;
+      rest.shift();
+    }
+
+    const area = row.reduce((s, i) => s + i.value, 0) * scale;
+    if (w >= h) {
+      const side = area / h;
+      let cy = y;
+      for (const i of row) {
+        const ih = (i.value * scale) / side;
+        out.push({ key: i.key, rect: { x, y: cy, w: side, h: ih } });
+        cy += ih;
+      }
+      x += side;
+      w -= side;
+    } else {
+      const side = area / w;
+      let cx = x;
+      for (const i of row) {
+        const iw = (i.value * scale) / side;
+        out.push({ key: i.key, rect: { x: cx, y, w: iw, h: side } });
+        cx += iw;
+      }
+      y += side;
+      h -= side;
+    }
+    total -= row.reduce((s, i) => s + i.value, 0);
+  }
+  return out;
+}
+
+// ── Ordinal ramp: rank 0 = largest sub-sector ───────────────────────────────
+const FILL = ["#42121C", "#6E1E30", "#932E46", "#AE5C6E", "#C9848F"];
+const INK  = ["#FAF7F0", "#FAF7F0", "#FAF7F0", "#FAF7F0", "#1A1A1A"];
+
+const byTicker = new Map(constituents.map((c) => [c.ticker, c]));
+
+const groups = subSectors
+  .map((g) => {
+    const members = g.tickers
+      .map((tk) => byTicker.get(tk))
+      .filter((c): c is Constituent => Boolean(c))
+      .sort((a, b) => b.weightPct - a.weightPct);
+    return {
+      ...g,
+      label: ru && g.nameRu ? g.nameRu : g.name,
+      members,
+      weight: members.reduce((s, c) => s + c.weightPct, 0),
+    };
+  })
+  .filter((g) => g.members.length > 0)
+  .sort((a, b) => b.weight - a.weight);
+
+const outer = new Map(
+  squarify(
+    groups.map((g) => ({ key: g.key, value: g.weight })),
+    { x: 0, y: 0, w: W, h: H },
+  ).map((r) => [r.key, r.rect]),
+);
+
+function num(v: number, digits = 1): string {
+  const s = v.toFixed(digits);
+  return ru ? s.replace(".", ",") : s;
+}
+
+const blocks = groups.map((g, rank) => {
+  const o = outer.get(g.key)!;
+  const box: Rect = { x: o.x + GAP / 2, y: o.y + GAP / 2, w: o.w - GAP, h: o.h - GAP };
+  const tiles = new Map(
+    squarify(
+      g.members.map((c) => ({ key: c.ticker, value: c.weightPct })),
+      { x: box.x, y: box.y + HEADER, w: box.w, h: box.h - HEADER },
+    ).map((r) => [r.key, r.rect]),
+  );
+
+  return {
+    ...g,
+    rank,
+    box,
+    fill: FILL[Math.min(rank, FILL.length - 1)],
+    ink: INK[Math.min(rank, INK.length - 1)],
+    tiles: g.members.map((c) => {
+      const r = tiles.get(c.ticker)!;
+      // Label density steps down with the tile: every tile keeps its ticker and
+      // its weight; the company name is dropped once there is no room for it.
+      const big = r.w >= 150 && r.h >= 150;
+      const mid = r.w >= 100 && r.h >= 100;
+      // Below ~78pt of height there is no room to stack ticker over weight, so
+      // the tile collapses to a single baseline: ticker left, weight right.
+      const compact = r.h < 78;
+      return {
+        c,
+        rect: r,
+        compact,
+        showName: !compact && r.w >= 78 && r.h >= 62,
+        tickerSize: compact ? 14 : big ? 19 : mid ? 16 : 14,
+        nameSize: big ? 13.5 : 12,
+        pctSize: compact ? 16 : big ? 30 : mid ? 22 : 18,
+        name: ru && c.nameRu ? c.nameRu : c.name,
+      };
+    }),
+  };
+});
+
+const heading = t.subSectorMap.heading;
+const legendLow = t.subSectorMap.legendLow;
+const legendHigh = t.subSectorMap.legendHigh;
+const note = t.subSectorMap.note;
+const ariaLabel =
+  heading +
+  ": " +
+  blocks.map((b) => `${b.label} ${num(b.weight)}%`).join(", ") +
+  ".";
+---
+
+<div class="mt-16">
+  <h2 class="font-display text-[28px] font-normal m-0 mb-6">{heading}</h2>
+
+  <div class="bg-bg border border-rule p-5">
+    <div class="flex items-center gap-3 mb-5 text-[11px] uppercase tracking-wider2 text-ink-mute">
+      <span>{legendLow}</span>
+      <span class="flex gap-[2px]">
+        {[...FILL].reverse().map((f) => (
+          <span class="block w-6 h-[10px]" style={`background:${f}`}></span>
+        ))}
+      </span>
+      <span>{legendHigh}</span>
+    </div>
+
+    {/* Narrow screens: the treemap would need sideways scrolling to be read at
+        all, so below `sm` it gives way to a proportional bar per sub-sector. */}
+    <div class="sm:hidden flex flex-col gap-5">
+      {blocks.map((b) => (
+        <div>
+          <div class="flex items-baseline justify-between gap-3 mb-2">
+            <span class="text-[13px] text-ink-soft">{b.label}</span>
+            <span class="font-mono numeric text-[13px] text-ink-mute">{num(b.weight)}%</span>
+          </div>
+          <div class="h-3 w-full bg-bg-sunken">
+            <div class="h-full" style={`width:${b.weight}%;background:${b.fill}`}></div>
+          </div>
+          <div class="mt-2 flex flex-wrap gap-x-4 gap-y-1">
+            {b.tiles.map((tl) => (
+              <span class="font-mono text-[11px] text-ink-mute">
+                {tl.c.ticker} <span class="numeric">{num(tl.c.weightPct)}%</span>
+              </span>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <div class="hidden sm:block overflow-x-auto">
+      <svg
+        viewBox={`0 0 ${W} ${H}`}
+        class="block w-full h-auto min-w-[720px]"
+        role="img"
+        aria-label={ariaLabel}
+      >
+        {blocks.map((b) => (
+          <g>
+            <text
+              x={b.box.x}
+              y={b.box.y + 14}
+              class="font-sans"
+              font-size="12.5"
+              font-weight="500"
+              fill="#3D3D3A"
+            >{b.label}</text>
+            <text
+              x={b.box.x + b.box.w}
+              y={b.box.y + 14}
+              text-anchor="end"
+              class="font-mono numeric"
+              font-size="12.5"
+              fill="#8A857C"
+            >{num(b.weight)}%</text>
+
+            {b.tiles.map((tl) => (
+              <g>
+                <title>{tl.c.ticker} · {tl.name} · {b.label} · {num(tl.c.weightPct, 2)}%</title>
+                <rect
+                  x={tl.rect.x + 1}
+                  y={tl.rect.y + 1}
+                  width={Math.max(0, tl.rect.w - 2)}
+                  height={Math.max(0, tl.rect.h - 2)}
+                  fill={b.fill}
+                  stroke="#FAF7F0"
+                  stroke-width="2"
+                />
+                <text
+                  x={tl.rect.x + 14}
+                  y={tl.compact
+                    ? tl.rect.y + tl.rect.h / 2 + tl.tickerSize / 3
+                    : tl.rect.y + 14 + tl.tickerSize}
+                  class="font-mono"
+                  font-size={tl.tickerSize}
+                  letter-spacing="0.04em"
+                  fill={b.ink}
+                >{tl.c.ticker}</text>
+                {tl.showName && (
+                  <text
+                    x={tl.rect.x + 14}
+                    y={tl.rect.y + 16 + tl.tickerSize + tl.nameSize}
+                    class="font-sans"
+                    font-size={tl.nameSize}
+                    fill={b.ink}
+                    opacity="0.72"
+                  >{tl.name}</text>
+                )}
+                <text
+                  x={tl.compact ? tl.rect.x + tl.rect.w - 14 : tl.rect.x + 14}
+                  y={tl.compact
+                    ? tl.rect.y + tl.rect.h / 2 + tl.pctSize / 3
+                    : tl.rect.y + tl.rect.h - 16}
+                  text-anchor={tl.compact ? "end" : "start"}
+                  class="font-mono numeric"
+                  font-size={tl.pctSize}
+                  fill={b.ink}
+                >{num(tl.c.weightPct)}%</text>
+              </g>
+            ))}
+          </g>
+        ))}
+      </svg>
+    </div>
+  </div>
+
+  <p class="mt-3 text-[13px] text-ink-mute italic">{note}</p>
+</div>

@@ -20,6 +20,46 @@ export const RITIX_CONSTITUENTS: Constituent[] = [
   { ticker: "IVAT", name: "IVA Technologies",       subIndustry: "Enterprise Software",   sharesMillions: 0, freeFloatPct:  6, weightPct:  1.01 },
 ];
 
+// Editorial sub-sector grouping used by the sub-sector map. This is a
+// presentation layer only — the methodology screens a single GICS Information
+// Technology universe and knows nothing about sub-sectors. Every constituent
+// must appear in exactly one group; unlisted tickers are silently dropped from
+// the map, so revisit this list at any reconstitution.
+import type { SubSector } from "../components/SubSectorMap.astro";
+
+export const RITIX_SUBSECTORS: SubSector[] = [
+  {
+    key: "internet",
+    name: "Internet platforms & e-commerce",
+    nameRu: "Интернет-платформы и e-commerce",
+    tickers: ["YDEX", "OZON", "VKCO"],
+  },
+  {
+    key: "classifieds",
+    name: "Classifieds & HR-tech",
+    nameRu: "Классифайды и HR-tech",
+    tickers: ["HEAD", "CNRU"],
+  },
+  {
+    key: "enterprise",
+    name: "Enterprise software",
+    nameRu: "Корпоративное ПО",
+    tickers: ["ASTR", "DIAS", "IVAT"],
+  },
+  {
+    key: "security",
+    name: "Cybersecurity",
+    nameRu: "Кибербезопасность",
+    tickers: ["POSI"],
+  },
+  {
+    key: "services",
+    name: "IT services & integration",
+    nameRu: "IT-услуги и интеграция",
+    tickers: ["SOFL"],
+  },
+];
+
 // Aggregate performance metrics from the 2025 performance report.
 // Update at each report cycle.
 export const RITIX_PERFORMANCE_2025 = {

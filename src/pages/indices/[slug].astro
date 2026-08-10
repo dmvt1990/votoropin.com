@@ -7,10 +7,11 @@ import IndexLevelChart from "../../components/IndexLevelChart.astro";
 import ConstituentsTable from "../../components/ConstituentsTable.astro";
 import Ribbon from "../../components/Ribbon.astro";
 import PerformanceStats from "../../components/PerformanceStats.astro";
+import SubSectorMap from "../../components/SubSectorMap.astro";
 import { t } from "../../i18n";
 
 import { RHIX_CONSTITUENTS, RHIX_AS_OF } from "../../data/rhix-constituents";
-import { RITIX_CONSTITUENTS, RITIX_AS_OF } from "../../data/ritix-constituents";
+import { RITIX_CONSTITUENTS, RITIX_AS_OF, RITIX_SUBSECTORS } from "../../data/ritix-constituents";
 import { RDIX_CONSTITUENTS, RDIX_AS_OF, RDIX_DIV_YIELD, RDIX_DIV_YIELD_AVG } from "../../data/rdix-constituents";
 import {
   RHIX_SERIES,
@@ -173,6 +174,10 @@ const rebalanceHistory = entry.data.rebalancingLog;
     )}
 
     <ConstituentsTable constituents={consts} asOf={asOf} showShares={showShares} showFreeFloat={!isRdix} />
+
+    {isRitix && (
+      <SubSectorMap constituents={consts} subSectors={RITIX_SUBSECTORS} asOf={asOf} />
+    )}
   </section>
 
   <!-- ── PERFORMANCE STATISTICS ───────────────────────────────────────────── -->
