@@ -2,22 +2,24 @@
 // Constituents of RITIX as of the last quarterly rebalancing.
 // Source: 2026-07-01 Q3 rebalance; weights from the production methodology.py
 // sqrt(ff_mcap) basis at Jul-1 prices. No membership change from Q2.
+// Free-float coefficients are MOEX's published values as at 29.07.2026, applied
+// in the 2026-07-29 correction. Re-read MOEX's table at every quarterly rebalance.
 
 import type { Constituent } from "./rhix-constituents";
 
 export const RITIX_AS_OF = "2026-07-01";
 
 export const RITIX_CONSTITUENTS: Constituent[] = [
-  { ticker: "YDEX", name: "Yandex (MKPAO)",         subIndustry: "Internet / Software",  sharesMillions: 0, freeFloatPct: 40, weightPct: 40.75 },
-  { ticker: "OZON", name: "Ozon Holdings",          subIndustry: "Internet / E-commerce", sharesMillions: 0, freeFloatPct: 32, weightPct: 26.23 },
-  { ticker: "HEAD", name: "HeadHunter (MKPAO)",     subIndustry: "Internet / Services",   sharesMillions: 0, freeFloatPct: 25, weightPct:  9.41 },
-  { ticker: "VKCO", name: "VK Company",             subIndustry: "Internet Platforms",    sharesMillions: 0, freeFloatPct: 15, weightPct:  6.92 },
-  { ticker: "POSI", name: "Positive Technologies",  subIndustry: "Cybersecurity",         sharesMillions: 0, freeFloatPct: 18, weightPct:  5.48 },
-  { ticker: "ASTR", name: "Astra Group",            subIndustry: "Enterprise Software",   sharesMillions: 0, freeFloatPct: 12, weightPct:  3.55 },
-  { ticker: "CNRU", name: "CIAN",                   subIndustry: "Internet / Marketplace", sharesMillions: 0, freeFloatPct:  7, weightPct:  2.79 },
-  { ticker: "SOFL", name: "Softline",               subIndustry: "IT Services",           sharesMillions: 0, freeFloatPct: 10, weightPct:  2.28 },
-  { ticker: "DIAS", name: "Diasoft",                subIndustry: "Enterprise Software",   sharesMillions: 0, freeFloatPct:  8, weightPct:  1.58 },
-  { ticker: "IVAT", name: "IVA Technologies",       subIndustry: "Enterprise Software",   sharesMillions: 0, freeFloatPct:  6, weightPct:  1.01 },
+  { ticker: "YDEX", name: "Yandex (MKPAO)",         subIndustry: "Internet / Software",  sharesMillions: 0, freeFloatPct: 26, weightPct: 32.31 },
+  { ticker: "OZON", name: "Ozon Holdings",          subIndustry: "Internet / E-commerce", sharesMillions: 0, freeFloatPct: 26, weightPct: 23.07 },
+  { ticker: "HEAD", name: "HeadHunter (MKPAO)",     subIndustry: "Internet / Services",   sharesMillions: 0, freeFloatPct: 53, weightPct: 13.58 },
+  { ticker: "VKCO", name: "VK Company",             subIndustry: "Internet Platforms",    sharesMillions: 0, freeFloatPct: 20, weightPct: 7.68 },
+  { ticker: "CNRU", name: "CIAN",                   subIndustry: "Internet / Marketplace", sharesMillions: 0, freeFloatPct: 40, weightPct: 6.49 },
+  { ticker: "POSI", name: "Positive Technologies",  subIndustry: "Cybersecurity",         sharesMillions: 0, freeFloatPct: 24, weightPct: 6.24 },
+  { ticker: "ASTR", name: "Astra Group",            subIndustry: "Enterprise Software",   sharesMillions: 0, freeFloatPct: 17, weightPct: 4.10 },
+  { ticker: "SOFL", name: "Softline",               subIndustry: "IT Services",           sharesMillions: 0, freeFloatPct: 19, weightPct: 3.05 },
+  { ticker: "DIAS", name: "Diasoft",                subIndustry: "Enterprise Software",   sharesMillions: 0, freeFloatPct: 15, weightPct: 2.15 },
+  { ticker: "IVAT", name: "IVA Technologies",       subIndustry: "Enterprise Software",   sharesMillions: 0, freeFloatPct: 11, weightPct: 1.34 },
 ];
 
 // Editorial sub-sector grouping used by the sub-sector map. This is a
@@ -60,26 +62,28 @@ export const RITIX_SUBSECTORS: SubSector[] = [
   },
 ];
 
-// Aggregate performance metrics from the 2025 performance report.
-// Update at each report cycle.
+// Aggregate performance metrics for calendar 2025, recomputed 2026-07-29 from
+// the corrected level series (v1.5 fixed-units + MOEX free-float correction).
+// Supersedes the figures carried from the original 2025 performance report,
+// which predated both restatements. Update at each report cycle.
 export const RITIX_PERFORMANCE_2025 = {
   startDate: "2025-01-03",
-  endDate: "2025-12-31",
+  endDate: "2025-12-30",
   startingLevel: 1000.00,
-  endingLevel: 726.93,
-  periodHigh: 1058.98,
-  periodHighDate: "2025-01-13",
-  periodLow: 662.84,
-  periodLowDate: "2025-12-17",
-  totalReturnPct: -27.31,
-  annualizedReturnPct: -27.51,
-  annualizedVolPct: 23.70,
-  sharpe: -1.16,
-  maxDrawdownPct: -37.41,
-  maxDrawdownDate: "2025-12-17",
-  bestDayPct: 3.44,
-  bestDayDate: "2025-12-31",
-  worstDayPct: -3.72,
-  worstDayDate: "2025-03-27",
-  tradingDays: 259,
+  endingLevel: 955.88,
+  periodHigh: 1115.66,
+  periodHighDate: "2025-02-25",
+  periodLow: 875.55,
+  periodLowDate: "2025-10-15",
+  totalReturnPct: -4.41,
+  annualizedReturnPct: -4.46,
+  annualizedVolPct: 23.80,
+  sharpe: -1.55,
+  maxDrawdownPct: -21.52,
+  maxDrawdownDate: "2025-10-15",
+  bestDayPct: 4.98,
+  bestDayDate: "2025-10-16",
+  worstDayPct: -5.26,
+  worstDayDate: "2025-04-04",
+  tradingDays: 254,
 };
