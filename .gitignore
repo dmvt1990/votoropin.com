@@ -17,3 +17,6 @@ dist-ru/
 .env
 .env.local
 .env.production
+
+# Obsidian vault config (local editor state)
+.obsidian/
