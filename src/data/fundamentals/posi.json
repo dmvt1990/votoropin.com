@@ -47,7 +47,7 @@
   "sources": [
     {
       "document": "2024__ifrs-2024-report-9a821feb4e3a0e69__95ff53ec.md",
-      "values": 14
+      "values": 16
     },
     {
       "document": "2025__attendance-pao-group-positive-2025-report__8258808a.md",
@@ -62,7 +62,7 @@
       "values": 4
     }
   ],
-  "facts": 48,
+  "facts": 50,
   "sections": [
     {
       "key": "enterprise_value",
@@ -156,16 +156,16 @@
           "kind": "money",
           "note": "operating profit + D&A",
           "values": [
-            null,
-            6500.0,
+            10854.051,
+            6506.843,
             12300.0,
             null
           ],
           "sub": "growth",
           "subValues": [
             null,
-            null,
-            89.23,
+            -40.05,
+            89.03,
             null
           ]
         },
@@ -175,16 +175,16 @@
           "kind": "pct",
           "note": "",
           "values": [
-            null,
-            26.5773,
+            48.8645,
+            26.6053,
             39.8058,
             null
           ],
           "sub": "pp",
           "subValues": [
             null,
-            null,
-            13.23,
+            -22.26,
+            13.2,
             null
           ]
         },

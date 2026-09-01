@@ -23,13 +23,35 @@ fi
 
 mkdir -p "$DATA_DIR"
 
+# How far back an issuer's own filings actually reach. Ozon and IVA each publish
+# a three-year statement carrying 2022; Diasoft's year ends 31 March, so its
+# columns are years to that date. The default suits everyone else. Without this
+# the script would quietly regenerate those three a year short of what they hold.
+years_for() {
+  case "$1" in
+    OZON|IVAT) echo "2022:2025" ;;
+    DIAS)      echo "2024:2026" ;;
+    *)         echo "2023:2025" ;;
+  esac
+}
+
+# An LTM column needs a half-year to trail from. Diasoft reports to a March year
+# end, and Softline and CIAN have no interim in the corpus.
+ltm_for() {
+  case "$1" in
+    DIAS|SOFL|CNRU) echo "" ;;
+    *)              echo "2025,2026-H1,2025-H1" ;;
+  esac
+}
+
 for t in "${TICKERS[@]}"; do
   out="$DATA_DIR/$(echo "$t" | tr '[:upper:]' '[:lower:]').json"
   echo "=== $t"
+  ltm="$(ltm_for "$t")"
   "$RITIX_FA/bin/ritix-fa" fa "$t" \
     --refresh \
-    --years 2023:2025 \
-    --ltm 2025,2026-H1,2025-H1 \
+    --years "$(years_for "$t")" \
+    ${ltm:+--ltm "$ltm"} \
     --json "$out" >/dev/null
   echo "  -> ${out#"$(cd "$(dirname "$0")/.." && pwd)/"}"
 done

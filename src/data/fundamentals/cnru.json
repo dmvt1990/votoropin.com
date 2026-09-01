@@ -46,14 +46,14 @@
   "sources": [
     {
       "document": "2024__cian-q4-2024-financial-results-rus__cf6bc5a6.md",
-      "values": 9
+      "values": 10
     },
     {
       "document": "2025__cian-q4-2025-financial-results-rus__bf5c5cd3.md",
-      "values": 19
+      "values": 21
     }
   ],
-  "facts": 28,
+  "facts": 31,
   "sections": [
     {
       "key": "enterprise_value",

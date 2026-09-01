@@ -1,0 +1,533 @@
+{
+  "ticker": "IVAT",
+  "name": "ПАО «ИВА»",
+  "name_en": "IVA Technologies",
+  "unit": "RUB mn",
+  "generated": "2026-09-01",
+  "columns": [
+    "2022",
+    "2023",
+    "2024",
+    "2025",
+    "LTM"
+  ],
+  "spot": {
+    "date": "2026-08-31",
+    "price": 69.35,
+    "shares": 100000000
+  },
+  "closes": {
+    "2024": {
+      "secid": "IVAT",
+      "date": "2024-12-30",
+      "close": 198.9
+    },
+    "2025": {
+      "secid": "IVAT",
+      "date": "2025-12-30",
+      "close": 167.35
+    }
+  },
+  "period_basis": null,
+  "coverage": {
+    "pnl": true,
+    "bs": true,
+    "cf": true,
+    "market": true,
+    "ltm": true
+  },
+  "note": {
+    "en": "IVA scans the signed balance sheet, income statement and cash-flow statement back into its filings, so those pages hold no machine-readable text and every figure here was read by OCR. Each one was checked three ways before use: the statement cross-foots against its own subtotals, each year appears twice — once in its own report, once as the comparative in the next — and cash and borrowings reproduce the net-debt ratios the company publishes. EBITDA above is operating profit plus depreciation and amortisation; the company's own EBITDA is an adjusted measure and runs higher, at a 70% margin for 2024 and 68% for 2025 against 66.7% and 62.6% here. Net debt excludes lease liabilities, which are shown separately in the memo block; adding them back reproduces the 0.2x and 0.31x the company reports. IVA listed in June 2024, so 2022 and 2023 carry no market capitalisation and no valuation multiples, and 2022 is the predecessor entity, ООО «ИВКС», whose 2023 figures match the comparatives ПАО «ИВА» reports for that year. No dividend was paid in the first half of 2026, which is why the trailing-twelve-month dividend cells are blank.",
+    "ru": "«ИВА» сканирует подписанные баланс, отчёт о прибылях и убытках и отчёт о движении денежных средств обратно в свою отчётность, поэтому на этих страницах нет машиночитаемого текста и все цифры здесь распознаны OCR. Каждая из них проверена тремя способами: отчёт сходится со своими же промежуточными итогами, каждый год встречается дважды — в собственном отчёте и как сравнительная колонка в следующем, — а денежные средства и кредиты воспроизводят коэффициенты чистого долга, которые публикует сама компания. EBITDA выше — это операционная прибыль плюс амортизация; собственный показатель компании скорректированный и выше: рентабельность 70% за 2024 год и 68% за 2025 против 66,7% и 62,6% здесь. Чистый долг не включает обязательства по аренде, они показаны отдельно в справочном блоке; с их учётом получаются те самые 0,2x и 0,31x, о которых сообщает компания. «ИВА» вышла на биржу в июне 2024 года, поэтому за 2022 и 2023 годы нет рыночной капитализации и оценочных мультипликаторов, а 2022 год — это предшественник, ООО «ИВКС», чьи показатели за 2023 год совпадают со сравнительными данными ПАО «ИВА» за тот же год. В первом полугодии 2026 года дивиденды не выплачивались — поэтому дивидендные ячейки в колонке LTM пустые."
+  },
+  "sources": [
+    {
+      "document": "2023__msfo-otchetnost-za-2023-god__a3e55a10.md",
+      "values": 42
+    },
+    {
+      "document": "2025-FY__msfo-otchetnost-pao-iva-12m-2025__3000b521.md",
+      "values": 13
+    },
+    {
+      "document": "2025-H1__otchetnost-iva-6m2025__b03af3b5.md",
+      "values": 19
+    },
+    {
+      "document": "2026-H1__otchetnost-pao-iva-6m2026__48251a42.md",
+      "values": 11
+    },
+    {
+      "document": "undated__otchetnost-pao-iva-12m24__6d85d300.md",
+      "values": 14
+    }
+  ],
+  "facts": 99,
+  "sections": [
+    {
+      "key": "enterprise_value",
+      "label": "Enterprise value",
+      "rows": [
+        {
+          "key": "mcap",
+          "label": "MCAP Ord",
+          "kind": "money",
+          "note": "",
+          "values": [
+            null,
+            null,
+            19890.0,
+            16735.0,
+            6935.0
+          ],
+          "sub": "growth",
+          "subValues": [
+            null,
+            null,
+            null,
+            -15.86,
+            -58.56
+          ]
+        },
+        {
+          "key": "net_debt",
+          "label": "+ Net Debt",
+          "kind": "money",
+          "note": "",
+          "values": [
+            -349.145,
+            -54.401,
+            275.005,
+            496.972,
+            884.78
+          ],
+          "sub": "growth",
+          "subValues": [
+            null,
+            null,
+            null,
+            80.71,
+            78.03
+          ]
+        },
+        {
+          "key": "ev",
+          "label": "= EV",
+          "kind": "money",
+          "note": "",
+          "values": [
+            null,
+            null,
+            20165.005,
+            17231.972,
+            7819.78
+          ],
+          "sub": "growth",
+          "subValues": [
+            null,
+            null,
+            null,
+            -14.55,
+            -54.62
+          ]
+        }
+      ]
+    },
+    {
+      "key": "pnl",
+      "label": "PnL",
+      "rows": [
+        {
+          "key": "revenue",
+          "label": "Revenue",
+          "kind": "money",
+          "note": "",
+          "values": [
+            1382.638,
+            2453.814,
+            3326.768,
+            3202.946,
+            3111.686
+          ],
+          "sub": "growth",
+          "subValues": [
+            null,
+            77.47,
+            35.58,
+            -3.72,
+            -2.85
+          ]
+        },
+        {
+          "key": "ebitda",
+          "label": "EBITDA",
+          "kind": "money",
+          "note": "operating profit + D&A",
+          "values": [
+            1151.916,
+            1923.148,
+            2217.592,
+            2006.153,
+            1887.61
+          ],
+          "sub": "growth",
+          "subValues": [
+            null,
+            66.95,
+            15.31,
+            -9.53,
+            -5.91
+          ]
+        },
+        {
+          "key": "ebitda_margin",
+          "label": "EBITDA margin, %",
+          "kind": "pct",
+          "note": "",
+          "values": [
+            83.3129,
+            78.3738,
+            66.6591,
+            62.6346,
+            60.662
+          ],
+          "sub": "pp",
+          "subValues": [
+            null,
+            -4.94,
+            -11.71,
+            -4.02,
+            -1.97
+          ]
+        },
+        {
+          "key": "net_income",
+          "label": "Net income",
+          "kind": "money",
+          "note": "attributable to shareholders",
+          "values": [
+            1001.014,
+            1761.149,
+            1897.357,
+            1413.058,
+            1192.233
+          ],
+          "sub": "growth",
+          "subValues": [
+            null,
+            75.94,
+            7.73,
+            -25.52,
+            -15.63
+          ]
+        }
+      ]
+    },
+    {
+      "key": "cash_flow",
+      "label": "Cash Flow",
+      "rows": [
+        {
+          "key": "fcf",
+          "label": "Free cash flow",
+          "kind": "money",
+          "note": "CFO - capex",
+          "values": [
+            456.46,
+            53.948,
+            205.91,
+            -100.66,
+            -412.289
+          ],
+          "sub": "growth",
+          "subValues": [
+            null,
+            -88.18,
+            281.68,
+            -148.89,
+            null
+          ]
+        },
+        {
+          "key": "dividends_paid",
+          "label": "Dividends paid",
+          "kind": "money",
+          "note": "",
+          "values": [
+            12.231,
+            479.204,
+            507.957,
+            111.412,
+            null
+          ],
+          "sub": "growth",
+          "subValues": [
+            null,
+            3817.95,
+            6.0,
+            -78.07,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "key": "mult",
+      "label": "Mult",
+      "rows": [
+        {
+          "key": "ev_ebitda",
+          "label": "EV/EBITDA",
+          "kind": "ratio",
+          "note": "",
+          "values": [
+            null,
+            null,
+            9.0932,
+            8.5896,
+            4.1427
+          ]
+        },
+        {
+          "key": "pe",
+          "label": "P/E",
+          "kind": "ratio",
+          "note": "",
+          "values": [
+            null,
+            null,
+            10.483,
+            11.8431,
+            5.8168
+          ]
+        },
+        {
+          "key": "nd_ebitda",
+          "label": "Net debt/EBITDA",
+          "kind": "ratio",
+          "note": "",
+          "values": [
+            -0.3031,
+            -0.0283,
+            0.124,
+            0.2477,
+            0.4687
+          ]
+        },
+        {
+          "key": "pb",
+          "label": "P/B",
+          "kind": "ratio",
+          "note": "",
+          "values": [
+            null,
+            null,
+            3.8995,
+            2.5651,
+            1.0422
+          ]
+        }
+      ]
+    },
+    {
+      "key": "yield",
+      "label": "Yield",
+      "rows": [
+        {
+          "key": "div_yield",
+          "label": "Dividend yield (paid), %",
+          "kind": "pct",
+          "note": "",
+          "values": [
+            null,
+            null,
+            2.5538,
+            0.6657,
+            null
+          ],
+          "sub": "pp",
+          "subValues": [
+            null,
+            null,
+            null,
+            -1.89,
+            null
+          ]
+        },
+        {
+          "key": "fcf_yield",
+          "label": "Free cash flow yield, %",
+          "kind": "pct",
+          "note": "",
+          "values": [
+            null,
+            null,
+            1.0352,
+            -0.6015,
+            -5.945
+          ],
+          "sub": "pp",
+          "subValues": [
+            null,
+            null,
+            null,
+            -1.64,
+            -5.34
+          ]
+        },
+        {
+          "key": "roe",
+          "label": "Return on equity, %",
+          "kind": "pct",
+          "note": "period-end equity",
+          "values": [
+            38.4524,
+            46.4399,
+            37.1986,
+            21.6592,
+            17.9164
+          ],
+          "sub": "pp",
+          "subValues": [
+            null,
+            7.99,
+            -9.24,
+            -15.54,
+            -3.74
+          ]
+        },
+        {
+          "key": "roa",
+          "label": "Return on assets, %",
+          "kind": "pct",
+          "note": "period-end assets",
+          "values": [
+            29.9679,
+            35.5639,
+            27.125,
+            16.4589,
+            13.034
+          ],
+          "sub": "pp",
+          "subValues": [
+            null,
+            5.6,
+            -8.44,
+            -10.67,
+            -3.42
+          ]
+        }
+      ]
+    },
+    {
+      "key": "memo",
+      "label": "Memo",
+      "rows": [
+        {
+          "key": "ebitda_adj",
+          "label": "Adj. EBITDA (reported)",
+          "kind": "money",
+          "note": "company definition, non-IFRS",
+          "values": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "key": "net_income_adj",
+          "label": "Adj. net income (reported)",
+          "kind": "money",
+          "note": "non-IFRS",
+          "values": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "key": "total_assets",
+          "label": "Total assets",
+          "kind": "money",
+          "note": "",
+          "values": [
+            3340.282,
+            4952.07,
+            6994.868,
+            8585.394,
+            9147.067
+          ]
+        },
+        {
+          "key": "total_equity",
+          "label": "Total equity",
+          "kind": "money",
+          "note": "",
+          "values": [
+            2603.254,
+            3792.318,
+            5100.61,
+            6524.066,
+            6654.422
+          ]
+        },
+        {
+          "key": "cash",
+          "label": "Cash and equivalents",
+          "kind": "money",
+          "note": "",
+          "values": [
+            355.773,
+            265.519,
+            236.528,
+            11.402,
+            51.311
+          ]
+        },
+        {
+          "key": "debt",
+          "label": "Total debt",
+          "kind": "money",
+          "note": "",
+          "values": [
+            6.628,
+            211.118,
+            511.533,
+            508.374,
+            936.091
+          ]
+        },
+        {
+          "key": "lease",
+          "label": "Lease liabilities",
+          "kind": "money",
+          "note": "excluded from net debt",
+          "values": [
+            5.342,
+            11.024,
+            194.655,
+            186.157,
+            144.808
+          ]
+        },
+        {
+          "key": "shares",
+          "label": "Shares, weighted avg basic",
+          "kind": "ratio",
+          "note": "mn",
+          "values": [
+            100.0,
+            100.0,
+            100.0,
+            100.0,
+            100.0
+          ]
+        }
+      ]
+    }
+  ]
+}
