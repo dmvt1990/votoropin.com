@@ -1,0 +1,443 @@
+{
+  "ticker": "OZON",
+  "name": "МКПАО «Озон»",
+  "name_en": "Ozon",
+  "unit": "RUB mn",
+  "generated": "2026-09-01",
+  "columns": [
+    "2024",
+    "2025",
+    "LTM"
+  ],
+  "spot": {
+    "date": "2026-08-31",
+    "price": 2288,
+    "shares": 216413733
+  },
+  "closes": {
+    "2024": {
+      "secid": "OZON",
+      "date": "2024-12-30",
+      "close": 3301
+    },
+    "2025": {
+      "secid": "OZON",
+      "date": "2025-12-30",
+      "close": 4519
+    }
+  },
+  "period_basis": null,
+  "coverage": {
+    "pnl": true,
+    "bs": false,
+    "cf": true,
+    "market": true,
+    "ltm": true
+  },
+  "note": {
+    "en": "Ozon's investor site refuses every automated client — its challenge script runs in a headless browser, posts its result and is answered 403 — so these pages were collected through an ordinary browser and ingested by hand. Its quarterly releases carry the income statement and cash-flow highlights but not the balance sheet, which exists only inside a PDF preview widget. Net debt, enterprise value, the multiples that need them and capital expenditure are blank as a result, and history begins at 2024, which is as far back as the site's release list goes.",
+    "ru": "Сайт «Озона» для инвесторов отклоняет любой автоматический доступ — его проверочный скрипт отрабатывает в браузере без интерфейса, отправляет результат и получает 403, — поэтому эти страницы собраны через обычный браузер и загружены вручную. Квартальные релизы содержат отчёт о прибылях и убытках и основные показатели денежного потока, но не баланс: он доступен только внутри PDF-виджета предпросмотра. Поэтому чистый долг, стоимость компании, зависящие от них мультипликаторы и капитальные затраты отсутствуют, а история начинается с 2024 года — дальше список релизов на сайте не уходит."
+  },
+  "sources": [
+    {
+      "document": "2025__ozon-obyavlyaet-finansovye-rezultaty-za-chetvertyi-kvartal-2__manual-7.md",
+      "values": 20
+    },
+    {
+      "document": "2026__ozon-obyavlyaet-finansovye-rezultaty-za-vtoroi-kvartal-2026__manual-f.md",
+      "values": 16
+    }
+  ],
+  "facts": 36,
+  "sections": [
+    {
+      "key": "enterprise_value",
+      "label": "Enterprise value",
+      "rows": [
+        {
+          "key": "mcap",
+          "label": "MCAP Ord",
+          "kind": "money",
+          "note": "",
+          "values": [
+            714381.7326,
+            977973.6594,
+            495154.6211
+          ],
+          "sub": "growth",
+          "subValues": [
+            null,
+            36.9,
+            -49.37
+          ]
+        },
+        {
+          "key": "net_debt",
+          "label": "+ Net Debt",
+          "kind": "money",
+          "note": "",
+          "values": [
+            null,
+            null,
+            null
+          ],
+          "sub": "growth",
+          "subValues": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "key": "ev",
+          "label": "= EV",
+          "kind": "money",
+          "note": "",
+          "values": [
+            null,
+            null,
+            null
+          ],
+          "sub": "growth",
+          "subValues": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "key": "pnl",
+      "label": "PnL",
+      "rows": [
+        {
+          "key": "revenue",
+          "label": "Revenue",
+          "kind": "money",
+          "note": "",
+          "values": [
+            613324.0,
+            997989.0,
+            1203362.0
+          ],
+          "sub": "growth",
+          "subValues": [
+            null,
+            62.72,
+            20.58
+          ]
+        },
+        {
+          "key": "ebitda",
+          "label": "EBITDA",
+          "kind": "money",
+          "note": "operating profit + D&A",
+          "values": [
+            40079.0,
+            156381.0,
+            191442.0
+          ],
+          "sub": "growth",
+          "subValues": [
+            null,
+            290.18,
+            22.42
+          ]
+        },
+        {
+          "key": "ebitda_margin",
+          "label": "EBITDA margin, %",
+          "kind": "pct",
+          "note": "",
+          "values": [
+            6.5347,
+            15.6696,
+            15.9089
+          ],
+          "sub": "pp",
+          "subValues": [
+            null,
+            9.13,
+            0.24
+          ]
+        },
+        {
+          "key": "net_income",
+          "label": "Net income",
+          "kind": "money",
+          "note": "attributable to shareholders",
+          "values": [
+            -59442.0,
+            -938.0,
+            null
+          ],
+          "sub": "growth",
+          "subValues": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "key": "cash_flow",
+      "label": "Cash Flow",
+      "rows": [
+        {
+          "key": "fcf",
+          "label": "Free cash flow",
+          "kind": "money",
+          "note": "CFO - capex",
+          "values": [
+            null,
+            null,
+            null
+          ],
+          "sub": "growth",
+          "subValues": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "key": "dividends_paid",
+          "label": "Dividends paid",
+          "kind": "money",
+          "note": "",
+          "values": [
+            null,
+            null,
+            null
+          ],
+          "sub": "growth",
+          "subValues": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "key": "mult",
+      "label": "Mult",
+      "rows": [
+        {
+          "key": "ev_ebitda",
+          "label": "EV/EBITDA",
+          "kind": "ratio",
+          "note": "",
+          "values": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "key": "pe",
+          "label": "P/E",
+          "kind": "ratio",
+          "note": "",
+          "values": [
+            -12.0181,
+            -1042.6158,
+            null
+          ]
+        },
+        {
+          "key": "nd_ebitda",
+          "label": "Net debt/EBITDA",
+          "kind": "ratio",
+          "note": "",
+          "values": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "key": "pb",
+          "label": "P/B",
+          "kind": "ratio",
+          "note": "",
+          "values": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "key": "yield",
+      "label": "Yield",
+      "rows": [
+        {
+          "key": "div_yield",
+          "label": "Dividend yield (paid), %",
+          "kind": "pct",
+          "note": "",
+          "values": [
+            null,
+            null,
+            null
+          ],
+          "sub": "pp",
+          "subValues": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "key": "fcf_yield",
+          "label": "Free cash flow yield, %",
+          "kind": "pct",
+          "note": "",
+          "values": [
+            null,
+            null,
+            null
+          ],
+          "sub": "pp",
+          "subValues": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "key": "roe",
+          "label": "Return on equity, %",
+          "kind": "pct",
+          "note": "period-end equity",
+          "values": [
+            null,
+            null,
+            null
+          ],
+          "sub": "pp",
+          "subValues": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "key": "roa",
+          "label": "Return on assets, %",
+          "kind": "pct",
+          "note": "period-end assets",
+          "values": [
+            null,
+            null,
+            null
+          ],
+          "sub": "pp",
+          "subValues": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "key": "memo",
+      "label": "Memo",
+      "rows": [
+        {
+          "key": "ebitda_adj",
+          "label": "Adj. EBITDA (reported)",
+          "kind": "money",
+          "note": "company definition, non-IFRS",
+          "values": [
+            40079.0,
+            156381.0,
+            191442.0
+          ]
+        },
+        {
+          "key": "net_income_adj",
+          "label": "Adj. net income (reported)",
+          "kind": "money",
+          "note": "non-IFRS",
+          "values": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "key": "total_assets",
+          "label": "Total assets",
+          "kind": "money",
+          "note": "",
+          "values": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "key": "total_equity",
+          "label": "Total equity",
+          "kind": "money",
+          "note": "",
+          "values": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "key": "cash",
+          "label": "Cash and equivalents",
+          "kind": "money",
+          "note": "",
+          "values": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "key": "debt",
+          "label": "Total debt",
+          "kind": "money",
+          "note": "",
+          "values": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "key": "lease",
+          "label": "Lease liabilities",
+          "kind": "money",
+          "note": "excluded from net debt",
+          "values": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "key": "shares",
+          "label": "Shares, weighted avg basic",
+          "kind": "ratio",
+          "note": "mn",
+          "values": [
+            216.4137,
+            216.4137,
+            216.4137
+          ]
+        }
+      ]
+    }
+  ]
+}
