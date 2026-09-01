@@ -13,9 +13,21 @@ export interface Props {
   showShares?: boolean;
   /** Show free-float column (some indices don't track it) */
   showFreeFloat?: boolean;
+  /** Index slug used to build per-constituent links, e.g. "ritix" */
+  indexSlug?: string;
+  /** Tickers that have a fundamentals page; others stay plain text */
+  withFundamentals?: string[];
 }
 
-const { constituents, asOf, showShares = true, showFreeFloat = true } = Astro.props;
+const {
+  constituents,
+  asOf,
+  showShares = true,
+  showFreeFloat = true,
+  indexSlug,
+  withFundamentals = [],
+} = Astro.props;
+const linked = new Set(withFundamentals);
 const ru = import.meta.env.PUBLIC_LANG === "ru";
 // asOf is already a formatted date string from the page; display as-is.
 const formattedAsOf = asOf;
@@ -45,7 +57,19 @@ const formattedAsOf = asOf;
         {
           constituents.map((c) => (
             <tr class="border-b border-rule last:border-b-0">
-              <td class="px-5 py-4 font-mono text-[14px] text-accent tracking-wide">{c.ticker}</td>
+              <td class="px-5 py-4 font-mono text-[14px] text-accent tracking-wide">
+                {indexSlug && linked.has(c.ticker) ? (
+                  <a
+                    href={`/indices/${indexSlug}/${c.ticker.toLowerCase()}`}
+                    class="text-accent no-underline border-b border-rule hover:border-accent"
+                    title={t.constituents.viewFundamentals}
+                  >
+                    {c.ticker}
+                  </a>
+                ) : (
+                  c.ticker
+                )}
+              </td>
               <td class="px-5 py-4 font-display text-[16px]">{ru && c.nameRu ? c.nameRu : c.name}</td>
               <td class="px-5 py-4 text-[13px] text-ink-mute">{ru && c.subIndustryRu ? c.subIndustryRu : c.subIndustry}</td>
               {showShares && (

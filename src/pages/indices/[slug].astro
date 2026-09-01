@@ -105,6 +105,14 @@ const ribbonCells = [
 const stats = (isRdix ? rdixStatsRaw : isRhix ? rhixStatsRaw : ritixStatsRaw) as StatsData;
 
 const rebalanceHistory = entry.data.rebalancingLog;
+
+// Constituents with a generated fundamentals file get a link from the table.
+// Dropping a new JSON into src/data/fundamentals/ is all it takes.
+const fundamentalsFiles = import.meta.glob<{ ticker: string }>(
+  "../../data/fundamentals/*.json",
+  { eager: true, import: "default" },
+);
+const withFundamentals = Object.values(fundamentalsFiles).map((f) => f.ticker);
 ---
 
 <Base title={entry.data.name} description={entry.data.tagline}>
@@ -173,7 +181,14 @@ const rebalanceHistory = entry.data.rebalancingLog;
       </div>
     )}
 
-    <ConstituentsTable constituents={consts} asOf={asOf} showShares={showShares} showFreeFloat={!isRdix} />
+    <ConstituentsTable
+      constituents={consts}
+      asOf={asOf}
+      showShares={showShares}
+      showFreeFloat={!isRdix}
+      indexSlug={entry.slug}
+      withFundamentals={withFundamentals}
+    />
 
     {isRitix && (
       <SubSectorMap constituents={consts} subSectors={RITIX_SUBSECTORS} asOf={asOf} />

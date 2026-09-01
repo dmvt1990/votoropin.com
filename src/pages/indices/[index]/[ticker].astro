@@ -1,0 +1,168 @@
+---
+// src/pages/indices/[index]/[ticker].astro
+// Per-constituent financial-analysis page, e.g. /indices/ritix/ydex.
+//
+// Adding a constituent is a data change, not a code change: drop the file
+// ritix-fa writes (`ritix-fa fa OZON --json src/data/fundamentals/ozon.json`)
+// into src/data/fundamentals/ and this route picks it up. The index a ticker
+// belongs to is resolved from the constituent lists, so the page also works
+// for RHIX and RDIX without edits.
+
+import { getCollection } from "astro:content";
+import Base from "../../../layouts/Base.astro";
+import Ribbon from "../../../components/Ribbon.astro";
+import FundamentalsTable from "../../../components/FundamentalsTable.astro";
+import type { Fundamentals } from "../../../components/FundamentalsTable.astro";
+import { t } from "../../../i18n";
+
+import { RITIX_CONSTITUENTS } from "../../../data/ritix-constituents";
+import { RHIX_CONSTITUENTS } from "../../../data/rhix-constituents";
+import { RDIX_CONSTITUENTS } from "../../../data/rdix-constituents";
+
+export async function getStaticPaths() {
+  // Both of these live inside getStaticPaths: Astro hoists this function out of
+  // the frontmatter, so it cannot see module-scope constants declared alongside
+  // it — only imports.
+  const MEMBERSHIP = [
+    { slug: "ritix", constituents: RITIX_CONSTITUENTS },
+    { slug: "rhix", constituents: RHIX_CONSTITUENTS },
+    { slug: "rdix", constituents: RDIX_CONSTITUENTS },
+  ];
+  const files = import.meta.glob<Fundamentals>("../../../data/fundamentals/*.json", {
+    eager: true,
+    import: "default",
+  });
+
+  const collectionName = import.meta.env.PUBLIC_LANG === "ru" ? "indices-ru" : "indices";
+  const indices = await getCollection(collectionName as "indices");
+
+  const paths = [];
+  for (const data of Object.values(files) as Fundamentals[]) {
+    for (const m of MEMBERSHIP) {
+      const member = m.constituents.find((c) => c.ticker === data.ticker);
+      if (!member) continue;
+      const entry = indices.find((i) => i.slug === m.slug);
+      if (!entry) continue;
+      paths.push({
+        params: { index: m.slug, ticker: data.ticker.toLowerCase() },
+        props: { data, member, indexName: entry.data.name, indexTicker: entry.data.ticker },
+      });
+    }
+  }
+  return paths;
+}
+
+const { data, member, indexName, indexTicker } = Astro.props;
+const ru = import.meta.env.PUBLIC_LANG === "ru";
+const P = t.fundamentals.page;
+
+const company = ru ? data.name : (data.name_en ?? data.name);
+// Russian groups thousands with a space and marks decimals with a comma.
+const nfmt = (v: number, d = 1) => {
+  const s = v.toLocaleString("en-US", { minimumFractionDigits: d, maximumFractionDigits: d });
+  return ru ? s.replace(/,/g, " ").replace(".", ",") : s;
+};
+
+const ribbonCells = [
+  { k: P.ribbon.lastPrice, v: `${nfmt(data.spot.price)} ₽` },
+  { k: P.ribbon.indexWeight, v: `${nfmt(member.weightPct)}%` },
+  { k: P.ribbon.freeFloat, v: `${member.freeFloatPct}%` },
+  { k: P.ribbon.lineItems, v: String(data.facts) },
+];
+
+const closes = Object.entries(data.closes).sort(([a], [b]) => a.localeCompare(b));
+const indexHref = `/indices/${Astro.params.index}`;
+const title = `${data.ticker} — ${company}`;
+---
+
+<Base title={title} description={`${company} (${data.ticker}) — ${t.fundamentals.heading}. ${indexTicker}.`}>
+  <!-- ── HEADER ─────────────────────────────────────────────────────────── -->
+  <section class="container-wide pt-20 pb-12">
+    <div class="text-[12px] text-ink-mute tracking-wide mb-8">
+      <a href="/indices" class="text-ink-mute no-underline hover:text-accent">{P.breadcrumbIndices}</a>
+      <span class="mx-2">/</span>
+      <a href={indexHref} class="text-ink-mute no-underline hover:text-accent">{indexTicker}</a>
+      <span class="mx-2">/</span>
+      <span>{data.ticker}</span>
+    </div>
+
+    <div class="font-mono text-[14px] tracking-wider2 text-accent mb-4">{P.eyebrow}</div>
+    <h1 class="display font-light text-[48px] sm:text-[68px] leading-[1.0] tracking-tightest m-0 mb-3">
+      {company}
+    </h1>
+    <p class="display italic text-[22px] text-ink-soft m-0 mb-14">
+      {data.ticker} · {P.subtitle} <a href={indexHref} class="text-accent no-underline hover:underline">{indexName}</a>
+    </p>
+
+    <Ribbon cells={ribbonCells} />
+
+    <FundamentalsTable data={data} />
+  </section>
+
+  <!-- ── DEFINITIONS ────────────────────────────────────────────────────── -->
+  <section class="bg-bg-sunken border-t border-rule">
+    <div class="container-narrow py-20">
+      <div class="section-label">{P.definitionsLabel}</div>
+      <h2 class="display font-normal text-[28px] tracking-tight m-0 mb-8">{P.definitionsH2}</h2>
+      <div class="flex flex-col gap-5 text-[16px] leading-relaxed text-ink-soft">
+        <p class="m-0">{P.def.ebitda}</p>
+        <p class="m-0">{P.def.netDebt}</p>
+        <p class="m-0">{P.def.ltm}</p>
+        <p class="m-0">{P.def.entity}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SOURCES ────────────────────────────────────────────────────────── -->
+  <section class="border-t border-rule">
+    <div class="container-narrow py-20">
+      <div class="section-label">{P.sourcesLabel}</div>
+      <h2 class="display font-normal text-[28px] tracking-tight m-0 mb-6">{P.sourcesH2}</h2>
+      <p class="text-[16px] leading-relaxed text-ink-soft m-0 mb-8">{P.sourcesIntro}</p>
+
+      <div class="bg-bg border border-rule overflow-x-auto">
+        <table class="w-full border-collapse">
+          <thead>
+            <tr class="bg-bg-sunken">
+              <th class="text-left px-5 py-4 text-[11px] uppercase tracking-wider2 text-ink-mute font-medium border-b border-rule">{P.sourcesTh.document}</th>
+              <th class="text-right px-5 py-4 text-[11px] uppercase tracking-wider2 text-ink-mute font-medium border-b border-rule">{P.sourcesTh.values}</th>
+            </tr>
+          </thead>
+          <tbody>
+            {data.sources.map((s) => (
+              <tr class="border-b border-rule last:border-b-0">
+                <td class="px-5 py-3.5 font-mono text-[12px] text-ink-soft break-all leading-relaxed">{s.document}</td>
+                <td class="px-5 py-3.5 font-mono text-[13px] text-right numeric text-ink-mute">{s.values}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="font-display text-[18px] font-normal mt-12 mb-3">{P.marketLabel}</h3>
+      <p class="text-[15px] leading-relaxed text-ink-soft m-0 mb-4">{P.marketIntro}</p>
+      <ul class="list-none p-0 m-0 border-t border-rule">
+        {closes.map(([year, c]) => (
+          <li class="grid grid-cols-[70px_90px_1fr] gap-4 py-2.5 border-b border-rule items-baseline">
+            <span class="font-mono text-[12px] text-accent tracking-wide">{year}</span>
+            <span class="font-mono text-[12px] text-ink-mute">{c.secid}</span>
+            <span class="font-mono text-[13px] numeric text-ink-soft">{nfmt(c.close, 0)} ₽ · {c.date}</span>
+          </li>
+        ))}
+      </ul>
+      <p class="mt-6 text-[13px] text-ink-mute italic">{P.generatedPrefix} {data.generated}</p>
+    </div>
+  </section>
+
+  <!-- ── DISCLAIMER ─────────────────────────────────────────────────────── -->
+  <section class="border-t border-rule">
+    <div class="container-narrow py-16">
+      <div class="bg-bg-sunken border-l-2 border-accent p-6">
+        <div class="font-sans text-[11px] uppercase tracking-[0.18em] text-accent font-medium mb-3">
+          {P.disclaimerLabel}
+        </div>
+        <p class="text-[14px] leading-relaxed text-ink-soft m-0">{P.disclaimer}</p>
+      </div>
+    </div>
+  </section>
+</Base>

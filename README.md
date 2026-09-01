@@ -9,8 +9,31 @@ deployed as a static site to a VPS behind Cloudflare.
 - **/cv** — full CV with photo, experience, credentials, capabilities
 - **/indices/rhix** — Russian Healthcare Index methodology, live levels, constituents
 - **/indices/ritix** — Russia IT Index methodology, performance, constituents
+- **/indices/ritix/ydex** — per-constituent financial analysis, built from the
+  issuer's own filings
 - **/notes** — occasional writing on index design and portfolio construction
 - **/contact** — email & social links
+
+## Constituent fundamentals
+
+`/indices/<index>/<ticker>` renders a financial-summary grid for one index
+member — the enterprise-value ladder, income statement, cash flow, multiples and
+yields, with a trailing-twelve-month column.
+
+The numbers are not maintained by hand. They come from
+[ritix-fa](https://github.com/dmvt1990/ritix-fa), which collects each issuer's
+filings from its investor-relations pages and reads the line items out of them,
+recording the document and line each figure came from. To refresh:
+
+```bash
+./scripts/refresh-fundamentals.sh YDEX
+```
+
+That writes `src/data/fundamentals/ydex.json`. The route enumerates that
+directory, so adding a constituent page means generating one more JSON — no code
+change, and the ticker automatically becomes a link in the index's constituents
+table. Row labels are translated from stable keys in `src/i18n`, so one generated
+file serves both language builds.
 
 ## Tech stack
 

@@ -59,6 +59,97 @@ export const en = {
       sharesM:     "Shares (M)",
       freeFloat:   "Free Float",
       weight:      "Weight",
+      viewFundamentals: "Financial summary",
+  },
+  },
+
+  // ── Constituent fundamentals (index detail sub-pages) ────────────────────
+  // Row keys come from the ritix-fa export; labels live here so one generated
+  // JSON file serves both language builds.
+  fundamentals: {
+    heading:    "Financial summary",
+    unitHeader: "mn RUB",
+    unitNote:   "Millions of roubles \u00b7 LTM = FY2025 + H1\u00a02026 \u2212 H1\u00a02025",
+    ltm:        "LTM",
+    growth:     "Growth %, YoY",
+    changePp:   "Change, p.p.",
+    rows: {
+      enterprise_value: "Enterprise value",
+      mcap:             "Market capitalisation",
+      net_debt:         "+ Net debt",
+      ev:               "= Enterprise value",
+      pnl:              "Income statement",
+      revenue:          "Revenue",
+      ebitda:           "EBITDA",
+      ebitda_margin:    "EBITDA margin, %",
+      net_income:       "Net income",
+      cash_flow:        "Cash flow",
+      fcf:              "Free cash flow",
+      dividends_paid:   "Dividends paid",
+      mult:             "Multiples",
+      ev_ebitda:        "EV/EBITDA",
+      pe:               "P/E",
+      nd_ebitda:        "Net debt/EBITDA",
+      pb:               "P/B",
+      yield:            "Yields and returns",
+      div_yield:        "Dividend yield (paid), %",
+      fcf_yield:        "Free cash flow yield, %",
+      roe:              "Return on equity, %",
+      roa:              "Return on assets, %",
+      memo:             "Memo",
+      ebitda_adj:       "Adjusted EBITDA (reported)",
+      net_income_adj:   "Adjusted net income (reported)",
+      total_assets:     "Total assets",
+      total_equity:     "Total equity",
+      cash:             "Cash and equivalents",
+      debt:             "Total debt",
+      lease:            "Lease liabilities",
+      shares:           "Shares, weighted average basic, mn",
+    },
+    notes: {
+      ebitda:         "operating profit + D&A",
+      net_income:     "attributable to shareholders",
+      fcf:            "operating cash flow \u2212 capex",
+      roe:            "period-end equity",
+      roa:            "period-end assets",
+      ebitda_adj:     "company definition, non-IFRS",
+      net_income_adj: "non-IFRS",
+      lease:          "excluded from net debt",
+    },
+    page: {
+      breadcrumbIndices: "Research prototypes",
+      eyebrow:           "Constituent \u00b7 Financial analysis",
+      subtitle:          "Constituent of",
+      ribbon: {
+        lastPrice:  "Last Price",
+        indexWeight:"Index Weight",
+        freeFloat:  "Free Float",
+        lineItems:  "Line Items",
+      },
+      definitionsLabel: "Definitions",
+      definitionsH2:    "What these figures commit to.",
+      def: {
+        ebitda:
+          "EBITDA here is operating profit plus depreciation and amortisation, computed the same way in every column. The company's own adjusted EBITDA appears in the memo block rather than in the multiples: it is a non-IFRS measure whose add-backs the issuer defines, and mixing it into a series that also contains derived years would make the row incomparable with itself.",
+        netDebt:
+          "Net debt is total borrowings less cash and equivalents. Lease liabilities are excluded and shown separately, so this figure will not agree with the issuer's own adjusted net debt, which includes them.",
+        ltm:
+          "The last column is trailing twelve months, not a forecast: the full year plus the latest half less the same half a year earlier, with balance-sheet items taken at the interim date. There is no consensus data behind this page, so there are no forecast years.",
+        entity:
+          "History starts at 2023. Everything before that was reported by a different entity \u2014 Yandex N.V., before the restructuring, including businesses since sold \u2014 and is not comparable with what follows.",
+      },
+      sourcesLabel: "Sources",
+      sourcesH2:    "Every figure traces to a filing.",
+      sourcesIntro:
+        "Line items are read directly out of documents the issuer published, collected automatically from its investor-relations pages. Audited IFRS statements take precedence; quarterly press releases fill the gaps where a statement page did not survive conversion.",
+      sourcesTh: { document: "Document", values: "Values" },
+      marketLabel: "Market data",
+      marketIntro:
+        "Price and share count from MOEX. Market capitalisation uses the year-end close and the share count reported for that year; the trailing-twelve-month column uses the latest quote and the registered issue size.",
+      generatedPrefix: "Generated",
+      disclaimerLabel: "Disclaimer",
+      disclaimer:
+        "Figures on this page are extracted automatically from public filings and are not audited, verified, or endorsed by the issuer. They are published for research and educational purposes only. Nothing here constitutes investment advice, a solicitation, or a recommendation to buy or sell any security.",
     },
   },
 
