@@ -55,6 +55,7 @@ export async function getStaticPaths() {
 const { data, member, indexName, indexTicker } = Astro.props;
 const ru = import.meta.env.PUBLIC_LANG === "ru";
 const P = t.fundamentals.page;
+const T = t.fundamentals;
 
 const company = ru ? data.name : (data.name_en ?? data.name);
 // Russian groups thousands with a space and marks decimals with a comma.
@@ -71,6 +72,15 @@ const ribbonCells = [
 ];
 
 const closes = Object.entries(data.closes).sort(([a], [b]) => a.localeCompare(b));
+
+// Say what the issuer's filings did not yield, rather than leaving silent
+// dashes. The flags come from the export, so this stays true as coverage grows.
+const gaps = [
+  !data.coverage.pnl && T.gapNoPnl,
+  !data.coverage.bs && T.gapNoBs,
+  !data.coverage.cf && T.gapNoCf,
+].filter(Boolean) as string[];
+const issuerNote = data.note ? (ru ? data.note.ru : data.note.en) : null;
 const indexHref = `/indices/${Astro.params.index}`;
 const title = `${data.ticker} — ${company}`;
 ---
@@ -107,9 +117,20 @@ const title = `${data.ticker} — ${company}`;
       <div class="flex flex-col gap-5 text-[16px] leading-relaxed text-ink-soft">
         <p class="m-0">{P.def.ebitda}</p>
         <p class="m-0">{P.def.netDebt}</p>
-        <p class="m-0">{P.def.ltm}</p>
-        <p class="m-0">{P.def.entity}</p>
+        {data.coverage.ltm && <p class="m-0">{P.def.ltm}</p>}
       </div>
+
+      {(gaps.length > 0 || issuerNote) && (
+        <div class="mt-10 bg-bg border-l-2 border-accent p-6">
+          <div class="font-sans text-[11px] uppercase tracking-[0.18em] text-accent font-medium mb-3">
+            {P.gapsLabel}
+          </div>
+          <div class="flex flex-col gap-3 text-[15px] leading-relaxed text-ink-soft">
+            {gaps.map((g) => <p class="m-0">{g}</p>)}
+            {issuerNote && <p class="m-0">{issuerNote}</p>}
+          </div>
+        </div>
+      )}
     </div>
   </section>
 

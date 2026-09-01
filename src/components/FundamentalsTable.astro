@@ -36,6 +36,9 @@ export interface Fundamentals {
   closes: Record<string, { secid: string; date: string; close: number }>;
   sources: { document: string; values: number }[];
   facts: number;
+  period_basis?: string | null;
+  note?: { en: string; ru: string } | null;
+  coverage: { pnl: boolean; bs: boolean; cf: boolean; market: boolean; ltm: boolean };
   sections: FundSection[];
 }
 
@@ -68,7 +71,10 @@ const note = (key: string) => (T.notes as Record<string, string>)[key] ?? "";
 <div>
   <div class="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2 mb-6">
     <h2 class="font-display text-[28px] font-normal m-0">{T.heading}</h2>
-    <span class="font-mono text-[12px] text-ink-mute">{T.unitNote}</span>
+    <span class="font-mono text-[12px] text-ink-mute">
+      {data.coverage.ltm ? T.unitNoteLtm : T.unitNotePlain}
+      {data.period_basis && ` \u00b7 ${T.periodBasis}`}
+    </span>
   </div>
 
   <div class="overflow-x-auto bg-bg border border-rule">

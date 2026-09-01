@@ -1,7 +1,7 @@
 {
-  "ticker": "YDEX",
-  "name": "МКПАО «ЯНДЕКС»",
-  "name_en": "Yandex",
+  "ticker": "ASTR",
+  "name": "ПАО «Группа Астра»",
+  "name_en": "Astra Group",
   "unit": "RUB mn",
   "generated": "2026-09-01",
   "columns": [
@@ -12,65 +12,53 @@
   ],
   "spot": {
     "date": "2026-08-31",
-    "price": 3566.5,
-    "shares": 396012957
+    "price": 213.95,
+    "shares": 210000000
   },
   "closes": {
     "2023": {
-      "secid": "YNDX",
+      "secid": "ASTR",
       "date": "2023-12-29",
-      "close": 2540
+      "close": 501.5
     },
     "2024": {
-      "secid": "YDEX",
+      "secid": "ASTR",
       "date": "2024-12-30",
-      "close": 3994
+      "close": 469.5
     },
     "2025": {
-      "secid": "YDEX",
+      "secid": "ASTR",
       "date": "2025-12-30",
-      "close": 4567
+      "close": 252.95
     }
   },
   "period_basis": null,
   "coverage": {
     "pnl": true,
-    "bs": true,
+    "bs": false,
     "cf": true,
     "market": true,
     "ltm": true
   },
   "note": {
-    "en": "History starts at 2023. Everything before that was reported by Yandex N.V. — a different entity, before the restructuring and including businesses since sold — and is not comparable with what follows.",
-    "ru": "История начинается с 2023 года. Всё, что было раньше, отчитывалось компанией Yandex N.V. — другим лицом, до реструктуризации и включая проданные с тех пор бизнесы, — и несопоставимо с последующими периодами."
+    "en": "Astra exports its statement of financial position as an image with no text layer, in every filing — so there is nothing to read, and OCR would be the only route to it.",
+    "ru": "«Астра» выгружает отчёт о финансовом положении картинкой без текстового слоя — во всех выпусках отчётности, так что читать попросту нечего; добраться до него можно было бы только через распознавание."
   },
   "sources": [
     {
-      "document": "2022-Q4__4q2022-rus__696b8639.md",
-      "values": 8
+      "document": "2024__msfo-otchetnost-za-2024-g__f5fedcf9.md",
+      "values": 7
     },
     {
-      "document": "2024-FY__yandex-ifrs-report-fy2024__2907cc44.md",
-      "values": 6
+      "document": "2025__msfo-otchetnost-gruppy-astra-za-2025-god__4fb53893.md",
+      "values": 14
     },
     {
-      "document": "2024-Q4__mkpao-q4-2024-press-release-rus__f6c2ad47.md",
-      "values": 28
-    },
-    {
-      "document": "2025-FY__yandex-ifrs-report-fy2025__e9206ea9.md",
-      "values": 22
-    },
-    {
-      "document": "2025-Q4__4q25-ydex-press-release-rus-77ac__b229aeb1.md",
-      "values": 28
-    },
-    {
-      "document": "2026__yandex-ifrs-review-6m2026__797e4083.md",
-      "values": 46
+      "document": "undated__otchetnost-pao-gruppa-astra-6m26__34d59e65.md",
+      "values": 18
     }
   ],
-  "facts": 138,
+  "facts": 39,
   "sections": [
     {
       "key": "enterprise_value",
@@ -82,17 +70,17 @@
           "kind": "money",
           "note": "",
           "values": [
-            963812.6393,
-            1503279.8408,
-            1733176.6005,
-            1412380.2111
+            105315.0,
+            98595.0,
+            53119.5,
+            44929.5
           ],
           "sub": "growth",
           "subValues": [
             null,
-            55.97,
-            15.29,
-            -18.51
+            -6.38,
+            -46.12,
+            -15.42
           ]
         },
         {
@@ -101,17 +89,17 @@
           "kind": "money",
           "note": "",
           "values": [
-            54700.0,
-            48400.0,
-            19462.0,
-            -18722.0
+            null,
+            null,
+            null,
+            null
           ],
           "sub": "growth",
           "subValues": [
             null,
-            -11.52,
-            -59.79,
-            -196.2
+            null,
+            null,
+            null
           ]
         },
         {
@@ -120,17 +108,17 @@
           "kind": "money",
           "note": "",
           "values": [
-            1018512.6393,
-            1551679.8408,
-            1752638.6005,
-            1393658.2111
+            null,
+            null,
+            null,
+            null
           ],
           "sub": "growth",
           "subValues": [
             null,
-            52.35,
-            12.95,
-            -20.48
+            null,
+            null,
+            null
           ]
         }
       ]
@@ -145,17 +133,17 @@
           "kind": "money",
           "note": "",
           "values": [
-            798100.0,
-            1094560.0,
-            1441098.0,
-            1561086.0
+            9540.56,
+            17206.135,
+            20369.24,
+            21523.248
           ],
           "sub": "growth",
           "subValues": [
             null,
-            37.15,
-            31.66,
-            8.33
+            80.35,
+            18.38,
+            5.67
           ]
         },
         {
@@ -164,17 +152,17 @@
           "kind": "money",
           "note": "operating profit + D&A",
           "values": [
-            122385.0,
-            128434.0,
-            272167.0,
-            359634.0
+            4378.866,
+            6843.053,
+            8170.503,
+            null
           ],
           "sub": "growth",
           "subValues": [
             null,
-            4.94,
-            111.91,
-            32.14
+            56.27,
+            19.4,
+            null
           ]
         },
         {
@@ -183,17 +171,17 @@
           "kind": "pct",
           "note": "",
           "values": [
-            15.3345,
-            11.7338,
-            18.8861,
-            23.0374
+            45.8974,
+            39.771,
+            40.112,
+            null
           ],
           "sub": "pp",
           "subValues": [
             null,
-            -3.6,
-            7.15,
-            4.15
+            -6.13,
+            0.34,
+            null
           ]
         },
         {
@@ -202,17 +190,17 @@
           "kind": "money",
           "note": "attributable to shareholders",
           "values": [
-            53700.0,
-            11468.0,
-            79579.0,
-            167561.0
+            3638.324,
+            6040.73,
+            6049.22,
+            6489.856
           ],
           "sub": "growth",
           "subValues": [
             null,
-            -78.64,
-            593.92,
-            110.56
+            66.03,
+            0.14,
+            7.28
           ]
         }
       ]
@@ -227,17 +215,17 @@
           "kind": "money",
           "note": "CFO - capex",
           "values": [
-            30020.0,
-            78561.0,
-            136462.0,
-            178028.0
+            3039.345,
+            3376.906,
+            4164.777,
+            3484.559
           ],
           "sub": "growth",
           "subValues": [
             null,
-            161.7,
-            73.7,
-            30.46
+            11.11,
+            23.33,
+            -16.33
           ]
         },
         {
@@ -246,17 +234,17 @@
           "kind": "money",
           "note": "",
           "values": [
-            null,
-            29223.0,
-            60492.0,
-            72384.0
+            1130.937,
+            1620.445,
+            1221.131,
+            1609.465
           ],
           "sub": "growth",
           "subValues": [
             null,
-            null,
-            107.0,
-            19.66
+            43.28,
+            -24.64,
+            31.8
           ]
         }
       ]
@@ -271,10 +259,10 @@
           "kind": "ratio",
           "note": "",
           "values": [
-            8.3222,
-            12.0815,
-            6.4396,
-            3.8752
+            null,
+            null,
+            null,
+            null
           ]
         },
         {
@@ -283,10 +271,10 @@
           "kind": "ratio",
           "note": "",
           "values": [
-            17.9481,
-            131.0847,
-            21.7793,
-            8.4291
+            28.946,
+            16.3217,
+            8.7812,
+            6.923
           ]
         },
         {
@@ -295,10 +283,10 @@
           "kind": "ratio",
           "note": "",
           "values": [
-            0.447,
-            0.3768,
-            0.0715,
-            -0.0521
+            null,
+            null,
+            null,
+            null
           ]
         },
         {
@@ -307,10 +295,10 @@
           "kind": "ratio",
           "note": "",
           "values": [
-            3.6984,
-            5.1167,
-            4.9348,
-            3.4765
+            null,
+            null,
+            null,
+            null
           ]
         }
       ]
@@ -325,17 +313,17 @@
           "kind": "pct",
           "note": "",
           "values": [
-            null,
-            1.9439,
-            3.4902,
-            5.125
+            1.0739,
+            1.6435,
+            2.2988,
+            3.5822
           ],
           "sub": "pp",
           "subValues": [
             null,
-            null,
-            1.55,
-            1.63
+            0.57,
+            0.66,
+            1.28
           ]
         },
         {
@@ -344,17 +332,17 @@
           "kind": "pct",
           "note": "",
           "values": [
-            3.1147,
-            5.226,
-            7.8735,
-            12.6048
+            2.886,
+            3.425,
+            7.8404,
+            7.7556
           ],
           "sub": "pp",
           "subValues": [
             null,
-            2.11,
-            2.65,
-            4.73
+            0.54,
+            4.42,
+            -0.08
           ]
         },
         {
@@ -363,17 +351,17 @@
           "kind": "pct",
           "note": "period-end equity",
           "values": [
-            20.6063,
-            3.9033,
-            22.6581,
-            41.244
+            null,
+            null,
+            null,
+            null
           ],
           "sub": "pp",
           "subValues": [
             null,
-            -16.7,
-            18.75,
-            18.59
+            null,
+            null,
+            null
           ]
         },
         {
@@ -382,17 +370,17 @@
           "kind": "pct",
           "note": "period-end assets",
           "values": [
-            7.1945,
-            1.0438,
-            5.8157,
-            11.2266
+            null,
+            null,
+            null,
+            null
           ],
           "sub": "pp",
           "subValues": [
             null,
-            -6.15,
-            4.77,
-            5.41
+            null,
+            null,
+            null
           ]
         }
       ]
@@ -407,9 +395,9 @@
           "kind": "money",
           "note": "company definition, non-IFRS",
           "values": [
-            120800.0,
-            188600.0,
-            280800.0,
+            null,
+            null,
+            null,
             null
           ]
         },
@@ -419,9 +407,9 @@
           "kind": "money",
           "note": "non-IFRS",
           "values": [
-            52100.0,
-            100900.0,
-            141400.0,
+            null,
+            null,
+            null,
             null
           ]
         },
@@ -431,10 +419,10 @@
           "kind": "money",
           "note": "",
           "values": [
-            746400.0,
-            1098700.0,
-            1368342.0,
-            1492530.0
+            null,
+            null,
+            null,
+            null
           ]
         },
         {
@@ -443,10 +431,10 @@
           "kind": "money",
           "note": "",
           "values": [
-            260600.0,
-            293800.0,
-            351216.0,
-            406268.0
+            null,
+            null,
+            null,
+            null
           ]
         },
         {
@@ -455,10 +443,10 @@
           "kind": "money",
           "note": "",
           "values": [
-            86100.0,
-            211600.0,
-            250210.0,
-            296024.0
+            null,
+            null,
+            null,
+            null
           ]
         },
         {
@@ -467,10 +455,10 @@
           "kind": "money",
           "note": "",
           "values": [
-            140800.0,
-            260000.0,
-            269672.0,
-            277302.0
+            null,
+            null,
+            null,
+            null
           ]
         },
         {
@@ -479,10 +467,10 @@
           "kind": "money",
           "note": "excluded from net debt",
           "values": [
-            65400.0,
-            82000.0,
-            90543.0,
-            92697.0
+            null,
+            null,
+            null,
+            null
           ]
         },
         {
@@ -491,10 +479,10 @@
           "kind": "ratio",
           "note": "mn",
           "values": [
-            379.4538,
-            376.3845,
-            379.5,
-            382.0841
+            210.0,
+            210.0,
+            210.0,
+            210.0
           ]
         }
       ]

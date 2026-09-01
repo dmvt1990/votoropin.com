@@ -71,6 +71,13 @@ export const en = {
     unitHeader: "mn RUB",
     unitNote:   "Millions of roubles \u00b7 LTM = FY2025 + H1\u00a02026 \u2212 H1\u00a02025",
     ltm:        "LTM",
+    unitNoteLtm: "Millions of roubles \u00b7 LTM = last full year + latest half \u2212 same half a year earlier",
+    unitNotePlain: "Millions of roubles",
+    periodBasis: "Financial year ends 31 March",
+    gapsLabel: "What is missing",
+    gapNoPnl: "No income statement. Revenue, EBITDA, net income and every multiple that needs them are blank.",
+    gapNoBs: "No balance sheet. Net debt, enterprise value, the multiples that need them and the return ratios are blank.",
+    gapNoCf: "No cash flow statement. Free cash flow, dividends paid and their yields are blank.",
     growth:     "Growth %, YoY",
     changePp:   "Change, p.p.",
     rows: {
@@ -126,6 +133,7 @@ export const en = {
         freeFloat:  "Free Float",
         lineItems:  "Line Items",
       },
+      gapsLabel:        "What is missing",
       definitionsLabel: "Definitions",
       definitionsH2:    "What these figures commit to.",
       def: {
@@ -135,8 +143,6 @@ export const en = {
           "Net debt is total borrowings less cash and equivalents. Lease liabilities are excluded and shown separately, so this figure will not agree with the issuer's own adjusted net debt, which includes them.",
         ltm:
           "The last column is trailing twelve months, not a forecast: the full year plus the latest half less the same half a year earlier, with balance-sheet items taken at the interim date. There is no consensus data behind this page, so there are no forecast years.",
-        entity:
-          "History starts at 2023. Everything before that was reported by a different entity \u2014 Yandex N.V., before the restructuring, including businesses since sold \u2014 and is not comparable with what follows.",
       },
       sourcesLabel: "Sources",
       sourcesH2:    "Every figure traces to a filing.",
