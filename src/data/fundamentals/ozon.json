@@ -5,6 +5,8 @@
   "unit": "RUB mn",
   "generated": "2026-09-01",
   "columns": [
+    "2022",
+    "2023",
     "2024",
     "2025",
     "LTM"
@@ -15,6 +17,16 @@
     "shares": 216413733
   },
   "closes": {
+    "2022": {
+      "secid": "OZON",
+      "date": "2022-12-30",
+      "close": 1402
+    },
+    "2023": {
+      "secid": "OZON",
+      "date": "2023-12-29",
+      "close": 2804.5
+    },
     "2024": {
       "secid": "OZON",
       "date": "2024-12-30",
@@ -35,24 +47,28 @@
     "ltm": true
   },
   "note": {
-    "en": "Read the net debt line with care. Ozon's cash includes the balances its fintech arm holds for customers — 627 bn roubles of client funds sit in current liabilities against it — so treating the whole cash pile as available to shareholders overstates net cash and understates enterprise value. EV/EBITDA on that basis reads far cheaper than the business is. The figures are the issuer's own; the adjustment is a judgement this table does not make for you. Equity has been negative since the accumulated deficit passed paid-in capital, so P/B and return on equity are left blank rather than shown as negative numbers that read like ratios. The audited statements were supplied by hand; the site refuses automated collection.",
-    "ru": "К строке чистого долга стоит отнестись внимательно. В денежные средства «Озона» входят остатки, которые финтех-направление держит для клиентов, — против них в краткосрочных обязательствах стоят 627 млрд рублей средств клиентов, — поэтому трактовка всей денежной позиции как доступной акционерам завышает чистые денежные средства и занижает стоимость компании. EV/EBITDA на такой основе выглядит куда дешевле, чем бизнес есть на самом деле. Цифры взяты из отчётности эмитента; корректировку эта таблица за вас не делает. Собственный капитал отрицателен с тех пор, как накопленный убыток превысил оплаченный капитал, поэтому P/B и рентабельность капитала оставлены пустыми, а не показаны отрицательными числами, которые выглядят как коэффициенты. Аудированная отчётность загружена вручную: сайт не допускает автоматический сбор."
+    "en": "Net debt here adds back the money Ozon's fintech arm holds for its customers — 882 bn roubles at 30 June 2026 — because that cash sits on the asset side with a matching liability against it. Netting only borrowings would count client money as shareholders', which put enterprise value below zero before this was corrected. Equity has been negative since the accumulated deficit passed paid-in capital, so P/B and return on equity are left blank rather than shown as negative numbers that read like ratios. Revenue, adjusted EBITDA and net income run from 2018 out of the company's databook; the balance sheet starts at 2024, which is as far back as the audited reports supplied go.",
+    "ru": "Чистый долг здесь включает средства, которые финтех-направление «Озона» держит для клиентов, — 882 млрд рублей на 30 июня 2026 года, — поскольку эти деньги стоят в активах, а против них в пассивах стоит соответствующее обязательство. Если вычесть из денежных средств только заёмные, клиентские деньги окажутся посчитаны как принадлежащие акционерам: до этой поправки стоимость компании выходила отрицательной. Собственный капитал отрицателен с тех пор, как накопленный убыток превысил оплаченный капитал, поэтому P/B и рентабельность капитала оставлены пустыми, а не показаны отрицательными числами, похожими на коэффициенты. Выручка, скорректированная EBITDA и чистая прибыль приведены с 2018 года по датабуку компании; баланс начинается с 2024 года — дальше предоставленная аудированная отчётность не уходит."
   },
   "sources": [
     {
       "document": "2025__1-1-mkpao-ozon-2025-konsolidirovannaya-finansovaya-otchetnos__manual-4.md",
-      "values": 19
+      "values": 13
     },
     {
       "document": "2025__ozon-obyavlyaet-finansovye-rezultaty-za-chetvertyi-kvartal-2__manual-7.md",
-      "values": 16
+      "values": 6
     },
     {
       "document": "2026__ozon-obyavlyaet-finansovye-rezultaty-za-vtoroi-kvartal-2026__manual-f.md",
-      "values": 16
+      "values": 6
+    },
+    {
+      "document": "undated__ozon-databook-q2-26__manual-2.md",
+      "values": 121
     }
   ],
-  "facts": 51,
+  "facts": 146,
   "sections": [
     {
       "key": "enterprise_value",
@@ -64,6 +80,8 @@
           "kind": "money",
           "note": "",
           "values": [
+            303412.0537,
+            606932.3142,
             714381.7326,
             977973.6594,
             495154.6211
@@ -71,6 +89,8 @@
           "sub": "growth",
           "subValues": [
             null,
+            100.04,
+            17.7,
             36.9,
             -49.37
           ]
@@ -81,15 +101,19 @@
           "kind": "money",
           "note": "",
           "values": [
-            -230748.0,
-            -569318.0,
-            null
+            null,
+            null,
+            36679.0,
+            61809.0,
+            257519.0
           ],
           "sub": "growth",
           "subValues": [
             null,
             null,
-            null
+            null,
+            68.51,
+            316.64
           ]
         },
         {
@@ -98,15 +122,19 @@
           "kind": "money",
           "note": "",
           "values": [
-            483633.7326,
-            408655.6594,
-            null
+            null,
+            null,
+            751060.7326,
+            1039782.6594,
+            752673.6211
           ],
           "sub": "growth",
           "subValues": [
             null,
-            -15.5,
-            null
+            null,
+            null,
+            38.44,
+            -27.61
           ]
         }
       ]
@@ -121,6 +149,8 @@
           "kind": "money",
           "note": "",
           "values": [
+            277115.0,
+            424291.0,
             613324.0,
             997989.0,
             1203362.0
@@ -128,6 +158,8 @@
           "sub": "growth",
           "subValues": [
             null,
+            53.11,
+            44.55,
             62.72,
             20.58
           ]
@@ -138,15 +170,19 @@
           "kind": "money",
           "note": "operating profit + D&A",
           "values": [
+            -3215.0,
+            6399.0,
             33774.0,
             133577.0,
-            191442.0
+            173482.0
           ],
           "sub": "growth",
           "subValues": [
             null,
+            null,
+            427.8,
             295.5,
-            43.32
+            29.87
           ]
         },
         {
@@ -155,15 +191,19 @@
           "kind": "pct",
           "note": "",
           "values": [
+            -1.1602,
+            1.5082,
             5.5067,
             13.3846,
-            15.9089
+            14.4164
           ],
           "sub": "pp",
           "subValues": [
             null,
+            2.67,
+            4.0,
             7.88,
-            2.52
+            1.03
           ]
         },
         {
@@ -172,12 +212,16 @@
           "kind": "money",
           "note": "attributable to shareholders",
           "values": [
+            -58187.0,
+            -42665.0,
             -59442.0,
             -938.0,
-            null
+            21225.0
           ],
           "sub": "growth",
           "subValues": [
+            null,
+            null,
             null,
             null,
             null
@@ -195,15 +239,19 @@
           "kind": "money",
           "note": "CFO - capex",
           "values": [
+            null,
+            null,
             215862.0,
             445465.0,
-            null
+            514589.0
           ],
           "sub": "growth",
           "subValues": [
             null,
+            null,
+            null,
             106.37,
-            null
+            15.52
           ]
         },
         {
@@ -213,11 +261,15 @@
           "note": "",
           "values": [
             null,
+            null,
+            null,
             24862.0,
             null
           ],
           "sub": "growth",
           "subValues": [
+            null,
+            null,
             null,
             null,
             null
@@ -235,9 +287,11 @@
           "kind": "ratio",
           "note": "",
           "values": [
-            14.3197,
-            3.0593,
-            null
+            null,
+            null,
+            22.2378,
+            7.7841,
+            4.3386
           ]
         },
         {
@@ -246,9 +300,11 @@
           "kind": "ratio",
           "note": "",
           "values": [
+            -5.2144,
+            -14.2255,
             -12.0181,
             -1042.6158,
-            null
+            23.3288
           ]
         },
         {
@@ -257,9 +313,11 @@
           "kind": "ratio",
           "note": "",
           "values": [
-            -6.8321,
-            -4.2621,
-            null
+            null,
+            null,
+            1.086,
+            0.4627,
+            1.4844
           ]
         },
         {
@@ -268,6 +326,8 @@
           "kind": "ratio",
           "note": "",
           "values": [
+            null,
+            null,
             null,
             null,
             null
@@ -286,11 +346,15 @@
           "note": "",
           "values": [
             null,
+            null,
+            null,
             2.5422,
             null
           ],
           "sub": "pp",
           "subValues": [
+            null,
+            null,
             null,
             null,
             null
@@ -302,15 +366,19 @@
           "kind": "pct",
           "note": "",
           "values": [
+            null,
+            null,
             30.2166,
             45.5498,
-            null
+            103.9249
           ],
           "sub": "pp",
           "subValues": [
             null,
+            null,
+            null,
             15.33,
-            null
+            58.38
           ]
         },
         {
@@ -321,10 +389,14 @@
           "values": [
             null,
             null,
+            null,
+            null,
             null
           ],
           "sub": "pp",
           "subValues": [
+            null,
+            null,
             null,
             null,
             null
@@ -336,15 +408,19 @@
           "kind": "pct",
           "note": "period-end assets",
           "values": [
+            null,
+            null,
             -6.6771,
             -0.0656,
-            null
+            1.215
           ],
           "sub": "pp",
           "subValues": [
             null,
+            null,
+            null,
             6.61,
-            null
+            1.28
           ]
         }
       ]
@@ -359,6 +435,8 @@
           "kind": "money",
           "note": "company definition, non-IFRS",
           "values": [
+            -3215.0,
+            6399.0,
             40079.0,
             156381.0,
             191442.0
@@ -372,6 +450,8 @@
           "values": [
             null,
             null,
+            null,
+            null,
             null
           ]
         },
@@ -381,9 +461,11 @@
           "kind": "money",
           "note": "",
           "values": [
+            null,
+            null,
             890235.0,
             1429778.0,
-            null
+            1746850.0
           ]
         },
         {
@@ -392,9 +474,11 @@
           "kind": "money",
           "note": "",
           "values": [
+            null,
+            null,
             -132500.0,
             -148406.0,
-            null
+            -153968.0
           ]
         },
         {
@@ -403,9 +487,11 @@
           "kind": "money",
           "note": "",
           "values": [
+            null,
+            null,
             349198.0,
             650730.0,
-            null
+            718700.0
           ]
         },
         {
@@ -414,9 +500,11 @@
           "kind": "money",
           "note": "",
           "values": [
+            null,
+            null,
             118450.0,
             81412.0,
-            null
+            85935.0
           ]
         },
         {
@@ -425,9 +513,11 @@
           "kind": "money",
           "note": "excluded from net debt",
           "values": [
+            null,
+            null,
             228656.0,
             325960.0,
-            null
+            372033.0
           ]
         },
         {
@@ -436,6 +526,8 @@
           "kind": "ratio",
           "note": "mn",
           "values": [
+            216.4137,
+            216.4137,
             216.4137,
             216.4137,
             216.4137
