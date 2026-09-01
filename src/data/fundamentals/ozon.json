@@ -29,26 +29,30 @@
   "period_basis": null,
   "coverage": {
     "pnl": true,
-    "bs": false,
+    "bs": true,
     "cf": true,
     "market": true,
     "ltm": true
   },
   "note": {
-    "en": "Ozon's investor site refuses every automated client — its challenge script runs in a headless browser, posts its result and is answered 403 — so these pages were collected through an ordinary browser and ingested by hand. Its quarterly releases carry the income statement and cash-flow highlights but not the balance sheet, which exists only inside a PDF preview widget. Net debt, enterprise value, the multiples that need them and capital expenditure are blank as a result, and history begins at 2024, which is as far back as the site's release list goes.",
-    "ru": "Сайт «Озона» для инвесторов отклоняет любой автоматический доступ — его проверочный скрипт отрабатывает в браузере без интерфейса, отправляет результат и получает 403, — поэтому эти страницы собраны через обычный браузер и загружены вручную. Квартальные релизы содержат отчёт о прибылях и убытках и основные показатели денежного потока, но не баланс: он доступен только внутри PDF-виджета предпросмотра. Поэтому чистый долг, стоимость компании, зависящие от них мультипликаторы и капитальные затраты отсутствуют, а история начинается с 2024 года — дальше список релизов на сайте не уходит."
+    "en": "Read the net debt line with care. Ozon's cash includes the balances its fintech arm holds for customers — 627 bn roubles of client funds sit in current liabilities against it — so treating the whole cash pile as available to shareholders overstates net cash and understates enterprise value. EV/EBITDA on that basis reads far cheaper than the business is. The figures are the issuer's own; the adjustment is a judgement this table does not make for you. Equity has been negative since the accumulated deficit passed paid-in capital, so P/B and return on equity are left blank rather than shown as negative numbers that read like ratios. The audited statements were supplied by hand; the site refuses automated collection.",
+    "ru": "К строке чистого долга стоит отнестись внимательно. В денежные средства «Озона» входят остатки, которые финтех-направление держит для клиентов, — против них в краткосрочных обязательствах стоят 627 млрд рублей средств клиентов, — поэтому трактовка всей денежной позиции как доступной акционерам завышает чистые денежные средства и занижает стоимость компании. EV/EBITDA на такой основе выглядит куда дешевле, чем бизнес есть на самом деле. Цифры взяты из отчётности эмитента; корректировку эта таблица за вас не делает. Собственный капитал отрицателен с тех пор, как накопленный убыток превысил оплаченный капитал, поэтому P/B и рентабельность капитала оставлены пустыми, а не показаны отрицательными числами, которые выглядят как коэффициенты. Аудированная отчётность загружена вручную: сайт не допускает автоматический сбор."
   },
   "sources": [
     {
+      "document": "2025__1-1-mkpao-ozon-2025-konsolidirovannaya-finansovaya-otchetnos__manual-4.md",
+      "values": 19
+    },
+    {
       "document": "2025__ozon-obyavlyaet-finansovye-rezultaty-za-chetvertyi-kvartal-2__manual-7.md",
-      "values": 20
+      "values": 16
     },
     {
       "document": "2026__ozon-obyavlyaet-finansovye-rezultaty-za-vtoroi-kvartal-2026__manual-f.md",
       "values": 16
     }
   ],
-  "facts": 36,
+  "facts": 51,
   "sections": [
     {
       "key": "enterprise_value",
@@ -77,8 +81,8 @@
           "kind": "money",
           "note": "",
           "values": [
-            null,
-            null,
+            -230748.0,
+            -569318.0,
             null
           ],
           "sub": "growth",
@@ -94,14 +98,14 @@
           "kind": "money",
           "note": "",
           "values": [
-            null,
-            null,
+            483633.7326,
+            408655.6594,
             null
           ],
           "sub": "growth",
           "subValues": [
             null,
-            null,
+            -15.5,
             null
           ]
         }
@@ -134,15 +138,15 @@
           "kind": "money",
           "note": "operating profit + D&A",
           "values": [
-            40079.0,
-            156381.0,
+            33774.0,
+            133577.0,
             191442.0
           ],
           "sub": "growth",
           "subValues": [
             null,
-            290.18,
-            22.42
+            295.5,
+            43.32
           ]
         },
         {
@@ -151,15 +155,15 @@
           "kind": "pct",
           "note": "",
           "values": [
-            6.5347,
-            15.6696,
+            5.5067,
+            13.3846,
             15.9089
           ],
           "sub": "pp",
           "subValues": [
             null,
-            9.13,
-            0.24
+            7.88,
+            2.52
           ]
         },
         {
@@ -191,14 +195,14 @@
           "kind": "money",
           "note": "CFO - capex",
           "values": [
-            null,
-            null,
+            215862.0,
+            445465.0,
             null
           ],
           "sub": "growth",
           "subValues": [
             null,
-            null,
+            106.37,
             null
           ]
         },
@@ -209,7 +213,7 @@
           "note": "",
           "values": [
             null,
-            null,
+            24862.0,
             null
           ],
           "sub": "growth",
@@ -231,8 +235,8 @@
           "kind": "ratio",
           "note": "",
           "values": [
-            null,
-            null,
+            14.3197,
+            3.0593,
             null
           ]
         },
@@ -253,8 +257,8 @@
           "kind": "ratio",
           "note": "",
           "values": [
-            null,
-            null,
+            -6.8321,
+            -4.2621,
             null
           ]
         },
@@ -282,7 +286,7 @@
           "note": "",
           "values": [
             null,
-            null,
+            2.5422,
             null
           ],
           "sub": "pp",
@@ -298,14 +302,14 @@
           "kind": "pct",
           "note": "",
           "values": [
-            null,
-            null,
+            30.2166,
+            45.5498,
             null
           ],
           "sub": "pp",
           "subValues": [
             null,
-            null,
+            15.33,
             null
           ]
         },
@@ -332,14 +336,14 @@
           "kind": "pct",
           "note": "period-end assets",
           "values": [
-            null,
-            null,
+            -6.6771,
+            -0.0656,
             null
           ],
           "sub": "pp",
           "subValues": [
             null,
-            null,
+            6.61,
             null
           ]
         }
@@ -377,8 +381,8 @@
           "kind": "money",
           "note": "",
           "values": [
-            null,
-            null,
+            890235.0,
+            1429778.0,
             null
           ]
         },
@@ -388,8 +392,8 @@
           "kind": "money",
           "note": "",
           "values": [
-            null,
-            null,
+            -132500.0,
+            -148406.0,
             null
           ]
         },
@@ -399,8 +403,8 @@
           "kind": "money",
           "note": "",
           "values": [
-            null,
-            null,
+            349198.0,
+            650730.0,
             null
           ]
         },
@@ -410,8 +414,8 @@
           "kind": "money",
           "note": "",
           "values": [
-            null,
-            null,
+            118450.0,
+            81412.0,
             null
           ]
         },
@@ -421,8 +425,8 @@
           "kind": "money",
           "note": "excluded from net debt",
           "values": [
-            null,
-            null,
+            228656.0,
+            325960.0,
             null
           ]
         },
