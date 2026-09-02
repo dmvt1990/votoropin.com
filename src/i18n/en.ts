@@ -159,6 +159,44 @@ export const en = {
     },
   },
 
+  // ── Constituent snapshot (one period, all ten, on the index page) ────────
+  // Row labels are reused from `fundamentals.rows` above — same keys, same
+  // generator — so only the framing lives here.
+  snapshot: {
+    label:      "Constituent snapshot",
+    heading:    "Every constituent, one period.",
+    unitHeader: "mn RUB",
+    periodH1:   "H1 2026",
+    trailingTag: "LTM",
+    intro:
+      "The per-constituent pages give one company across five years. This gives one period across all ten, which is the comparison an index actually needs. Figures are generated from the same filings by the same pipeline.",
+    basisHeading: "What each row is measured over",
+    basisFlow:
+      "Revenue, EBITDA, net income, free cash flow and dividends are the six months to 30 June 2026. The balance sheet is at 30 June 2026.",
+    basisTrailing:
+      "Multiples, yields and returns — marked LTM — trail the twelve months to 30 June 2026. A price-to-earnings ratio on half a year of earnings is roughly double the real one, and for a company whose year is back-loaded it is not merely scaled but meaningless, so those rows are not shown on a half-year basis.",
+    basisPrice:
+      "Market capitalisation is the 30 June 2026 MOEX close times shares outstanding, so the market side of every ratio is struck on the same date as the balance sheet it is compared with.",
+    readLabel: "Three figures not to read at face value",
+    read: {
+      ozon:
+        "Ozon's free cash flow is not cash earned. Its operating cash flow includes the growth in fintech customer balances — 262 bn in this half alone — so the figure measures cash passing through the group. Net of that, free cash flow for the half is about −6.4 bn rather than +255.5 bn, and the 69% yield is the tell.",
+      head:
+        "HeadHunter's 159% return on equity and 12.5× price-to-book are arithmetic, not error: the 40.0 bn dividend paid in 2024 left group equity at a fraction of the profit earned against it. Net income is the share attributable to owners of the Company; equity is the group total including non-controlling interests.",
+      cnru:
+        "CIAN's 27.7% dividend yield is a special dividend, not a run rate.",
+    },
+    missingLabel: "Two constituents do not report a first half",
+    missing: {
+      SOFL: "Softline publishes no interim IFRS statements, only presentations.",
+      DIAS: "Diasoft's financial year ends 31 March, so it has no half to 30 June; its next interim covers the six months to 30 September 2026.",
+    },
+    missingNote:
+      "Both keep a market capitalisation and a share count, because those are prices rather than filings.",
+    sourceNote:
+      "Generated {generated} from the issuers' own filings. Per-constituent detail, including what each table cannot say, is on the pages linked from the table above.",
+  },
+
   // ── Sub-sector map ───────────────────────────────────────────────────────
   subSectorMap: {
     heading:    "Sub-sector map",

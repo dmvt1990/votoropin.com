@@ -8,6 +8,9 @@ import ConstituentsTable from "../../components/ConstituentsTable.astro";
 import Ribbon from "../../components/Ribbon.astro";
 import PerformanceStats from "../../components/PerformanceStats.astro";
 import SubSectorMap from "../../components/SubSectorMap.astro";
+import SnapshotTable from "../../components/SnapshotTable.astro";
+import ritixSnapshot from "../../data/ritix-snapshot.json";
+import type { Snapshot } from "../../components/SnapshotTable.astro";
 import { t } from "../../i18n";
 
 import { RHIX_CONSTITUENTS, RHIX_AS_OF } from "../../data/rhix-constituents";
@@ -197,6 +200,9 @@ const withFundamentals = Object.values(fundamentalsFiles).map((f) => f.ticker);
 
   <!-- ── PERFORMANCE STATISTICS ───────────────────────────────────────────── -->
   <PerformanceStats stats={stats} indexTicker={entry.data.ticker} />
+
+  <!-- ── CONSTITUENT SNAPSHOT ─────────────────────────────────────────────── -->
+  {isRitix && <SnapshotTable data={ritixSnapshot as Snapshot} indexSlug={entry.slug} />}
 
   <!-- ── DESCRIPTION (from MDX) ─────────────────────────────────────────── -->
   <section class="bg-bg-sunken border-t border-rule">

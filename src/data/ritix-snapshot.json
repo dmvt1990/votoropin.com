@@ -1,0 +1,573 @@
+{
+  "index": "RITIX",
+  "name": "Russia IT Index",
+  "period": "2026-H1",
+  "ltm": {
+    "fy": "2025",
+    "cur": "2026-H1",
+    "prior": "2025-H1"
+  },
+  "price_month": "2026-06",
+  "generated": "2026-09-02",
+  "unit": "RUB mn",
+  "tickers": [
+    "YDEX",
+    "OZON",
+    "HEAD",
+    "VKCO",
+    "POSI",
+    "ASTR",
+    "CNRU",
+    "SOFL",
+    "DIAS",
+    "IVAT"
+  ],
+  "names": {
+    "YDEX": {
+      "ru": "МКПАО «ЯНДЕКС»",
+      "en": "Yandex"
+    },
+    "OZON": {
+      "ru": "МКПАО «Озон»",
+      "en": "Ozon"
+    },
+    "HEAD": {
+      "ru": "МКПАО «Хэдхантер»",
+      "en": "HeadHunter"
+    },
+    "VKCO": {
+      "ru": "МКПАО «ВК»",
+      "en": "VK Company"
+    },
+    "POSI": {
+      "ru": "ПАО «Группа Позитив»",
+      "en": "Positive Technologies"
+    },
+    "ASTR": {
+      "ru": "ПАО «Группа Астра»",
+      "en": "Astra Group"
+    },
+    "CNRU": {
+      "ru": "МКПАО «Циан»",
+      "en": "CIAN"
+    },
+    "SOFL": {
+      "ru": "ПАО «Софтлайн»",
+      "en": "Softline"
+    },
+    "DIAS": {
+      "ru": "ПАО «Диасофт»",
+      "en": "Diasoft"
+    },
+    "IVAT": {
+      "ru": "ПАО «ИВА»",
+      "en": "IVA Technologies"
+    }
+  },
+  "covered": {
+    "YDEX": true,
+    "OZON": true,
+    "HEAD": true,
+    "VKCO": true,
+    "POSI": true,
+    "ASTR": true,
+    "CNRU": true,
+    "SOFL": false,
+    "DIAS": false,
+    "IVAT": true
+  },
+  "prices": {
+    "YDEX": {
+      "date": "2026-06-30",
+      "close": 3639
+    },
+    "OZON": {
+      "date": "2026-06-30",
+      "close": 3428
+    },
+    "HEAD": {
+      "date": "2026-06-30",
+      "close": 2624
+    },
+    "VKCO": {
+      "date": "2026-06-30",
+      "close": 190.65
+    },
+    "POSI": {
+      "date": "2026-06-30",
+      "close": 804.4
+    },
+    "ASTR": {
+      "date": "2026-06-30",
+      "close": 172.45
+    },
+    "CNRU": {
+      "date": "2026-06-30",
+      "close": 502.8
+    },
+    "SOFL": {
+      "date": "2026-06-30",
+      "close": 45.36
+    },
+    "DIAS": {
+      "date": "2026-06-30",
+      "close": 1050
+    },
+    "IVAT": {
+      "date": "2026-06-30",
+      "close": 59.5
+    }
+  },
+  "rows": [
+    {
+      "key": "mcap",
+      "section": "enterprise_value",
+      "kind": "money",
+      "basis": "period",
+      "values": {
+        "YDEX": 1390404.218211,
+        "OZON": 741866.276724,
+        "HEAD": 123813.224832,
+        "VKCO": 122206.65,
+        "POSI": 57284.5416,
+        "ASTR": 36214.5,
+        "CNRU": 39052.722372,
+        "SOFL": 18144.09072,
+        "DIAS": 11025.0,
+        "IVAT": 5950.0
+      }
+    },
+    {
+      "key": "net_debt",
+      "section": "enterprise_value",
+      "kind": "money",
+      "basis": "period",
+      "values": {
+        "YDEX": -18722.0,
+        "OZON": 257519.0,
+        "HEAD": -7788.118,
+        "VKCO": 50352.0,
+        "POSI": 13171.365999999998,
+        "ASTR": 2841.075,
+        "CNRU": -4085.0,
+        "SOFL": null,
+        "DIAS": null,
+        "IVAT": 884.78
+      }
+    },
+    {
+      "key": "ev",
+      "section": "enterprise_value",
+      "kind": "money",
+      "basis": "period",
+      "values": {
+        "YDEX": 1371682.218211,
+        "OZON": 999385.276724,
+        "HEAD": 116025.106832,
+        "VKCO": 172558.65,
+        "POSI": 70455.90759999999,
+        "ASTR": 39055.575,
+        "CNRU": 34967.722372,
+        "SOFL": null,
+        "DIAS": null,
+        "IVAT": 6834.78
+      }
+    },
+    {
+      "key": "revenue",
+      "section": "pnl",
+      "kind": "money",
+      "basis": "period",
+      "values": {
+        "YDEX": 759014.0,
+        "OZON": 635112.0,
+        "HEAD": 19641.466,
+        "VKCO": 81043.0,
+        "POSI": 9541.471,
+        "ASTR": 7779.414,
+        "CNRU": 8320.0,
+        "SOFL": null,
+        "DIAS": null,
+        "IVAT": 978.345
+      }
+    },
+    {
+      "key": "ebitda",
+      "section": "pnl",
+      "kind": "money",
+      "basis": "period",
+      "values": {
+        "YDEX": 193899.0,
+        "OZON": 100833.0,
+        "HEAD": 9094.992,
+        "VKCO": 13046.0,
+        "POSI": 853.5790000000002,
+        "ASTR": 1874.9480000000003,
+        "CNRU": 2575.0,
+        "SOFL": null,
+        "DIAS": null,
+        "IVAT": 432.313
+      }
+    },
+    {
+      "key": "ebitda_margin",
+      "section": "pnl",
+      "kind": "pct",
+      "basis": "period",
+      "values": {
+        "YDEX": 25.546169108870192,
+        "OZON": 15.876412349317913,
+        "HEAD": 46.305056862863495,
+        "VKCO": 16.097627185568157,
+        "POSI": 8.945989564921387,
+        "ASTR": 24.101404038916048,
+        "CNRU": 30.94951923076923,
+        "SOFL": null,
+        "DIAS": null,
+        "IVAT": 44.18819537075367
+      }
+    },
+    {
+      "key": "net_income",
+      "section": "pnl",
+      "kind": "money",
+      "basis": "period",
+      "values": {
+        "YDEX": 93401.0,
+        "OZON": 14628.0,
+        "HEAD": 6900.0470000000005,
+        "VKCO": -3846.0,
+        "POSI": -1364.1580000000001,
+        "ASTR": 1101.215,
+        "CNRU": 2045.0,
+        "SOFL": null,
+        "DIAS": null,
+        "IVAT": 94.611
+      }
+    },
+    {
+      "key": "fcf",
+      "section": "cash_flow",
+      "kind": "money",
+      "basis": "period",
+      "values": {
+        "YDEX": 76082.0,
+        "OZON": 255542.0,
+        "HEAD": 5432.303,
+        "VKCO": 2963.0,
+        "POSI": 9876.892,
+        "ASTR": -79.38900000000012,
+        "CNRU": 2324.0,
+        "SOFL": null,
+        "DIAS": null,
+        "IVAT": -373.5540000000001
+      }
+    },
+    {
+      "key": "dividends_paid",
+      "section": "cash_flow",
+      "kind": "money",
+      "basis": "period",
+      "values": {
+        "YDEX": 42002.0,
+        "OZON": 17964.0,
+        "HEAD": 10378.467,
+        "VKCO": null,
+        "POSI": 1999.689,
+        "ASTR": 975.064,
+        "CNRU": 4333.0,
+        "SOFL": null,
+        "DIAS": null,
+        "IVAT": 0.0
+      }
+    },
+    {
+      "key": "ev_ebitda",
+      "section": "mult",
+      "kind": "ratio",
+      "basis": "trailing",
+      "values": {
+        "YDEX": 3.9550463819410844,
+        "OZON": 5.760743343539964,
+        "HEAD": 5.6410690075797145,
+        "VKCO": 6.665393338498808,
+        "POSI": 4.496189063798348,
+        "ASTR": 4.581736064682767,
+        "CNRU": 8.10751735961048,
+        "SOFL": null,
+        "DIAS": null,
+        "IVAT": 3.6208644794210665
+      }
+    },
+    {
+      "key": "pe",
+      "section": "mult",
+      "kind": "ratio",
+      "basis": "trailing",
+      "values": {
+        "YDEX": 8.600397171913512,
+        "OZON": 34.95247475731449,
+        "HEAD": 7.873870308186488,
+        "VKCO": -6.76897508161874,
+        "POSI": 5.242977991397548,
+        "ASTR": 5.580170037671097,
+        "CNRU": 10.013518556923076,
+        "SOFL": null,
+        "DIAS": null,
+        "IVAT": 4.990635219793446
+      }
+    },
+    {
+      "key": "nd_ebitda",
+      "section": "mult",
+      "kind": "ratio",
+      "basis": "trailing",
+      "values": {
+        "YDEX": -0.05205848167859546,
+        "OZON": 1.4844133685339114,
+        "HEAD": -0.3786534852390827,
+        "VKCO": 2.103170293638528,
+        "POSI": 0.8405391936855185,
+        "ASTR": 0.3332957148875312,
+        "CNRU": -0.947136563876652,
+        "SOFL": null,
+        "DIAS": null,
+        "IVAT": 0.4687302991613733
+      }
+    },
+    {
+      "key": "pb",
+      "section": "mult",
+      "kind": "ratio",
+      "basis": "trailing",
+      "values": {
+        "YDEX": 3.54714412782449,
+        "OZON": null,
+        "HEAD": 12.546986621051047,
+        "VKCO": 0.8424476627021773,
+        "POSI": 2.7307612599576334,
+        "ASTR": 3.061373805284808,
+        "CNRU": 9.649795495922906,
+        "SOFL": null,
+        "DIAS": null,
+        "IVAT": 0.8941422711093465
+      }
+    },
+    {
+      "key": "div_yield",
+      "section": "yield",
+      "kind": "pct",
+      "basis": "trailing",
+      "values": {
+        "YDEX": 5.022860627083197,
+        "OZON": 5.772738476415846,
+        "HEAD": 16.749917489137257,
+        "VKCO": null,
+        "POSI": 3.4908003872374533,
+        "ASTR": 4.444255753910727,
+        "CNRU": 27.675407355849575,
+        "SOFL": null,
+        "DIAS": null,
+        "IVAT": 0.0
+      }
+    },
+    {
+      "key": "fcf_yield",
+      "section": "yield",
+      "kind": "pct",
+      "basis": "trailing",
+      "values": {
+        "YDEX": 12.353694624756399,
+        "OZON": 69.36411805539518,
+        "HEAD": 13.82856962431275,
+        "VKCO": -5.952894208849193,
+        "POSI": 12.918361207589731,
+        "ASTR": 1.0931919534992895,
+        "CNRU": 10.711161081561693,
+        "SOFL": null,
+        "DIAS": null,
+        "IVAT": -6.929226890756299
+      }
+    },
+    {
+      "key": "roe",
+      "section": "yield",
+      "kind": "pct",
+      "basis": "trailing",
+      "values": {
+        "YDEX": 41.24395719081985,
+        "OZON": null,
+        "HEAD": 159.34967341290732,
+        "VKCO": -12.44571966278702,
+        "POSI": 52.084164084574624,
+        "ASTR": 54.86165806091605,
+        "CNRU": 96.36767976278725,
+        "SOFL": null,
+        "DIAS": null,
+        "IVAT": 17.916402055655624
+      }
+    },
+    {
+      "key": "roa",
+      "section": "yield",
+      "kind": "pct",
+      "basis": "trailing",
+      "values": {
+        "YDEX": 11.226642010545852,
+        "OZON": 1.2150442224575664,
+        "HEAD": 54.18831286199687,
+        "VKCO": -4.986418375829344,
+        "POSI": 21.510154514065082,
+        "ASTR": 28.992519317308858,
+        "CNRU": 48.37509302902506,
+        "SOFL": null,
+        "DIAS": null,
+        "IVAT": 13.034046869887364
+      }
+    },
+    {
+      "key": "ebitda_adj",
+      "section": "memo",
+      "kind": "money",
+      "basis": "period",
+      "values": {
+        "YDEX": null,
+        "OZON": 106723.0,
+        "HEAD": 9812.685,
+        "VKCO": null,
+        "POSI": null,
+        "ASTR": null,
+        "CNRU": null,
+        "SOFL": null,
+        "DIAS": null,
+        "IVAT": null
+      }
+    },
+    {
+      "key": "net_income_adj",
+      "section": "memo",
+      "kind": "money",
+      "basis": "period",
+      "values": {
+        "YDEX": null,
+        "OZON": null,
+        "HEAD": 8980.968,
+        "VKCO": null,
+        "POSI": null,
+        "ASTR": null,
+        "CNRU": null,
+        "SOFL": null,
+        "DIAS": null,
+        "IVAT": null
+      }
+    },
+    {
+      "key": "total_assets",
+      "section": "memo",
+      "kind": "money",
+      "basis": "period",
+      "values": {
+        "YDEX": 1492530.0,
+        "OZON": 1746850.0,
+        "HEAD": 29018.379,
+        "VKCO": 323599.0,
+        "POSI": 50794.405,
+        "ASTR": 22384.588,
+        "CNRU": 8062.0,
+        "SOFL": null,
+        "DIAS": null,
+        "IVAT": 9147.067000000001
+      }
+    },
+    {
+      "key": "total_equity",
+      "section": "memo",
+      "kind": "money",
+      "basis": "period",
+      "values": {
+        "YDEX": 406268.0,
+        "OZON": -153968.0,
+        "HEAD": 9867.965,
+        "VKCO": 129651.0,
+        "POSI": 20977.499,
+        "ASTR": 11829.493,
+        "CNRU": 4047.0,
+        "SOFL": null,
+        "DIAS": null,
+        "IVAT": 6654.4220000000005
+      }
+    },
+    {
+      "key": "cash",
+      "section": "memo",
+      "kind": "money",
+      "basis": "period",
+      "values": {
+        "YDEX": 296024.0,
+        "OZON": 718700.0,
+        "HEAD": 7788.118,
+        "VKCO": 49571.0,
+        "POSI": 7333.7390000000005,
+        "ASTR": 736.028,
+        "CNRU": 4085.0,
+        "SOFL": null,
+        "DIAS": null,
+        "IVAT": 51.311
+      }
+    },
+    {
+      "key": "debt",
+      "section": "memo",
+      "kind": "money",
+      "basis": "period",
+      "values": {
+        "YDEX": 277302.0,
+        "OZON": 85935.0,
+        "HEAD": 0.0,
+        "VKCO": 99923.0,
+        "POSI": 20505.105,
+        "ASTR": 3577.103,
+        "CNRU": 0.0,
+        "SOFL": null,
+        "DIAS": null,
+        "IVAT": 936.091
+      }
+    },
+    {
+      "key": "lease",
+      "section": "memo",
+      "kind": "money",
+      "basis": "period",
+      "values": {
+        "YDEX": 92697.0,
+        "OZON": 372033.0,
+        "HEAD": 3232.675,
+        "VKCO": 12401.0,
+        "POSI": 675.946,
+        "ASTR": 18.082,
+        "CNRU": 39.0,
+        "SOFL": null,
+        "DIAS": null,
+        "IVAT": 144.808
+      }
+    },
+    {
+      "key": "shares",
+      "section": "memo",
+      "kind": "ratio",
+      "basis": "period",
+      "values": {
+        "YDEX": 382.084149,
+        "OZON": 216.413733,
+        "HEAD": 47.184918,
+        "VKCO": 641.0,
+        "POSI": 71.214,
+        "ASTR": 210.0,
+        "CNRU": 77.67049,
+        "SOFL": 400.002,
+        "DIAS": 10.5,
+        "IVAT": 100.0
+      }
+    }
+  ]
+}
