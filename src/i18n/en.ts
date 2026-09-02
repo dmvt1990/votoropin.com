@@ -188,13 +188,13 @@ export const en = {
       cnru:
         "CIAN's 27.7% dividend yield is a special dividend, not a run rate.",
     },
-    missingLabel: "Two constituents do not report a first half",
+    missingLabel: "Two constituents do not report a comparable first half",
     missing: {
-      SOFL: "Softline publishes no interim IFRS statements, only presentations.",
-      DIAS: "Diasoft's financial year ends 31 March, so it has no half to 30 June; its next interim covers the six months to 30 September 2026.",
+      SOFL: "Softline reported a first half at an investor day on 26 August 2026, but as slides rather than statements: turnover rather than IFRS revenue, gross profit on a methodology changed this period, adjusted EBITDA of 4.4 bn and adjusted net debt of 29.7 bn. It publishes no interim IFRS income statement, balance sheet or cash flow, which is what the rows above are read from.",
+      DIAS: "Diasoft's financial year ends 31 March, so its interim covers the six months to 30 September rather than to 30 June — its half never lines up with the others'. The most recent one ended 30 September 2025; the next is not yet published.",
     },
     missingNote:
-      "Both keep a market capitalisation and a share count, because those are prices rather than filings.",
+      "Both keep a market capitalisation and a share count, because those are prices rather than filings. Neither figure is hand-entered anywhere in this table: every number is read out of a document by the pipeline, and a figure printed as a label on a slide chart cannot be.",
     sourceNote:
       "Generated {generated} from the issuers' own filings. Per-constituent detail, including what each table cannot say, is on the pages linked from the table above.",
   },
