@@ -30,7 +30,7 @@ mkdir -p "$DATA_DIR"
 years_for() {
   case "$1" in
     OZON|IVAT) echo "2022:2025" ;;
-    DIAS)      echo "2024:2026" ;;
+    DIAS)      echo "2022:2026" ;;
     # Softline's only readable income statement is the FY2025 filing, which
     # carries 2024 as its comparative and nothing earlier. A 2023 column would
     # hold a market capitalisation and no company in it.

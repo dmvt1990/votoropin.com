@@ -5,6 +5,8 @@
   "unit": "RUB mn",
   "generated": "2026-09-02",
   "columns": [
+    "2022",
+    "2023",
     "2024",
     "2025",
     "2026"
@@ -40,20 +42,24 @@
     "ltm": false
   },
   "note": {
-    "en": "Diasoft's financial year ends 31 March, so a column labelled 2026 is the year to 31 March 2026 — not a calendar year, and not comparable period-for-period with the other constituents. Each year is priced at that year's last March close rather than December's, so the market figures line up with the balance sheet beside them. That balance sheet is a rendered image in both filings — the page extracts two characters, the number printed outside it — so it was read by OCR; every subtotal on it cross-foots against its own components in both columns, and the equity total matches the figure the notes carry in text. Diasoft carried no borrowings at all until the year to 31 March 2026, so the earlier nil is a fact rather than a gap. There is no trailing-twelve-month column: the next interim report covers the six months to 30 September 2026 and is not published yet, and the one before it falls inside the year already shown.",
-    "ru": "Финансовый год «Диасофта» заканчивается 31 марта, поэтому колонка 2026 — это год, закончившийся 31 марта 2026 года, а не календарный год, и она несопоставима период к периоду с другими эмитентами индекса. Каждый год оценивается по последнему мартовскому закрытию, а не декабрьскому, чтобы рыночные показатели соответствовали балансу рядом с ними. Сам баланс в обеих версиях отчётности — картинка: со страницы извлекаются два символа, номер, напечатанный за её пределами. Поэтому он распознан; все промежуточные итоги на странице сходятся с собственными составляющими в обеих колонках, а итог по капиталу совпадает с цифрой, которую примечания приводят текстом. До года, закончившегося 31 марта 2026 года, у «Диасофта» не было заёмных средств вовсе, так что ноль в ранних периодах — это факт, а не пропуск. Колонки LTM нет: следующая промежуточная отчётность охватывает шесть месяцев до 30 сентября 2026 года и ещё не опубликована, а предыдущая попадает внутрь уже показанного года."
+    "en": "Diasoft's financial year ends 31 March, so a column labelled 2026 is the year to 31 March 2026 — not a calendar year, and not comparable period-for-period with the other constituents. Each year is priced at that year's last March close rather than December's, so the market figures line up with the balance sheet beside them. The figures come from Diasoft's own investor databook, published on diasoft.ru, which carries six audited years of all three statements; the balance sheet is a rendered image in the filings themselves, and reading those pages separately gives the same totals to the rouble. Capital expenditure includes capitalised software development, which is much the largest part of it — the company treats it the same way in its own EBITDAC measure — and free cash flow is struck after it, which is why FY2025 comes out at essentially nil. Operating cash flow is the total after interest and tax paid. Net income is the statutory bottom line including discontinued operations; the adjusted EBITDA and adjusted net income in the memo block are the company's own, and add back one-off IPO costs. There is no trailing-twelve-month column: the next interim covers the six months to 30 September 2026 and is not published yet, and the one before it falls inside the year already shown.",
+    "ru": "Финансовый год «Диасофта» заканчивается 31 марта, поэтому колонка 2026 — это год, закончившийся 31 марта 2026 года, а не календарный год, и она несопоставима период к периоду с другими эмитентами индекса. Каждый год оценивается по последнему мартовскому закрытию, а не декабрьскому, чтобы рыночные показатели соответствовали балансу рядом с ними. Данные взяты из собственного справочника инвестора «Диасофта», опубликованного на diasoft.ru: в нём шесть аудированных лет по всем трём отчётам. Сам баланс в отчётности — картинка, и отдельное распознавание тех страниц даёт те же итоги до рубля. Капитальные затраты включают капитализированные расходы на разработку программного обеспечения — это их большая часть, и сама компания учитывает их так же в своём показателе EBITDAC, — а свободный денежный поток считается после них; отсюда практически нулевое значение за 2025 финансовый год. Операционный денежный поток приводится после уплаты процентов и налога. Чистая прибыль — итоговая по отчётности, включая прекращённую деятельность; скорректированные EBITDA и чистая прибыль в справочном блоке — собственные показатели компании, в них возвращены разовые расходы на IPO. Колонки LTM нет: следующая промежуточная отчётность охватывает шесть месяцев до 30 сентября 2026 года и ещё не опубликована, а предыдущая попадает внутрь уже показанного года."
   },
   "sources": [
     {
       "document": "2024-FY__konsolidirovannaya-finansovaya-otchetnost-po-msfo-za-2024-go__11137c01.md",
-      "values": 11
+      "values": 1
     },
     {
       "document": "2025-FY__konsolidirovannaya-finansovaya-otchetnost-po-msfo-za-2025-go__9403f4b3.md",
-      "values": 24
+      "values": 2
+    },
+    {
+      "document": "2026-FY__diasoft-investor-databook-fy2026__manual-8.md",
+      "values": 81
     }
   ],
-  "facts": 35,
+  "facts": 84,
   "sections": [
     {
       "key": "enterprise_value",
@@ -65,12 +71,16 @@
           "kind": "money",
           "note": "",
           "values": [
+            null,
+            null,
             64496.25,
             36246.0,
             16432.5
           ],
           "sub": "growth",
           "subValues": [
+            null,
+            null,
             null,
             -43.8,
             -54.66
@@ -82,12 +92,16 @@
           "kind": "money",
           "note": "",
           "values": [
-            -3137.993,
+            -743.869,
+            -584.716,
+            -3137.9928,
             -785.699,
             -895.097
           ],
           "sub": "growth",
           "subValues": [
+            null,
+            null,
             null,
             null,
             null
@@ -99,12 +113,16 @@
           "kind": "money",
           "note": "",
           "values": [
-            61358.257,
+            null,
+            null,
+            61358.2572,
             35460.301,
             15537.403
           ],
           "sub": "growth",
           "subValues": [
+            null,
+            null,
             null,
             -42.21,
             -56.18
@@ -122,13 +140,17 @@
           "kind": "money",
           "note": "",
           "values": [
-            9139.675,
+            6600.69,
+            7188.443,
+            9139.6747,
             10055.982,
             9778.102
           ],
           "sub": "growth",
           "subValues": [
             null,
+            8.9,
+            27.14,
             10.03,
             -2.76
           ]
@@ -139,13 +161,17 @@
           "kind": "money",
           "note": "operating profit + D&A",
           "values": [
-            3630.733,
+            2491.1142,
+            3046.9627,
+            3630.7325,
             2918.362,
             1343.084
           ],
           "sub": "growth",
           "subValues": [
             null,
+            22.31,
+            19.16,
             -19.62,
             -53.98
           ]
@@ -156,6 +182,8 @@
           "kind": "pct",
           "note": "",
           "values": [
+            37.7402,
+            42.387,
             39.725,
             29.0212,
             13.7356
@@ -163,6 +191,8 @@
           "sub": "pp",
           "subValues": [
             null,
+            4.65,
+            -2.66,
             -10.7,
             -15.29
           ]
@@ -173,6 +203,8 @@
           "kind": "money",
           "note": "attributable to shareholders",
           "values": [
+            2111.455,
+            2626.438,
             3058.266,
             2391.207,
             544.16
@@ -180,6 +212,8 @@
           "sub": "growth",
           "subValues": [
             null,
+            24.39,
+            16.44,
             -21.81,
             -77.24
           ]
@@ -196,15 +230,19 @@
           "kind": "money",
           "note": "CFO - capex",
           "values": [
-            2858.244,
-            1557.221,
-            3977.573
+            2065.1578,
+            1923.5163,
+            1718.4602,
+            10.5896,
+            1991.7348
           ],
           "sub": "growth",
           "subValues": [
             null,
-            -45.52,
-            155.43
+            -6.86,
+            -10.66,
+            -99.38,
+            18708.46
           ]
         },
         {
@@ -213,6 +251,8 @@
           "kind": "money",
           "note": "",
           "values": [
+            1442.154,
+            1649.843,
             977.022,
             2602.353,
             2099.962
@@ -220,6 +260,8 @@
           "sub": "growth",
           "subValues": [
             null,
+            14.4,
+            -40.78,
             166.36,
             -19.31
           ]
@@ -236,6 +278,8 @@
           "kind": "ratio",
           "note": "",
           "values": [
+            null,
+            null,
             16.8997,
             12.1508,
             11.5685
@@ -247,6 +291,8 @@
           "kind": "ratio",
           "note": "",
           "values": [
+            null,
+            null,
             21.0892,
             15.158,
             30.1979
@@ -258,6 +304,8 @@
           "kind": "ratio",
           "note": "",
           "values": [
+            -0.2986,
+            -0.1919,
             -0.8643,
             -0.2692,
             -0.6664
@@ -269,6 +317,8 @@
           "kind": "ratio",
           "note": "",
           "values": [
+            null,
+            null,
             10.6041,
             5.4461,
             3.0898
@@ -286,12 +336,16 @@
           "kind": "pct",
           "note": "",
           "values": [
+            null,
+            null,
             1.5149,
             7.1797,
             12.7793
           ],
           "sub": "pp",
           "subValues": [
+            null,
+            null,
             null,
             5.66,
             5.6
@@ -303,15 +357,19 @@
           "kind": "pct",
           "note": "",
           "values": [
-            4.4316,
-            4.2963,
-            24.2055
+            null,
+            null,
+            2.6644,
+            0.0292,
+            12.1207
           ],
           "sub": "pp",
           "subValues": [
             null,
-            -0.14,
-            19.91
+            null,
+            null,
+            -2.64,
+            12.09
           ]
         },
         {
@@ -320,6 +378,8 @@
           "kind": "pct",
           "note": "period-end equity",
           "values": [
+            105.5059,
+            92.2197,
             50.2822,
             35.9288,
             10.2317
@@ -327,6 +387,8 @@
           "sub": "pp",
           "subValues": [
             null,
+            -13.29,
+            -41.94,
             -14.35,
             -25.7
           ]
@@ -337,6 +399,8 @@
           "kind": "pct",
           "note": "period-end assets",
           "values": [
+            57.5747,
+            62.1583,
             35.4954,
             27.9607,
             6.3879
@@ -344,6 +408,8 @@
           "sub": "pp",
           "subValues": [
             null,
+            4.58,
+            -26.66,
             -7.53,
             -21.57
           ]
@@ -360,9 +426,11 @@
           "kind": "money",
           "note": "company definition, non-IFRS",
           "values": [
-            null,
-            null,
-            null
+            2527.4276,
+            3080.2062,
+            3911.784,
+            2946.41,
+            1936.735
           ]
         },
         {
@@ -371,9 +439,11 @@
           "kind": "money",
           "note": "non-IFRS",
           "values": [
-            null,
-            null,
-            null
+            2111.455,
+            2626.438,
+            3345.1666,
+            2399.16,
+            1108.757
           ]
         },
         {
@@ -382,7 +452,9 @@
           "kind": "money",
           "note": "",
           "values": [
-            8615.96,
+            3667.33,
+            4225.4,
+            8615.9595,
             8552.034,
             8518.619
           ]
@@ -393,7 +465,9 @@
           "kind": "money",
           "note": "",
           "values": [
-            6082.2,
+            2001.268,
+            2848.024,
+            6082.2002,
             6655.4,
             5318.387
           ]
@@ -404,7 +478,9 @@
           "kind": "money",
           "note": "",
           "values": [
-            3137.993,
+            799.791,
+            630.116,
+            3137.9928,
             785.699,
             1355.758
           ]
@@ -415,6 +491,8 @@
           "kind": "money",
           "note": "",
           "values": [
+            55.922,
+            45.4,
             0.0,
             0.0,
             460.661
@@ -426,7 +504,9 @@
           "kind": "money",
           "note": "excluded from net debt",
           "values": [
-            111.793,
+            528.398,
+            432.658,
+            184.8913,
             118.825,
             49.59
           ]
@@ -437,6 +517,8 @@
           "kind": "ratio",
           "note": "mn",
           "values": [
+            10.5,
+            10.5,
             10.5,
             10.5,
             10.5
