@@ -204,7 +204,7 @@
         "POSI": 853.5790000000002,
         "ASTR": 1874.9480000000003,
         "CNRU": 2575.0,
-        "SOFL": null,
+        "SOFL": 4449.0,
         "DIAS": null,
         "IVAT": 432.313
       }
@@ -438,7 +438,7 @@
         "POSI": null,
         "ASTR": null,
         "CNRU": null,
-        "SOFL": null,
+        "SOFL": 4449.0,
         "DIAS": null,
         "IVAT": null
       }

@@ -190,7 +190,7 @@ export const en = {
     },
     missingLabel: "Two constituents do not report a comparable first half",
     missing: {
-      SOFL: "Softline reported a first half at an investor day on 26 August 2026, but as slides rather than statements: turnover rather than IFRS revenue, gross profit on a methodology changed this period, adjusted EBITDA of 4.4 bn and adjusted net debt of 29.7 bn. It publishes no interim IFRS income statement, balance sheet or cash flow, which is what the rows above are read from.",
+      SOFL: "Softline publishes no interim IFRS statements. Its own fact sheet does report a first half, and adjusted EBITDA of 4,449 mn is the one figure in it that maps to a row here — with no depreciation line to go with it, the EBITDA row carries that same adjusted figure, which is why the two are identical. Turnover of 53,111 mn is not IFRS revenue: agency contracts are netted differently, and for 2025 the two are 132,127 against 95,472. There is no interim balance sheet or cash flow at all, so the rest of the column is empty.",
       DIAS: "Diasoft's financial year ends 31 March, so its interim covers the six months to 30 September rather than to 30 June — its half never lines up with the others'. The most recent one ended 30 September 2025; the next is not yet published.",
     },
     missingNote:

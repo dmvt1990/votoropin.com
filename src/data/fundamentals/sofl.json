@@ -34,16 +34,20 @@
     "ltm": false
   },
   "note": {
-    "en": "Nine pages of Softline's audited filing are scans with no text layer, among them the income statement, the liabilities half of the balance sheet and the investing and financing halves of the cash-flow statement. The income statement was read by OCR and checks out against its own arithmetic. The liabilities page does not, so borrowings and leases come from notes 19 and 21, which are text. The investing page reads its 2024 column consistently — the separately scanned 2024 filing gives the same figures and the column foots — but not its 2025 one, where the plant line reads three different ways at three resolutions and the column never foots. So capital expenditure and free cash flow are shown for 2024 and not for 2025. No dividend was paid in either year: note 17 records that no dividend decision was taken. Softline publishes no interim IFRS statements, only presentations, so there is no trailing-twelve-month column. 2024 is the restated comparative from the 2025 filing. The 2025 P/E reflects profit attributable to shareholders of 21 mn against 3,264 mn a year earlier, after a 1,560 mn loss from discontinued operations and a 516 mn goodwill impairment.",
-    "ru": "Девять страниц аудированной отчётности «Софтлайна» — сканы без текстового слоя, и среди них отчёт о прибылях и убытках, часть баланса с обязательствами и инвестиционный и финансовый разделы отчёта о движении денежных средств. Отчёт о прибылях и убытках распознан и сходится по собственной арифметике. Страница с обязательствами — нет, поэтому кредиты и аренда взяты из примечаний 19 и 21, представленных текстом. Инвестиционная страница уверенно читается за 2024 год — отдельно отсканированная отчётность за 2024 год даёт те же цифры, и колонка сходится с собственным итогом, — но не за 2025-й, где строка основных средств читается тремя разными способами при трёх разрешениях, а колонка не сходится ни при одном. Поэтому капитальные затраты и свободный денежный поток приведены за 2024 год и отсутствуют за 2025-й. Дивиденды не выплачивались ни в одном из годов: в примечании 17 сказано, что решения о выплате не принимались. Промежуточную отчётность по МСФО «Софтлайн» не публикует, только презентации, поэтому колонки LTM нет. 2024 год — пересчитанные сравнительные данные из отчётности за 2025 год. P/E за 2025 год отражает прибыль, относимую на собственников, в размере 21 млн против 3 264 млн годом ранее — после убытка 1 560 млн от прекращённой деятельности и обесценения гудвила на 516 млн."
+    "en": "Nine pages of Softline's audited filing are scans with no text layer, among them the income statement, the liabilities half of the balance sheet and the investing and financing halves of the cash-flow statement. The income statement was read by OCR and checks out against its own arithmetic. The liabilities page does not, so borrowings and leases come from notes 19 and 21, which are text. The investing page reads its 2024 column consistently — the separately scanned 2024 filing gives the same figures and the column foots — but not its 2025 one, where the plant line reads three different ways at three resolutions and the column never foots. So capital expenditure and free cash flow are shown for 2024 and not for 2025. No dividend was paid in either year: note 17 records that no dividend decision was taken. Softline publishes no interim IFRS statements, only presentations and a fact sheet, so there is no trailing-twelve-month column. The adjusted EBITDA shown is from that fact sheet, whose operating profit and group profit agree exactly with the audited statements for both years — 4 019 and 2 149, 288 and 3 656 — which is an independent check on the scanned income statement, since the spreadsheet shares none of the same machinery. 2024 is the restated comparative from the 2025 filing. The 2025 P/E reflects profit attributable to shareholders of 21 mn against 3,264 mn a year earlier, after a 1,560 mn loss from discontinued operations and a 516 mn goodwill impairment.",
+    "ru": "Девять страниц аудированной отчётности «Софтлайна» — сканы без текстового слоя, и среди них отчёт о прибылях и убытках, часть баланса с обязательствами и инвестиционный и финансовый разделы отчёта о движении денежных средств. Отчёт о прибылях и убытках распознан и сходится по собственной арифметике. Страница с обязательствами — нет, поэтому кредиты и аренда взяты из примечаний 19 и 21, представленных текстом. Инвестиционная страница уверенно читается за 2024 год — отдельно отсканированная отчётность за 2024 год даёт те же цифры, и колонка сходится с собственным итогом, — но не за 2025-й, где строка основных средств читается тремя разными способами при трёх разрешениях, а колонка не сходится ни при одном. Поэтому капитальные затраты и свободный денежный поток приведены за 2024 год и отсутствуют за 2025-й. Дивиденды не выплачивались ни в одном из годов: в примечании 17 сказано, что решения о выплате не принимались. Промежуточную отчётность по МСФО «Софтлайн» не публикует — только презентации и фактшит, поэтому колонки LTM нет. Скорректированная EBITDA взята из этого фактшита; его операционная прибыль и прибыль группы совпадают с аудированной отчётностью за оба года в точности — 4 019 и 2 149, 288 и 3 656, — что даёт независимую проверку отсканированного отчёта о прибылях и убытках, поскольку таблица не имеет с распознаванием ничего общего. 2024 год — пересчитанные сравнительные данные из отчётности за 2025 год. P/E за 2025 год отражает прибыль, относимую на собственников, в размере 21 млн против 3 264 млн годом ранее — после убытка 1 560 млн от прекращённой деятельности и обесценения гудвила на 516 млн."
   },
   "sources": [
     {
       "document": "2025__softline-consolidated-fs-2025-with-audit-report__eee540d2.md",
       "values": 23
+    },
+    {
+      "document": "2026-Q2__softline-fact-sheet-q2-2026__manual-9.md",
+      "values": 86
     }
   ],
-  "facts": 23,
+  "facts": 109,
   "sections": [
     {
       "key": "enterprise_value",
@@ -320,8 +324,8 @@
           "kind": "money",
           "note": "company definition, non-IFRS",
           "values": [
-            null,
-            null
+            7084.0,
+            8155.0
           ]
         },
         {
