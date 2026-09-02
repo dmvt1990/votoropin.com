@@ -3,7 +3,7 @@
   "name": "ПАО «Группа Астра»",
   "name_en": "Astra Group",
   "unit": "RUB mn",
-  "generated": "2026-09-01",
+  "generated": "2026-09-02",
   "columns": [
     "2023",
     "2024",
@@ -35,30 +35,34 @@
   "period_basis": null,
   "coverage": {
     "pnl": true,
-    "bs": false,
+    "bs": true,
     "cf": true,
     "market": true,
     "ltm": true
   },
   "note": {
-    "en": "Astra exports its statement of financial position as an image with no text layer, in every filing — so there is nothing to read, and OCR would be the only route to it.",
-    "ru": "«Астра» выгружает отчёт о финансовом положении картинкой без текстового слоя — во всех выпусках отчётности, так что читать попросту нечего; добраться до него можно было бы только через распознавание."
+    "en": "Astra exports its statement of financial position as an image with no text layer — one page in every filing, always that statement — so the balance-sheet figures here were read by OCR rather than extracted. They are confirmed against Astra's own quarterly databook, a spreadsheet that shares none of the same machinery, and agree with it exactly in every year shown. The income statement and cash-flow statement are read from the text of the filings as usual.",
+    "ru": "«Астра» выгружает отчёт о финансовом положении картинкой без текстового слоя — по одной такой странице в каждом выпуске отчётности, и всегда именно этот отчёт, — поэтому балансовые показатели здесь распознаны, а не извлечены из текста. Они сверены с собственным квартальным датабуком «Астры», отдельным файлом, не имеющим с распознаванием ничего общего, и полностью совпадают с ним за все показанные годы. Отчёт о прибылях и убытках и отчёт о движении денежных средств читаются из текста отчётности обычным образом."
   },
   "sources": [
     {
+      "document": "2023__msfo-otchetnost-za-2023-g__98d5d241.md",
+      "values": 8
+    },
+    {
       "document": "2024__msfo-otchetnost-za-2024-g__f5fedcf9.md",
-      "values": 7
+      "values": 12
     },
     {
       "document": "2025__msfo-otchetnost-gruppy-astra-za-2025-god__4fb53893.md",
-      "values": 14
+      "values": 19
     },
     {
       "document": "undated__otchetnost-pao-gruppa-astra-6m26__34d59e65.md",
-      "values": 18
+      "values": 25
     }
   ],
-  "facts": 39,
+  "facts": 64,
   "sections": [
     {
       "key": "enterprise_value",
@@ -89,17 +93,17 @@
           "kind": "money",
           "note": "",
           "values": [
-            null,
-            null,
-            null,
-            null
+            94.438,
+            1577.833,
+            2103.461,
+            2841.075
           ],
           "sub": "growth",
           "subValues": [
             null,
-            null,
-            null,
-            null
+            1570.76,
+            33.31,
+            35.07
           ]
         },
         {
@@ -108,17 +112,17 @@
           "kind": "money",
           "note": "",
           "values": [
-            null,
-            null,
-            null,
-            null
+            105409.438,
+            100172.833,
+            55222.961,
+            47770.575
           ],
           "sub": "growth",
           "subValues": [
             null,
-            null,
-            null,
-            null
+            -4.97,
+            -44.87,
+            -13.5
           ]
         }
       ]
@@ -155,14 +159,14 @@
             4378.866,
             6843.053,
             8170.503,
-            null
+            8524.187
           ],
           "sub": "growth",
           "subValues": [
             null,
             56.27,
             19.4,
-            null
+            4.33
           ]
         },
         {
@@ -174,14 +178,14 @@
             45.8974,
             39.771,
             40.112,
-            null
+            39.6046
           ],
           "sub": "pp",
           "subValues": [
             null,
             -6.13,
             0.34,
-            null
+            -0.51
           ]
         },
         {
@@ -259,10 +263,10 @@
           "kind": "ratio",
           "note": "",
           "values": [
-            null,
-            null,
-            null,
-            null
+            24.0723,
+            14.6386,
+            6.7588,
+            5.6041
           ]
         },
         {
@@ -283,10 +287,10 @@
           "kind": "ratio",
           "note": "",
           "values": [
-            null,
-            null,
-            null,
-            null
+            0.0216,
+            0.2306,
+            0.2574,
+            0.3333
           ]
         },
         {
@@ -295,10 +299,10 @@
           "kind": "ratio",
           "note": "",
           "values": [
-            null,
-            null,
-            null,
-            null
+            22.1317,
+            12.076,
+            4.4421,
+            3.7981
           ]
         }
       ]
@@ -351,17 +355,17 @@
           "kind": "pct",
           "note": "period-end equity",
           "values": [
-            null,
-            null,
-            null,
-            null
+            76.4586,
+            73.9875,
+            50.5862,
+            54.8617
           ],
           "sub": "pp",
           "subValues": [
             null,
-            null,
-            null,
-            null
+            -2.47,
+            -23.4,
+            4.28
           ]
         },
         {
@@ -370,17 +374,17 @@
           "kind": "pct",
           "note": "period-end assets",
           "values": [
-            null,
-            null,
-            null,
-            null
+            29.461,
+            31.5078,
+            24.7417,
+            28.9925
           ],
           "sub": "pp",
           "subValues": [
             null,
-            null,
-            null,
-            null
+            2.05,
+            -6.77,
+            4.25
           ]
         }
       ]
@@ -419,10 +423,10 @@
           "kind": "money",
           "note": "",
           "values": [
-            null,
-            null,
-            null,
-            null
+            12349.619,
+            19172.165,
+            24449.482,
+            22384.588
           ]
         },
         {
@@ -431,10 +435,10 @@
           "kind": "money",
           "note": "",
           "values": [
-            null,
-            null,
-            null,
-            null
+            4758.556,
+            8164.525,
+            11958.248,
+            11829.493
           ]
         },
         {
@@ -443,10 +447,10 @@
           "kind": "money",
           "note": "",
           "values": [
-            null,
-            null,
-            null,
-            null
+            2640.062,
+            1358.891,
+            1246.946,
+            736.028
           ]
         },
         {
@@ -455,10 +459,10 @@
           "kind": "money",
           "note": "",
           "values": [
-            null,
-            null,
-            null,
-            null
+            2734.5,
+            2936.724,
+            3350.407,
+            3577.103
           ]
         },
         {
@@ -468,9 +472,9 @@
           "note": "excluded from net debt",
           "values": [
             null,
-            null,
-            null,
-            null
+            55.902,
+            27.148,
+            18.082
           ]
         },
         {
