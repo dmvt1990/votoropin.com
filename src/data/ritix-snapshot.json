@@ -462,6 +462,42 @@
       }
     },
     {
+      "key": "turnover",
+      "section": "memo",
+      "kind": "money",
+      "basis": "period",
+      "values": {
+        "YDEX": null,
+        "OZON": null,
+        "HEAD": null,
+        "VKCO": null,
+        "POSI": null,
+        "ASTR": null,
+        "CNRU": null,
+        "SOFL": 53111.067,
+        "DIAS": null,
+        "IVAT": null
+      }
+    },
+    {
+      "key": "net_income_group",
+      "section": "memo",
+      "kind": "money",
+      "basis": "period",
+      "values": {
+        "YDEX": null,
+        "OZON": null,
+        "HEAD": null,
+        "VKCO": null,
+        "POSI": null,
+        "ASTR": null,
+        "CNRU": null,
+        "SOFL": 891.682,
+        "DIAS": null,
+        "IVAT": null
+      }
+    },
+    {
       "key": "total_assets",
       "section": "memo",
       "kind": "money",

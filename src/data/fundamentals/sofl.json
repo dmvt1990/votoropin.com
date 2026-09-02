@@ -44,10 +44,10 @@
     },
     {
       "document": "2026-Q2__softline-fact-sheet-q2-2026__manual-9.md",
-      "values": 86
+      "values": 116
     }
   ],
-  "facts": 109,
+  "facts": 139,
   "sections": [
     {
       "key": "enterprise_value",
@@ -336,6 +336,26 @@
           "values": [
             null,
             null
+          ]
+        },
+        {
+          "key": "turnover",
+          "label": "Turnover (reported)",
+          "kind": "money",
+          "note": "before agency netting",
+          "values": [
+            120232.0,
+            132127.0
+          ]
+        },
+        {
+          "key": "net_income_group",
+          "label": "Net income incl. NCI",
+          "kind": "money",
+          "note": "",
+          "values": [
+            3656.0,
+            288.0
           ]
         },
         {

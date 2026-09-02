@@ -106,6 +106,8 @@ export const en = {
       memo:             "Memo",
       ebitda_adj:       "Adjusted EBITDA (reported)",
       net_income_adj:   "Adjusted net income (reported)",
+      turnover:         "Turnover (reported)",
+      net_income_group: "Net income incl. NCI",
       total_assets:     "Total assets",
       total_equity:     "Total equity",
       cash:             "Cash and equivalents",
@@ -121,6 +123,7 @@ export const en = {
       roa:            "period-end assets",
       ebitda_adj:     "company definition, non-IFRS",
       net_income_adj: "non-IFRS",
+      turnover:        "before agency netting",
       lease:          "excluded from net debt",
     },
     page: {
@@ -190,7 +193,7 @@ export const en = {
     },
     missingLabel: "Two constituents do not report a comparable first half",
     missing: {
-      SOFL: "Softline publishes no interim IFRS statements. Its own fact sheet does report a first half, and adjusted EBITDA of 4,449 mn is the one figure in it that maps to a row here — with no depreciation line to go with it, the EBITDA row carries that same adjusted figure, which is why the two are identical. Turnover of 53,111 mn is not IFRS revenue: agency contracts are netted differently, and for 2025 the two are 132,127 against 95,472. There is no interim balance sheet or cash flow at all, so the rest of the column is empty.",
+      SOFL: "Softline publishes no interim IFRS statements, and its fact sheet carries no revenue line — it reports turnover, 53,111 mn for the half, which is gross billings before the cost of agency contracts is netted off. For 2025 the two are 132,127 against 95,472 of audited revenue, so turnover sits in the memo rather than the revenue row, where it would have shown a 4.7% EBITDA margin against a real 8.6%. Net income is the group figure including non-controlling interests, also in the memo, because the fact sheet gives no attributable split and for Softline that gap is wide: 288 against 21 in 2025. Adjusted EBITDA is the one figure that maps directly, and with no depreciation line beside it the EBITDA row carries it too, which is why those two cells are identical. There is no interim balance sheet or cash flow at all.",
       DIAS: "Diasoft's financial year ends 31 March, so its interim covers the six months to 30 September rather than to 30 June — its half never lines up with the others'. The most recent one ended 30 September 2025; the next is not yet published.",
     },
     missingNote:

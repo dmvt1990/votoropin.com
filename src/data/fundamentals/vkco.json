@@ -406,6 +406,30 @@
           ]
         },
         {
+          "key": "turnover",
+          "label": "Turnover (reported)",
+          "kind": "money",
+          "note": "before agency netting",
+          "values": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "key": "net_income_group",
+          "label": "Net income incl. NCI",
+          "kind": "money",
+          "note": "",
+          "values": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
           "key": "total_assets",
           "label": "Total assets",
           "kind": "money",
