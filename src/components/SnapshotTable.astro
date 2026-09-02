@@ -58,7 +58,6 @@ function dec(v: number | null, d = 1): string {
 }
 const cell = (v: number | null, kind: string) => (kind === "money" ? money(v) : dec(v));
 const rowLabel = (key: string) => (F.rows as Record<string, string>)[key] ?? key;
-const rowNote = (key: string) => (F.notes as Record<string, string>)[key] ?? "";
 
 // Constituents in the order the snapshot lists them, largest first — the same
 // order the index roster carries.
@@ -79,13 +78,13 @@ const sourceNote = S.sourceNote.replace("{generated}", data.generated);
 ---
 
 <section class="border-t border-rule">
-  <div class="container-wide py-20">
+  <div class="container-data py-20">
     <div class="section-label">{S.label}</div>
     <h2 class="display font-normal text-[28px] tracking-tight m-0 mb-4">{S.heading}</h2>
     <p class="text-[16px] leading-relaxed text-ink-soft max-w-[62ch] m-0 mb-8">{S.intro}</p>
 
     <div class="overflow-x-auto bg-bg border border-rule">
-      <table class="w-full border-collapse min-w-[1000px]">
+      <table class="w-full border-collapse min-w-[1360px]">
         <thead>
           <tr class="bg-bg-sunken">
             <th
@@ -134,9 +133,6 @@ const sourceNote = S.sourceNote.replace("{generated}", data.generated);
                           {S.trailingTag}
                         </span>
                       )}
-                      {rowNote(r.key) && (
-                        <span class="ml-2 font-sans text-[11px] text-ink-mute">{rowNote(r.key)}</span>
-                      )}
                     </th>
                     {cols.map((tk) => (
                       <td class="px-4 py-3 font-mono text-[14px] text-right numeric whitespace-nowrap">
@@ -159,7 +155,8 @@ const sourceNote = S.sourceNote.replace("{generated}", data.generated);
         </div>
         <p class="text-[14px] leading-relaxed text-ink-soft m-0 mb-3">{S.basisFlow}</p>
         <p class="text-[14px] leading-relaxed text-ink-soft m-0 mb-3">{S.basisTrailing}</p>
-        <p class="text-[14px] leading-relaxed text-ink-soft m-0">{S.basisPrice}</p>
+        <p class="text-[14px] leading-relaxed text-ink-soft m-0 mb-3">{S.basisPrice}</p>
+        <p class="text-[14px] leading-relaxed text-ink-soft m-0">{S.basisDefs}</p>
       </div>
 
       <div>

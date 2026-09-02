@@ -177,6 +177,8 @@ export const en = {
       "Multiples, yields and returns — marked LTM — trail the twelve months to 30 June 2026. A price-to-earnings ratio on half a year of earnings is roughly double the real one, and for a company whose year is back-loaded it is not merely scaled but meaningless, so those rows are not shown on a half-year basis.",
     basisPrice:
       "Market capitalisation is the 30 June 2026 MOEX close times shares outstanding, so the market side of every ratio is struck on the same date as the balance sheet it is compared with.",
+    basisDefs:
+      "EBITDA is operating profit plus depreciation and amortisation; free cash flow is operating cash flow less capital expenditure; net income is the share attributable to shareholders. Return on equity and on assets are measured against period-end balances.",
     readLabel: "Three figures not to read at face value",
     read: {
       ozon:

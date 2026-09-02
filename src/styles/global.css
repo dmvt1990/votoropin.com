@@ -64,6 +64,15 @@
   .container-narrow {
     @apply max-w-[780px] mx-auto px-6 sm:px-10;
   }
+  /* Third tier, for blocks that are read across rather than down: the level
+     chart, the constituent tables, the sub-sector map. A ten-column
+     cross-section needs about 1,350px before it starts scrolling sideways,
+     which container-wide cannot give it. Prose stays at container-narrow —
+     the contrast between a 780px column of text and a 1,560px block of data
+     is the point, not an inconsistency. */
+  .container-data {
+    @apply max-w-[1560px] mx-auto px-6 sm:px-10;
+  }
   .display {
     font-family: "Fraunces", Georgia, serif;
     font-weight: 400;
