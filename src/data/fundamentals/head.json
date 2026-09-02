@@ -3,7 +3,7 @@
   "name": "МКПАО «Хэдхантер»",
   "name_en": "HeadHunter",
   "unit": "RUB mn",
-  "generated": "2026-09-01",
+  "generated": "2026-09-02",
   "columns": [
     "2023",
     "2024",
@@ -11,8 +11,8 @@
     "LTM"
   ],
   "spot": {
-    "date": "2026-08-31",
-    "price": 2697,
+    "date": "2026-09-01",
+    "price": 2669,
     "shares": 47184918
   },
   "closes": {
@@ -51,10 +51,10 @@
     },
     {
       "document": "2026-Q2__head-reliz-2-kv-2026-pdf__5e53e16e.md",
-      "values": 21
+      "values": 22
     }
   ],
-  "facts": 41,
+  "facts": 42,
   "sections": [
     {
       "key": "enterprise_value",
@@ -69,14 +69,14 @@
             139195.5081,
             175056.0458,
             137402.4812,
-            127257.7238
+            125936.5461
           ],
           "sub": "growth",
           "subValues": [
             null,
             25.76,
             -21.51,
-            -7.38
+            -8.34
           ]
         },
         {
@@ -88,7 +88,7 @@
             null,
             null,
             -14496.736,
-            null
+            -7788.118
           ],
           "sub": "growth",
           "subValues": [
@@ -107,14 +107,14 @@
             null,
             null,
             122905.7452,
-            null
+            118148.4281
           ],
           "sub": "growth",
           "subValues": [
             null,
             null,
             null,
-            null
+            -3.87
           ]
         }
       ]
@@ -258,7 +258,7 @@
             null,
             null,
             5.9656,
-            null
+            5.7443
           ]
         },
         {
@@ -282,7 +282,7 @@
             null,
             null,
             -0.7036,
-            null
+            -0.3787
           ]
         },
         {
@@ -294,7 +294,7 @@
             null,
             37.5082,
             10.4508,
-            12.896
+            12.7622
           ]
         }
       ]
@@ -454,7 +454,7 @@
             null,
             null,
             4.507,
-            null
+            0.0
           ]
         },
         {

@@ -3,7 +3,7 @@
   "name": "ПАО «Группа Позитив»",
   "name_en": "Positive Technologies",
   "unit": "RUB mn",
-  "generated": "2026-09-01",
+  "generated": "2026-09-02",
   "columns": [
     "2023",
     "2024",
@@ -11,8 +11,8 @@
     "LTM"
   ],
   "spot": {
-    "date": "2026-08-31",
-    "price": 947,
+    "date": "2026-09-01",
+    "price": 955,
     "shares": 71214000
   },
   "closes": {
@@ -55,14 +55,14 @@
     },
     {
       "document": "2026-H1__posi-6m2026-ifrs-report__76accaf7.md",
-      "values": 29
+      "values": 30
     },
     {
       "document": "undated__pt-ar25-book-0704-1804-public__0fc5de31.md",
       "values": 4
     }
   ],
-  "facts": 50,
+  "facts": 51,
   "sections": [
     {
       "key": "enterprise_value",
@@ -77,14 +77,14 @@
             142200.1152,
             145760.8152,
             70601.5596,
-            67439.658
+            68009.37
           ],
           "sub": "growth",
           "subValues": [
             null,
             2.5,
             -51.56,
-            -4.48
+            -3.67
           ]
         },
         {
@@ -115,14 +115,14 @@
             null,
             null,
             91832.6616,
-            80611.024
+            81180.736
           ],
           "sub": "growth",
           "subValues": [
             null,
             null,
             null,
-            -12.22
+            -11.6
           ]
         }
       ]
@@ -278,7 +278,7 @@
             14.6655,
             39.782,
             9.6714,
-            6.1575
+            6.2095
           ]
         },
         {
@@ -302,7 +302,7 @@
             null,
             null,
             2.9007,
-            3.2149
+            3.242
           ]
         }
       ]

@@ -3,7 +3,7 @@
   "name": "ПАО «ИВА»",
   "name_en": "IVA Technologies",
   "unit": "RUB mn",
-  "generated": "2026-09-01",
+  "generated": "2026-09-02",
   "columns": [
     "2022",
     "2023",
@@ -12,8 +12,8 @@
     "LTM"
   ],
   "spot": {
-    "date": "2026-08-31",
-    "price": 69.35,
+    "date": "2026-09-01",
+    "price": 67.25,
     "shares": 100000000
   },
   "closes": {
@@ -43,7 +43,7 @@
   "sources": [
     {
       "document": "2023__msfo-otchetnost-za-2023-god__a3e55a10.md",
-      "values": 42
+      "values": 43
     },
     {
       "document": "2025-FY__msfo-otchetnost-pao-iva-12m-2025__3000b521.md",
@@ -55,14 +55,14 @@
     },
     {
       "document": "2026-H1__otchetnost-pao-iva-6m2026__48251a42.md",
-      "values": 11
+      "values": 12
     },
     {
       "document": "undated__otchetnost-pao-iva-12m24__6d85d300.md",
       "values": 14
     }
   ],
-  "facts": 99,
+  "facts": 101,
   "sections": [
     {
       "key": "enterprise_value",
@@ -78,7 +78,7 @@
             null,
             19890.0,
             16735.0,
-            6935.0
+            6725.0
           ],
           "sub": "growth",
           "subValues": [
@@ -86,7 +86,7 @@
             null,
             null,
             -15.86,
-            -58.56
+            -59.81
           ]
         },
         {
@@ -120,7 +120,7 @@
             null,
             20165.005,
             17231.972,
-            7819.78
+            7609.78
           ],
           "sub": "growth",
           "subValues": [
@@ -128,7 +128,7 @@
             null,
             null,
             -14.55,
-            -54.62
+            -55.84
           ]
         }
       ]
@@ -258,7 +258,7 @@
             479.204,
             507.957,
             111.412,
-            null
+            0.0
           ],
           "sub": "growth",
           "subValues": [
@@ -266,7 +266,7 @@
             3817.95,
             6.0,
             -78.07,
-            null
+            -100.0
           ]
         }
       ]
@@ -285,7 +285,7 @@
             null,
             9.0932,
             8.5896,
-            4.1427
+            4.0314
           ]
         },
         {
@@ -298,7 +298,7 @@
             null,
             10.483,
             11.8431,
-            5.8168
+            5.6407
           ]
         },
         {
@@ -324,7 +324,7 @@
             null,
             3.8995,
             2.5651,
-            1.0422
+            1.0106
           ]
         }
       ]
@@ -343,7 +343,7 @@
             null,
             2.5538,
             0.6657,
-            null
+            0.0
           ],
           "sub": "pp",
           "subValues": [
@@ -351,7 +351,7 @@
             null,
             null,
             -1.89,
-            null
+            -0.67
           ]
         },
         {
@@ -364,7 +364,7 @@
             null,
             1.0352,
             -0.6015,
-            -5.945
+            -6.1307
           ],
           "sub": "pp",
           "subValues": [
@@ -372,7 +372,7 @@
             null,
             null,
             -1.64,
-            -5.34
+            -5.53
           ]
         },
         {

@@ -3,52 +3,57 @@
   "name": "ПАО «Диасофт»",
   "name_en": "Diasoft",
   "unit": "RUB mn",
-  "generated": "2026-09-01",
+  "generated": "2026-09-02",
   "columns": [
     "2024",
     "2025",
     "2026"
   ],
   "spot": {
-    "date": "2026-08-31",
-    "price": 1179,
+    "date": "2026-09-01",
+    "price": 1157,
     "shares": 10500000
   },
   "closes": {
     "2024": {
       "secid": "DIAS",
-      "date": "2024-12-30",
-      "close": 4260
+      "date": "2024-03-29",
+      "close": 6142.5
     },
     "2025": {
       "secid": "DIAS",
-      "date": "2025-12-30",
-      "close": 1693.5
+      "date": "2025-03-31",
+      "close": 3452
+    },
+    "2026": {
+      "secid": "DIAS",
+      "date": "2026-03-31",
+      "close": 1565
     }
   },
   "period_basis": "year ended 31 March",
   "coverage": {
     "pnl": true,
-    "bs": false,
+    "bs": true,
     "cf": true,
     "market": true,
     "ltm": false
   },
   "note": {
-    "en": "Diasoft's financial year ends 31 March, so a column labelled 2026 is the year to 31 March 2026 — not a calendar year, and not comparable period-for-period with the other constituents. Market capitalisation is omitted for the same reason: a December closing price does not belong beside a March year end. The balance-sheet pages come through blank in both filings.",
-    "ru": "Финансовый год «Диасофта» заканчивается 31 марта, поэтому колонка 2026 — это год, закончившийся 31 марта 2026 года, а не календарный год, и она несопоставима период к периоду с другими эмитентами индекса. По той же причине не приводится рыночная капитализация: декабрьская цена закрытия не соответствует мартовской отчётной дате. Страницы баланса в обоих выпусках отчётности выгрузились пустыми."
+    "en": "Diasoft's financial year ends 31 March, so a column labelled 2026 is the year to 31 March 2026 — not a calendar year, and not comparable period-for-period with the other constituents. Each year is priced at that year's last March close rather than December's, so the market figures line up with the balance sheet beside them. That balance sheet is a rendered image in both filings — the page extracts two characters, the number printed outside it — so it was read by OCR; every subtotal on it cross-foots against its own components in both columns, and the equity total matches the figure the notes carry in text. Diasoft carried no borrowings at all until the year to 31 March 2026, so the earlier nil is a fact rather than a gap. There is no trailing-twelve-month column: the next interim report covers the six months to 30 September 2026 and is not published yet, and the one before it falls inside the year already shown.",
+    "ru": "Финансовый год «Диасофта» заканчивается 31 марта, поэтому колонка 2026 — это год, закончившийся 31 марта 2026 года, а не календарный год, и она несопоставима период к периоду с другими эмитентами индекса. Каждый год оценивается по последнему мартовскому закрытию, а не декабрьскому, чтобы рыночные показатели соответствовали балансу рядом с ними. Сам баланс в обеих версиях отчётности — картинка: со страницы извлекаются два символа, номер, напечатанный за её пределами. Поэтому он распознан; все промежуточные итоги на странице сходятся с собственными составляющими в обеих колонках, а итог по капиталу совпадает с цифрой, которую примечания приводят текстом. До года, закончившегося 31 марта 2026 года, у «Диасофта» не было заёмных средств вовсе, так что ноль в ранних периодах — это факт, а не пропуск. Колонки LTM нет: следующая промежуточная отчётность охватывает шесть месяцев до 30 сентября 2026 года и ещё не опубликована, а предыдущая попадает внутрь уже показанного года."
   },
   "sources": [
     {
       "document": "2024-FY__konsolidirovannaya-finansovaya-otchetnost-po-msfo-za-2024-go__11137c01.md",
-      "values": 6
+      "values": 11
     },
     {
       "document": "2025-FY__konsolidirovannaya-finansovaya-otchetnost-po-msfo-za-2025-go__9403f4b3.md",
-      "values": 14
+      "values": 24
     }
   ],
-  "facts": 20,
+  "facts": 35,
   "sections": [
     {
       "key": "enterprise_value",
@@ -60,15 +65,15 @@
           "kind": "money",
           "note": "",
           "values": [
-            null,
-            null,
-            null
+            64496.25,
+            36246.0,
+            16432.5
           ],
           "sub": "growth",
           "subValues": [
             null,
-            null,
-            null
+            -43.8,
+            -54.66
           ]
         },
         {
@@ -77,9 +82,9 @@
           "kind": "money",
           "note": "",
           "values": [
-            null,
-            null,
-            null
+            -3137.993,
+            -785.699,
+            -895.097
           ],
           "sub": "growth",
           "subValues": [
@@ -94,15 +99,15 @@
           "kind": "money",
           "note": "",
           "values": [
-            null,
-            null,
-            null
+            61358.257,
+            35460.301,
+            15537.403
           ],
           "sub": "growth",
           "subValues": [
             null,
-            null,
-            null
+            -42.21,
+            -56.18
           ]
         }
       ]
@@ -168,14 +173,14 @@
           "kind": "money",
           "note": "attributable to shareholders",
           "values": [
-            null,
+            3058.266,
             2391.207,
             544.16
           ],
           "sub": "growth",
           "subValues": [
             null,
-            null,
+            -21.81,
             -77.24
           ]
         }
@@ -231,9 +236,9 @@
           "kind": "ratio",
           "note": "",
           "values": [
-            null,
-            null,
-            null
+            16.8997,
+            12.1508,
+            11.5685
           ]
         },
         {
@@ -242,9 +247,9 @@
           "kind": "ratio",
           "note": "",
           "values": [
-            null,
-            null,
-            null
+            21.0892,
+            15.158,
+            30.1979
           ]
         },
         {
@@ -253,9 +258,9 @@
           "kind": "ratio",
           "note": "",
           "values": [
-            null,
-            null,
-            null
+            -0.8643,
+            -0.2692,
+            -0.6664
           ]
         },
         {
@@ -264,9 +269,9 @@
           "kind": "ratio",
           "note": "",
           "values": [
-            null,
-            null,
-            null
+            10.6041,
+            5.4461,
+            3.0898
           ]
         }
       ]
@@ -281,15 +286,15 @@
           "kind": "pct",
           "note": "",
           "values": [
-            null,
-            null,
-            null
+            1.5149,
+            7.1797,
+            12.7793
           ],
           "sub": "pp",
           "subValues": [
             null,
-            null,
-            null
+            5.66,
+            5.6
           ]
         },
         {
@@ -298,15 +303,15 @@
           "kind": "pct",
           "note": "",
           "values": [
-            null,
-            null,
-            null
+            4.4316,
+            4.2963,
+            24.2055
           ],
           "sub": "pp",
           "subValues": [
             null,
-            null,
-            null
+            -0.14,
+            19.91
           ]
         },
         {
@@ -315,15 +320,15 @@
           "kind": "pct",
           "note": "period-end equity",
           "values": [
-            null,
-            null,
-            null
+            50.2822,
+            35.9288,
+            10.2317
           ],
           "sub": "pp",
           "subValues": [
             null,
-            null,
-            null
+            -14.35,
+            -25.7
           ]
         },
         {
@@ -332,15 +337,15 @@
           "kind": "pct",
           "note": "period-end assets",
           "values": [
-            null,
-            null,
-            null
+            35.4954,
+            27.9607,
+            6.3879
           ],
           "sub": "pp",
           "subValues": [
             null,
-            null,
-            null
+            -7.53,
+            -21.57
           ]
         }
       ]
@@ -377,9 +382,9 @@
           "kind": "money",
           "note": "",
           "values": [
-            null,
-            null,
-            null
+            8615.96,
+            8552.034,
+            8518.619
           ]
         },
         {
@@ -388,9 +393,9 @@
           "kind": "money",
           "note": "",
           "values": [
-            null,
-            null,
-            null
+            6082.2,
+            6655.4,
+            5318.387
           ]
         },
         {
@@ -399,9 +404,9 @@
           "kind": "money",
           "note": "",
           "values": [
-            null,
-            null,
-            null
+            3137.993,
+            785.699,
+            1355.758
           ]
         },
         {
@@ -410,9 +415,9 @@
           "kind": "money",
           "note": "",
           "values": [
-            null,
-            null,
-            null
+            0.0,
+            0.0,
+            460.661
           ]
         },
         {
@@ -421,9 +426,9 @@
           "kind": "money",
           "note": "excluded from net debt",
           "values": [
-            null,
-            null,
-            null
+            111.793,
+            118.825,
+            49.59
           ]
         },
         {

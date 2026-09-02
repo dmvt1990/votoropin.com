@@ -31,16 +31,23 @@ years_for() {
   case "$1" in
     OZON|IVAT) echo "2022:2025" ;;
     DIAS)      echo "2024:2026" ;;
+    # Softline's only readable income statement is the FY2025 filing, which
+    # carries 2024 as its comparative and nothing earlier. A 2023 column would
+    # hold a market capitalisation and no company in it.
+    SOFL)      echo "2024:2025" ;;
     *)         echo "2023:2025" ;;
   esac
 }
 
-# An LTM column needs a half-year to trail from. Diasoft reports to a March year
-# end, and Softline and CIAN have no interim in the corpus.
+# An LTM column needs a published half-year to trail from. Softline issues no
+# interim IFRS statements at all, only presentations. Diasoft closes its books
+# on 31 March, so its next interim covers the six months to 30 September 2026
+# and is not out yet, while the one before it falls inside the year already
+# shown — there is nothing to add.
 ltm_for() {
   case "$1" in
-    DIAS|SOFL|CNRU) echo "" ;;
-    *)              echo "2025,2026-H1,2025-H1" ;;
+    DIAS|SOFL) echo "" ;;
+    *)         echo "2025,2026-H1,2025-H1" ;;
   esac
 }
 

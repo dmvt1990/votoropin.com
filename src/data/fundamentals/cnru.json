@@ -3,15 +3,16 @@
   "name": "МКПАО «Циан»",
   "name_en": "CIAN",
   "unit": "RUB mn",
-  "generated": "2026-09-01",
+  "generated": "2026-09-02",
   "columns": [
     "2023",
     "2024",
-    "2025"
+    "2025",
+    "LTM"
   ],
   "spot": {
-    "date": "2026-08-31",
-    "price": 620.8,
+    "date": "2026-09-01",
+    "price": 616.6,
     "shares": 77670490
   },
   "closes": {
@@ -35,25 +36,29 @@
   "coverage": {
     "pnl": true,
     "bs": true,
-    "cf": false,
+    "cf": true,
     "market": true,
-    "ltm": false
+    "ltm": true
   },
   "note": {
-    "en": "CIAN's investor site is a separate host, ir.ciangroup.ru, which renders its document lists with JavaScript — the files themselves come down over ordinary HTTP. History runs to 2023 because each quarterly release restates only the prior year. CIAN carries no borrowings, so net debt is negative throughout: the company holds net cash.",
-    "ru": "Сайт «Циана» для инвесторов — отдельный хост ir.ciangroup.ru, списки документов на нём формирует JavaScript, тогда как сами файлы отдаются по обычному HTTP. История доходит до 2023 года, поскольку каждый квартальный релиз пересчитывает только предыдущий год. У «Циана» нет заёмных средств, поэтому чистый долг отрицателен во всех периодах: у компании чистая денежная позиция."
+    "en": "CIAN's investor site is a separate host, ir.ciangroup.ru, which renders its document lists with JavaScript — the files themselves come down over ordinary HTTP. History runs to 2023 because each quarterly release restates only the prior year. CIAN carries no borrowings, so net debt is negative throughout: the company holds net cash. The trailing-twelve-month column adds the half-year to 30 June 2026 and takes off the same half of 2025; note that the interim release prints the current period first while the annual releases print the comparative year first. The dividend figures are the amounts actually paid in each period, not declared: CIAN paid nothing in the first half of 2025 and 4.3 bn in the first half of 2026.",
+    "ru": "Сайт «Циана» для инвесторов — отдельный хост ir.ciangroup.ru, списки документов на нём формирует JavaScript, тогда как сами файлы отдаются по обычному HTTP. История доходит до 2023 года, поскольку каждый квартальный релиз пересчитывает только предыдущий год. У «Циана» нет заёмных средств, поэтому чистый долг отрицателен во всех периодах: у компании чистая денежная позиция. Колонка LTM прибавляет полугодие до 30 июня 2026 года и вычитает то же полугодие 2025 года; обратите внимание, что в промежуточном релизе текущий период печатается первым, а в годовых — первым идёт сравнительный год. Дивиденды — это фактически выплаченные за период суммы, а не объявленные: в первом полугодии 2025 года «Циан» не платил ничего, а в первом полугодии 2026 года выплатил 4,3 млрд руб."
   },
   "sources": [
     {
       "document": "2024__cian-q4-2024-financial-results-rus__cf6bc5a6.md",
-      "values": 10
+      "values": 11
     },
     {
       "document": "2025__cian-q4-2025-financial-results-rus__bf5c5cd3.md",
-      "values": 21
+      "values": 24
+    },
+    {
+      "document": "2026__cian-q2-2026-financial-results-rus__8291d981.md",
+      "values": 20
     }
   ],
-  "facts": 31,
+  "facts": 55,
   "sections": [
     {
       "key": "enterprise_value",
@@ -67,13 +72,15 @@
           "values": [
             47689.6809,
             40963.4164,
-            46975.1124
+            46975.1124,
+            47891.6241
           ],
           "sub": "growth",
           "subValues": [
             null,
             -14.1,
-            14.68
+            14.68,
+            1.95
           ]
         },
         {
@@ -84,10 +91,12 @@
           "values": [
             -6434.0,
             -9220.0,
-            -6120.0
+            -6120.0,
+            -4085.0
           ],
           "sub": "growth",
           "subValues": [
+            null,
             null,
             null,
             null
@@ -101,13 +110,15 @@
           "values": [
             41255.6809,
             31743.4164,
-            40855.1124
+            40855.1124,
+            43806.6241
           ],
           "sub": "growth",
           "subValues": [
             null,
             -23.06,
-            28.7
+            28.7,
+            7.22
           ]
         }
       ]
@@ -124,13 +135,15 @@
           "values": [
             11571.0,
             12987.0,
-            15156.0
+            15156.0,
+            16570.0
           ],
           "sub": "growth",
           "subValues": [
             null,
             12.24,
-            16.7
+            16.7,
+            9.33
           ]
         },
         {
@@ -141,13 +154,15 @@
           "values": [
             2093.0,
             2584.0,
-            3118.0
+            3118.0,
+            4313.0
           ],
           "sub": "growth",
           "subValues": [
             null,
             23.46,
-            20.67
+            20.67,
+            38.33
           ]
         },
         {
@@ -158,13 +173,15 @@
           "values": [
             18.0883,
             19.8968,
-            20.5727
+            20.5727,
+            26.029
           ],
           "sub": "pp",
           "subValues": [
             null,
             1.81,
-            0.68
+            0.68,
+            5.46
           ]
         },
         {
@@ -175,13 +192,15 @@
           "values": [
             1691.0,
             2464.0,
-            2862.0
+            2862.0,
+            3900.0
           ],
           "sub": "growth",
           "subValues": [
             null,
             45.71,
-            16.15
+            16.15,
+            36.27
           ]
         }
       ]
@@ -196,15 +215,17 @@
           "kind": "money",
           "note": "CFO - capex",
           "values": [
-            null,
-            null,
-            null
+            2285.0,
+            2654.0,
+            4153.0,
+            4183.0
           ],
           "sub": "growth",
           "subValues": [
             null,
-            null,
-            null
+            16.15,
+            56.48,
+            0.72
           ]
         },
         {
@@ -214,14 +235,16 @@
           "note": "",
           "values": [
             null,
-            null,
-            6475.0
+            0.0,
+            6475.0,
+            10808.0
           ],
           "sub": "growth",
           "subValues": [
             null,
             null,
-            null
+            null,
+            66.92
           ]
         }
       ]
@@ -238,7 +261,8 @@
           "values": [
             19.7113,
             12.2846,
-            13.103
+            13.103,
+            10.1569
           ]
         },
         {
@@ -249,7 +273,8 @@
           "values": [
             28.2021,
             16.6248,
-            16.4134
+            16.4134,
+            12.2799
           ]
         },
         {
@@ -260,7 +285,8 @@
           "values": [
             -3.0741,
             -3.5681,
-            -1.9628
+            -1.9628,
+            -0.9471
           ]
         },
         {
@@ -271,7 +297,8 @@
           "values": [
             6.6466,
             4.0927,
-            7.8937
+            7.8937,
+            11.8339
           ]
         }
       ]
@@ -287,14 +314,16 @@
           "note": "",
           "values": [
             null,
-            null,
-            13.7839
+            0.0,
+            13.7839,
+            22.5676
           ],
           "sub": "pp",
           "subValues": [
             null,
             null,
-            null
+            13.78,
+            8.78
           ]
         },
         {
@@ -303,15 +332,17 @@
           "kind": "pct",
           "note": "",
           "values": [
-            null,
-            null,
-            null
+            4.7914,
+            6.479,
+            8.8409,
+            8.7343
           ],
           "sub": "pp",
           "subValues": [
             null,
-            null,
-            null
+            1.69,
+            2.36,
+            -0.11
           ]
         },
         {
@@ -322,13 +353,15 @@
           "values": [
             23.5679,
             24.6178,
-            48.0928
+            48.0928,
+            96.3677
           ],
           "sub": "pp",
           "subValues": [
             null,
             1.05,
-            23.47
+            23.47,
+            48.27
           ]
         },
         {
@@ -339,13 +372,15 @@
           "values": [
             16.427,
             18.8885,
-            28.4154
+            28.4154,
+            48.3751
           ],
           "sub": "pp",
           "subValues": [
             null,
             2.46,
-            9.53
+            9.53,
+            19.96
           ]
         }
       ]
@@ -362,6 +397,7 @@
           "values": [
             null,
             null,
+            null,
             null
           ]
         },
@@ -371,6 +407,7 @@
           "kind": "money",
           "note": "non-IFRS",
           "values": [
+            null,
             null,
             null,
             null
@@ -384,7 +421,8 @@
           "values": [
             10294.0,
             13045.0,
-            10072.0
+            10072.0,
+            8062.0
           ]
         },
         {
@@ -395,7 +433,8 @@
           "values": [
             7175.0,
             10009.0,
-            5951.0
+            5951.0,
+            4047.0
           ]
         },
         {
@@ -406,7 +445,8 @@
           "values": [
             6434.0,
             9220.0,
-            6120.0
+            6120.0,
+            4085.0
           ]
         },
         {
@@ -415,6 +455,7 @@
           "kind": "money",
           "note": "",
           "values": [
+            0.0,
             0.0,
             0.0,
             0.0
@@ -428,7 +469,8 @@
           "values": [
             18.0,
             79.0,
-            65.0
+            65.0,
+            39.0
           ]
         },
         {
@@ -437,6 +479,7 @@
           "kind": "ratio",
           "note": "mn",
           "values": [
+            77.6705,
             77.6705,
             77.6705,
             77.6705

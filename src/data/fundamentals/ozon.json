@@ -3,7 +3,7 @@
   "name": "МКПАО «Озон»",
   "name_en": "Ozon",
   "unit": "RUB mn",
-  "generated": "2026-09-01",
+  "generated": "2026-09-02",
   "columns": [
     "2022",
     "2023",
@@ -12,8 +12,8 @@
     "LTM"
   ],
   "spot": {
-    "date": "2026-08-31",
-    "price": 2288,
+    "date": "2026-09-01",
+    "price": 2332,
     "shares": 216413733
   },
   "closes": {
@@ -53,22 +53,22 @@
   "sources": [
     {
       "document": "2025__1-1-mkpao-ozon-2025-konsolidirovannaya-finansovaya-otchetnos__manual-4.md",
-      "values": 13
+      "values": 16
     },
     {
       "document": "2025__ozon-obyavlyaet-finansovye-rezultaty-za-chetvertyi-kvartal-2__manual-7.md",
-      "values": 6
+      "values": 4
     },
     {
       "document": "2026__ozon-obyavlyaet-finansovye-rezultaty-za-vtoroi-kvartal-2026__manual-f.md",
-      "values": 6
+      "values": 2
     },
     {
       "document": "undated__ozon-databook-q2-26__manual-2.md",
-      "values": 121
+      "values": 125
     }
   ],
-  "facts": 146,
+  "facts": 147,
   "sections": [
     {
       "key": "enterprise_value",
@@ -84,7 +84,7 @@
             606932.3142,
             714381.7326,
             977973.6594,
-            495154.6211
+            504676.8254
           ],
           "sub": "growth",
           "subValues": [
@@ -92,7 +92,7 @@
             100.04,
             17.7,
             36.9,
-            -49.37
+            -48.4
           ]
         },
         {
@@ -126,7 +126,7 @@
             null,
             751060.7326,
             1039782.6594,
-            752673.6211
+            762195.8254
           ],
           "sub": "growth",
           "subValues": [
@@ -134,7 +134,7 @@
             null,
             null,
             38.44,
-            -27.61
+            -26.7
           ]
         }
       ]
@@ -262,7 +262,7 @@
           "values": [
             null,
             null,
-            null,
+            0.0,
             24862.0,
             null
           ],
@@ -291,7 +291,7 @@
             null,
             22.2378,
             7.7841,
-            4.3386
+            4.3935
           ]
         },
         {
@@ -304,7 +304,7 @@
             -14.2255,
             -12.0181,
             -1042.6158,
-            23.3288
+            23.7775
           ]
         },
         {
@@ -347,7 +347,7 @@
           "values": [
             null,
             null,
-            null,
+            0.0,
             2.5422,
             null
           ],
@@ -356,7 +356,7 @@
             null,
             null,
             null,
-            null,
+            2.54,
             null
           ]
         },
@@ -370,7 +370,7 @@
             null,
             30.2166,
             45.5498,
-            103.9249
+            101.9641
           ],
           "sub": "pp",
           "subValues": [
@@ -378,7 +378,7 @@
             null,
             null,
             15.33,
-            58.38
+            56.41
           ]
         },
         {
