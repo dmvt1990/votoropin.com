@@ -41,28 +41,32 @@
     "ltm": true
   },
   "note": {
-    "en": "The 2025 income statement comes from the annual report's own management-to-IFRS reconciliation, rounded to billions: the audited FY2025 filing is not yet in the collected set. The 2024 balance sheet comes from the issuer report rather than the audited statements, whose balance-sheet page does not survive conversion.",
-    "ru": "Отчёт о прибылях и убытках за 2025 год взят из сверки управленческой отчётности с МСФО в годовом отчёте и округлён до миллиардов: аудированная отчётность за 2025 год пока не попала в собранный корпус. Баланс за 2024 год взят из отчёта эмитента, поскольку соответствующая страница аудированной отчётности не пережила конвертацию."
+    "en": "Every year here comes from the audited IFRS statements for that year. Positive Technologies scans its balance-sheet page, so it carries no text and is read by OCR; each one foots to its own accounting identity and each year appears again as the comparative in the following filing, where the figures agree. Capital expenditure includes capitalised development, which is the larger part of it — 6.96 bn against 0.46 bn of plant in 2025 — so free cash flow here is well below the figure a reader would get from the \"purchases\" lines alone, and was negative in 2024 and 2025. Borrowings include lease liabilities, which the balance sheet reports inside the same line: the lease row in the memo is a component of total debt, not an addition to it.",
+    "ru": "Все годы здесь взяты из аудированной отчётности по МСФО за соответствующий год. «Группа Позитив» сканирует страницу с отчётом о финансовом положении, поэтому текста на ней нет и она прочитана OCR; каждый баланс сходится по собственному тождеству, и каждый год повторно встречается сравнительной колонкой в следующей отчётности, где цифры совпадают. В капитальные затраты включена капитализация разработки — она и составляет их большую часть: 6,96 млрд против 0,46 млрд по основным средствам в 2025 году, — поэтому свободный денежный поток здесь заметно ниже того, что даёт чтение одних только строк «приобретение», и в 2024 и 2025 годах он был отрицательным. Кредиты и займы включают обязательства по аренде, которые баланс показывает в той же строке: строка аренды в справке — часть общего долга, а не добавление к нему."
   },
   "sources": [
     {
-      "document": "2024__ifrs-2024-report-9a821feb4e3a0e69__95ff53ec.md",
-      "values": 16
+      "document": "2023__posi-2023-ifrs-report-683756877da095d9-1c9e4e566f8a8b9a__169079ba.md",
+      "values": 10
     },
     {
-      "document": "2025__attendance-pao-group-positive-2025-report__8258808a.md",
-      "values": 1
+      "document": "2024__ifrs-2024-report-9a821feb4e3a0e69__95ff53ec.md",
+      "values": 13
+    },
+    {
+      "document": "2025__posi-2025-ifrs-report__9882e5ac.md",
+      "values": 21
     },
     {
       "document": "2026-H1__posi-6m2026-ifrs-report__76accaf7.md",
-      "values": 30
+      "values": 29
     },
     {
       "document": "undated__pt-ar25-book-0704-1804-public__0fc5de31.md",
-      "values": 4
+      "values": 2
     }
   ],
-  "facts": 51,
+  "facts": 75,
   "sections": [
     {
       "key": "enterprise_value",
@@ -93,16 +97,16 @@
           "kind": "money",
           "note": "",
           "values": [
-            null,
-            null,
+            3993.417,
+            20123.658,
             21231.102,
             13171.366
           ],
           "sub": "growth",
           "subValues": [
             null,
-            null,
-            null,
+            403.92,
+            5.5,
             -37.96
           ]
         },
@@ -112,16 +116,16 @@
           "kind": "money",
           "note": "",
           "values": [
-            null,
-            null,
+            146193.5322,
+            165884.4732,
             91832.6616,
             81180.736
           ],
           "sub": "growth",
           "subValues": [
             null,
-            null,
-            null,
+            13.47,
+            -44.64,
             -11.6
           ]
         }
@@ -139,15 +143,15 @@
           "values": [
             22212.552,
             24456.985,
-            30900.0,
-            33684.517
+            30881.105,
+            33665.622
           ],
           "sub": "growth",
           "subValues": [
             null,
             10.1,
-            26.34,
-            9.01
+            26.27,
+            9.02
           ]
         },
         {
@@ -158,15 +162,15 @@
           "values": [
             10854.051,
             6506.843,
-            12300.0,
-            null
+            12345.958,
+            15670.139
           ],
           "sub": "growth",
           "subValues": [
             null,
             -40.05,
-            89.03,
-            null
+            89.74,
+            26.93
           ]
         },
         {
@@ -177,15 +181,15 @@
           "values": [
             48.8645,
             26.6053,
-            39.8058,
-            null
+            39.979,
+            46.5464
           ],
           "sub": "pp",
           "subValues": [
             null,
             -22.26,
-            13.2,
-            null
+            13.37,
+            6.57
           ]
         },
         {
@@ -196,15 +200,15 @@
           "values": [
             9696.212,
             3663.989,
-            7300.0,
-            10952.434
+            7273.521,
+            10925.955
           ],
           "sub": "growth",
           "subValues": [
             null,
             -62.21,
-            99.24,
-            50.03
+            98.51,
+            50.22
           ]
         }
       ]
@@ -219,15 +223,15 @@
           "kind": "money",
           "note": "CFO - capex",
           "values": [
-            4845.738,
-            1463.36,
-            null,
-            null
+            1899.135,
+            -3785.245,
+            -1020.507,
+            7400.224
           ],
           "sub": "growth",
           "subValues": [
             null,
-            -69.8,
+            -299.31,
             null,
             null
           ]
@@ -240,14 +244,14 @@
           "values": [
             4792.26,
             6546.54,
-            null,
-            null
+            0.0,
+            1999.689
           ],
           "sub": "growth",
           "subValues": [
             null,
             36.61,
-            null,
+            -100.0,
             null
           ]
         }
@@ -263,10 +267,10 @@
           "kind": "ratio",
           "note": "",
           "values": [
-            null,
-            null,
-            7.4661,
-            null
+            13.469,
+            25.4938,
+            7.4383,
+            5.1806
           ]
         },
         {
@@ -277,8 +281,8 @@
           "values": [
             14.6655,
             39.782,
-            9.6714,
-            6.2095
+            9.7067,
+            6.2246
           ]
         },
         {
@@ -287,10 +291,10 @@
           "kind": "ratio",
           "note": "",
           "values": [
-            null,
-            null,
-            1.7261,
-            null
+            0.3679,
+            3.0927,
+            1.7197,
+            0.8405
           ]
         },
         {
@@ -299,8 +303,8 @@
           "kind": "ratio",
           "note": "",
           "values": [
-            null,
-            null,
+            10.7725,
+            8.5441,
             2.9007,
             3.242
           ]
@@ -319,15 +323,15 @@
           "values": [
             3.3701,
             4.4913,
-            null,
-            null
+            0.0,
+            2.9403
           ],
           "sub": "pp",
           "subValues": [
             null,
             1.12,
-            null,
-            null
+            -4.49,
+            2.94
           ]
         },
         {
@@ -336,17 +340,17 @@
           "kind": "pct",
           "note": "",
           "values": [
-            3.4077,
-            1.0039,
-            null,
-            null
+            1.3355,
+            -2.5969,
+            -1.4454,
+            10.8812
           ],
           "sub": "pp",
           "subValues": [
             null,
-            -2.4,
-            null,
-            null
+            -3.93,
+            1.15,
+            12.33
           ]
         },
         {
@@ -355,17 +359,17 @@
           "kind": "pct",
           "note": "period-end equity",
           "values": [
-            null,
-            null,
-            29.9924,
-            52.2104
+            73.4545,
+            21.4773,
+            29.8836,
+            52.0842
           ],
           "sub": "pp",
           "subValues": [
             null,
-            null,
-            null,
-            22.22
+            -51.98,
+            8.41,
+            22.2
           ]
         },
         {
@@ -374,17 +378,17 @@
           "kind": "pct",
           "note": "period-end assets",
           "values": [
-            null,
-            null,
-            11.9631,
-            21.5623
+            34.1848,
+            6.95,
+            11.9197,
+            21.5102
           ],
           "sub": "pp",
           "subValues": [
             null,
-            null,
-            null,
-            9.6
+            -27.23,
+            4.97,
+            9.59
           ]
         }
       ]
@@ -423,8 +427,8 @@
           "kind": "money",
           "note": "",
           "values": [
-            null,
-            null,
+            28364.134,
+            52718.993,
             61020.792,
             50794.405
           ]
@@ -435,8 +439,8 @@
           "kind": "money",
           "note": "",
           "values": [
-            null,
-            null,
+            13200.288,
+            17059.782,
             24339.481,
             20977.499
           ]
@@ -447,8 +451,8 @@
           "kind": "money",
           "note": "",
           "values": [
-            null,
-            null,
+            1683.655,
+            6225.167,
             2779.128,
             7333.739
           ]
@@ -459,8 +463,8 @@
           "kind": "money",
           "note": "",
           "values": [
-            null,
-            18883.058,
+            5677.072,
+            26348.825,
             24010.23,
             20505.105
           ]
@@ -471,10 +475,10 @@
           "kind": "money",
           "note": "excluded from net debt",
           "values": [
-            null,
-            null,
-            null,
-            null
+            633.058,
+            915.438,
+            763.491,
+            675.946
           ]
         },
         {

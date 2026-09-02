@@ -36,25 +36,29 @@
   "coverage": {
     "pnl": true,
     "bs": true,
-    "cf": false,
+    "cf": true,
     "market": true,
     "ltm": true
   },
   "note": {
-    "en": "HeadHunter's disclosure centre files material facts, not financial statements, so everything here comes from the quarterly earnings releases on its own investor site. Their cash-flow appendix converts with the last digit of every figure clipped, so it is left out rather than read wrong: free cash flow and dividends are blank. Net income is the share attributable to the Company's owners.",
-    "ru": "Центр раскрытия, через который отчитывается «Хэдхантер», публикует существенные факты, а не финансовую отчётность, поэтому всё здесь взято из квартальных релизов на его собственном сайте для инвесторов. Приложение с движением денежных средств конвертируется с потерей последней цифры в каждом числе, поэтому оно не используется вовсе, а итоговая строка отчёта о прибылях и убытках переносится так, что теряет колонки. Свободный денежный поток, дивиденды, чистая прибыль и мультипликаторы на её основе отсутствуют; выручка, EBITDA, баланс и производные от них читаются прямо из отчётности."
+    "en": "HeadHunter's disclosure centre files material facts, not financial statements, so everything here comes from the quarterly earnings releases on its own investor site. Those releases lay their statements out as separate runs of captions and figures, which ordinary text extraction cannot pair up, so each statement page is rebuilt from its geometry and every cash-flow column is cross-footed to the subtotals the issuer prints. Net income is the share attributable to owners of the Company: non-controlling interests took 15% of group profit in 2025, and market capitalisation is a claim on the parent's share alone. Equity, by contrast, is the group total including those interests, as it is for every other issuer here — so return on equity and price to book are not on a like-for-like basis with net income, and the 2024 figures are dominated by the 40.0 bn dividend paid that year, which left year-end equity at a fraction of the profit earned against it.",
+    "ru": "Центр раскрытия, через который отчитывается «Хэдхантер», публикует существенные факты, а не финансовую отчётность, поэтому всё здесь взято из квартальных релизов на его собственном сайте для инвесторов. В этих релизах подписи строк и цифры набраны двумя отдельными потоками текста, которые обычное извлечение не соединяет, поэтому каждая страница отчётности восстановлена по геометрии страницы, а каждая колонка отчёта о движении денежных средств сведена с промежуточными итогами самого эмитента. Чистая прибыль — доля, причитающаяся собственникам Компании: на неконтролирующие доли в 2025 году пришлось 15% прибыли группы, а рыночная капитализация — требование только на долю материнской компании. Капитал, напротив, взят по группе целиком, включая неконтролирующие доли, — как и у всех остальных эмитентов здесь, — поэтому рентабельность капитала и P/B несопоставимы с чистой прибылью напрямую, а показатели 2024 года определяются выплаченными в том году дивидендами на 40,0 млрд рублей, после которых капитал на конец года оказался много меньше заработанной за год прибыли."
   },
   "sources": [
     {
+      "document": "2023__20240306-fin-result-2023-pdf__390ea045.md",
+      "values": 44
+    },
+    {
       "document": "2025-FY__hedhanter-obyavlyaet-finansovye-rezultaty-za-iv-kvartal-2025__ddb2f63d.md",
-      "values": 20
+      "values": 44
     },
     {
       "document": "2026-Q2__head-reliz-2-kv-2026-pdf__5e53e16e.md",
-      "values": 22
+      "values": 39
     }
   ],
-  "facts": 42,
+  "facts": 127,
   "sections": [
     {
       "key": "enterprise_value",
@@ -85,8 +89,8 @@
           "kind": "money",
           "note": "",
           "values": [
-            null,
-            null,
+            -19451.923,
+            -3923.405,
             -14496.736,
             -7788.118
           ],
@@ -104,16 +108,16 @@
           "kind": "money",
           "note": "",
           "values": [
-            null,
-            null,
+            119743.5851,
+            171132.6408,
             122905.7452,
             118148.4281
           ],
           "sub": "growth",
           "subValues": [
             null,
-            null,
-            null,
+            42.92,
+            -28.18,
             -3.87
           ]
         }
@@ -129,7 +133,7 @@
           "kind": "money",
           "note": "",
           "values": [
-            null,
+            29449.103,
             39618.86,
             41203.402,
             41057.148
@@ -137,7 +141,7 @@
           "sub": "growth",
           "subValues": [
             null,
-            null,
+            34.53,
             4.0,
             -0.35
           ]
@@ -148,7 +152,7 @@
           "kind": "money",
           "note": "operating profit + D&A",
           "values": [
-            null,
+            16986.527,
             21560.225,
             20602.561,
             20567.929
@@ -156,7 +160,7 @@
           "sub": "growth",
           "subValues": [
             null,
-            null,
+            26.93,
             -4.44,
             -0.17
           ]
@@ -167,7 +171,7 @@
           "kind": "pct",
           "note": "",
           "values": [
-            null,
+            57.681,
             54.4191,
             50.0021,
             50.0959
@@ -175,7 +179,7 @@
           "sub": "pp",
           "subValues": [
             null,
-            null,
+            -3.26,
             -4.42,
             0.09
           ]
@@ -186,17 +190,17 @@
           "kind": "money",
           "note": "attributable to shareholders",
           "values": [
-            null,
-            null,
-            null,
-            null
+            12221.255,
+            18396.187,
+            15245.646,
+            15724.57
           ],
           "sub": "growth",
           "subValues": [
             null,
-            null,
-            null,
-            null
+            50.53,
+            -17.13,
+            3.14
           ]
         }
       ]
@@ -211,17 +215,17 @@
           "kind": "money",
           "note": "CFO - capex",
           "values": [
-            null,
-            null,
-            null,
-            null
+            15900.428,
+            23086.1,
+            20492.051,
+            17121.598
           ],
           "sub": "growth",
           "subValues": [
             null,
-            null,
-            null,
-            null
+            45.19,
+            -11.24,
+            -16.45
           ]
         },
         {
@@ -230,17 +234,17 @@
           "kind": "money",
           "note": "",
           "values": [
-            null,
-            null,
-            null,
-            null
+            0.0,
+            40018.137,
+            10360.146,
+            20738.613
           ],
           "sub": "growth",
           "subValues": [
             null,
             null,
-            null,
-            null
+            -74.11,
+            100.18
           ]
         }
       ]
@@ -255,8 +259,8 @@
           "kind": "ratio",
           "note": "",
           "values": [
-            null,
-            null,
+            7.0493,
+            7.9374,
             5.9656,
             5.7443
           ]
@@ -267,10 +271,10 @@
           "kind": "ratio",
           "note": "",
           "values": [
-            null,
-            null,
-            null,
-            null
+            11.3896,
+            9.5159,
+            9.0126,
+            8.0089
           ]
         },
         {
@@ -279,8 +283,8 @@
           "kind": "ratio",
           "note": "",
           "values": [
-            null,
-            null,
+            -1.1451,
+            -0.182,
             -0.7036,
             -0.3787
           ]
@@ -291,7 +295,7 @@
           "kind": "ratio",
           "note": "",
           "values": [
-            null,
+            7.0943,
             37.5082,
             10.4508,
             12.7622
@@ -309,17 +313,17 @@
           "kind": "pct",
           "note": "",
           "values": [
-            null,
-            null,
-            null,
-            null
+            0.0,
+            22.8602,
+            7.54,
+            16.4675
           ],
           "sub": "pp",
           "subValues": [
             null,
-            null,
-            null,
-            null
+            22.86,
+            -15.32,
+            8.93
           ]
         },
         {
@@ -328,17 +332,17 @@
           "kind": "pct",
           "note": "",
           "values": [
-            null,
-            null,
-            null,
-            null
+            11.4231,
+            13.1878,
+            14.9139,
+            13.5954
           ],
           "sub": "pp",
           "subValues": [
             null,
-            null,
-            null,
-            null
+            1.76,
+            1.73,
+            -1.32
           ]
         },
         {
@@ -347,17 +351,17 @@
           "kind": "pct",
           "note": "period-end equity",
           "values": [
-            null,
-            null,
-            null,
-            null
+            62.2876,
+            394.1639,
+            115.9581,
+            159.3497
           ],
           "sub": "pp",
           "subValues": [
             null,
-            null,
-            null,
-            null
+            331.88,
+            -278.21,
+            43.39
           ]
         },
         {
@@ -366,17 +370,17 @@
           "kind": "pct",
           "note": "period-end assets",
           "values": [
-            null,
-            null,
-            null,
-            null
+            33.2472,
+            75.1056,
+            43.7057,
+            54.1883
           ],
           "sub": "pp",
           "subValues": [
             null,
-            null,
-            null,
-            null
+            41.86,
+            -31.4,
+            10.48
           ]
         }
       ]
@@ -391,10 +395,10 @@
           "kind": "money",
           "note": "company definition, non-IFRS",
           "values": [
-            null,
-            null,
-            null,
-            null
+            17378.335,
+            23229.459,
+            22761.895,
+            22305.959
           ]
         },
         {
@@ -403,10 +407,10 @@
           "kind": "money",
           "note": "non-IFRS",
           "values": [
-            null,
-            null,
-            null,
-            null
+            12480.339,
+            24438.148,
+            20803.524,
+            20510.045
           ]
         },
         {
@@ -415,7 +419,7 @@
           "kind": "money",
           "note": "",
           "values": [
-            null,
+            36758.695,
             24493.775,
             34882.549,
             29018.379
@@ -427,7 +431,7 @@
           "kind": "money",
           "note": "",
           "values": [
-            null,
+            19620.678,
             4667.142,
             13147.547,
             9867.965
@@ -439,7 +443,7 @@
           "kind": "money",
           "note": "",
           "values": [
-            null,
+            22595.519,
             5435.959,
             14501.243,
             7788.118
@@ -451,8 +455,8 @@
           "kind": "money",
           "note": "",
           "values": [
-            null,
-            null,
+            3143.596,
+            1512.554,
             4.507,
             0.0
           ]
@@ -463,10 +467,10 @@
           "kind": "money",
           "note": "excluded from net debt",
           "values": [
-            null,
-            2297.482,
-            2501.935,
-            2576.87
+            346.606,
+            2487.246,
+            3131.027,
+            3232.675
           ]
         },
         {

@@ -41,8 +41,8 @@
     "ltm": true
   },
   "note": {
-    "en": "Astra exports its statement of financial position as an image with no text layer — one page in every filing, always that statement — so the balance-sheet figures here were read by OCR rather than extracted. They are confirmed against Astra's own quarterly databook, a spreadsheet that shares none of the same machinery, and agree with it exactly in every year shown. The income statement and cash-flow statement are read from the text of the filings as usual.",
-    "ru": "«Астра» выгружает отчёт о финансовом положении картинкой без текстового слоя — по одной такой странице в каждом выпуске отчётности, и всегда именно этот отчёт, — поэтому балансовые показатели здесь распознаны, а не извлечены из текста. Они сверены с собственным квартальным датабуком «Астры», отдельным файлом, не имеющим с распознаванием ничего общего, и полностью совпадают с ним за все показанные годы. Отчёт о прибылях и убытках и отчёт о движении денежных средств читаются из текста отчётности обычным образом."
+    "en": "Astra exports its statement of financial position as an image with no text layer — one page in every filing, always that statement — so the balance-sheet figures here were read by OCR rather than extracted. They are confirmed against Astra's own quarterly databook, a spreadsheet that shares none of the same machinery, and agree with it exactly in every year shown. The income statement and cash-flow statement are read from the text of the filings as usual. Capital expenditure is the three investing lines together: plant, software Astra creates, and software it buys. The created-software line is the largest of the three — 2 891 mn of the 4 419 mn spent in 2025 — so free cash flow here is well below what the \"purchases\" lines alone would give.",
+    "ru": "«Астра» выгружает отчёт о финансовом положении картинкой без текстового слоя — по одной такой странице в каждом выпуске отчётности, и всегда именно этот отчёт, — поэтому балансовые показатели здесь распознаны, а не извлечены из текста. Они сверены с собственным квартальным датабуком «Астры», отдельным файлом, не имеющим с распознаванием ничего общего, и полностью совпадают с ним за все показанные годы. Отчёт о прибылях и убытках и отчёт о движении денежных средств читаются из текста отчётности обычным образом. Капитальные затраты — это три строки инвестиционного раздела вместе: основные средства, создаваемое «Астрой» программное обеспечение и покупаемое. Строка создания — крупнейшая из трёх: 2 891 млн из 4 419 млн, потраченных в 2025 году, — поэтому свободный денежный поток здесь заметно ниже того, что дают одни только строки «приобретение»."
   },
   "sources": [
     {
@@ -219,17 +219,17 @@
           "kind": "money",
           "note": "CFO - capex",
           "values": [
-            3039.345,
-            3376.906,
-            4164.777,
-            3484.559
+            2145.638,
+            1376.684,
+            1273.69,
+            395.894
           ],
           "sub": "growth",
           "subValues": [
             null,
-            11.11,
-            23.33,
-            -16.33
+            -35.84,
+            -7.48,
+            -68.92
           ]
         },
         {
@@ -336,17 +336,17 @@
           "kind": "pct",
           "note": "",
           "values": [
-            2.886,
-            3.425,
-            7.8404,
-            7.6678
+            2.0374,
+            1.3963,
+            2.3978,
+            0.8712
           ],
           "sub": "pp",
           "subValues": [
             null,
-            0.54,
-            4.42,
-            -0.17
+            -0.64,
+            1.0,
+            -1.53
           ]
         },
         {

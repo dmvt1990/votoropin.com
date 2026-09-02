@@ -52,12 +52,20 @@
   },
   "sources": [
     {
+      "document": "2023__ozon-rus-konsolidirovannaya-finansovaya-otchetnost-2023-isa__manual-5.md",
+      "values": 21
+    },
+    {
       "document": "2025__1-1-mkpao-ozon-2025-konsolidirovannaya-finansovaya-otchetnos__manual-4.md",
       "values": 16
     },
     {
       "document": "2025__ozon-obyavlyaet-finansovye-rezultaty-za-chetvertyi-kvartal-2__manual-7.md",
       "values": 4
+    },
+    {
+      "document": "2026-Q2__rus-ozon-ipjsc-consolidated-fs-ifrs-2q2026__manual-e.md",
+      "values": 2
     },
     {
       "document": "2026__ozon-obyavlyaet-finansovye-rezultaty-za-vtoroi-kvartal-2026__manual-f.md",
@@ -68,7 +76,7 @@
       "values": 125
     }
   ],
-  "facts": 147,
+  "facts": 170,
   "sections": [
     {
       "key": "enterprise_value",
@@ -101,8 +109,8 @@
           "kind": "money",
           "note": "",
           "values": [
-            null,
-            null,
+            9784.0,
+            -394.0,
             36679.0,
             61809.0,
             257519.0
@@ -110,7 +118,7 @@
           "sub": "growth",
           "subValues": [
             null,
-            null,
+            -104.03,
             null,
             68.51,
             316.64
@@ -122,8 +130,8 @@
           "kind": "money",
           "note": "",
           "values": [
-            null,
-            null,
+            313196.0537,
+            606538.3142,
             751060.7326,
             1039782.6594,
             762195.8254
@@ -131,8 +139,8 @@
           "sub": "growth",
           "subValues": [
             null,
-            null,
-            null,
+            93.66,
+            23.83,
             38.44,
             -26.7
           ]
@@ -239,8 +247,8 @@
           "kind": "money",
           "note": "CFO - capex",
           "values": [
-            null,
-            null,
+            -54566.0,
+            57884.0,
             215862.0,
             445465.0,
             514589.0
@@ -249,7 +257,7 @@
           "subValues": [
             null,
             null,
-            null,
+            272.92,
             106.37,
             15.52
           ]
@@ -264,7 +272,7 @@
             null,
             0.0,
             24862.0,
-            null
+            42826.0
           ],
           "sub": "growth",
           "subValues": [
@@ -272,7 +280,7 @@
             null,
             null,
             null,
-            null
+            72.25
           ]
         }
       ]
@@ -287,8 +295,8 @@
           "kind": "ratio",
           "note": "",
           "values": [
-            null,
-            null,
+            -97.4171,
+            94.7864,
             22.2378,
             7.7841,
             4.3935
@@ -313,8 +321,8 @@
           "kind": "ratio",
           "note": "",
           "values": [
-            null,
-            null,
+            -3.0432,
+            -0.0616,
             1.086,
             0.4627,
             1.4844
@@ -349,7 +357,7 @@
             null,
             0.0,
             2.5422,
-            null
+            8.4858
           ],
           "sub": "pp",
           "subValues": [
@@ -357,7 +365,7 @@
             null,
             null,
             2.54,
-            null
+            5.94
           ]
         },
         {
@@ -366,8 +374,8 @@
           "kind": "pct",
           "note": "",
           "values": [
-            null,
-            null,
+            -17.9841,
+            9.5371,
             30.2166,
             45.5498,
             101.9641
@@ -375,8 +383,8 @@
           "sub": "pp",
           "subValues": [
             null,
-            null,
-            null,
+            27.52,
+            20.68,
             15.33,
             56.41
           ]
@@ -408,8 +416,8 @@
           "kind": "pct",
           "note": "period-end assets",
           "values": [
-            null,
-            null,
+            -20.4293,
+            -8.9627,
             -6.6771,
             -0.0656,
             1.215
@@ -417,8 +425,8 @@
           "sub": "pp",
           "subValues": [
             null,
-            null,
-            null,
+            11.47,
+            2.29,
             6.61,
             1.28
           ]
@@ -461,8 +469,8 @@
           "kind": "money",
           "note": "",
           "values": [
-            null,
-            null,
+            284821.0,
+            476026.0,
             890235.0,
             1429778.0,
             1746850.0
@@ -474,8 +482,8 @@
           "kind": "money",
           "note": "",
           "values": [
-            null,
-            null,
+            -16647.0,
+            -66577.0,
             -132500.0,
             -148406.0,
             -153968.0
@@ -487,8 +495,8 @@
           "kind": "money",
           "note": "",
           "values": [
-            null,
-            null,
+            90469.0,
+            169814.0,
             349198.0,
             650730.0,
             718700.0
@@ -500,8 +508,8 @@
           "kind": "money",
           "note": "",
           "values": [
-            null,
-            null,
+            94115.0,
+            104371.0,
             118450.0,
             81412.0,
             85935.0
@@ -513,8 +521,8 @@
           "kind": "money",
           "note": "excluded from net debt",
           "values": [
-            null,
-            null,
+            74495.0,
+            124335.0,
             228656.0,
             325960.0,
             372033.0
