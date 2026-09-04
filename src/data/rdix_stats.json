@@ -1,31 +1,31 @@
 {
-  "as_of": "2026-09-01",
+  "as_of": "2026-09-03",
   "inception_date": "2018-08-01",
   "benchmark_ticker": "MCFTRR",
   "returns": {
     "1m": {
-      "index": -3.81,
-      "benchmark": -3.59
+      "index": -2.01,
+      "benchmark": -3.32
     },
     "3m": {
-      "index": -9.24,
-      "benchmark": -11.89
+      "index": -8.25,
+      "benchmark": -12.71
     },
     "ytd": {
-      "index": -16.38,
-      "benchmark": -15.59
+      "index": -14.81,
+      "benchmark": -15.35
     },
     "1y": {
-      "index": -19.38,
-      "benchmark": -18.75
+      "index": -17.65,
+      "benchmark": -17.97
     },
     "inception": {
-      "index": 83.03,
-      "benchmark": 60.09
+      "index": 86.45,
+      "benchmark": 60.54
     }
   },
   "ann_vol_pct": 23.79,
-  "bench_ann_vol_pct": 26.93,
+  "bench_ann_vol_pct": 26.92,
   "max_drawdown": {
     "value_pct": -46.36,
     "peak_date": "2024-05-17",
@@ -39,8 +39,8 @@
   "beta": 0.755,
   "sharpe": -2.048,
   "bench_sharpe": -1.597,
-  "sortino": 0.317,
-  "calmar": 0.167,
+  "sortino": 0.327,
+  "calmar": 0.173,
   "rf_instrument": "CBR Key Rate (annual, end-of-month)",
   "rf_frequency": "monthly",
   "rf_type": "nominal"
