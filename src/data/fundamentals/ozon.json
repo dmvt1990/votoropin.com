@@ -5,6 +5,8 @@
   "unit": "RUB mn",
   "generated": "2026-09-04",
   "columns": [
+    "2020",
+    "2021",
     "2022",
     "2023",
     "2024",
@@ -17,6 +19,16 @@
     "shares": 216413733
   },
   "closes": {
+    "2020": {
+      "secid": "OZON",
+      "date": "2020-12-30",
+      "close": 3289.5
+    },
+    "2021": {
+      "secid": "OZON",
+      "date": "2021-12-30",
+      "close": 2316.5
+    },
     "2022": {
       "secid": "OZON",
       "date": "2022-12-30",
@@ -44,6 +56,8 @@
     "weighted average",
     "weighted average",
     "weighted average",
+    "weighted average",
+    "weighted average",
     "issue size"
   ],
   "coverage": {
@@ -54,10 +68,18 @@
     "ltm": true
   },
   "note": {
-    "en": "Net debt here adds back the money Ozon's fintech arm holds for its customers — 882 bn roubles at 30 June 2026 — because that cash sits on the asset side with a matching liability against it. Netting only borrowings would count client money as shareholders', which put enterprise value below zero before this was corrected. Equity has been negative since the accumulated deficit passed paid-in capital, so P/B and return on equity are left blank rather than shown as negative numbers that read like ratios. Revenue, adjusted EBITDA and net income run from 2018 out of the company's databook; the balance sheet and cash flow start at 2022, from the audited FY2023 filing. Free cash flow removes the fintech book's own growth from operating cash flow, for the same reason net debt adds the liability back: the deposits taken, net of the lending they fund, are money passing through the group rather than cash earned for shareholders. In 2025 that is 316 bn of the 539 bn of cash from operations, and 262 bn in the first half of 2026 alone; the memo row beneath free cash flow shows the amount removed each period so the adjustment can be undone. It stops at the funding — the arm's interest received and paid stay in, because they are earnings rather than the book expanding — so this is free cash flow before the fintech book grows, not e-commerce free cash flow.",
-    "ru": "Чистый долг здесь включает средства, которые финтех-направление «Озона» держит для клиентов, — 882 млрд рублей на 30 июня 2026 года, — поскольку эти деньги стоят в активах, а против них в пассивах стоит соответствующее обязательство. Если вычесть из денежных средств только заёмные, клиентские деньги окажутся посчитаны как принадлежащие акционерам: до этой поправки стоимость компании выходила отрицательной. Собственный капитал отрицателен с тех пор, как накопленный убыток превысил оплаченный капитал, поэтому P/B и рентабельность капитала оставлены пустыми, а не показаны отрицательными числами, похожими на коэффициенты. Выручка, скорректированная EBITDA и чистая прибыль приведены с 2018 года по датабуку компании; баланс и отчёт о движении денежных средств — с 2022 года, из аудированной отчётности за 2023 год. Из операционного потока при расчёте свободного денежного потока исключён     прирост самого финтех-портфеля — по той же причине, по которой чистый     долг включает встречное обязательство: привлечённые средства клиентов за     вычетом выданных им займов представляют собой деньги, проходящие через     группу, а не заработанные для акционеров. В 2025 году это 316 млрд из     539 млрд рублей операционного потока, а только за первое полугодие 2026     года — 262 млрд. Строка под свободным денежным потоком показывает     исключённую сумму за каждый период, так что корректировку можно снять.     Исключено только фондирование: полученные и уплаченные финтехом проценты     остаются внутри, поскольку это заработок, а не рост портфеля, — поэтому показатель означает свободный денежный поток до роста финтех-портфеля, а не свободный денежный поток электронной коммерции."
+    "en": "Net debt here adds back the money Ozon's fintech arm holds for its customers — 882 bn roubles at 30 June 2026 — because that cash sits on the asset side with a matching liability against it. Netting only borrowings would count client money as shareholders', which put enterprise value below zero before this was corrected. Equity has been negative since the accumulated deficit passed paid-in capital, so P/B and return on equity are left blank rather than shown as negative numbers that read like ratios. Revenue, adjusted EBITDA and net income run from 2018 out of the company's databook; the balance sheet and cash flow start at 2022, from the audited FY2023 filing. 2020 and 2021 come from the 20-F filings Ozon made to the SEC as Ozon Holdings PLC, before the move to Russia. They describe the same group: 2022 appears in both, and its revenue, loss, weighted-average share count, total assets, borrowings, leases and capital expenditure all agree to the million with the Russian statements beside them. Gross profit is deliberately not carried back — the 20-F strikes it after cost of sales alone, which is a different line from the one the databook prints, and splicing the two would put a break mid-series with nothing marking it. Free cash flow removes the fintech book's own growth from operating cash flow, for the same reason net debt adds the liability back: the deposits taken, net of the lending they fund, are money passing through the group rather than cash earned for shareholders. In 2025 that is 316 bn of the 539 bn of cash from operations, and 262 bn in the first half of 2026 alone; the memo row beneath free cash flow shows the amount removed each period so the adjustment can be undone. It stops at the funding — the arm's interest received and paid stay in, because they are earnings rather than the book expanding — so this is free cash flow before the fintech book grows, not e-commerce free cash flow.",
+    "ru": "Чистый долг здесь включает средства, которые финтех-направление «Озона» держит для клиентов, — 882 млрд рублей на 30 июня 2026 года, — поскольку эти деньги стоят в активах, а против них в пассивах стоит соответствующее обязательство. Если вычесть из денежных средств только заёмные, клиентские деньги окажутся посчитаны как принадлежащие акционерам: до этой поправки стоимость компании выходила отрицательной. Собственный капитал отрицателен с тех пор, как накопленный убыток превысил оплаченный капитал, поэтому P/B и рентабельность капитала оставлены пустыми, а не показаны отрицательными числами, похожими на коэффициенты. Выручка, скорректированная EBITDA и чистая прибыль приведены с 2018 года по датабуку компании; баланс и отчёт о движении денежных средств — с 2022 года, из аудированной отчётности за 2023 год. 2020 и 2021 годы взяты из отчётов по форме 20-F, которые «Озон» подавал в SEC как Ozon Holdings PLC, до переезда в Россию. Это та же группа: 2022 год есть в обоих источниках, и выручка, убыток, средневзвешенное количество акций, итог активов, заёмные средства, обязательства по аренде и капитальные затраты совпадают в них до миллиона. Валовая прибыль намеренно не продлена назад: в 20-F она считается только за вычетом себестоимости продаж, то есть по другой строке, чем в дейтабуке, и их склейка создала бы разрыв определения в середине ряда. Из операционного потока при расчёте свободного денежного потока исключён     прирост самого финтех-портфеля — по той же причине, по которой чистый     долг включает встречное обязательство: привлечённые средства клиентов за     вычетом выданных им займов представляют собой деньги, проходящие через     группу, а не заработанные для акционеров. В 2025 году это 316 млрд из     539 млрд рублей операционного потока, а только за первое полугодие 2026     года — 262 млрд. Строка под свободным денежным потоком показывает     исключённую сумму за каждый период, так что корректировку можно снять.     Исключено только фондирование: полученные и уплаченные финтехом проценты     остаются внутри, поскольку это заработок, а не рост портфеля, — поэтому показатель означает свободный денежный поток до роста финтех-портфеля, а не свободный денежный поток электронной коммерции."
   },
   "sources": [
+    {
+      "document": "2021__20-f-2021__manual-4.md",
+      "values": 6
+    },
+    {
+      "document": "2022__20-f-2022__manual-a.md",
+      "values": 25
+    },
     {
       "document": "2023__ozon-rus-konsolidirovannaya-finansovaya-otchetnost-2023-isa__manual-5.md",
       "values": 30
@@ -87,7 +109,7 @@
       "values": 141
     }
   ],
-  "facts": 211,
+  "facts": 242,
   "sections": [
     {
       "key": "enterprise_value",
@@ -99,6 +121,8 @@
           "kind": "money",
           "note": "",
           "values": [
+            541471.2791,
+            476318.3408,
             292670.4764,
             585753.9417,
             689876.1848,
@@ -108,6 +132,8 @@
           "sub": "growth",
           "subValues": [
             null,
+            -12.03,
+            -38.56,
             100.14,
             17.78,
             36.82,
@@ -120,6 +146,8 @@
           "kind": "money",
           "note": "borrowings and leases, less cash and short-term investments",
           "values": [
+            -78786.0,
+            -21408.0,
             84279.0,
             123941.0,
             265335.0,
@@ -128,6 +156,8 @@
           ],
           "sub": "growth",
           "subValues": [
+            null,
+            null,
             null,
             47.06,
             114.08,
@@ -141,6 +171,8 @@
           "kind": "money",
           "note": "",
           "values": [
+            462685.2791,
+            454910.3408,
             376949.4764,
             709694.9417,
             955211.1848,
@@ -150,6 +182,8 @@
           "sub": "growth",
           "subValues": [
             null,
+            -1.68,
+            -17.14,
             88.27,
             34.59,
             39.41,
@@ -168,6 +202,8 @@
           "kind": "money",
           "note": "",
           "values": [
+            104350.0,
+            178215.0,
             277115.0,
             424291.0,
             613324.0,
@@ -177,6 +213,8 @@
           "sub": "growth",
           "subValues": [
             null,
+            70.79,
+            55.49,
             53.11,
             44.55,
             62.72,
@@ -189,6 +227,8 @@
           "kind": "money",
           "note": "",
           "values": [
+            null,
+            -10612.0,
             32691.0,
             44442.0,
             99885.0,
@@ -197,6 +237,8 @@
           ],
           "sub": "growth",
           "subValues": [
+            null,
+            null,
             null,
             35.95,
             124.75,
@@ -210,6 +252,8 @@
           "kind": "money",
           "note": "operating profit + D&A",
           "values": [
+            -12360.0,
+            -48976.0,
             -24379.0,
             -4673.0,
             33774.0,
@@ -218,6 +262,8 @@
           ],
           "sub": "growth",
           "subValues": [
+            null,
+            null,
             null,
             null,
             null,
@@ -231,6 +277,8 @@
           "kind": "pct",
           "note": "",
           "values": [
+            -11.8448,
+            -27.4814,
             -8.7974,
             -1.1014,
             5.5067,
@@ -240,6 +288,8 @@
           "sub": "pp",
           "subValues": [
             null,
+            -15.64,
+            18.68,
             7.7,
             6.61,
             7.88,
@@ -252,6 +302,8 @@
           "kind": "money",
           "note": "attributable to shareholders",
           "values": [
+            -22264.0,
+            -56779.0,
             -58187.0,
             -42665.0,
             -59442.0,
@@ -260,6 +312,8 @@
           ],
           "sub": "growth",
           "subValues": [
+            null,
+            null,
             null,
             null,
             null,
@@ -279,6 +333,8 @@
           "kind": "money",
           "note": "operating cash flow − capex, as the issuer classifies interest",
           "values": [
+            -270.0,
+            -32967.0,
             -55519.0,
             40012.0,
             61631.0,
@@ -287,6 +343,8 @@
           ],
           "sub": "growth",
           "subValues": [
+            null,
+            null,
             null,
             null,
             54.03,
@@ -300,6 +358,8 @@
           "kind": "money",
           "note": "customer deposits taken, net of lending",
           "values": [
+            null,
+            null,
             953.0,
             17872.0,
             154231.0,
@@ -315,12 +375,16 @@
           "values": [
             null,
             null,
+            null,
+            null,
             0.0,
             24862.0,
             42826.0
           ],
           "sub": "growth",
           "subValues": [
+            null,
+            null,
             null,
             null,
             null,
@@ -342,11 +406,15 @@
           "values": [
             null,
             null,
+            null,
+            null,
             28.2824,
             9.9692,
             6.9815
           ],
           "nm": [
+            true,
+            true,
             true,
             true,
             false,
@@ -364,9 +432,13 @@
             null,
             null,
             null,
+            null,
+            null,
             27.4022
           ],
           "nm": [
+            true,
+            true,
             true,
             true,
             true,
@@ -382,11 +454,15 @@
           "values": [
             null,
             null,
+            null,
+            null,
             7.8562,
             2.903,
             3.6289
           ],
           "nm": [
+            true,
+            true,
             true,
             true,
             false,
@@ -400,6 +476,8 @@
           "kind": "ratio",
           "note": "equity attributable to owners",
           "values": [
+            6.8318,
+            15.5619,
             null,
             null,
             null,
@@ -407,6 +485,8 @@
             null
           ],
           "nm": [
+            false,
+            false,
             true,
             true,
             true,
@@ -428,12 +508,16 @@
           "values": [
             null,
             null,
+            null,
+            null,
             0.0,
             2.634,
             7.3633
           ],
           "sub": "pp",
           "subValues": [
+            null,
+            null,
             null,
             null,
             null,
@@ -451,9 +535,13 @@
             null,
             null,
             null,
+            null,
+            null,
             201.7715
           ],
           "nm": [
+            true,
+            true,
             true,
             true,
             true,
@@ -462,6 +550,8 @@
           ],
           "sub": "pp",
           "subValues": [
+            null,
+            null,
             null,
             null,
             null,
@@ -475,6 +565,8 @@
           "kind": "pct",
           "note": "",
           "values": [
+            -0.0499,
+            -6.9212,
             -18.9698,
             6.8309,
             8.9336,
@@ -484,6 +576,8 @@
           "sub": "pp",
           "subValues": [
             null,
+            -6.87,
+            -12.05,
             25.8,
             2.1,
             4.76,
@@ -497,12 +591,16 @@
           "note": "average equity attributable to owners",
           "values": [
             null,
+            -103.3614,
+            null,
             null,
             null,
             null,
             null
           ],
           "nm": [
+            false,
+            false,
             true,
             true,
             true,
@@ -511,6 +609,8 @@
           ],
           "sub": "pp",
           "subValues": [
+            null,
+            null,
             null,
             null,
             null,
@@ -525,6 +625,8 @@
           "note": "average assets, profit incl. NCI",
           "values": [
             null,
+            -28.6802,
+            -22.1176,
             -11.2151,
             -8.7014,
             -0.0809,
@@ -534,6 +636,8 @@
           "subValues": [
             null,
             null,
+            6.56,
+            10.9,
             2.51,
             8.62,
             1.42
@@ -551,7 +655,9 @@
           "kind": "ratio",
           "note": "operating profit ÷ finance costs",
           "values": [
-            null,
+            -8.1905,
+            -10.1441,
+            -3.7225,
             null,
             null,
             null,
@@ -567,11 +673,15 @@
             null,
             null,
             null,
+            null,
+            null,
             113.845,
             39.7804
           ],
           "nm": [
-            false,
+            true,
+            true,
+            true,
             false,
             true,
             false,
@@ -579,6 +689,8 @@
           ],
           "sub": "pp",
           "subValues": [
+            null,
+            null,
             null,
             null,
             null,
@@ -598,6 +710,8 @@
           "kind": "money",
           "note": "company definition, non-IFRS",
           "values": [
+            -11716.0,
+            -41156.0,
             -3215.0,
             6399.0,
             40079.0,
@@ -615,6 +729,8 @@
             null,
             null,
             null,
+            null,
+            null,
             null
           ]
         },
@@ -624,6 +740,8 @@
           "kind": "money",
           "note": "before agency netting",
           "values": [
+            null,
+            null,
             null,
             null,
             null,
@@ -641,6 +759,8 @@
             null,
             null,
             null,
+            null,
+            null,
             null
           ]
         },
@@ -650,6 +770,8 @@
           "kind": "money",
           "note": "",
           "values": [
+            154608.0,
+            241338.0,
             284821.0,
             476026.0,
             890235.0,
@@ -663,7 +785,9 @@
           "kind": "money",
           "note": "",
           "values": [
-            null,
+            -22034.0,
+            -56777.0,
+            -57162.0,
             null,
             -55150.0,
             6775.0,
@@ -676,7 +800,9 @@
           "kind": "money",
           "note": "",
           "values": [
-            null,
+            2115.0,
+            5802.0,
+            11860.0,
             null,
             null,
             null,
@@ -689,6 +815,8 @@
           "kind": "money",
           "note": "",
           "values": [
+            79257.0,
+            30608.0,
             -16647.0,
             -66577.0,
             -132500.0,
@@ -702,6 +830,8 @@
           "kind": "money",
           "note": "",
           "values": [
+            79257.0,
+            30608.0,
             -16647.0,
             -66577.0,
             -132500.0,
@@ -719,6 +849,8 @@
             null,
             null,
             null,
+            null,
+            null,
             null
           ]
         },
@@ -728,6 +860,8 @@
           "kind": "money",
           "note": "",
           "values": [
+            103702.0,
+            108037.0,
             90469.0,
             169814.0,
             349198.0,
@@ -741,6 +875,8 @@
           "kind": "money",
           "note": "",
           "values": [
+            9448.0,
+            62116.0,
             94115.0,
             104371.0,
             118450.0,
@@ -754,6 +890,8 @@
           "kind": "money",
           "note": "included in net debt",
           "values": [
+            15490.0,
+            42467.0,
             74495.0,
             124335.0,
             228656.0,
@@ -767,7 +905,9 @@
           "kind": "money",
           "note": "netted against net debt",
           "values": [
-            null,
+            22.0,
+            17954.0,
+            0.0,
             null,
             null,
             null,
@@ -780,6 +920,8 @@
           "kind": "ratio",
           "note": "mn; the P/E denominator",
           "values": [
+            164.606,
+            205.6198,
             208.7521,
             208.8622,
             208.9901,
@@ -793,6 +935,8 @@
           "kind": "ratio",
           "note": "mn; what market capitalisation is struck on",
           "values": [
+            164.606,
+            205.6198,
             208.7521,
             208.8622,
             208.9901,

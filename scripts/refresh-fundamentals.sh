@@ -26,15 +26,17 @@ fi
 
 mkdir -p "$DATA_DIR"
 
-# How far back an issuer's own filings actually reach. Ozon and IVA each publish
-# a three-year statement carrying 2022; Diasoft's year ends 31 March, so its
+# How far back an issuer's own filings actually reach. Ozon reaches 2020 through
+# the 20-F filings of Ozon Holdings PLC, ingested 2026-09-04; IVA publishes a
+# three-year statement carrying 2022; Diasoft's year ends 31 March, so its
 # columns are years to that date. The default suits everyone else — Softline
 # included, since its FY2024 filing was read (2026-09-03) and carries 2023.
 # Without this the script would quietly regenerate those three a year short of
 # what they hold.
 years_for() {
   case "$1" in
-    OZON|IVAT) echo "2022:2025" ;;
+    IVAT)      echo "2022:2025" ;;
+    OZON)      echo "2020:2025" ;;
     DIAS)      echo "2022:2026" ;;
     *)         echo "2023:2025" ;;
   esac
