@@ -57,22 +57,22 @@
     },
     {
       "document": "2024__ifrs-2024-report-9a821feb4e3a0e69__95ff53ec.md",
-      "values": 18
+      "values": 19
     },
     {
       "document": "2025__posi-2025-ifrs-report__9882e5ac.md",
-      "values": 28
+      "values": 30
     },
     {
       "document": "2026-H1__posi-6m2026-ifrs-report__76accaf7.md",
-      "values": 33
+      "values": 37
     },
     {
       "document": "undated__pt-ar25-book-0704-1804-public__0fc5de31.md",
       "values": 2
     }
   ],
-  "facts": 91,
+  "facts": 98,
   "sections": [
     {
       "key": "enterprise_value",
@@ -161,6 +161,25 @@
           ]
         },
         {
+          "key": "gross_profit",
+          "label": "Gross profit",
+          "kind": "money",
+          "note": "",
+          "values": [
+            20753.135,
+            22070.653,
+            27186.717,
+            29375.833
+          ],
+          "sub": "growth",
+          "subValues": [
+            null,
+            6.35,
+            23.18,
+            8.05
+          ]
+        },
+        {
           "key": "ebitda",
           "label": "EBITDA",
           "kind": "money",
@@ -227,7 +246,7 @@
           "key": "fcf",
           "label": "Free cash flow",
           "kind": "money",
-          "note": "CFO - capex",
+          "note": "operating cash flow − capex, as the issuer classifies interest",
           "values": [
             1899.135,
             -3785.245,

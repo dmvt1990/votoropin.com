@@ -63,10 +63,10 @@
     },
     {
       "document": "2026-FY__diasoft-investor-databook-fy2026__manual-8.md",
-      "values": 81
+      "values": 87
     }
   ],
-  "facts": 88,
+  "facts": 94,
   "sections": [
     {
       "key": "enterprise_value",
@@ -163,6 +163,27 @@
           ]
         },
         {
+          "key": "gross_profit",
+          "label": "Gross profit",
+          "kind": "money",
+          "note": "",
+          "values": [
+            3871.634,
+            4409.083,
+            5572.3552,
+            4830.471,
+            3348.632
+          ],
+          "sub": "growth",
+          "subValues": [
+            null,
+            13.88,
+            26.38,
+            -13.31,
+            -30.68
+          ]
+        },
+        {
           "key": "ebitda",
           "label": "EBITDA",
           "kind": "money",
@@ -235,7 +256,7 @@
           "key": "fcf",
           "label": "Free cash flow",
           "kind": "money",
-          "note": "CFO - capex",
+          "note": "operating cash flow − capex, as the issuer classifies interest",
           "values": [
             2065.1578,
             1923.5163,

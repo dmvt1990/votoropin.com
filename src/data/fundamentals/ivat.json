@@ -50,26 +50,26 @@
   "sources": [
     {
       "document": "2023__msfo-otchetnost-za-2023-god__a3e55a10.md",
-      "values": 53
+      "values": 56
     },
     {
       "document": "2025-FY__msfo-otchetnost-pao-iva-12m-2025__3000b521.md",
-      "values": 16
+      "values": 17
     },
     {
       "document": "2025-H1__otchetnost-iva-6m2025__b03af3b5.md",
-      "values": 24
+      "values": 26
     },
     {
       "document": "2026-H1__otchetnost-pao-iva-6m2026__48251a42.md",
-      "values": 17
+      "values": 18
     },
     {
       "document": "undated__otchetnost-pao-iva-12m24__6d85d300.md",
-      "values": 17
+      "values": 18
     }
   ],
-  "facts": 127,
+  "facts": 135,
   "sections": [
     {
       "key": "enterprise_value",
@@ -166,6 +166,27 @@
           ]
         },
         {
+          "key": "gross_profit",
+          "label": "Gross profit",
+          "kind": "money",
+          "note": "",
+          "values": [
+            1167.324,
+            2127.566,
+            2790.314,
+            2581.692,
+            2305.463
+          ],
+          "sub": "growth",
+          "subValues": [
+            null,
+            82.26,
+            31.15,
+            -7.48,
+            -10.7
+          ]
+        },
+        {
           "key": "ebitda",
           "label": "EBITDA",
           "kind": "money",
@@ -238,7 +259,7 @@
           "key": "fcf",
           "label": "Free cash flow",
           "kind": "money",
-          "note": "CFO - capex",
+          "note": "operating cash flow − capex, as the issuer classifies interest",
           "values": [
             456.46,
             53.948,

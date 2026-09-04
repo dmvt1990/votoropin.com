@@ -51,18 +51,18 @@
   "sources": [
     {
       "document": "2024__softline-consolidated-fs-2024-web__79413122.md",
-      "values": 20
+      "values": 21
     },
     {
       "document": "2025__softline-consolidated-fs-2025-with-audit-report__eee540d2.md",
-      "values": 31
+      "values": 33
     },
     {
       "document": "2026-Q2__softline-fact-sheet-q2-2026__manual-9.md",
       "values": 114
     }
   ],
-  "facts": 165,
+  "facts": 168,
   "sections": [
     {
       "key": "enterprise_value",
@@ -143,6 +143,23 @@
           ]
         },
         {
+          "key": "gross_profit",
+          "label": "Gross profit",
+          "kind": "money",
+          "note": "",
+          "values": [
+            23568.0,
+            36724.0,
+            46929.0
+          ],
+          "sub": "growth",
+          "subValues": [
+            null,
+            55.82,
+            27.79
+          ]
+        },
+        {
           "key": "ebitda",
           "label": "EBITDA",
           "kind": "money",
@@ -203,7 +220,7 @@
           "key": "fcf",
           "label": "Free cash flow",
           "kind": "money",
-          "note": "CFO - capex",
+          "note": "operating cash flow − capex, as the issuer classifies interest",
           "values": [
             5109.0,
             -7635.0,

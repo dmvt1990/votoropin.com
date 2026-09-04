@@ -92,6 +92,7 @@ export const en = {
       ev:               "= Enterprise value",
       pnl:              "Income statement",
       revenue:          "Revenue",
+      gross_profit:     "Gross profit",
       ebitda:           "EBITDA",
       ebitda_margin:    "EBITDA margin, %",
       net_income:       "Net income",
@@ -132,7 +133,7 @@ export const en = {
     notes: {
       ebitda:         "operating profit + D&A",
       net_income:     "attributable to shareholders",
-      fcf:            "operating cash flow \u2212 capex",
+      fcf:            "operating cash flow \u2212 capex, as the issuer classifies interest",
       roe:            "average equity attributable to owners",
       roa:            "average assets, profit incl. NCI",
       pb:             "equity attributable to owners",

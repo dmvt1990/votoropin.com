@@ -57,18 +57,18 @@
     },
     {
       "document": "2024__msfo-otchetnost-za-2024-g__f5fedcf9.md",
-      "values": 18
+      "values": 19
     },
     {
       "document": "2025__msfo-otchetnost-gruppy-astra-za-2025-god__4fb53893.md",
-      "values": 30
+      "values": 32
     },
     {
       "document": "undated__otchetnost-pao-gruppa-astra-6m26__34d59e65.md",
-      "values": 34
+      "values": 38
     }
   ],
-  "facts": 92,
+  "facts": 99,
   "sections": [
     {
       "key": "enterprise_value",
@@ -157,6 +157,25 @@
           ]
         },
         {
+          "key": "gross_profit",
+          "label": "Gross profit",
+          "kind": "money",
+          "note": "",
+          "values": [
+            6956.474,
+            11185.825,
+            12503.88,
+            12754.842
+          ],
+          "sub": "growth",
+          "subValues": [
+            null,
+            60.8,
+            11.78,
+            2.01
+          ]
+        },
+        {
           "key": "ebitda",
           "label": "EBITDA",
           "kind": "money",
@@ -223,7 +242,7 @@
           "key": "fcf",
           "label": "Free cash flow",
           "kind": "money",
-          "note": "CFO - capex",
+          "note": "operating cash flow − capex, as the issuer classifies interest",
           "values": [
             2145.638,
             1376.684,

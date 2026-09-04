@@ -165,6 +165,25 @@
           ]
         },
         {
+          "key": "gross_profit",
+          "label": "Gross profit",
+          "kind": "money",
+          "note": "",
+          "values": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "sub": "growth",
+          "subValues": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
           "key": "ebitda",
           "label": "EBITDA",
           "kind": "money",
@@ -231,7 +250,7 @@
           "key": "fcf",
           "label": "Free cash flow",
           "kind": "money",
-          "note": "CFO - capex",
+          "note": "operating cash flow − capex, as the issuer classifies interest",
           "values": [
             30020.0,
             78561.0,

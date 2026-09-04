@@ -60,7 +60,7 @@
   "sources": [
     {
       "document": "2023__ozon-rus-konsolidirovannaya-finansovaya-otchetnost-2023-isa__manual-5.md",
-      "values": 24
+      "values": 27
     },
     {
       "document": "2024__ozon-konsolidirovannaya-finansovaya-otchetnost-2024__manual-4.md",
@@ -72,7 +72,7 @@
     },
     {
       "document": "2025__ozon-obyavlyaet-finansovye-rezultaty-za-chetvertyi-kvartal-2__manual-7.md",
-      "values": 6
+      "values": 10
     },
     {
       "document": "2026-Q2__rus-ozon-ipjsc-consolidated-fs-ifrs-2q2026__manual-e.md",
@@ -84,10 +84,10 @@
     },
     {
       "document": "undated__ozon-databook-q2-26__manual-2.md",
-      "values": 133
+      "values": 137
     }
   ],
-  "facts": 191,
+  "facts": 202,
   "sections": [
     {
       "key": "enterprise_value",
@@ -184,6 +184,27 @@
           ]
         },
         {
+          "key": "gross_profit",
+          "label": "Gross profit",
+          "kind": "money",
+          "note": "",
+          "values": [
+            32691.0,
+            44442.0,
+            99885.0,
+            230134.0,
+            273629.0
+          ],
+          "sub": "growth",
+          "subValues": [
+            null,
+            35.95,
+            124.75,
+            130.4,
+            18.9
+          ]
+        },
+        {
           "key": "ebitda",
           "label": "EBITDA",
           "kind": "money",
@@ -256,7 +277,7 @@
           "key": "fcf",
           "label": "Free cash flow",
           "kind": "money",
-          "note": "CFO - capex",
+          "note": "operating cash flow − capex, as the issuer classifies interest",
           "values": [
             -54566.0,
             57884.0,
