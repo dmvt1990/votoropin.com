@@ -266,6 +266,18 @@
           ]
         },
         {
+          "key": "fintech_funding",
+          "label": "— of which fintech funding, removed",
+          "kind": "money",
+          "note": "customer deposits taken, net of lending",
+          "values": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
           "key": "dividends_paid",
           "label": "Dividends paid",
           "kind": "money",

@@ -54,13 +54,13 @@
     "ltm": true
   },
   "note": {
-    "en": "Net debt here adds back the money Ozon's fintech arm holds for its customers — 882 bn roubles at 30 June 2026 — because that cash sits on the asset side with a matching liability against it. Netting only borrowings would count client money as shareholders', which put enterprise value below zero before this was corrected. Equity has been negative since the accumulated deficit passed paid-in capital, so P/B and return on equity are left blank rather than shown as negative numbers that read like ratios. Revenue, adjusted EBITDA and net income run from 2018 out of the company's databook; the balance sheet and cash flow start at 2022, from the audited FY2023 filing. Operating cash flow is Ozon's own, and it includes the growth in those fintech customer balances — 262 bn in the first half of 2026 alone — so free cash flow here measures cash passing through the group rather than cash earned for shareholders, and is not comparable with the other constituents' on that basis.",
-    "ru": "Чистый долг здесь включает средства, которые финтех-направление «Озона» держит для клиентов, — 882 млрд рублей на 30 июня 2026 года, — поскольку эти деньги стоят в активах, а против них в пассивах стоит соответствующее обязательство. Если вычесть из денежных средств только заёмные, клиентские деньги окажутся посчитаны как принадлежащие акционерам: до этой поправки стоимость компании выходила отрицательной. Собственный капитал отрицателен с тех пор, как накопленный убыток превысил оплаченный капитал, поэтому P/B и рентабельность капитала оставлены пустыми, а не показаны отрицательными числами, похожими на коэффициенты. Выручка, скорректированная EBITDA и чистая прибыль приведены с 2018 года по датабуку компании; баланс и отчёт о движении денежных средств — с 2022 года, из аудированной отчётности за 2023 год. Операционный поток взят как есть у «Озона», а он включает прирост тех самых клиентских средств финтеха — только за первое полугодие 2026 года это 262 млрд рублей, — поэтому свободный денежный поток здесь измеряет деньги, проходящие через группу, а не заработанные для акционеров, и в этом смысле несопоставим с остальными эмитентами индекса."
+    "en": "Net debt here adds back the money Ozon's fintech arm holds for its customers — 882 bn roubles at 30 June 2026 — because that cash sits on the asset side with a matching liability against it. Netting only borrowings would count client money as shareholders', which put enterprise value below zero before this was corrected. Equity has been negative since the accumulated deficit passed paid-in capital, so P/B and return on equity are left blank rather than shown as negative numbers that read like ratios. Revenue, adjusted EBITDA and net income run from 2018 out of the company's databook; the balance sheet and cash flow start at 2022, from the audited FY2023 filing. Free cash flow removes the fintech book's own growth from operating cash flow, for the same reason net debt adds the liability back: the deposits taken, net of the lending they fund, are money passing through the group rather than cash earned for shareholders. In 2025 that is 316 bn of the 539 bn of cash from operations, and 262 bn in the first half of 2026 alone; the memo row beneath free cash flow shows the amount removed each period so the adjustment can be undone. It stops at the funding — the arm's interest received and paid stay in, because they are earnings rather than the book expanding — so this is free cash flow before the fintech book grows, not e-commerce free cash flow.",
+    "ru": "Чистый долг здесь включает средства, которые финтех-направление «Озона» держит для клиентов, — 882 млрд рублей на 30 июня 2026 года, — поскольку эти деньги стоят в активах, а против них в пассивах стоит соответствующее обязательство. Если вычесть из денежных средств только заёмные, клиентские деньги окажутся посчитаны как принадлежащие акционерам: до этой поправки стоимость компании выходила отрицательной. Собственный капитал отрицателен с тех пор, как накопленный убыток превысил оплаченный капитал, поэтому P/B и рентабельность капитала оставлены пустыми, а не показаны отрицательными числами, похожими на коэффициенты. Выручка, скорректированная EBITDA и чистая прибыль приведены с 2018 года по датабуку компании; баланс и отчёт о движении денежных средств — с 2022 года, из аудированной отчётности за 2023 год. Из операционного потока при расчёте свободного денежного потока исключён     прирост самого финтех-портфеля — по той же причине, по которой чистый     долг включает встречное обязательство: привлечённые средства клиентов за     вычетом выданных им займов представляют собой деньги, проходящие через     группу, а не заработанные для акционеров. В 2025 году это 316 млрд из     539 млрд рублей операционного потока, а только за первое полугодие 2026     года — 262 млрд. Строка под свободным денежным потоком показывает     исключённую сумму за каждый период, так что корректировку можно снять.     Исключено только фондирование: полученные и уплаченные финтехом проценты     остаются внутри, поскольку это заработок, а не рост портфеля, — поэтому показатель означает свободный денежный поток до роста финтех-портфеля, а не свободный денежный поток электронной коммерции."
   },
   "sources": [
     {
       "document": "2023__ozon-rus-konsolidirovannaya-finansovaya-otchetnost-2023-isa__manual-5.md",
-      "values": 27
+      "values": 30
     },
     {
       "document": "2024__ozon-konsolidirovannaya-finansovaya-otchetnost-2024__manual-4.md",
@@ -68,7 +68,7 @@
     },
     {
       "document": "2025__1-1-mkpao-ozon-2025-konsolidirovannaya-finansovaya-otchetnos__manual-4.md",
-      "values": 22
+      "values": 24
     },
     {
       "document": "2025__ozon-obyavlyaet-finansovye-rezultaty-za-chetvertyi-kvartal-2__manual-7.md",
@@ -84,10 +84,10 @@
     },
     {
       "document": "undated__ozon-databook-q2-26__manual-2.md",
-      "values": 137
+      "values": 141
     }
   ],
-  "facts": 202,
+  "facts": 211,
   "sections": [
     {
       "key": "enterprise_value",
@@ -279,19 +279,32 @@
           "kind": "money",
           "note": "operating cash flow − capex, as the issuer classifies interest",
           "values": [
-            -54566.0,
-            57884.0,
-            215862.0,
-            445465.0,
-            514589.0
+            -55519.0,
+            40012.0,
+            61631.0,
+            129256.0,
+            111067.0
           ],
           "sub": "growth",
           "subValues": [
             null,
             null,
-            272.92,
-            106.37,
-            15.52
+            54.03,
+            109.73,
+            -14.07
+          ]
+        },
+        {
+          "key": "fintech_funding",
+          "label": "— of which fintech funding, removed",
+          "kind": "money",
+          "note": "customer deposits taken, net of lending",
+          "values": [
+            953.0,
+            17872.0,
+            154231.0,
+            316209.0,
+            403522.0
           ]
         },
         {
@@ -462,19 +475,19 @@
           "kind": "pct",
           "note": "",
           "values": [
-            -18.6442,
-            9.882,
-            31.29,
-            47.1945,
-            88.4764
+            -18.9698,
+            6.8309,
+            8.9336,
+            13.6939,
+            19.0964
           ],
           "sub": "pp",
           "subValues": [
             null,
-            28.53,
-            21.41,
-            15.9,
-            41.28
+            25.8,
+            2.1,
+            4.76,
+            5.4
           ]
         },
         {
