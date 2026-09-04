@@ -3,17 +3,23 @@
   "name": "ПАО «Софтлайн»",
   "name_en": "Softline",
   "unit": "RUB mn",
-  "generated": "2026-09-02",
+  "generated": "2026-09-04",
   "columns": [
+    "2023",
     "2024",
     "2025"
   ],
   "spot": {
-    "date": "2026-09-01",
-    "price": 53.26,
+    "date": "2026-09-03",
+    "price": 52.62,
     "shares": 400002000
   },
   "closes": {
+    "2023": {
+      "secid": "SOFL",
+      "date": "2023-12-29",
+      "close": 142.7
+    },
     "2024": {
       "secid": "SOFL",
       "date": "2024-12-30",
@@ -26,6 +32,11 @@
     }
   },
   "period_basis": null,
+  "shares_source": [
+    "weighted average",
+    "weighted average",
+    "issue size"
+  ],
   "coverage": {
     "pnl": true,
     "bs": true,
@@ -34,20 +45,24 @@
     "ltm": false
   },
   "note": {
-    "en": "Nine pages of Softline's audited filing are scans with no text layer, among them the income statement, the liabilities half of the balance sheet and the investing and financing halves of the cash-flow statement. The income statement was read by OCR and checks out against its own arithmetic. The liabilities page does not, so borrowings and leases come from notes 19 and 21, which are text. The investing page reads its 2024 column consistently — the separately scanned 2024 filing gives the same figures and the column foots — but not its 2025 one, where the plant line reads three different ways at three resolutions and the column never foots. So capital expenditure and free cash flow are shown for 2024 and not for 2025. No dividend was paid in either year: note 17 records that no dividend decision was taken. Softline publishes no interim IFRS statements, only presentations and a fact sheet, so there is no trailing-twelve-month column. The adjusted EBITDA shown is from that fact sheet, whose operating profit and group profit agree exactly with the audited statements for both years — 4 019 and 2 149, 288 and 3 656 — which is an independent check on the scanned income statement, since the spreadsheet shares none of the same machinery. 2024 is the restated comparative from the 2025 filing. The 2025 P/E reflects profit attributable to shareholders of 21 mn against 3,264 mn a year earlier, after a 1,560 mn loss from discontinued operations and a 516 mn goodwill impairment.",
-    "ru": "Девять страниц аудированной отчётности «Софтлайна» — сканы без текстового слоя, и среди них отчёт о прибылях и убытках, часть баланса с обязательствами и инвестиционный и финансовый разделы отчёта о движении денежных средств. Отчёт о прибылях и убытках распознан и сходится по собственной арифметике. Страница с обязательствами — нет, поэтому кредиты и аренда взяты из примечаний 19 и 21, представленных текстом. Инвестиционная страница уверенно читается за 2024 год — отдельно отсканированная отчётность за 2024 год даёт те же цифры, и колонка сходится с собственным итогом, — но не за 2025-й, где строка основных средств читается тремя разными способами при трёх разрешениях, а колонка не сходится ни при одном. Поэтому капитальные затраты и свободный денежный поток приведены за 2024 год и отсутствуют за 2025-й. Дивиденды не выплачивались ни в одном из годов: в примечании 17 сказано, что решения о выплате не принимались. Промежуточную отчётность по МСФО «Софтлайн» не публикует — только презентации и фактшит, поэтому колонки LTM нет. Скорректированная EBITDA взята из этого фактшита; его операционная прибыль и прибыль группы совпадают с аудированной отчётностью за оба года в точности — 4 019 и 2 149, 288 и 3 656, — что даёт независимую проверку отсканированного отчёта о прибылях и убытках, поскольку таблица не имеет с распознаванием ничего общего. 2024 год — пересчитанные сравнительные данные из отчётности за 2025 год. P/E за 2025 год отражает прибыль, относимую на собственников, в размере 21 млн против 3 264 млн годом ранее — после убытка 1 560 млн от прекращённой деятельности и обесценения гудвила на 516 млн."
+    "en": "Nine pages of Softline's audited filing are scans with no text layer, among them the income statement, the liabilities half of the balance sheet and the investing and financing halves of the cash-flow statement. The income statement was read by OCR and checks out against its own arithmetic. The liabilities page does not, so borrowings and leases come from notes 19 and 21, which are text. The investing page reads its 2024 column consistently — the separately scanned 2024 filing gives the same figures and the column foots — but not its 2025 one, where the plant line reads three different ways at three resolutions and the column never foots. So capital expenditure and free cash flow are shown for 2024 and not for 2025. No dividend was paid in either year: note 17 records that no dividend decision was taken. Softline publishes no interim IFRS statements, only presentations and a fact sheet, so there is no trailing-twelve-month column. The adjusted EBITDA shown is from that fact sheet, whose operating profit and group profit agree exactly with the audited statements for both years — 4 019 and 2 149, 288 and 3 656 — which is an independent check on the scanned income statement, since the spreadsheet shares none of the same machinery. 2024 is the restated comparative from the 2025 filing, and 2023 the comparative column of the FY2024 filing — a separate document, scanned end to end, whose 2023 column was taken only because it proves itself three ways: the income statement subtracts to its own gross and net profit, the cash-flow column reconciles opening to closing cash, and the balance sheet's two halves agree. Its revenue line is the one figure the ordinary read loses — 400 dpi returns the leading digit as punctuation — so the page was read again at 300 dpi, where it reads 73 181 outright and the statement's own arithmetic confirms it. Share counts for 2023 and 2024 are the weighted averages Softline reports in its earnings-per-share note; 2025 falls back to the registered issue size, which differs from the reported count by two thousand shares. The 2025 P/E reflects profit attributable to shareholders of 21 mn against 3,264 mn a year earlier, after a 1,560 mn loss from discontinued operations and a 516 mn goodwill impairment.",
+    "ru": "Девять страниц аудированной отчётности «Софтлайна» — сканы без текстового слоя, и среди них отчёт о прибылях и убытках, часть баланса с обязательствами и инвестиционный и финансовый разделы отчёта о движении денежных средств. Отчёт о прибылях и убытках распознан и сходится по собственной арифметике. Страница с обязательствами — нет, поэтому кредиты и аренда взяты из примечаний 19 и 21, представленных текстом. Инвестиционная страница уверенно читается за 2024 год — отдельно отсканированная отчётность за 2024 год даёт те же цифры, и колонка сходится с собственным итогом, — но не за 2025-й, где строка основных средств читается тремя разными способами при трёх разрешениях, а колонка не сходится ни при одном. Поэтому капитальные затраты и свободный денежный поток приведены за 2024 год и отсутствуют за 2025-й. Дивиденды не выплачивались ни в одном из годов: в примечании 17 сказано, что решения о выплате не принимались. Промежуточную отчётность по МСФО «Софтлайн» не публикует — только презентации и фактшит, поэтому колонки LTM нет. Скорректированная EBITDA взята из этого фактшита; его операционная прибыль и прибыль группы совпадают с аудированной отчётностью за оба года в точности — 4 019 и 2 149, 288 и 3 656, — что даёт независимую проверку отсканированного отчёта о прибылях и убытках, поскольку таблица не имеет с распознаванием ничего общего. 2024 год — пересчитанные сравнительные данные из отчётности за 2025 год, а 2023-й — сравнительная колонка отчётности за 2024 год. Это отдельный документ, отсканированный целиком; его колонка за 2023 год взята только потому, что сходится трижды: отчёт о прибылях и убытках даёт собственные валовую и чистую прибыль вычитанием, отчёт о движении денежных средств сводит остаток на начало года с остатком на конец, а обе половины баланса совпадают. Строка выручки — единственная, которую обычное распознавание теряет: при 400 dpi первая цифра читается как знак препинания, поэтому страница прочитана повторно при 300 dpi, где выручка читается как 73 181, что подтверждается арифметикой самого отчёта. Количество акций за 2023 и 2024 годы — средневзвешенные значения из примечания о прибыли на акцию; за 2025 год взят зарегистрированный размер выпуска, отличающийся от отчётного на две тысячи акций. P/E за 2025 год отражает прибыль, относимую на собственников, в размере 21 млн против 3 264 млн годом ранее — после убытка 1 560 млн от прекращённой деятельности и обесценения гудвила на 516 млн."
   },
   "sources": [
     {
+      "document": "2024__softline-consolidated-fs-2024-web__79413122.md",
+      "values": 18
+    },
+    {
       "document": "2025__softline-consolidated-fs-2025-with-audit-report__eee540d2.md",
-      "values": 23
+      "values": 29
     },
     {
       "document": "2026-Q2__softline-fact-sheet-q2-2026__manual-9.md",
-      "values": 116
+      "values": 114
     }
   ],
-  "facts": 139,
+  "facts": 161,
   "sections": [
     {
       "key": "enterprise_value",
@@ -59,28 +74,32 @@
           "kind": "money",
           "note": "",
           "values": [
-            47576.2379,
+            39956.0,
+            44339.7108,
             31600.158
           ],
           "sub": "growth",
           "subValues": [
             null,
-            -33.58
+            10.97,
+            -28.73
           ]
         },
         {
           "key": "net_debt",
           "label": "+ Net Debt",
           "kind": "money",
-          "note": "",
+          "note": "borrowings and leases, less cash and short-term investments",
           "values": [
-            10752.0,
-            14809.0
+            -866.0,
+            6734.0,
+            13205.0
           ],
           "sub": "growth",
           "subValues": [
             null,
-            37.73
+            null,
+            96.09
           ]
         },
         {
@@ -89,13 +108,15 @@
           "kind": "money",
           "note": "",
           "values": [
-            58328.2379,
-            46409.158
+            39316.0,
+            58350.7108,
+            52212.158
           ],
           "sub": "growth",
           "subValues": [
             null,
-            -20.43
+            48.41,
+            -10.52
           ]
         }
       ]
@@ -110,12 +131,14 @@
           "kind": "money",
           "note": "",
           "values": [
+            73181.0,
             80723.0,
             95472.0
           ],
           "sub": "growth",
           "subValues": [
             null,
+            10.31,
             18.27
           ]
         },
@@ -125,12 +148,14 @@
           "kind": "money",
           "note": "operating profit + D&A",
           "values": [
+            3243.0,
             5333.0,
             8166.0
           ],
           "sub": "growth",
           "subValues": [
             null,
+            64.45,
             53.12
           ]
         },
@@ -140,12 +165,14 @@
           "kind": "pct",
           "note": "",
           "values": [
+            4.4315,
             6.6065,
             8.5533
           ],
           "sub": "pp",
           "subValues": [
             null,
+            2.18,
             1.95
           ]
         },
@@ -155,12 +182,14 @@
           "kind": "money",
           "note": "attributable to shareholders",
           "values": [
+            2997.0,
             3264.0,
             21.0
           ],
           "sub": "growth",
           "subValues": [
             null,
+            8.91,
             -99.36
           ]
         }
@@ -176,12 +205,14 @@
           "kind": "money",
           "note": "CFO - capex",
           "values": [
+            5109.0,
             -7635.0,
             null
           ],
           "sub": "growth",
           "subValues": [
             null,
+            -249.44,
             null
           ]
         },
@@ -192,10 +223,12 @@
           "note": "",
           "values": [
             null,
+            null,
             null
           ],
           "sub": "growth",
           "subValues": [
+            null,
             null,
             null
           ]
@@ -212,8 +245,9 @@
           "kind": "ratio",
           "note": "",
           "values": [
-            10.9372,
-            5.6832
+            12.1233,
+            10.9414,
+            6.3938
           ]
         },
         {
@@ -222,7 +256,8 @@
           "kind": "ratio",
           "note": "",
           "values": [
-            14.5761,
+            13.332,
+            13.5845,
             1504.7694
           ]
         },
@@ -232,18 +267,20 @@
           "kind": "ratio",
           "note": "",
           "values": [
-            2.0161,
-            1.8135
+            -0.267,
+            1.2627,
+            1.6171
           ]
         },
         {
           "key": "pb",
           "label": "P/B",
           "kind": "ratio",
-          "note": "",
+          "note": "equity attributable to owners",
           "values": [
-            1.9693,
-            1.0696
+            4.8198,
+            2.6264,
+            1.4275
           ]
         }
       ]
@@ -259,10 +296,12 @@
           "note": "",
           "values": [
             null,
+            null,
             null
           ],
           "sub": "pp",
           "subValues": [
+            null,
             null,
             null
           ]
@@ -273,12 +312,14 @@
           "kind": "pct",
           "note": "",
           "values": [
-            -16.0479,
+            12.7866,
+            -17.2193,
             null
           ],
           "sub": "pp",
           "subValues": [
             null,
+            -30.01,
             null
           ]
         },
@@ -286,30 +327,34 @@
           "key": "roe",
           "label": "Return on equity, %",
           "kind": "pct",
-          "note": "period-end equity",
+          "note": "average equity attributable to owners",
           "values": [
-            13.5105,
-            0.0711
+            null,
+            25.9336,
+            0.1076
           ],
           "sub": "pp",
           "subValues": [
             null,
-            -13.44
+            null,
+            -25.83
           ]
         },
         {
           "key": "roa",
           "label": "Return on assets, %",
           "kind": "pct",
-          "note": "period-end assets",
+          "note": "average assets, profit incl. NCI",
           "values": [
-            3.234,
-            0.0178
+            null,
+            4.1677,
+            0.2634
           ],
           "sub": "pp",
           "subValues": [
             null,
-            -3.22
+            null,
+            -3.9
           ]
         }
       ]
@@ -324,6 +369,7 @@
           "kind": "money",
           "note": "company definition, non-IFRS",
           "values": [
+            4489.0,
             7084.0,
             8155.0
           ]
@@ -335,6 +381,7 @@
           "note": "non-IFRS",
           "values": [
             null,
+            null,
             null
           ]
         },
@@ -344,6 +391,7 @@
           "kind": "money",
           "note": "before agency netting",
           "values": [
+            91493.01,
             120232.0,
             132127.0
           ]
@@ -354,6 +402,7 @@
           "kind": "money",
           "note": "",
           "values": [
+            3078.0,
             3656.0,
             288.0
           ]
@@ -364,6 +413,7 @@
           "kind": "money",
           "note": "",
           "values": [
+            74517.0,
             100927.0,
             117749.0
           ]
@@ -374,8 +424,31 @@
           "kind": "money",
           "note": "",
           "values": [
+            8516.0,
             24159.0,
             29544.0
+          ]
+        },
+        {
+          "key": "equity_parent",
+          "label": "— attributable to owners",
+          "kind": "money",
+          "note": "",
+          "values": [
+            8290.0,
+            16882.0,
+            22137.0
+          ]
+        },
+        {
+          "key": "nci",
+          "label": "— non-controlling interests",
+          "kind": "money",
+          "note": "added to enterprise value",
+          "values": [
+            226.0,
+            7277.0,
+            7407.0
           ]
         },
         {
@@ -384,6 +457,7 @@
           "kind": "money",
           "note": "",
           "values": [
+            13767.0,
             10683.0,
             13134.0
           ]
@@ -394,6 +468,7 @@
           "kind": "money",
           "note": "",
           "values": [
+            19941.0,
             21435.0,
             27943.0
           ]
@@ -402,19 +477,43 @@
           "key": "lease",
           "label": "Lease liabilities",
           "kind": "money",
-          "note": "excluded from net debt",
+          "note": "included in net debt",
           "values": [
+            1884.0,
             2012.0,
             1515.0
+          ]
+        },
+        {
+          "key": "short_term_investments",
+          "label": "Short-term investments",
+          "kind": "money",
+          "note": "netted against net debt",
+          "values": [
+            8924.0,
+            6030.0,
+            3119.0
           ]
         },
         {
           "key": "shares",
           "label": "Shares, weighted avg basic",
           "kind": "ratio",
-          "note": "mn",
+          "note": "mn; the P/E denominator",
           "values": [
-            400.002,
+            280.0,
+            372.7906,
+            400.002
+          ]
+        },
+        {
+          "key": "shares_out",
+          "label": "Shares outstanding, period end",
+          "kind": "ratio",
+          "note": "mn; what market capitalisation is struck on",
+          "values": [
+            280.0,
+            372.7906,
             400.002
           ]
         }

@@ -3,7 +3,7 @@
   "name": "МКПАО «Озон»",
   "name_en": "Ozon",
   "unit": "RUB mn",
-  "generated": "2026-09-02",
+  "generated": "2026-09-04",
   "columns": [
     "2022",
     "2023",
@@ -12,8 +12,8 @@
     "LTM"
   ],
   "spot": {
-    "date": "2026-09-01",
-    "price": 2332,
+    "date": "2026-09-03",
+    "price": 2687.5,
     "shares": 216413733
   },
   "closes": {
@@ -39,6 +39,13 @@
     }
   },
   "period_basis": null,
+  "shares_source": [
+    "weighted average",
+    "weighted average",
+    "weighted average",
+    "weighted average",
+    "issue size"
+  ],
   "coverage": {
     "pnl": true,
     "bs": true,
@@ -53,11 +60,15 @@
   "sources": [
     {
       "document": "2023__ozon-rus-konsolidirovannaya-finansovaya-otchetnost-2023-isa__manual-5.md",
-      "values": 21
+      "values": 24
+    },
+    {
+      "document": "2024__ozon-konsolidirovannaya-finansovaya-otchetnost-2024__manual-4.md",
+      "values": 2
     },
     {
       "document": "2025__1-1-mkpao-ozon-2025-konsolidirovannaya-finansovaya-otchetnos__manual-4.md",
-      "values": 16
+      "values": 18
     },
     {
       "document": "2025__ozon-obyavlyaet-finansovye-rezultaty-za-chetvertyi-kvartal-2__manual-7.md",
@@ -76,7 +87,7 @@
       "values": 125
     }
   ],
-  "facts": 170,
+  "facts": 177,
   "sections": [
     {
       "key": "enterprise_value",
@@ -88,40 +99,40 @@
           "kind": "money",
           "note": "",
           "values": [
-            303412.0537,
-            606932.3142,
-            714381.7326,
-            977973.6594,
-            504676.8254
+            292670.4764,
+            585753.9417,
+            689876.1848,
+            943891.8043,
+            581611.9074
           ],
           "sub": "growth",
           "subValues": [
             null,
-            100.04,
-            17.7,
-            36.9,
-            -48.4
+            100.14,
+            17.78,
+            36.82,
+            -38.38
           ]
         },
         {
           "key": "net_debt",
           "label": "+ Net Debt",
           "kind": "money",
-          "note": "",
+          "note": "borrowings and leases, less cash and short-term investments",
           "values": [
-            9784.0,
-            -394.0,
-            36679.0,
-            61809.0,
-            257519.0
+            84279.0,
+            123941.0,
+            265335.0,
+            387769.0,
+            629552.0
           ],
           "sub": "growth",
           "subValues": [
             null,
-            -104.03,
-            null,
-            68.51,
-            316.64
+            47.06,
+            114.08,
+            46.14,
+            62.35
           ]
         },
         {
@@ -130,19 +141,19 @@
           "kind": "money",
           "note": "",
           "values": [
-            313196.0537,
-            606538.3142,
-            751060.7326,
-            1039782.6594,
-            762195.8254
+            376949.4764,
+            709694.9417,
+            955211.1848,
+            1331660.8043,
+            1211163.9074
           ],
           "sub": "growth",
           "subValues": [
             null,
-            93.66,
-            23.83,
-            38.44,
-            -26.7
+            88.27,
+            34.59,
+            39.41,
+            -9.05
           ]
         }
       ]
@@ -178,8 +189,8 @@
           "kind": "money",
           "note": "operating profit + D&A",
           "values": [
-            -3215.0,
-            6399.0,
+            -24379.0,
+            -4673.0,
             33774.0,
             133577.0,
             173482.0
@@ -188,7 +199,7 @@
           "subValues": [
             null,
             null,
-            427.8,
+            null,
             295.5,
             29.87
           ]
@@ -199,8 +210,8 @@
           "kind": "pct",
           "note": "",
           "values": [
-            -1.1602,
-            1.5082,
+            -8.7974,
+            -1.1014,
             5.5067,
             13.3846,
             14.4164
@@ -208,8 +219,8 @@
           "sub": "pp",
           "subValues": [
             null,
-            2.67,
-            4.0,
+            7.7,
+            6.61,
             7.88,
             1.03
           ]
@@ -295,11 +306,18 @@
           "kind": "ratio",
           "note": "",
           "values": [
-            -97.4171,
-            94.7864,
-            22.2378,
-            7.7841,
-            4.3935
+            null,
+            null,
+            28.2824,
+            9.9692,
+            6.9815
+          ],
+          "nm": [
+            true,
+            true,
+            false,
+            false,
+            false
           ]
         },
         {
@@ -308,11 +326,18 @@
           "kind": "ratio",
           "note": "",
           "values": [
-            -5.2144,
-            -14.2255,
-            -12.0181,
-            -1042.6158,
-            23.7775
+            null,
+            null,
+            null,
+            null,
+            27.4022
+          ],
+          "nm": [
+            true,
+            true,
+            true,
+            true,
+            false
           ]
         },
         {
@@ -321,24 +346,38 @@
           "kind": "ratio",
           "note": "",
           "values": [
-            -3.0432,
-            -0.0616,
-            1.086,
-            0.4627,
-            1.4844
+            null,
+            null,
+            7.8562,
+            2.903,
+            3.6289
+          ],
+          "nm": [
+            true,
+            true,
+            false,
+            false,
+            false
           ]
         },
         {
           "key": "pb",
           "label": "P/B",
           "kind": "ratio",
-          "note": "",
+          "note": "equity attributable to owners",
           "values": [
             null,
             null,
             null,
             null,
             null
+          ],
+          "nm": [
+            true,
+            true,
+            true,
+            true,
+            true
           ]
         }
       ]
@@ -356,16 +395,16 @@
             null,
             null,
             0.0,
-            2.5422,
-            8.4858
+            2.634,
+            7.3633
           ],
           "sub": "pp",
           "subValues": [
             null,
             null,
             null,
-            2.54,
-            5.94
+            2.63,
+            4.73
           ]
         },
         {
@@ -374,32 +413,39 @@
           "kind": "pct",
           "note": "",
           "values": [
-            -17.9841,
-            9.5371,
-            30.2166,
-            45.5498,
-            101.9641
+            -18.6442,
+            9.882,
+            31.29,
+            47.1945,
+            88.4764
           ],
           "sub": "pp",
           "subValues": [
             null,
-            27.52,
-            20.68,
-            15.33,
-            56.41
+            28.53,
+            21.41,
+            15.9,
+            41.28
           ]
         },
         {
           "key": "roe",
           "label": "Return on equity, %",
           "kind": "pct",
-          "note": "period-end equity",
+          "note": "average equity attributable to owners",
           "values": [
             null,
             null,
             null,
             null,
             null
+          ],
+          "nm": [
+            true,
+            true,
+            true,
+            true,
+            true
           ],
           "sub": "pp",
           "subValues": [
@@ -414,21 +460,21 @@
           "key": "roa",
           "label": "Return on assets, %",
           "kind": "pct",
-          "note": "period-end assets",
+          "note": "average assets, profit incl. NCI",
           "values": [
-            -20.4293,
-            -8.9627,
-            -6.6771,
-            -0.0656,
-            1.215
+            null,
+            -11.2151,
+            -8.7014,
+            -0.0809,
+            1.3363
           ],
           "sub": "pp",
           "subValues": [
             null,
-            11.47,
-            2.29,
-            6.61,
-            1.28
+            null,
+            2.51,
+            8.62,
+            1.42
           ]
         }
       ]
@@ -516,6 +562,32 @@
           ]
         },
         {
+          "key": "equity_parent",
+          "label": "— attributable to owners",
+          "kind": "money",
+          "note": "",
+          "values": [
+            -16647.0,
+            -66577.0,
+            -132500.0,
+            -148406.0,
+            -153968.0
+          ]
+        },
+        {
+          "key": "nci",
+          "label": "— non-controlling interests",
+          "kind": "money",
+          "note": "added to enterprise value",
+          "values": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
           "key": "cash",
           "label": "Cash and equivalents",
           "kind": "money",
@@ -545,7 +617,7 @@
           "key": "lease",
           "label": "Lease liabilities",
           "kind": "money",
-          "note": "excluded from net debt",
+          "note": "included in net debt",
           "values": [
             74495.0,
             124335.0,
@@ -555,15 +627,41 @@
           ]
         },
         {
+          "key": "short_term_investments",
+          "label": "Short-term investments",
+          "kind": "money",
+          "note": "netted against net debt",
+          "values": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
           "key": "shares",
           "label": "Shares, weighted avg basic",
           "kind": "ratio",
-          "note": "mn",
+          "note": "mn; the P/E denominator",
           "values": [
-            216.4137,
-            216.4137,
-            216.4137,
-            216.4137,
+            208.7521,
+            208.8622,
+            208.9901,
+            208.8718,
+            216.4137
+          ]
+        },
+        {
+          "key": "shares_out",
+          "label": "Shares outstanding, period end",
+          "kind": "ratio",
+          "note": "mn; what market capitalisation is struck on",
+          "values": [
+            208.7521,
+            208.8622,
+            208.9901,
+            208.8718,
             216.4137
           ]
         }

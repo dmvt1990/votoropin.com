@@ -80,6 +80,11 @@ export const en = {
     gapNoCf: "No cash flow statement. Free cash flow, dividends paid and their yields are blank.",
     growth:     "Growth %, YoY",
     changePp:   "Change, p.p.",
+    // A ratio computed on a denominator that cannot carry one — a loss, a
+    // negative EBITDA, an accumulated deficit larger than paid-in capital.
+    // Deliberately not the same mark as a blank, which means undisclosed.
+    nm:         "n.m.",
+    nmTitle:    "Not meaningful — the denominator is nil or negative",
     rows: {
       enterprise_value: "Enterprise value",
       mcap:             "Market capitalisation",
@@ -110,8 +115,11 @@ export const en = {
       net_income_group: "Net income incl. NCI",
       total_assets:     "Total assets",
       total_equity:     "Total equity",
+      equity_parent: "— attributable to owners",
+      nci:           "— non-controlling interests",
       cash:             "Cash and equivalents",
       debt:             "Total debt",
+      short_term_investments: "Short-term investments",
       lease:            "Lease liabilities",
       shares:           "Shares, weighted average basic, mn",
     },
@@ -119,12 +127,16 @@ export const en = {
       ebitda:         "operating profit + D&A",
       net_income:     "attributable to shareholders",
       fcf:            "operating cash flow \u2212 capex",
-      roe:            "period-end equity",
-      roa:            "period-end assets",
+      roe:            "average equity attributable to owners",
+      roa:            "average assets, profit incl. NCI",
+      pb:             "equity attributable to owners",
+      nci:            "added to enterprise value",
       ebitda_adj:     "company definition, non-IFRS",
       net_income_adj: "non-IFRS",
       turnover:        "before agency netting",
-      lease:          "excluded from net debt",
+      lease:          "included in net debt",
+      short_term_investments: "netted against net debt",
+      net_debt:       "borrowings and leases, less cash",
     },
     page: {
       breadcrumbIndices: "Research prototypes",

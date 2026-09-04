@@ -15,6 +15,9 @@ export interface FundRow {
   kind: "money" | "ratio" | "pct";
   note?: string;
   values: (number | null)[];
+  // Set only on rows that have one: true where the ratio was computed and is
+  // not meaningful, as opposed to a null, which means it could not be computed.
+  nm?: boolean[];
   sub?: "growth" | "pp";
   subValues?: (number | null)[];
 }
@@ -120,9 +123,15 @@ const note = (key: string) => (T.notes as Record<string, string>)[key] ?? "";
                         <span class="ml-2 font-sans text-[11px] text-ink-mute">{note(r.key)}</span>
                       )}
                     </th>
-                    {r.values.map((v) => (
-                      <td class="px-5 pt-3.5 pb-1 font-mono text-[14px] text-right numeric whitespace-nowrap">
-                        {cell(v, r.kind)}
+                    {r.values.map((v, i) => (
+                      <td
+                        class:list={[
+                          "px-5 pt-3.5 pb-1 font-mono text-[14px] text-right numeric whitespace-nowrap",
+                          r.nm?.[i] && "text-ink-mute",
+                        ]}
+                        title={r.nm?.[i] ? T.nmTitle : undefined}
+                      >
+                        {r.nm?.[i] ? T.nm : cell(v, r.kind)}
                       </td>
                     ))}
                   </tr>

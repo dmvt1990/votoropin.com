@@ -3,7 +3,7 @@
   "name": "МКПАО «ВК»",
   "name_en": "VK Company",
   "unit": "RUB mn",
-  "generated": "2026-09-02",
+  "generated": "2026-09-04",
   "columns": [
     "2023",
     "2024",
@@ -11,8 +11,8 @@
     "LTM"
   ],
   "spot": {
-    "date": "2026-09-01",
-    "price": 117.25,
+    "date": "2026-09-03",
+    "price": 122.15,
     "shares": 572904180
   },
   "closes": {
@@ -33,6 +33,12 @@
     }
   },
   "period_basis": null,
+  "shares_source": [
+    "outstanding",
+    "outstanding",
+    "outstanding",
+    "issue size"
+  ],
   "coverage": {
     "pnl": true,
     "bs": true,
@@ -46,11 +52,19 @@
   },
   "sources": [
     {
+      "document": "2024__konsolidirovannaya-finansovaya-otchetnost-mkpao-vk-2024__762b4888.md",
+      "values": 2
+    },
+    {
+      "document": "2025-FY__konsolidirovannaya-finansovaya-otchetnost-mkpao-vk-za-12-mes__082d72b0.md",
+      "values": 4
+    },
+    {
       "document": "2026-Q2__vk-databook-2q2026__4d7ff3d4.md",
-      "values": 84
+      "values": 96
     }
   ],
-  "facts": 84,
+  "facts": 102,
   "sections": [
     {
       "key": "enterprise_value",
@@ -62,36 +76,36 @@
           "kind": "money",
           "note": "",
           "values": [
-            128050.4188,
-            70288.5194,
-            119773.1794,
-            67173.0151
+            125830.2534,
+            70649.4809,
+            173292.0805,
+            69980.2456
           ],
           "sub": "growth",
           "subValues": [
             null,
-            -45.11,
-            70.4,
-            -43.92
+            -43.85,
+            145.28,
+            -59.62
           ]
         },
         {
           "key": "net_debt",
           "label": "+ Net Debt",
           "kind": "money",
-          "note": "",
+          "note": "borrowings and leases, less cash and short-term investments",
           "values": [
-            116868.0,
-            174261.0,
-            70463.0,
-            50352.0
+            126522.0,
+            183365.0,
+            82292.0,
+            62753.0
           ],
           "sub": "growth",
           "subValues": [
             null,
-            49.11,
-            -59.56,
-            -28.54
+            44.93,
+            -55.12,
+            -23.74
           ]
         },
         {
@@ -100,17 +114,17 @@
           "kind": "money",
           "note": "",
           "values": [
-            244918.4188,
-            244549.5194,
-            190236.1794,
-            117525.0151
+            249667.2534,
+            254714.4809,
+            255825.0805,
+            132969.2456
           ],
           "sub": "growth",
           "subValues": [
             null,
-            -0.15,
-            -22.21,
-            -38.22
+            2.02,
+            0.44,
+            -48.02
           ]
         }
       ]
@@ -251,10 +265,16 @@
           "kind": "ratio",
           "note": "",
           "values": [
-            -238.4795,
-            -48.4448,
-            8.9216,
-            4.9089
+            null,
+            null,
+            11.9976,
+            5.554
+          ],
+          "nm": [
+            true,
+            true,
+            false,
+            false
           ]
         },
         {
@@ -263,10 +283,16 @@
           "kind": "ratio",
           "note": "",
           "values": [
-            -3.7342,
-            -0.7403,
-            -4.7984,
-            -4.1629
+            null,
+            null,
+            null,
+            null
+          ],
+          "nm": [
+            true,
+            true,
+            true,
+            true
           ]
         },
         {
@@ -275,22 +301,28 @@
           "kind": "ratio",
           "note": "",
           "values": [
-            -113.7955,
-            -34.5208,
-            3.3046,
-            2.1032
+            null,
+            null,
+            3.8593,
+            2.6212
+          ],
+          "nm": [
+            true,
+            true,
+            false,
+            false
           ]
         },
         {
           "key": "pb",
           "label": "P/B",
           "kind": "ratio",
-          "note": "",
+          "note": "equity attributable to owners",
           "values": [
-            0.931,
-            1.5686,
-            0.9014,
-            0.5181
+            0.8974,
+            1.6017,
+            1.3066,
+            0.5407
           ]
         }
       ]
@@ -324,55 +356,55 @@
           "kind": "pct",
           "note": "",
           "values": [
-            -24.3139,
-            -53.5223,
-            -18.3138,
-            -9.6795
+            -24.7429,
+            -53.2488,
+            -12.6578,
+            -9.2912
           ],
           "sub": "pp",
           "subValues": [
             null,
-            -29.21,
-            35.21,
-            8.63
+            -28.51,
+            40.59,
+            3.37
           ]
         },
         {
           "key": "roe",
           "label": "Return on equity, %",
           "kind": "pct",
-          "note": "period-end equity",
+          "note": "average equity attributable to owners",
           "values": [
-            -24.9327,
-            -211.8949,
-            -18.7855,
-            -12.4457
+            null,
+            -103.0207,
+            -28.2457,
+            -11.8302
           ],
           "sub": "pp",
           "subValues": [
             null,
-            -186.96,
-            193.11,
-            6.34
+            null,
+            74.78,
+            16.42
           ]
         },
         {
           "key": "roa",
           "label": "Return on assets, %",
           "kind": "pct",
-          "note": "period-end assets",
+          "note": "average assets, profit incl. NCI",
           "values": [
-            -8.5569,
-            -28.4708,
-            -7.4896,
-            -4.9864
+            null,
+            -25.8632,
+            -7.4872,
+            -4.8774
           ],
           "sub": "pp",
           "subValues": [
             null,
-            -19.91,
-            20.98,
-            2.5
+            null,
+            18.38,
+            2.61
           ]
         }
       ]
@@ -454,6 +486,30 @@
           ]
         },
         {
+          "key": "equity_parent",
+          "label": "— attributable to owners",
+          "kind": "money",
+          "note": "",
+          "values": [
+            140219.0,
+            44109.0,
+            132633.0,
+            129415.0
+          ]
+        },
+        {
+          "key": "nci",
+          "label": "— non-controlling interests",
+          "kind": "money",
+          "note": "added to enterprise value",
+          "values": [
+            -2685.0,
+            700.0,
+            241.0,
+            236.0
+          ]
+        },
+        {
           "key": "cash",
           "label": "Cash and equivalents",
           "kind": "money",
@@ -481,7 +537,7 @@
           "key": "lease",
           "label": "Lease liabilities",
           "kind": "money",
-          "note": "excluded from net debt",
+          "note": "included in net debt",
           "values": [
             9654.0,
             9104.0,
@@ -490,15 +546,39 @@
           ]
         },
         {
+          "key": "short_term_investments",
+          "label": "Short-term investments",
+          "kind": "money",
+          "note": "netted against net debt",
+          "values": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
           "key": "shares",
           "label": "Shares, weighted avg basic",
           "kind": "ratio",
-          "note": "mn",
+          "note": "mn; the P/E denominator",
           "values": [
-            230.1409,
-            224.9953,
-            396.2063,
-            2689.3333
+            226.1507,
+            226.1507,
+            406.598,
+            572.9042
+          ]
+        },
+        {
+          "key": "shares_out",
+          "label": "Shares outstanding, period end",
+          "kind": "ratio",
+          "note": "mn; what market capitalisation is struck on",
+          "values": [
+            226.1507,
+            226.1507,
+            573.2454,
+            572.9042
           ]
         }
       ]

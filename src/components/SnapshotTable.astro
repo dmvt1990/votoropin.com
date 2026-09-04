@@ -19,6 +19,9 @@ export interface SnapRow {
   kind: "money" | "ratio" | "pct";
   basis: "period" | "trailing";
   values: Record<string, number | null>;
+  // Present only on rows that have one: true where the ratio was computed and
+  // is not meaningful, which is not the same as a blank.
+  nm?: Record<string, boolean>;
 }
 
 export interface Snapshot {
@@ -135,8 +138,14 @@ const sourceNote = S.sourceNote.replace("{generated}", data.generated);
                       )}
                     </th>
                     {cols.map((tk) => (
-                      <td class="px-4 py-3 font-mono text-[14px] text-right numeric whitespace-nowrap">
-                        {cell(r.values[tk] ?? null, r.kind)}
+                      <td
+                        class:list={[
+                          "px-4 py-3 font-mono text-[14px] text-right numeric whitespace-nowrap",
+                          r.nm?.[tk] && "text-ink-mute",
+                        ]}
+                        title={r.nm?.[tk] ? F.nmTitle : undefined}
+                      >
+                        {r.nm?.[tk] ? F.nm : cell(r.values[tk] ?? null, r.kind)}
                       </td>
                     ))}
                   </tr>
