@@ -68,11 +68,11 @@
     },
     {
       "document": "2025__1-1-mkpao-ozon-2025-konsolidirovannaya-finansovaya-otchetnos__manual-4.md",
-      "values": 18
+      "values": 22
     },
     {
       "document": "2025__ozon-obyavlyaet-finansovye-rezultaty-za-chetvertyi-kvartal-2__manual-7.md",
-      "values": 4
+      "values": 6
     },
     {
       "document": "2026-Q2__rus-ozon-ipjsc-consolidated-fs-ifrs-2q2026__manual-e.md",
@@ -84,10 +84,10 @@
     },
     {
       "document": "undated__ozon-databook-q2-26__manual-2.md",
-      "values": 125
+      "values": 133
     }
   ],
-  "facts": 177,
+  "facts": 191,
   "sections": [
     {
       "key": "enterprise_value",
@@ -508,6 +508,53 @@
       ]
     },
     {
+      "key": "solvency",
+      "label": "Solvency and efficiency",
+      "rows": [
+        {
+          "key": "interest_cover",
+          "label": "Finance cost coverage",
+          "kind": "ratio",
+          "note": "operating profit ÷ finance costs",
+          "values": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "key": "tax_rate",
+          "label": "Effective tax rate, %",
+          "kind": "pct",
+          "note": "",
+          "values": [
+            null,
+            null,
+            null,
+            113.845,
+            39.7804
+          ],
+          "nm": [
+            false,
+            false,
+            true,
+            false,
+            false
+          ],
+          "sub": "pp",
+          "subValues": [
+            null,
+            null,
+            null,
+            null,
+            -74.06
+          ]
+        }
+      ]
+    },
+    {
       "key": "memo",
       "label": "Memo",
       "rows": [
@@ -574,6 +621,32 @@
             890235.0,
             1429778.0,
             1746850.0
+          ]
+        },
+        {
+          "key": "profit_before_tax",
+          "label": "Profit before tax",
+          "kind": "money",
+          "note": "",
+          "values": [
+            null,
+            null,
+            -55150.0,
+            6775.0,
+            35246.0
+          ]
+        },
+        {
+          "key": "interest_expense",
+          "label": "Finance costs",
+          "kind": "money",
+          "note": "",
+          "values": [
+            null,
+            null,
+            null,
+            null,
+            null
           ]
         },
         {

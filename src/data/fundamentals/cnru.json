@@ -53,18 +53,18 @@
   "sources": [
     {
       "document": "2024__cian-q4-2024-financial-results-rus__cf6bc5a6.md",
-      "values": 13
+      "values": 15
     },
     {
       "document": "2025__cian-q4-2025-financial-results-rus__bf5c5cd3.md",
-      "values": 30
+      "values": 34
     },
     {
       "document": "2026__cian-q2-2026-financial-results-rus__8291d981.md",
-      "values": 23
+      "values": 27
     }
   ],
-  "facts": 66,
+  "facts": 76,
   "sections": [
     {
       "key": "enterprise_value",
@@ -411,6 +411,43 @@
       ]
     },
     {
+      "key": "solvency",
+      "label": "Solvency and efficiency",
+      "rows": [
+        {
+          "key": "interest_cover",
+          "label": "Finance cost coverage",
+          "kind": "ratio",
+          "note": "operating profit ÷ finance costs",
+          "values": [
+            51.9143,
+            49.5111,
+            124.1818,
+            438.0
+          ]
+        },
+        {
+          "key": "tax_rate",
+          "label": "Effective tax rate, %",
+          "kind": "pct",
+          "note": "",
+          "values": [
+            27.5493,
+            25.4914,
+            32.1801,
+            29.0909
+          ],
+          "sub": "pp",
+          "subValues": [
+            null,
+            -2.06,
+            6.69,
+            -3.09
+          ]
+        }
+      ]
+    },
+    {
       "key": "memo",
       "label": "Memo",
       "rows": [
@@ -472,6 +509,30 @@
             13045.0,
             10072.0,
             8062.0
+          ]
+        },
+        {
+          "key": "profit_before_tax",
+          "label": "Profit before tax",
+          "kind": "money",
+          "note": "",
+          "values": [
+            2334.0,
+            3307.0,
+            4220.0,
+            5500.0
+          ]
+        },
+        {
+          "key": "interest_expense",
+          "label": "Finance costs",
+          "kind": "money",
+          "note": "",
+          "values": [
+            35.0,
+            45.0,
+            22.0,
+            9.0
           ]
         },
         {

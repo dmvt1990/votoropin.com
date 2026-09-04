@@ -57,18 +57,18 @@
     },
     {
       "document": "2024__msfo-otchetnost-za-2024-g__f5fedcf9.md",
-      "values": 16
+      "values": 18
     },
     {
       "document": "2025__msfo-otchetnost-gruppy-astra-za-2025-god__4fb53893.md",
-      "values": 24
+      "values": 30
     },
     {
       "document": "undated__otchetnost-pao-gruppa-astra-6m26__34d59e65.md",
-      "values": 26
+      "values": 34
     }
   ],
-  "facts": 76,
+  "facts": 92,
   "sections": [
     {
       "key": "enterprise_value",
@@ -415,6 +415,43 @@
       ]
     },
     {
+      "key": "solvency",
+      "label": "Solvency and efficiency",
+      "rows": [
+        {
+          "key": "interest_cover",
+          "label": "Finance cost coverage",
+          "kind": "ratio",
+          "note": "operating profit ÷ finance costs",
+          "values": [
+            13.9236,
+            9.7843,
+            10.9799,
+            12.8572
+          ]
+        },
+        {
+          "key": "tax_rate",
+          "label": "Effective tax rate, %",
+          "kind": "pct",
+          "note": "",
+          "values": [
+            null,
+            -0.4713,
+            4.661,
+            null
+          ],
+          "sub": "pp",
+          "subValues": [
+            null,
+            null,
+            5.13,
+            null
+          ]
+        }
+      ]
+    },
+    {
       "key": "memo",
       "label": "Memo",
       "rows": [
@@ -476,6 +513,30 @@
             19172.165,
             24449.482,
             22384.588
+          ]
+        },
+        {
+          "key": "profit_before_tax",
+          "label": "Profit before tax",
+          "kind": "money",
+          "note": "",
+          "values": [
+            3561.906,
+            6012.395,
+            6344.958,
+            6667.055
+          ]
+        },
+        {
+          "key": "interest_expense",
+          "label": "Finance costs",
+          "kind": "money",
+          "note": "",
+          "values": [
+            293.625,
+            563.939,
+            569.821,
+            499.937
           ]
         },
         {

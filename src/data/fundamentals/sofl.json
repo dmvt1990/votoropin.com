@@ -51,18 +51,18 @@
   "sources": [
     {
       "document": "2024__softline-consolidated-fs-2024-web__79413122.md",
-      "values": 18
+      "values": 20
     },
     {
       "document": "2025__softline-consolidated-fs-2025-with-audit-report__eee540d2.md",
-      "values": 29
+      "values": 31
     },
     {
       "document": "2026-Q2__softline-fact-sheet-q2-2026__manual-9.md",
       "values": 114
     }
   ],
-  "facts": 161,
+  "facts": 165,
   "sections": [
     {
       "key": "enterprise_value",
@@ -377,6 +377,40 @@
       ]
     },
     {
+      "key": "solvency",
+      "label": "Solvency and efficiency",
+      "rows": [
+        {
+          "key": "interest_cover",
+          "label": "Finance cost coverage",
+          "kind": "ratio",
+          "note": "operating profit ÷ finance costs",
+          "values": [
+            0.3383,
+            0.4263,
+            0.6651
+          ]
+        },
+        {
+          "key": "tax_rate",
+          "label": "Effective tax rate, %",
+          "kind": "pct",
+          "note": "",
+          "values": [
+            18.2036,
+            null,
+            null
+          ],
+          "sub": "pp",
+          "subValues": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
       "key": "memo",
       "label": "Memo",
       "rows": [
@@ -433,6 +467,28 @@
             74517.0,
             100927.0,
             117749.0
+          ]
+        },
+        {
+          "key": "profit_before_tax",
+          "label": "Profit before tax",
+          "kind": "money",
+          "note": "",
+          "values": [
+            3763.0,
+            null,
+            null
+          ]
+        },
+        {
+          "key": "interest_expense",
+          "label": "Finance costs",
+          "kind": "money",
+          "note": "",
+          "values": [
+            4535.0,
+            5041.0,
+            6043.0
           ]
         },
         {

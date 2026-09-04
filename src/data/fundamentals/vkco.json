@@ -61,10 +61,10 @@
     },
     {
       "document": "2026-Q2__vk-databook-2q2026__4d7ff3d4.md",
-      "values": 96
+      "values": 104
     }
   ],
-  "facts": 102,
+  "facts": 110,
   "sections": [
     {
       "key": "enterprise_value",
@@ -435,6 +435,43 @@
       ]
     },
     {
+      "key": "solvency",
+      "label": "Solvency and efficiency",
+      "rows": [
+        {
+          "key": "interest_cover",
+          "label": "Finance cost coverage",
+          "kind": "ratio",
+          "note": "operating profit ÷ finance costs",
+          "values": [
+            -1.3815,
+            -1.1904,
+            -0.4901,
+            -0.8918
+          ]
+        },
+        {
+          "key": "tax_rate",
+          "label": "Effective tax rate, %",
+          "kind": "pct",
+          "note": "",
+          "values": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "sub": "pp",
+          "subValues": [
+            null,
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
       "key": "memo",
       "label": "Memo",
       "rows": [
@@ -496,6 +533,30 @@
             333492.0,
             333276.0,
             323599.0
+          ]
+        },
+        {
+          "key": "profit_before_tax",
+          "label": "Profit before tax",
+          "kind": "money",
+          "note": "",
+          "values": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "key": "interest_expense",
+          "label": "Finance costs",
+          "kind": "money",
+          "note": "",
+          "values": [
+            17749.0,
+            28472.0,
+            25200.0,
+            13886.0
           ]
         },
         {

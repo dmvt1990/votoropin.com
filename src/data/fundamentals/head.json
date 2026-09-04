@@ -53,18 +53,18 @@
   "sources": [
     {
       "document": "2023__20240306-fin-result-2023-pdf__390ea045.md",
-      "values": 48
+      "values": 56
     },
     {
       "document": "2025-FY__hedhanter-obyavlyaet-finansovye-rezultaty-za-iv-kvartal-2025__ddb2f63d.md",
-      "values": 48
+      "values": 56
     },
     {
       "document": "2026-Q2__head-reliz-2-kv-2026-pdf__5e53e16e.md",
-      "values": 41
+      "values": 49
     }
   ],
-  "facts": 137,
+  "facts": 161,
   "sections": [
     {
       "key": "enterprise_value",
@@ -423,6 +423,43 @@
       ]
     },
     {
+      "key": "solvency",
+      "label": "Solvency and efficiency",
+      "rows": [
+        {
+          "key": "interest_cover",
+          "label": "Finance cost coverage",
+          "kind": "ratio",
+          "note": "operating profit ÷ finance costs",
+          "values": [
+            24.3675,
+            38.2332,
+            34.1532,
+            35.2897
+          ]
+        },
+        {
+          "key": "tax_rate",
+          "label": "Effective tax rate, %",
+          "kind": "pct",
+          "note": "",
+          "values": [
+            28.003,
+            2.444,
+            10.0375,
+            8.1859
+          ],
+          "sub": "pp",
+          "subValues": [
+            null,
+            -25.56,
+            7.59,
+            -1.85
+          ]
+        }
+      ]
+    },
+    {
       "key": "memo",
       "label": "Memo",
       "rows": [
@@ -484,6 +521,30 @@
             24493.775,
             34882.549,
             29018.379
+          ]
+        },
+        {
+          "key": "profit_before_tax",
+          "label": "Profit before tax",
+          "kind": "money",
+          "note": "",
+          "values": [
+            17243.053,
+            24480.09,
+            19996.663,
+            20104.546
+          ]
+        },
+        {
+          "key": "interest_expense",
+          "label": "Finance costs",
+          "kind": "money",
+          "note": "",
+          "values": [
+            649.278,
+            530.985,
+            554.893,
+            533.618
           ]
         },
         {

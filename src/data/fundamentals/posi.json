@@ -57,22 +57,22 @@
     },
     {
       "document": "2024__ifrs-2024-report-9a821feb4e3a0e69__95ff53ec.md",
-      "values": 16
+      "values": 18
     },
     {
       "document": "2025__posi-2025-ifrs-report__9882e5ac.md",
-      "values": 24
+      "values": 28
     },
     {
       "document": "2026-H1__posi-6m2026-ifrs-report__76accaf7.md",
-      "values": 29
+      "values": 33
     },
     {
       "document": "undated__pt-ar25-book-0704-1804-public__0fc5de31.md",
       "values": 2
     }
   ],
-  "facts": 81,
+  "facts": 91,
   "sections": [
     {
       "key": "enterprise_value",
@@ -419,6 +419,43 @@
       ]
     },
     {
+      "key": "solvency",
+      "label": "Solvency and efficiency",
+      "rows": [
+        {
+          "key": "interest_cover",
+          "label": "Finance cost coverage",
+          "kind": "ratio",
+          "note": "operating profit ÷ finance costs",
+          "values": [
+            66.3303,
+            3.7665,
+            2.2734,
+            3.9794
+          ]
+        },
+        {
+          "key": "tax_rate",
+          "label": "Effective tax rate, %",
+          "kind": "pct",
+          "note": "",
+          "values": [
+            1.9702,
+            4.8099,
+            1.4745,
+            null
+          ],
+          "sub": "pp",
+          "subValues": [
+            null,
+            2.84,
+            -3.34,
+            null
+          ]
+        }
+      ]
+    },
+    {
       "key": "memo",
       "label": "Memo",
       "rows": [
@@ -480,6 +517,30 @@
             52718.993,
             61020.792,
             50794.405
+          ]
+        },
+        {
+          "key": "profit_before_tax",
+          "label": "Profit before tax",
+          "kind": "money",
+          "note": "",
+          "values": [
+            9891.083,
+            3849.128,
+            7382.372,
+            null
+          ]
+        },
+        {
+          "key": "interest_expense",
+          "label": "Finance costs",
+          "kind": "money",
+          "note": "",
+          "values": [
+            148.086,
+            1225.224,
+            4104.777,
+            3092.744
           ]
         },
         {

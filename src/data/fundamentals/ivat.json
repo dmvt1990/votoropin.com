@@ -50,26 +50,26 @@
   "sources": [
     {
       "document": "2023__msfo-otchetnost-za-2023-god__a3e55a10.md",
-      "values": 47
+      "values": 53
     },
     {
       "document": "2025-FY__msfo-otchetnost-pao-iva-12m-2025__3000b521.md",
-      "values": 14
+      "values": 16
     },
     {
       "document": "2025-H1__otchetnost-iva-6m2025__b03af3b5.md",
-      "values": 20
+      "values": 24
     },
     {
       "document": "2026-H1__otchetnost-pao-iva-6m2026__48251a42.md",
-      "values": 13
+      "values": 17
     },
     {
       "document": "undated__otchetnost-pao-iva-12m24__6d85d300.md",
-      "values": 15
+      "values": 17
     }
   ],
-  "facts": 109,
+  "facts": 127,
   "sections": [
     {
       "key": "enterprise_value",
@@ -448,6 +448,46 @@
       ]
     },
     {
+      "key": "solvency",
+      "label": "Solvency and efficiency",
+      "rows": [
+        {
+          "key": "interest_cover",
+          "label": "Finance cost coverage",
+          "kind": "ratio",
+          "note": "operating profit ÷ finance costs",
+          "values": [
+            42.8027,
+            416.8415,
+            40.8949,
+            14.7914,
+            10.7988
+          ]
+        },
+        {
+          "key": "tax_rate",
+          "label": "Effective tax rate, %",
+          "kind": "pct",
+          "note": "",
+          "values": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          "sub": "pp",
+          "subValues": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
       "key": "memo",
       "label": "Memo",
       "rows": [
@@ -514,6 +554,32 @@
             6994.868,
             8585.394,
             9147.067
+          ]
+        },
+        {
+          "key": "profit_before_tax",
+          "label": "Profit before tax",
+          "kind": "money",
+          "note": "",
+          "values": [
+            1005.45,
+            1763.706,
+            1914.367,
+            1528.202,
+            1294.159
+          ]
+        },
+        {
+          "key": "interest_expense",
+          "label": "Finance costs",
+          "kind": "money",
+          "note": "",
+          "values": [
+            23.964,
+            4.214,
+            47.761,
+            109.736,
+            131.846
           ]
         },
         {

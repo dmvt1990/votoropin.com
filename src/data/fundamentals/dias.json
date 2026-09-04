@@ -59,14 +59,14 @@
     },
     {
       "document": "2025-FY__konsolidirovannaya-finansovaya-otchetnost-po-msfo-za-2025-go__9403f4b3.md",
-      "values": 2
+      "values": 6
     },
     {
       "document": "2026-FY__diasoft-investor-databook-fy2026__manual-8.md",
       "values": 81
     }
   ],
-  "facts": 84,
+  "facts": 88,
   "sections": [
     {
       "key": "enterprise_value",
@@ -445,6 +445,46 @@
       ]
     },
     {
+      "key": "solvency",
+      "label": "Solvency and efficiency",
+      "rows": [
+        {
+          "key": "interest_cover",
+          "label": "Finance cost coverage",
+          "kind": "ratio",
+          "note": "operating profit ÷ finance costs",
+          "values": [
+            null,
+            null,
+            null,
+            42.3452,
+            6.8399
+          ]
+        },
+        {
+          "key": "tax_rate",
+          "label": "Effective tax rate, %",
+          "kind": "pct",
+          "note": "",
+          "values": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          "sub": "pp",
+          "subValues": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
       "key": "memo",
       "label": "Memo",
       "rows": [
@@ -511,6 +551,32 @@
             8615.9595,
             8552.034,
             8518.619
+          ]
+        },
+        {
+          "key": "profit_before_tax",
+          "label": "Profit before tax",
+          "kind": "money",
+          "note": "",
+          "values": [
+            null,
+            null,
+            null,
+            2556.524,
+            561.49
+          ]
+        },
+        {
+          "key": "interest_expense",
+          "label": "Finance costs",
+          "kind": "money",
+          "note": "",
+          "values": [
+            null,
+            null,
+            null,
+            55.451,
+            84.969
           ]
         },
         {
