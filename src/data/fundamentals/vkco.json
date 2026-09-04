@@ -335,12 +335,37 @@
           "key": "div_yield",
           "label": "Dividend yield (paid), %",
           "kind": "pct",
-          "note": "",
+          "note": "cash paid in the period, not declared",
           "values": [
             null,
             null,
             null,
             null
+          ],
+          "sub": "pp",
+          "subValues": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "key": "payout",
+          "label": "Payout ratio, %",
+          "kind": "pct",
+          "note": "cash paid, over the profit of the period it was paid in",
+          "values": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "nm": [
+            true,
+            true,
+            true,
+            true
           ],
           "sub": "pp",
           "subValues": [
