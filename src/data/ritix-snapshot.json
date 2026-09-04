@@ -143,16 +143,16 @@
       "kind": "money",
       "basis": "period",
       "values": {
-        "YDEX": -18722.0,
-        "OZON": 257519.0,
-        "HEAD": -7788.118,
-        "VKCO": 50352.0,
-        "POSI": 13171.365999999998,
-        "ASTR": 2841.075,
-        "CNRU": -4085.0,
+        "YDEX": 73975.0,
+        "OZON": 629552.0,
+        "HEAD": -4555.443,
+        "VKCO": 62753.0,
+        "POSI": 13847.311999999998,
+        "ASTR": 2859.157,
+        "CNRU": -4046.0,
         "SOFL": null,
         "DIAS": null,
-        "IVAT": 884.78
+        "IVAT": 1029.588
       }
     },
     {
@@ -161,16 +161,16 @@
       "kind": "money",
       "basis": "period",
       "values": {
-        "YDEX": 1371682.218211,
-        "OZON": 999385.276724,
-        "HEAD": 116025.106832,
-        "VKCO": 159576.18191699998,
-        "POSI": 70455.90759999999,
-        "ASTR": 39055.575,
-        "CNRU": 34967.722372,
+        "YDEX": 1464379.218211,
+        "OZON": 1371418.276724,
+        "HEAD": 129759.201832,
+        "VKCO": 172213.18191699998,
+        "POSI": 71131.8536,
+        "ASTR": 39631.825,
+        "CNRU": 35382.722372,
         "SOFL": null,
         "DIAS": null,
-        "IVAT": 6834.78
+        "IVAT": 6978.683
       }
     },
     {
@@ -192,6 +192,24 @@
       }
     },
     {
+      "key": "gross_profit",
+      "section": "pnl",
+      "kind": "money",
+      "basis": "period",
+      "values": {
+        "YDEX": null,
+        "OZON": 148152.0,
+        "HEAD": null,
+        "VKCO": null,
+        "POSI": 7277.951,
+        "ASTR": 3265.739,
+        "CNRU": null,
+        "SOFL": null,
+        "DIAS": null,
+        "IVAT": 572.586
+      }
+    },
+    {
       "key": "ebitda",
       "section": "pnl",
       "kind": "money",
@@ -204,7 +222,7 @@
         "POSI": 853.5790000000002,
         "ASTR": 1874.9480000000003,
         "CNRU": 2575.0,
-        "SOFL": 4449.0,
+        "SOFL": null,
         "DIAS": null,
         "IVAT": 432.313
       }
@@ -252,7 +270,7 @@
       "basis": "period",
       "values": {
         "YDEX": 76082.0,
-        "OZON": 255542.0,
+        "OZON": -6425.0,
         "HEAD": 5432.303,
         "VKCO": 2963.0,
         "POSI": 9876.892,
@@ -261,6 +279,24 @@
         "SOFL": null,
         "DIAS": null,
         "IVAT": -373.5540000000001
+      }
+    },
+    {
+      "key": "fintech_funding",
+      "section": "cash_flow",
+      "kind": "money",
+      "basis": "period",
+      "values": {
+        "YDEX": null,
+        "OZON": 261967.0,
+        "HEAD": null,
+        "VKCO": null,
+        "POSI": null,
+        "ASTR": null,
+        "CNRU": null,
+        "SOFL": null,
+        "DIAS": null,
+        "IVAT": null
       }
     },
     {
@@ -287,16 +323,16 @@
       "kind": "ratio",
       "basis": "trailing",
       "values": {
-        "YDEX": 3.9550463819410844,
-        "OZON": 5.760743343539964,
-        "HEAD": 5.6410690075797145,
-        "VKCO": 6.665393338498808,
-        "POSI": 4.496189063798348,
-        "ASTR": 4.581736064682767,
-        "CNRU": 8.10751735961048,
+        "YDEX": 4.212800098219301,
+        "OZON": 7.905248248948018,
+        "HEAD": 6.308812220812316,
+        "VKCO": 7.193232610041351,
+        "POSI": 4.539324992586217,
+        "ASTR": 4.6493378195480695,
+        "CNRU": 8.203738087642012,
         "SOFL": null,
         "DIAS": null,
-        "IVAT": 3.6208644794210665
+        "IVAT": 3.697100036554161
       }
     },
     {
@@ -335,16 +371,16 @@
       "kind": "ratio",
       "basis": "trailing",
       "values": {
-        "YDEX": -0.05205848167859546,
-        "OZON": 1.4844133685339114,
-        "HEAD": -0.3786534852390827,
-        "VKCO": 2.103170293638528,
-        "POSI": 0.8405391936855185,
-        "ASTR": 0.3332957148875312,
-        "CNRU": -0.947136563876652,
+        "YDEX": 0.20569523459962072,
+        "OZON": 3.628918273941965,
+        "HEAD": -0.22148282406070155,
+        "VKCO": 2.6211519986633807,
+        "POSI": 0.883675122473387,
+        "ASTR": 0.335416972903105,
+        "CNRU": -0.9380941340134478,
         "SOFL": null,
         "DIAS": null,
-        "IVAT": 0.4687302991613733
+        "IVAT": 0.5454452985521373
       }
     },
     {
@@ -355,19 +391,19 @@
       "values": {
         "YDEX": 3.54714412782449,
         "OZON": null,
-        "HEAD": 12.546986621051047,
-        "VKCO": 0.8424476627021773,
+        "HEAD": null,
+        "VKCO": 0.8439839424873469,
         "POSI": 2.7307612599576334,
-        "ASTR": 3.061373805284808,
-        "CNRU": 9.649795495922906,
+        "ASTR": 3.212976291607242,
+        "CNRU": 10.638170082266411,
         "SOFL": null,
         "DIAS": null,
-        "IVAT": 0.8941422711093465
+        "IVAT": 0.8940206844832718
       },
       "nm": {
         "YDEX": false,
         "OZON": true,
-        "HEAD": false,
+        "HEAD": true,
         "VKCO": false,
         "POSI": false,
         "ASTR": false,
@@ -396,13 +432,43 @@
       }
     },
     {
+      "key": "payout",
+      "section": "yield",
+      "kind": "pct",
+      "basis": "trailing",
+      "values": {
+        "YDEX": 43.19859633208205,
+        "OZON": 201.77149587750293,
+        "HEAD": 131.88667798229142,
+        "VKCO": null,
+        "POSI": 18.30218960264801,
+        "ASTR": 24.79970279772001,
+        "CNRU": 295.8664111689023,
+        "SOFL": null,
+        "DIAS": null,
+        "IVAT": 0.0
+      },
+      "nm": {
+        "YDEX": false,
+        "OZON": false,
+        "HEAD": false,
+        "VKCO": true,
+        "POSI": false,
+        "ASTR": false,
+        "CNRU": false,
+        "SOFL": false,
+        "DIAS": false,
+        "IVAT": false
+      }
+    },
+    {
       "key": "fcf_yield",
       "section": "yield",
       "kind": "pct",
       "basis": "trailing",
       "values": {
         "YDEX": 12.353694624756399,
-        "OZON": 69.36411805539518,
+        "OZON": 14.971296510532826,
         "HEAD": 13.82856962431275,
         "VKCO": -5.952894208849193,
         "POSI": 12.918361207589731,
@@ -419,21 +485,21 @@
       "kind": "pct",
       "basis": "trailing",
       "values": {
-        "YDEX": 41.24395719081985,
+        "YDEX": 44.241462525941145,
         "OZON": null,
-        "HEAD": 159.34967341290732,
-        "VKCO": -12.44571966278702,
-        "POSI": 52.084164084574624,
-        "ASTR": 54.86165806091605,
-        "CNRU": 90.26439337781072,
+        "HEAD": null,
+        "VKCO": -11.830215584710752,
+        "POSI": 48.22012351966954,
+        "ASTR": 57.83354734745541,
+        "CNRU": 82.16374269005848,
         "SOFL": null,
         "DIAS": null,
-        "IVAT": 17.916402055655624
+        "IVAT": 19.758429147268068
       },
       "nm": {
         "YDEX": false,
         "OZON": true,
-        "HEAD": false,
+        "HEAD": true,
         "VKCO": false,
         "POSI": false,
         "ASTR": false,
@@ -449,16 +515,52 @@
       "kind": "pct",
       "basis": "trailing",
       "values": {
-        "YDEX": 11.226642010545852,
-        "OZON": 1.2150442224575664,
-        "HEAD": 54.18831286199687,
-        "VKCO": -4.986418375829344,
-        "POSI": 21.510154514065082,
-        "ASTR": 28.992519317308858,
-        "CNRU": 45.311337137186804,
+        "YDEX": 11.71398091211351,
+        "OZON": 1.3363226666767403,
+        "HEAD": 49.21546679259494,
+        "VKCO": -4.87739263826861,
+        "POSI": 19.54288020437866,
+        "ASTR": 27.714251612127672,
+        "CNRU": 43.013124517480975,
         "SOFL": null,
         "DIAS": null,
-        "IVAT": 13.034046869887364
+        "IVAT": 14.388769394792913
+      }
+    },
+    {
+      "key": "interest_cover",
+      "section": "solvency",
+      "kind": "ratio",
+      "basis": "period",
+      "values": {
+        "YDEX": 5.295828264196852,
+        "OZON": null,
+        "HEAD": 28.231838401366165,
+        "VKCO": -0.844984349381428,
+        "POSI": -0.916488616480963,
+        "ASTR": 6.233162456205053,
+        "CNRU": 599.75,
+        "SOFL": null,
+        "DIAS": null,
+        "IVAT": 2.30445005409304
+      }
+    },
+    {
+      "key": "tax_rate",
+      "section": "solvency",
+      "kind": "pct",
+      "basis": "period",
+      "values": {
+        "YDEX": 18.073610160868725,
+        "OZON": 44.26366927033721,
+        "HEAD": 6.971960426258807,
+        "VKCO": null,
+        "POSI": null,
+        "ASTR": null,
+        "CNRU": 27.22419928825623,
+        "SOFL": null,
+        "DIAS": null,
+        "IVAT": 5.395411102454655
       }
     },
     {
@@ -552,6 +654,42 @@
       }
     },
     {
+      "key": "profit_before_tax",
+      "section": "memo",
+      "kind": "money",
+      "basis": "period",
+      "values": {
+        "YDEX": 114006.0,
+        "OZON": 26245.0,
+        "HEAD": 8686.366,
+        "VKCO": null,
+        "POSI": null,
+        "ASTR": 1027.718,
+        "CNRU": 2810.0,
+        "SOFL": null,
+        "DIAS": null,
+        "IVAT": 91.133
+      }
+    },
+    {
+      "key": "interest_expense",
+      "section": "memo",
+      "kind": "money",
+      "basis": "period",
+      "values": {
+        "YDEX": 25481.0,
+        "OZON": null,
+        "HEAD": 290.448,
+        "VKCO": 6709.0,
+        "POSI": 940.746,
+        "ASTR": 135.575,
+        "CNRU": 4.0,
+        "SOFL": null,
+        "DIAS": null,
+        "IVAT": 69.325
+      }
+    },
+    {
       "key": "total_equity",
       "section": "memo",
       "kind": "money",
@@ -567,6 +705,42 @@
         "SOFL": null,
         "DIAS": null,
         "IVAT": 6654.4220000000005
+      }
+    },
+    {
+      "key": "equity_parent",
+      "section": "memo",
+      "kind": "money",
+      "basis": "period",
+      "values": {
+        "YDEX": 406268.0,
+        "OZON": -153968.0,
+        "HEAD": -633.455,
+        "VKCO": 129415.0,
+        "POSI": 20977.499,
+        "ASTR": 11271.325,
+        "CNRU": 3671.0,
+        "SOFL": null,
+        "DIAS": null,
+        "IVAT": 6655.327
+      }
+    },
+    {
+      "key": "nci",
+      "section": "memo",
+      "kind": "money",
+      "basis": "period",
+      "values": {
+        "YDEX": null,
+        "OZON": null,
+        "HEAD": 10501.42,
+        "VKCO": 236.0,
+        "POSI": null,
+        "ASTR": 558.168,
+        "CNRU": 376.0,
+        "SOFL": null,
+        "DIAS": null,
+        "IVAT": -0.905
       }
     },
     {
@@ -621,6 +795,24 @@
         "SOFL": null,
         "DIAS": null,
         "IVAT": 144.808
+      }
+    },
+    {
+      "key": "short_term_investments",
+      "section": "memo",
+      "kind": "money",
+      "basis": "period",
+      "values": {
+        "YDEX": null,
+        "OZON": null,
+        "HEAD": null,
+        "VKCO": null,
+        "POSI": null,
+        "ASTR": null,
+        "CNRU": null,
+        "SOFL": null,
+        "DIAS": null,
+        "IVAT": null
       }
     },
     {
