@@ -8,7 +8,7 @@
     "prior": "2025-H1"
   },
   "price_month": "2026-06",
-  "generated": "2026-09-02",
+  "generated": "2026-09-04",
   "unit": "RUB mn",
   "tickers": [
     "YDEX",
@@ -128,7 +128,7 @@
         "YDEX": 1390404.218211,
         "OZON": 741866.276724,
         "HEAD": 123813.224832,
-        "VKCO": 122206.65,
+        "VKCO": 109224.181917,
         "POSI": 57284.5416,
         "ASTR": 36214.5,
         "CNRU": 39052.722372,
@@ -164,7 +164,7 @@
         "YDEX": 1371682.218211,
         "OZON": 999385.276724,
         "HEAD": 116025.106832,
-        "VKCO": 172558.65,
+        "VKCO": 159576.18191699998,
         "POSI": 70455.90759999999,
         "ASTR": 39055.575,
         "CNRU": 34967.722372,
@@ -239,7 +239,7 @@
         "VKCO": -3846.0,
         "POSI": -1364.1580000000001,
         "ASTR": 1101.215,
-        "CNRU": 2045.0,
+        "CNRU": 1927.0,
         "SOFL": null,
         "DIAS": null,
         "IVAT": 94.611
@@ -308,13 +308,25 @@
         "YDEX": 8.600397171913512,
         "OZON": 34.95247475731449,
         "HEAD": 7.873870308186488,
-        "VKCO": -6.76897508161874,
+        "VKCO": null,
         "POSI": 5.242977991397548,
         "ASTR": 5.580170037671097,
-        "CNRU": 10.013518556923076,
+        "CNRU": 10.69058920667944,
         "SOFL": null,
         "DIAS": null,
         "IVAT": 4.990635219793446
+      },
+      "nm": {
+        "YDEX": false,
+        "OZON": false,
+        "HEAD": false,
+        "VKCO": true,
+        "POSI": false,
+        "ASTR": false,
+        "CNRU": false,
+        "SOFL": false,
+        "DIAS": false,
+        "IVAT": false
       }
     },
     {
@@ -351,6 +363,18 @@
         "SOFL": null,
         "DIAS": null,
         "IVAT": 0.8941422711093465
+      },
+      "nm": {
+        "YDEX": false,
+        "OZON": true,
+        "HEAD": false,
+        "VKCO": false,
+        "POSI": false,
+        "ASTR": false,
+        "CNRU": false,
+        "SOFL": false,
+        "DIAS": false,
+        "IVAT": false
       }
     },
     {
@@ -401,10 +425,22 @@
         "VKCO": -12.44571966278702,
         "POSI": 52.084164084574624,
         "ASTR": 54.86165806091605,
-        "CNRU": 96.36767976278725,
+        "CNRU": 90.26439337781072,
         "SOFL": null,
         "DIAS": null,
         "IVAT": 17.916402055655624
+      },
+      "nm": {
+        "YDEX": false,
+        "OZON": true,
+        "HEAD": false,
+        "VKCO": false,
+        "POSI": false,
+        "ASTR": false,
+        "CNRU": false,
+        "SOFL": false,
+        "DIAS": false,
+        "IVAT": false
       }
     },
     {
@@ -419,7 +455,7 @@
         "VKCO": -4.986418375829344,
         "POSI": 21.510154514065082,
         "ASTR": 28.992519317308858,
-        "CNRU": 48.37509302902506,
+        "CNRU": 45.311337137186804,
         "SOFL": null,
         "DIAS": null,
         "IVAT": 13.034046869887364
@@ -491,7 +527,7 @@
         "VKCO": null,
         "POSI": null,
         "ASTR": null,
-        "CNRU": null,
+        "CNRU": 2045.0,
         "SOFL": 891.682,
         "DIAS": null,
         "IVAT": null
@@ -596,7 +632,25 @@
         "YDEX": 382.084149,
         "OZON": 216.413733,
         "HEAD": 47.184918,
-        "VKCO": 641.0,
+        "VKCO": 572.90418,
+        "POSI": 71.214,
+        "ASTR": 210.0,
+        "CNRU": 77.67049,
+        "SOFL": 400.002,
+        "DIAS": 10.5,
+        "IVAT": 100.0
+      }
+    },
+    {
+      "key": "shares_out",
+      "section": "memo",
+      "kind": "ratio",
+      "basis": "period",
+      "values": {
+        "YDEX": 382.084149,
+        "OZON": 216.413733,
+        "HEAD": 47.184918,
+        "VKCO": 572.90418,
         "POSI": 71.214,
         "ASTR": 210.0,
         "CNRU": 77.67049,
