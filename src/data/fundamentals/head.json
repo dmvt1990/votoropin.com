@@ -37,7 +37,7 @@
     "issue size",
     "issue size",
     "issue size",
-    "issue size"
+    "outstanding"
   ],
   "coverage": {
     "pnl": true,
@@ -47,24 +47,28 @@
     "ltm": true
   },
   "note": {
-    "en": "HeadHunter's disclosure centre files material facts, not financial statements, so everything here comes from the quarterly earnings releases on its own investor site. Those releases lay their statements out as separate runs of captions and figures, which ordinary text extraction cannot pair up, so each statement page is rebuilt from its geometry and every cash-flow column is cross-footed to the subtotals the issuer prints. Net income is the share attributable to owners of the Company: non-controlling interests took 15% of group profit in 2025, and market capitalisation is a claim on the parent's share alone. Equity, by contrast, is the group total including those interests, as it is for every other issuer here — so return on equity and price to book are not on a like-for-like basis with net income, and the 2024 figures are dominated by the 40.0 bn dividend paid that year, which left year-end equity at a fraction of the profit earned against it.",
-    "ru": "Центр раскрытия, через который отчитывается «Хэдхантер», публикует существенные факты, а не финансовую отчётность, поэтому всё здесь взято из квартальных релизов на его собственном сайте для инвесторов. В этих релизах подписи строк и цифры набраны двумя отдельными потоками текста, которые обычное извлечение не соединяет, поэтому каждая страница отчётности восстановлена по геометрии страницы, а каждая колонка отчёта о движении денежных средств сведена с промежуточными итогами самого эмитента. Чистая прибыль — доля, причитающаяся собственникам Компании: на неконтролирующие доли в 2025 году пришлось 15% прибыли группы, а рыночная капитализация — требование только на долю материнской компании. Капитал, напротив, взят по группе целиком, включая неконтролирующие доли, — как и у всех остальных эмитентов здесь, — поэтому рентабельность капитала и P/B несопоставимы с чистой прибылью напрямую, а показатели 2024 года определяются выплаченными в том году дивидендами на 40,0 млрд рублей, после которых капитал на конец года оказался много меньше заработанной за год прибыли."
+    "en": "HeadHunter's disclosure centre files material facts, not financial statements, so everything here comes from the quarterly earnings releases on its own investor site. Those releases lay their statements out as separate runs of captions and figures, which ordinary text extraction cannot pair up, so each statement page is rebuilt from its geometry and every cash-flow column is cross-footed to the subtotals the issuer prints. Net income is the share attributable to owners of the Company: non-controlling interests took 15% of group profit in 2025, and market capitalisation is a claim on the parent's share alone. Equity, by contrast, is the group total including those interests, as it is for every other issuer here — so return on equity and price to book are not on a like-for-like basis with net income, and the 2024 figures are dominated by the 40.0 bn dividend paid that year, which left year-end equity at a fraction of the profit earned against it. The share count is the one place this table leans on the issuer's website rather than its statements: no filing prints a number of shares, so the trailing column uses the 43 370 413 outstanding published at 3 August 2026 — the 47 184 918 registered, less the incentive-programme and buyback shares held against it. The year columns have no published count and fall back to the registered total, which overstates them. The weighted average behind earnings per share is deliberately not used for market capitalisation here: it implies 50.3 mn shares for 2023 and 38.9 mn for 2024, which tracks the redomiciliation from Headhunter Group PLC rather than any change in the company.",
+    "ru": "Центр раскрытия, через который отчитывается «Хэдхантер», публикует существенные факты, а не финансовую отчётность, поэтому всё здесь взято из квартальных релизов на его собственном сайте для инвесторов. В этих релизах подписи строк и цифры набраны двумя отдельными потоками текста, которые обычное извлечение не соединяет, поэтому каждая страница отчётности восстановлена по геометрии страницы, а каждая колонка отчёта о движении денежных средств сведена с промежуточными итогами самого эмитента. Чистая прибыль — доля, причитающаяся собственникам Компании: на неконтролирующие доли в 2025 году пришлось 15% прибыли группы, а рыночная капитализация — требование только на долю материнской компании. Капитал, напротив, взят по группе целиком, включая неконтролирующие доли, — как и у всех остальных эмитентов здесь, — поэтому рентабельность капитала и P/B несопоставимы с чистой прибылью напрямую, а показатели 2024 года определяются выплаченными в том году дивидендами на 40,0 млрд рублей, после которых капитал на конец года оказался много меньше заработанной за год прибыли. Количество акций — единственное, что в этой таблице взято с сайта эмитента, а не из отчётности: ни один документ не приводит числа акций, поэтому в скользящей колонке использованы 43 370 413 акций в обращении по состоянию на 3 августа 2026 года — 47 184 918 размещённых за вычетом акций программы мотивации и выкупленных в рамках обратного выкупа. Для годовых колонок опубликованного количества нет, и они опираются на общее размещённое число, которое их завышает. Средневзвешенное количество акций, стоящее за прибылью на акцию, для капитализации здесь намеренно не используется: из него следует 50,3 млн акций за 2023 год и 38,9 млн за 2024-й, что отражает перерегистрацию из Headhunter Group PLC, а не изменения в самой компании."
   },
   "sources": [
     {
       "document": "2023__20240306-fin-result-2023-pdf__390ea045.md",
-      "values": 56
+      "values": 60
     },
     {
       "document": "2025-FY__hedhanter-obyavlyaet-finansovye-rezultaty-za-iv-kvartal-2025__ddb2f63d.md",
-      "values": 56
+      "values": 60
     },
     {
       "document": "2026-Q2__head-reliz-2-kv-2026-pdf__5e53e16e.md",
-      "values": 49
+      "values": 53
+    },
+    {
+      "document": "2026__aktsionernyi-kapital__sharecap.md",
+      "values": 1
     }
   ],
-  "facts": 161,
+  "facts": 174,
   "sections": [
     {
       "key": "enterprise_value",
@@ -79,14 +83,14 @@
             139195.5081,
             175056.0458,
             137402.4812,
-            130324.7435
+            119789.0807
           ],
           "sub": "growth",
           "subValues": [
             null,
             25.76,
             -21.51,
-            -5.15
+            -12.82
           ]
         },
         {
@@ -117,14 +121,14 @@
             120289.7311,
             180411.0978,
             135396.8792,
-            136270.7205
+            125735.0577
           ],
           "sub": "growth",
           "subValues": [
             null,
             49.98,
             -24.95,
-            0.65
+            -7.14
           ]
         }
       ]
@@ -299,7 +303,7 @@
             7.0815,
             8.3678,
             6.5718,
-            6.6254
+            6.1132
           ]
         },
         {
@@ -308,10 +312,10 @@
           "kind": "ratio",
           "note": "",
           "values": [
-            11.3896,
-            9.5159,
-            9.0126,
-            8.288
+            12.1309,
+            7.8404,
+            8.4607,
+            7.8127
           ]
         },
         {
@@ -359,14 +363,14 @@
             0.0,
             22.8602,
             7.54,
-            15.913
+            17.3126
           ],
           "sub": "pp",
           "subValues": [
             null,
             22.86,
             -15.32,
-            8.37
+            9.77
           ]
         },
         {
@@ -397,14 +401,14 @@
             11.4231,
             13.1878,
             14.9139,
-            13.1376
+            14.2931
           ],
           "sub": "pp",
           "subValues": [
             null,
             1.76,
             1.73,
-            -1.78
+            -0.62
           ]
         },
         {
@@ -668,10 +672,10 @@
           "kind": "ratio",
           "note": "mn; the P/E denominator",
           "values": [
-            47.1849,
-            47.1849,
-            47.1849,
-            47.1849
+            50.256,
+            38.877,
+            44.2956,
+            44.4791
           ]
         },
         {
@@ -683,7 +687,7 @@
             47.1849,
             47.1849,
             47.1849,
-            47.1849
+            43.3704
           ]
         }
       ]
