@@ -332,7 +332,7 @@
         },
         {
           "key": "pe",
-          "label": "P/E",
+          "label": "P/E (basic)",
           "kind": "ratio",
           "note": "",
           "values": [

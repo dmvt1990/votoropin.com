@@ -34,10 +34,10 @@
   },
   "period_basis": null,
   "shares_source": [
-    "weighted average",
-    "weighted average",
-    "weighted average",
-    "weighted average"
+    "outstanding",
+    "outstanding",
+    "outstanding",
+    "outstanding"
   ],
   "coverage": {
     "pnl": true,
@@ -47,8 +47,8 @@
     "ltm": true
   },
   "note": {
-    "en": "History starts at 2023. Everything before that was reported by Yandex N.V. — a different entity, before the restructuring and including businesses since sold — and is not comparable with what follows.",
-    "ru": "История начинается с 2023 года. Всё, что было раньше, отчитывалось компанией Yandex N.V. — другим лицом, до реструктуризации и включая проданные с тех пор бизнесы, — и несопоставимо с последующими периодами."
+    "en": "History starts at 2023. Everything before that was reported by Yandex N.V. — a different entity, before the restructuring and including businesses since sold — and is not comparable with what follows. Market capitalisation is priced on the count outstanding at each period end, from the share-movement note in the statements: 379 453 797 at 31.12.2023, 373 391 901 at 31.12.2024, 380 783 546 at 31.12.2025 and 380 885 255 at 30.06.2026. That is net of the shares Yandex holds against its motivation programme — 16 021 827 of the 396 907 079 issued at the last of those dates — and it is not the weighted average the earnings-per-share line divides by, which moves with when in the year shares were issued and bought back rather than with how many exist. P/E keeps the average, because it has to match the denominator the issuer used.",
+    "ru": "История начинается с 2023 года. Всё, что было раньше, отчитывалось компанией Yandex N.V. — другим лицом, до реструктуризации и включая проданные с тех пор бизнесы, — и несопоставимо с последующими периодами. Капитализация считается по количеству акций в обращении на конец каждого периода — из примечания о движении акций в отчётности: 379 453 797 на 31.12.2023, 373 391 901 на 31.12.2024, 380 783 546 на 31.12.2025 и 380 885 255 на 30.06.2026. Это за вычетом акций, которые «Яндекс» держит под программу мотивации, — 16 021 827 из 396 907 079 размещённых на последнюю из этих дат, — и это не средневзвешенное количество, на которое делится прибыль на акцию: оно зависит от того, когда именно в течение года акции выпускались и выкупались, а не от того, сколько их есть. В P/E остаётся средневзвешенное — знаменатель должен совпадать с тем, которым пользуется сам эмитент."
   },
   "sources": [
     {
@@ -57,7 +57,7 @@
     },
     {
       "document": "2024-FY__yandex-ifrs-report-fy2024__2907cc44.md",
-      "values": 7
+      "values": 8
     },
     {
       "document": "2024-Q4__mkpao-q4-2024-press-release-rus__f6c2ad47.md",
@@ -65,7 +65,7 @@
     },
     {
       "document": "2025-FY__yandex-ifrs-report-fy2025__e9206ea9.md",
-      "values": 24
+      "values": 26
     },
     {
       "document": "2025-Q4__4q25-ydex-press-release-rus-77ac__b229aeb1.md",
@@ -73,10 +73,10 @@
     },
     {
       "document": "2026__yandex-ifrs-review-6m2026__797e4083.md",
-      "values": 50
+      "values": 51
     }
   ],
-  "facts": 152,
+  "facts": 156,
   "sections": [
     {
       "key": "enterprise_value",
@@ -88,17 +88,17 @@
           "kind": "money",
           "note": "",
           "values": [
-            963812.6393,
-            1503279.8408,
-            1733176.6005,
-            1426129.0861
+            963812.6444,
+            1491327.2526,
+            1739038.4546,
+            1421654.2143
           ],
           "sub": "growth",
           "subValues": [
             null,
-            55.97,
-            15.29,
-            -17.72
+            54.73,
+            16.61,
+            -18.25
           ]
         },
         {
@@ -126,17 +126,17 @@
           "kind": "money",
           "note": "",
           "values": [
-            1083912.6393,
-            1633679.8408,
-            1843181.6005,
-            1500104.0861
+            1083912.6444,
+            1621727.2526,
+            1849043.4546,
+            1495629.2143
           ],
           "sub": "growth",
           "subValues": [
             null,
-            50.72,
-            12.82,
-            -18.61
+            49.62,
+            14.02,
+            -19.11
           ]
         }
       ]
@@ -309,14 +309,14 @@
           "note": "",
           "values": [
             8.8566,
-            12.72,
-            6.7722,
-            4.1712
+            12.6269,
+            6.7938,
+            4.1588
           ]
         },
         {
           "key": "pe",
-          "label": "P/E",
+          "label": "P/E (basic)",
           "kind": "ratio",
           "note": "",
           "values": [
@@ -345,9 +345,9 @@
           "note": "equity attributable to owners",
           "values": [
             3.6984,
-            5.1167,
-            4.9348,
-            3.5103
+            5.076,
+            4.9515,
+            3.4993
           ]
         }
       ]
@@ -363,16 +363,16 @@
           "note": "cash paid in the period, not declared",
           "values": [
             0.0,
-            1.9439,
-            3.4902,
-            5.0756
+            1.9595,
+            3.4785,
+            5.0915
           ],
           "sub": "pp",
           "subValues": [
             null,
-            1.94,
-            1.55,
-            1.59
+            1.96,
+            1.52,
+            1.61
           ]
         },
         {
@@ -401,16 +401,16 @@
           "note": "",
           "values": [
             3.1147,
-            5.226,
-            7.8735,
-            12.4833
+            5.2679,
+            7.847,
+            12.5226
           ],
           "sub": "pp",
           "subValues": [
             null,
-            2.11,
-            2.65,
-            4.61
+            2.15,
+            2.58,
+            4.68
           ]
         },
         {
@@ -681,9 +681,9 @@
           "note": "mn; what market capitalisation is struck on",
           "values": [
             379.4538,
-            376.3845,
-            379.5,
-            382.0841
+            373.3919,
+            380.7835,
+            380.8853
           ]
         }
       ]

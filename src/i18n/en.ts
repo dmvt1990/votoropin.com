@@ -103,7 +103,7 @@ export const en = {
       solvency:         "Solvency and efficiency",
       mult:             "Multiples",
       ev_ebitda:        "EV/EBITDA",
-      pe:               "P/E",
+      pe:               "P/E (basic)",
       nd_ebitda:        "Net debt/EBITDA",
       pb:               "P/B",
       yield:            "Yields and returns",

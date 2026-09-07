@@ -98,7 +98,7 @@ export const ru = {
       solvency:         "Долговая нагрузка и эффективность",
       mult:             "Мультипликаторы",
       ev_ebitda:        "EV/EBITDA",
-      pe:               "P/E",
+      pe:               "P/E (basic)",
       nd_ebitda:        "Чистый долг/EBITDA",
       pb:               "P/B",
       yield:            "Доходности и рентабельность",
