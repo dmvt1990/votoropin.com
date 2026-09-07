@@ -130,6 +130,7 @@ export const en = {
       short_term_investments: "Short-term investments",
       lease:            "Lease liabilities",
       shares:           "Shares, weighted average basic, mn",
+      shares_out:       "Shares outstanding, period end, mn",
     },
     notes: {
       ebitda:         "operating profit + D&A",
