@@ -1,31 +1,31 @@
 {
-  "as_of": "2026-09-03",
+  "as_of": "2026-09-04",
   "inception_date": "2025-01-03",
   "benchmark_ticker": "IMOEX",
   "returns": {
     "1m": {
-      "index": -3.59,
-      "benchmark": -2.12
+      "index": -2.94,
+      "benchmark": -0.7
     },
     "3m": {
-      "index": -7.54,
-      "benchmark": -14.86
+      "index": -6.6,
+      "benchmark": -12.66
     },
     "ytd": {
-      "index": -17.73,
-      "benchmark": -19.67
+      "index": -16.95,
+      "benchmark": -18.27
     },
     "1y": {
-      "index": -11.54,
-      "benchmark": -22.76
+      "index": -10.7,
+      "benchmark": -21.59
     },
     "inception": {
-      "index": 5.13,
-      "benchmark": -21.7
+      "index": 6.13,
+      "benchmark": -20.33
     }
   },
-  "ann_vol_pct": 21.2,
-  "bench_ann_vol_pct": 22.79,
+  "ann_vol_pct": 21.19,
+  "bench_ann_vol_pct": 22.81,
   "max_drawdown": {
     "value_pct": -32.44,
     "peak_date": "2026-02-02",
@@ -39,8 +39,8 @@
   "beta": 0.551,
   "sharpe": -0.909,
   "bench_sharpe": -2.113,
-  "sortino": 0.223,
-  "calmar": 0.094,
+  "sortino": 0.266,
+  "calmar": 0.112,
   "rf_instrument": "CBR Key Rate (annual, end-of-month)",
   "rf_frequency": "monthly",
   "rf_type": "nominal"
