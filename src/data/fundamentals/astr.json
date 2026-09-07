@@ -3,7 +3,7 @@
   "name": "ПАО «Группа Астра»",
   "name_en": "Astra Group",
   "unit": "RUB mn",
-  "generated": "2026-09-04",
+  "generated": "2026-09-07",
   "columns": [
     "2023",
     "2024",
@@ -37,7 +37,7 @@
     "outstanding",
     "outstanding",
     "outstanding",
-    "issue size"
+    "outstanding"
   ],
   "coverage": {
     "pnl": true,
@@ -47,8 +47,8 @@
     "ltm": true
   },
   "note": {
-    "en": "Astra exports its statement of financial position as an image with no text layer — one page in every filing, always that statement — so the balance-sheet figures here were read by OCR rather than extracted. They are confirmed against Astra's own quarterly databook, a spreadsheet that shares none of the same machinery, and agree with it exactly in every year shown. The income statement and cash-flow statement are read from the text of the filings as usual. Capital expenditure is the three investing lines together: plant, software Astra creates, and software it buys. The created-software line is the largest of the three — 2 891 mn of the 4 419 mn spent in 2025 — so free cash flow here is well below what the \"purchases\" lines alone would give.",
-    "ru": "«Астра» выгружает отчёт о финансовом положении картинкой без текстового слоя — по одной такой странице в каждом выпуске отчётности, и всегда именно этот отчёт, — поэтому балансовые показатели здесь распознаны, а не извлечены из текста. Они сверены с собственным квартальным датабуком «Астры», отдельным файлом, не имеющим с распознаванием ничего общего, и полностью совпадают с ним за все показанные годы. Отчёт о прибылях и убытках и отчёт о движении денежных средств читаются из текста отчётности обычным образом. Капитальные затраты — это три строки инвестиционного раздела вместе: основные средства, создаваемое «Астрой» программное обеспечение и покупаемое. Строка создания — крупнейшая из трёх: 2 891 млн из 4 419 млн, потраченных в 2025 году, — поэтому свободный денежный поток здесь заметно ниже того, что дают одни только строки «приобретение»."
+    "en": "Astra exports its statement of financial position as an image with no text layer — one page in every filing, always that statement — so the balance-sheet figures here were read by OCR rather than extracted. They are confirmed against Astra's own quarterly databook, a spreadsheet that shares none of the same machinery, and agree with it exactly in every year shown. The income statement and cash-flow statement are read from the text of the filings as usual. Capital expenditure is the three investing lines together: plant, software Astra creates, and software it buys. The created-software line is the largest of the three — 2 891 mn of the 4 419 mn spent in 2025 — so free cash flow here is well below what the \"purchases\" lines alone would give. The trailing column's share count is the 201 358 879 outstanding at 31 March 2026, the most recent Astra publishes: it issues no half-year IFRS statement, and neither the second-quarter databook nor the presentation carries a count. It is three months older than the price beside it and unchanged since 1 January, and it is the right basis — the 210 000 000 registered includes the shares the company holds against itself, and pricing on those would overstate the company by 4.3%.",
+    "ru": "«Астра» выгружает отчёт о финансовом положении картинкой без текстового слоя — по одной такой странице в каждом выпуске отчётности, и всегда именно этот отчёт, — поэтому балансовые показатели здесь распознаны, а не извлечены из текста. Они сверены с собственным квартальным датабуком «Астры», отдельным файлом, не имеющим с распознаванием ничего общего, и полностью совпадают с ним за все показанные годы. Отчёт о прибылях и убытках и отчёт о движении денежных средств читаются из текста отчётности обычным образом. Капитальные затраты — это три строки инвестиционного раздела вместе: основные средства, создаваемое «Астрой» программное обеспечение и покупаемое. Строка создания — крупнейшая из трёх: 2 891 млн из 4 419 млн, потраченных в 2025 году, — поэтому свободный денежный поток здесь заметно ниже того, что дают одни только строки «приобретение». Количество акций в скользящей колонке — 201 358 879 в обращении на 31 марта 2026 года, самое свежее из публикуемых «Астрой»: полугодовую отчётность по МСФО она не выпускает, а ни дейтабук за второй квартал, ни презентация количества не приводят. Оно на три месяца старше цены рядом и не менялось с 1 января, и это верная база: в 210 000 000 размещённых входят акции, которые компания держит сама, и оценка по ним завысила бы её на 4,3%."
   },
   "sources": [
     {
@@ -64,11 +64,15 @@
       "values": 32
     },
     {
+      "document": "2026__msfo-1-kv-2026-goda-pao-gruppa-astra-vf__a75c9de5.md",
+      "values": 1
+    },
+    {
       "document": "undated__otchetnost-pao-gruppa-astra-6m26__34d59e65.md",
       "values": 38
     }
   ],
-  "facts": 99,
+  "facts": 100,
   "sections": [
     {
       "key": "enterprise_value",
@@ -83,14 +87,14 @@
             100300.0,
             94499.4656,
             50933.7284,
-            46189.5
+            44288.8854
           ],
           "sub": "growth",
           "subValues": [
             null,
             -5.78,
             -46.1,
-            -9.31
+            -13.05
           ]
         },
         {
@@ -121,14 +125,14 @@
             100927.663,
             96820.3756,
             53850.6874,
-            49606.825
+            47706.2104
           ],
           "sub": "growth",
           "subValues": [
             null,
             -4.07,
             -44.38,
-            -7.88
+            -11.41
           ]
         }
       ]
@@ -303,7 +307,7 @@
             23.0488,
             14.1487,
             6.5909,
-            5.8195
+            5.5966
           ]
         },
         {
@@ -315,7 +319,7 @@
             23.0831,
             15.547,
             8.4083,
-            7.1172
+            6.8243
           ]
         },
         {
@@ -339,7 +343,7 @@
             23.7378,
             12.6381,
             4.5591,
-            4.098
+            3.9293
           ]
         }
       ]
@@ -357,14 +361,14 @@
             1.1276,
             1.7148,
             2.3975,
-            3.4845
+            3.634
           ],
           "sub": "pp",
           "subValues": [
             null,
             0.59,
             0.68,
-            1.09
+            1.24
           ]
         },
         {
@@ -395,14 +399,14 @@
             2.1392,
             1.4568,
             2.5007,
-            0.8571
+            0.8939
           ],
           "sub": "pp",
           "subValues": [
             null,
             -0.68,
             1.04,
-            -1.64
+            -1.61
           ]
         },
         {
@@ -663,7 +667,7 @@
             167.4652,
             200.0323,
             201.0817,
-            210.0
+            201.3589
           ]
         },
         {
@@ -675,7 +679,7 @@
             200.0,
             201.2768,
             201.3589,
-            210.0
+            201.3589
           ]
         }
       ]

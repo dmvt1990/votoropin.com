@@ -3,7 +3,7 @@
   "name": "МКПАО «Озон»",
   "name_en": "Ozon",
   "unit": "RUB mn",
-  "generated": "2026-09-04",
+  "generated": "2026-09-07",
   "columns": [
     "2020",
     "2021",
@@ -55,10 +55,10 @@
     "weighted average",
     "weighted average",
     "weighted average",
-    "weighted average",
-    "weighted average",
-    "weighted average",
-    "issue size"
+    "outstanding",
+    "outstanding",
+    "outstanding",
+    "outstanding"
   ],
   "coverage": {
     "pnl": true,
@@ -90,7 +90,7 @@
     },
     {
       "document": "2025__1-1-mkpao-ozon-2025-konsolidirovannaya-finansovaya-otchetnos__manual-4.md",
-      "values": 24
+      "values": 27
     },
     {
       "document": "2025__ozon-obyavlyaet-finansovye-rezultaty-za-chetvertyi-kvartal-2__manual-7.md",
@@ -98,7 +98,7 @@
     },
     {
       "document": "2026-Q2__rus-ozon-ipjsc-consolidated-fs-ifrs-2q2026__manual-e.md",
-      "values": 2
+      "values": 3
     },
     {
       "document": "2026__ozon-obyavlyaet-finansovye-rezultaty-za-vtoroi-kvartal-2026__manual-f.md",
@@ -109,7 +109,7 @@
       "values": 141
     }
   ],
-  "facts": 242,
+  "facts": 246,
   "sections": [
     {
       "key": "enterprise_value",
@@ -124,20 +124,20 @@
             541471.2791,
             476318.3408,
             292670.4764,
-            585753.9417,
-            689876.1848,
-            943891.8043,
-            581611.9074
+            586065.7517,
+            689882.9518,
+            939012.9834,
+            576969.6355
           ],
           "sub": "growth",
           "subValues": [
             null,
             -12.03,
             -38.56,
-            100.14,
-            17.78,
-            36.82,
-            -38.38
+            100.25,
+            17.71,
+            36.11,
+            -38.56
           ]
         },
         {
@@ -174,20 +174,20 @@
             462685.2791,
             454910.3408,
             376949.4764,
-            709694.9417,
-            955211.1848,
-            1331660.8043,
-            1211163.9074
+            710006.7517,
+            955217.9518,
+            1326781.9834,
+            1206521.6355
           ],
           "sub": "growth",
           "subValues": [
             null,
             -1.68,
             -17.14,
-            88.27,
-            34.59,
-            39.41,
-            -9.05
+            88.36,
+            34.54,
+            38.9,
+            -9.06
           ]
         }
       ]
@@ -408,9 +408,9 @@
             null,
             null,
             null,
-            28.2824,
-            9.9692,
-            6.9815
+            28.2826,
+            9.9327,
+            6.9547
           ],
           "nm": [
             true,
@@ -434,7 +434,7 @@
             null,
             null,
             null,
-            27.4022
+            27.1835
           ],
           "nm": [
             true,
@@ -511,8 +511,8 @@
             null,
             null,
             0.0,
-            2.634,
-            7.3633
+            2.6477,
+            7.4226
           ],
           "sub": "pp",
           "subValues": [
@@ -521,8 +521,8 @@
             null,
             null,
             null,
-            2.63,
-            4.73
+            2.65,
+            4.77
           ]
         },
         {
@@ -568,10 +568,10 @@
             -0.0499,
             -6.9212,
             -18.9698,
-            6.8309,
-            8.9336,
-            13.6939,
-            19.0964
+            6.8272,
+            8.9335,
+            13.7651,
+            19.2501
           ],
           "sub": "pp",
           "subValues": [
@@ -579,9 +579,9 @@
             -6.87,
             -12.05,
             25.8,
-            2.1,
-            4.76,
-            5.4
+            2.11,
+            4.83,
+            5.48
           ]
         },
         {
@@ -926,7 +926,7 @@
             208.8622,
             208.9901,
             208.8718,
-            216.4137
+            214.6864
           ]
         },
         {
@@ -938,10 +938,10 @@
             164.606,
             205.6198,
             208.7521,
-            208.8622,
-            208.9901,
-            208.8718,
-            216.4137
+            208.9733,
+            208.9921,
+            207.7922,
+            214.6864
           ]
         }
       ]

@@ -3,7 +3,7 @@
   "name": "ПАО «Софтлайн»",
   "name_en": "Softline",
   "unit": "RUB mn",
-  "generated": "2026-09-04",
+  "generated": "2026-09-07",
   "columns": [
     "2023",
     "2024",
@@ -35,7 +35,7 @@
   "shares_source": [
     "weighted average",
     "weighted average",
-    "issue size"
+    "weighted average"
   ],
   "coverage": {
     "pnl": true,
@@ -54,6 +54,10 @@
       "values": 21
     },
     {
+      "document": "2025__softline-consolidated-fs-2025-with-audit-report-web__8df4e08a.md",
+      "values": 1
+    },
+    {
       "document": "2025__softline-consolidated-fs-2025-with-audit-report__eee540d2.md",
       "values": 33
     },
@@ -62,7 +66,7 @@
       "values": 114
     }
   ],
-  "facts": 168,
+  "facts": 169,
   "sections": [
     {
       "key": "enterprise_value",

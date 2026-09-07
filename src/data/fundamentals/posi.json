@@ -3,7 +3,7 @@
   "name": "ПАО «Группа Позитив»",
   "name_en": "Positive Technologies",
   "unit": "RUB mn",
-  "generated": "2026-09-04",
+  "generated": "2026-09-07",
   "columns": [
     "2023",
     "2024",
@@ -37,7 +37,7 @@
     "weighted average",
     "weighted average",
     "weighted average",
-    "issue size"
+    "weighted average"
   ],
   "coverage": {
     "pnl": true,
@@ -65,14 +65,14 @@
     },
     {
       "document": "2026-H1__posi-6m2026-ifrs-report__76accaf7.md",
-      "values": 37
+      "values": 39
     },
     {
       "document": "undated__pt-ar25-book-0704-1804-public__0fc5de31.md",
       "values": 2
     }
   ],
-  "facts": 98,
+  "facts": 100,
   "sections": [
     {
       "key": "enterprise_value",
