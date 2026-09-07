@@ -68,8 +68,8 @@
     "ltm": true
   },
   "note": {
-    "en": "Net debt here adds back the money Ozon's fintech arm holds for its customers — 882 bn roubles at 30 June 2026 — because that cash sits on the asset side with a matching liability against it. Netting only borrowings would count client money as shareholders', which put enterprise value below zero before this was corrected. Equity has been negative since the accumulated deficit passed paid-in capital, so P/B and return on equity are left blank rather than shown as negative numbers that read like ratios. Revenue, adjusted EBITDA and net income run from 2018 out of the company's databook; the balance sheet and cash flow start at 2022, from the audited FY2023 filing. 2020 and 2021 come from the 20-F filings Ozon made to the SEC as Ozon Holdings PLC, before the move to Russia. They describe the same group: 2022 appears in both, and its revenue, loss, weighted-average share count, total assets, borrowings, leases and capital expenditure all agree to the million with the Russian statements beside them. Gross profit is deliberately not carried back — the 20-F strikes it after cost of sales alone, which is a different line from the one the databook prints, and splicing the two would put a break mid-series with nothing marking it. Free cash flow removes the fintech book's own growth from operating cash flow, for the same reason net debt adds the liability back: the deposits taken, net of the lending they fund, are money passing through the group rather than cash earned for shareholders. In 2025 that is 316 bn of the 539 bn of cash from operations, and 262 bn in the first half of 2026 alone; the memo row beneath free cash flow shows the amount removed each period so the adjustment can be undone. It stops at the funding — the arm's interest received and paid stay in, because they are earnings rather than the book expanding — so this is free cash flow before the fintech book grows, not e-commerce free cash flow.",
-    "ru": "Чистый долг здесь включает средства, которые финтех-направление «Озона» держит для клиентов, — 882 млрд рублей на 30 июня 2026 года, — поскольку эти деньги стоят в активах, а против них в пассивах стоит соответствующее обязательство. Если вычесть из денежных средств только заёмные, клиентские деньги окажутся посчитаны как принадлежащие акционерам: до этой поправки стоимость компании выходила отрицательной. Собственный капитал отрицателен с тех пор, как накопленный убыток превысил оплаченный капитал, поэтому P/B и рентабельность капитала оставлены пустыми, а не показаны отрицательными числами, похожими на коэффициенты. Выручка, скорректированная EBITDA и чистая прибыль приведены с 2018 года по датабуку компании; баланс и отчёт о движении денежных средств — с 2022 года, из аудированной отчётности за 2023 год. 2020 и 2021 годы взяты из отчётов по форме 20-F, которые «Озон» подавал в SEC как Ozon Holdings PLC, до переезда в Россию. Это та же группа: 2022 год есть в обоих источниках, и выручка, убыток, средневзвешенное количество акций, итог активов, заёмные средства, обязательства по аренде и капитальные затраты совпадают в них до миллиона. Валовая прибыль намеренно не продлена назад: в 20-F она считается только за вычетом себестоимости продаж, то есть по другой строке, чем в дейтабуке, и их склейка создала бы разрыв определения в середине ряда. Из операционного потока при расчёте свободного денежного потока исключён     прирост самого финтех-портфеля — по той же причине, по которой чистый     долг включает встречное обязательство: привлечённые средства клиентов за     вычетом выданных им займов представляют собой деньги, проходящие через     группу, а не заработанные для акционеров. В 2025 году это 316 млрд из     539 млрд рублей операционного потока, а только за первое полугодие 2026     года — 262 млрд. Строка под свободным денежным потоком показывает     исключённую сумму за каждый период, так что корректировку можно снять.     Исключено только фондирование: полученные и уплаченные финтехом проценты     остаются внутри, поскольку это заработок, а не рост портфеля, — поэтому показатель означает свободный денежный поток до роста финтех-портфеля, а не свободный денежный поток электронной коммерции."
+    "en": "Net debt here adds back the money Ozon's fintech arm holds for its customers — 882 bn roubles at 30 June 2026 — because that cash sits on the asset side with a matching liability against it. Netting only borrowings would count client money as shareholders', which put enterprise value below zero before this was corrected. Equity has been negative since the accumulated deficit passed paid-in capital, so P/B and return on equity are left blank rather than shown as negative numbers that read like ratios. Revenue, adjusted EBITDA and net income run from 2018 out of the company's databook; the balance sheet and cash flow start at 2022, from the audited FY2023 filing. 2020 and 2021 come from the 20-F filings Ozon made to the SEC as Ozon Holdings PLC, before the move to Russia. They describe the same group: 2022 appears in both, and its revenue, loss, weighted-average share count, total assets, borrowings, leases and capital expenditure all agree to the million with the Russian statements beside them. Gross profit is deliberately not carried back — the 20-F strikes it after cost of sales alone, which is a different line from the one the databook prints, and splicing the two would put a break mid-series with nothing marking it. Free cash flow removes the fintech book's own growth from operating cash flow, for the same reason net debt adds the liability back: the deposits taken, net of the lending they fund, are money passing through the group rather than cash earned for shareholders. In 2025 that is 316 bn of the 539 bn of cash from operations, and 262 bn in the first half of 2026 alone; the memo row beneath free cash flow shows the amount removed each period so the adjustment can be undone. It stops at the funding — the arm's interest received and paid stay in, because they are earnings rather than the book expanding — so this is free cash flow before the fintech book grows, not e-commerce free cash flow. Finance cost coverage follows the same logic on the other side of the balance sheet. Ozon's income statement reports finance costs net — after 12.2 bn of interest income, and including fair-value and credit-loss movements — so the charge here is assembled instead from the three interest components its note breaks out: leases, borrowings and other e-commerce obligations, 72.9 bn in 2025. Those three are the company's own definition of the line, not ours: for 2022 they sum to 11 860, exactly the interest expense Ozon reported in its 20-F. The fintech arm's interest is excluded — 65.7 bn in 2025 against 124.0 bn of fintech interest income — because it is the cost of running a bank, matched by the revenue it earns, rather than a charge on the group's capital.",
+    "ru": "Чистый долг здесь включает средства, которые финтех-направление «Озона» держит для клиентов, — 882 млрд рублей на 30 июня 2026 года, — поскольку эти деньги стоят в активах, а против них в пассивах стоит соответствующее обязательство. Если вычесть из денежных средств только заёмные, клиентские деньги окажутся посчитаны как принадлежащие акционерам: до этой поправки стоимость компании выходила отрицательной. Собственный капитал отрицателен с тех пор, как накопленный убыток превысил оплаченный капитал, поэтому P/B и рентабельность капитала оставлены пустыми, а не показаны отрицательными числами, похожими на коэффициенты. Выручка, скорректированная EBITDA и чистая прибыль приведены с 2018 года по датабуку компании; баланс и отчёт о движении денежных средств — с 2022 года, из аудированной отчётности за 2023 год. 2020 и 2021 годы взяты из отчётов по форме 20-F, которые «Озон» подавал в SEC как Ozon Holdings PLC, до переезда в Россию. Это та же группа: 2022 год есть в обоих источниках, и выручка, убыток, средневзвешенное количество акций, итог активов, заёмные средства, обязательства по аренде и капитальные затраты совпадают в них до миллиона. Валовая прибыль намеренно не продлена назад: в 20-F она считается только за вычетом себестоимости продаж, то есть по другой строке, чем в дейтабуке, и их склейка создала бы разрыв определения в середине ряда. Покрытие финансовых расходов устроено по той же логике, но с другой стороны баланса. В отчёте о прибылях и убытках «Озон» показывает финансовые расходы нетто — уже за вычетом 12,2 млрд процентных доходов и вместе с переоценкой и резервами, — поэтому здесь расход собран из трёх процентных составляющих, которые раскрыты в примечании: аренда, заёмные средства и прочие обязательства e-commerce, 72,9 млрд за 2025 год. Эти три — определение самой компании, а не наше: за 2022 год они дают в сумме 11 860, ровно те процентные расходы, которые «Озон» показал в отчёте по форме 20-F. Проценты финтех-направления исключены — 65,7 млрд в 2025 году против 124,0 млрд процентных доходов финтеха, — потому что это стоимость банковского бизнеса, покрываемая его же выручкой, а не плата за капитал группы. Из операционного потока при расчёте свободного денежного потока исключён     прирост самого финтех-портфеля — по той же причине, по которой чистый     долг включает встречное обязательство: привлечённые средства клиентов за     вычетом выданных им займов представляют собой деньги, проходящие через     группу, а не заработанные для акционеров. В 2025 году это 316 млрд из     539 млрд рублей операционного потока, а только за первое полугодие 2026     года — 262 млрд. Строка под свободным денежным потоком показывает     исключённую сумму за каждый период, так что корректировку можно снять.     Исключено только фондирование: полученные и уплаченные финтехом проценты     остаются внутри, поскольку это заработок, а не рост портфеля, — поэтому показатель означает свободный денежный поток до роста финтех-портфеля, а не свободный денежный поток электронной коммерции."
   },
   "sources": [
     {
@@ -78,7 +78,7 @@
     },
     {
       "document": "2022__20-f-2022__manual-a.md",
-      "values": 25
+      "values": 24
     },
     {
       "document": "2023__ozon-rus-konsolidirovannaya-finansovaya-otchetnost-2023-isa__manual-5.md",
@@ -86,11 +86,11 @@
     },
     {
       "document": "2024__ozon-konsolidirovannaya-finansovaya-otchetnost-2024__manual-4.md",
-      "values": 2
+      "values": 4
     },
     {
       "document": "2025__1-1-mkpao-ozon-2025-konsolidirovannaya-finansovaya-otchetnos__manual-4.md",
-      "values": 27
+      "values": 29
     },
     {
       "document": "2025__ozon-obyavlyaet-finansovye-rezultaty-za-chetvertyi-kvartal-2__manual-7.md",
@@ -98,7 +98,7 @@
     },
     {
       "document": "2026-Q2__rus-ozon-ipjsc-consolidated-fs-ifrs-2q2026__manual-e.md",
-      "values": 3
+      "values": 5
     },
     {
       "document": "2026__ozon-obyavlyaet-finansovye-rezultaty-za-vtoroi-kvartal-2026__manual-f.md",
@@ -109,7 +109,7 @@
       "values": 141
     }
   ],
-  "facts": 246,
+  "facts": 251,
   "sections": [
     {
       "key": "enterprise_value",
@@ -658,10 +658,10 @@
             -8.1905,
             -10.1441,
             -3.7225,
-            null,
-            null,
-            null,
-            null
+            -1.4414,
+            -0.1766,
+            0.9785,
+            1.2783
           ]
         },
         {
@@ -803,10 +803,10 @@
             2115.0,
             5802.0,
             11860.0,
-            null,
-            null,
-            null,
-            null
+            22725.0,
+            53832.0,
+            72939.0,
+            75909.0
           ]
         },
         {

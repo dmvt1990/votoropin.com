@@ -54,8 +54,12 @@
   },
   "sources": [
     {
-      "document": "2024-FY__konsolidirovannaya-finansovaya-otchetnost-po-msfo-za-2024-go__11137c01.md",
+      "document": "2023-FY__konsolidirovannaya-finansovaya-otchetnost-po-msfo-za-2023-go__ced2a5e2.md",
       "values": 1
+    },
+    {
+      "document": "2024-FY__konsolidirovannaya-finansovaya-otchetnost-po-msfo-za-2024-go__11137c01.md",
+      "values": 3
     },
     {
       "document": "2025-FY__konsolidirovannaya-finansovaya-otchetnost-po-msfo-za-2025-go__9403f4b3.md",
@@ -66,7 +70,7 @@
       "values": 87
     }
   ],
-  "facts": 94,
+  "facts": 97,
   "sections": [
     {
       "key": "enterprise_value",
@@ -488,9 +492,9 @@
           "kind": "ratio",
           "note": "operating profit ÷ finance costs",
           "values": [
-            null,
-            null,
-            null,
+            43.7179,
+            106.4559,
+            103.2318,
             42.3452,
             6.8399
           ]
@@ -606,9 +610,9 @@
           "kind": "money",
           "note": "",
           "values": [
-            null,
-            null,
-            null,
+            48.541,
+            24.633,
+            29.915,
             55.451,
             84.969
           ]
