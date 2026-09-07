@@ -366,6 +366,36 @@
       }
     },
     {
+      "key": "pe_diluted",
+      "section": "mult",
+      "kind": "ratio",
+      "basis": "trailing",
+      "values": {
+        "YDEX": 8.724417400116971,
+        "OZON": null,
+        "HEAD": 7.517326080594545,
+        "VKCO": null,
+        "POSI": 5.242977991397548,
+        "ASTR": 5.3505561114992375,
+        "CNRU": null,
+        "SOFL": null,
+        "DIAS": null,
+        "IVAT": 4.990635219793446
+      },
+      "nm": {
+        "YDEX": false,
+        "OZON": false,
+        "HEAD": false,
+        "VKCO": true,
+        "POSI": false,
+        "ASTR": false,
+        "CNRU": false,
+        "SOFL": false,
+        "DIAS": false,
+        "IVAT": false
+      }
+    },
+    {
       "key": "nd_ebitda",
       "section": "mult",
       "kind": "ratio",

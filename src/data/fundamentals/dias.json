@@ -36,10 +36,10 @@
   "period_basis": "year ended 31 March",
   "shares_source": [
     "issue size",
-    "issue size",
-    "issue size",
-    "issue size",
-    "issue size"
+    "weighted average",
+    "weighted average",
+    "weighted average",
+    "weighted average"
   ],
   "coverage": {
     "pnl": true,
@@ -59,18 +59,18 @@
     },
     {
       "document": "2024-FY__konsolidirovannaya-finansovaya-otchetnost-po-msfo-za-2024-go__11137c01.md",
-      "values": 3
+      "values": 7
     },
     {
       "document": "2025-FY__konsolidirovannaya-finansovaya-otchetnost-po-msfo-za-2025-go__9403f4b3.md",
-      "values": 6
+      "values": 10
     },
     {
       "document": "2026-FY__diasoft-investor-databook-fy2026__manual-8.md",
       "values": 87
     }
   ],
-  "facts": 97,
+  "facts": 105,
   "sections": [
     {
       "key": "enterprise_value",
@@ -333,6 +333,19 @@
         {
           "key": "pe",
           "label": "P/E (basic)",
+          "kind": "ratio",
+          "note": "",
+          "values": [
+            null,
+            null,
+            21.0892,
+            15.158,
+            30.1979
+          ]
+        },
+        {
+          "key": "pe_diluted",
+          "label": "P/E (diluted)",
           "kind": "ratio",
           "note": "",
           "values": [
@@ -715,7 +728,7 @@
           "note": "mn; the P/E denominator",
           "values": [
             10.5,
-            10.5,
+            6.5282,
             10.5,
             10.5,
             10.5
@@ -728,7 +741,7 @@
           "note": "mn; what market capitalisation is struck on",
           "values": [
             10.5,
-            10.5,
+            6.5282,
             10.5,
             10.5,
             10.5

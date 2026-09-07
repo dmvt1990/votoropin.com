@@ -323,6 +323,18 @@
           ]
         },
         {
+          "key": "pe_diluted",
+          "label": "P/E (diluted)",
+          "kind": "ratio",
+          "note": "",
+          "values": [
+            23.0831,
+            15.547,
+            8.4083,
+            6.8243
+          ]
+        },
+        {
           "key": "nd_ebitda",
           "label": "Net debt/EBITDA",
           "kind": "ratio",

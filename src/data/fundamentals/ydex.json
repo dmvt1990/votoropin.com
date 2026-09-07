@@ -47,8 +47,8 @@
     "ltm": true
   },
   "note": {
-    "en": "History starts at 2023. Everything before that was reported by Yandex N.V. — a different entity, before the restructuring and including businesses since sold — and is not comparable with what follows. Market capitalisation is priced on the count outstanding at each period end, from the share-movement note in the statements: 379 453 797 at 31.12.2023, 373 391 901 at 31.12.2024, 380 783 546 at 31.12.2025 and 380 885 255 at 30.06.2026. That is net of the shares Yandex holds against its motivation programme — 16 021 827 of the 396 907 079 issued at the last of those dates — and it is not the weighted average the earnings-per-share line divides by, which moves with when in the year shares were issued and bought back rather than with how many exist. P/E keeps the average, because it has to match the denominator the issuer used.",
-    "ru": "История начинается с 2023 года. Всё, что было раньше, отчитывалось компанией Yandex N.V. — другим лицом, до реструктуризации и включая проданные с тех пор бизнесы, — и несопоставимо с последующими периодами. Капитализация считается по количеству акций в обращении на конец каждого периода — из примечания о движении акций в отчётности: 379 453 797 на 31.12.2023, 373 391 901 на 31.12.2024, 380 783 546 на 31.12.2025 и 380 885 255 на 30.06.2026. Это за вычетом акций, которые «Яндекс» держит под программу мотивации, — 16 021 827 из 396 907 079 размещённых на последнюю из этих дат, — и это не средневзвешенное количество, на которое делится прибыль на акцию: оно зависит от того, когда именно в течение года акции выпускались и выкупались, а не от того, сколько их есть. В P/E остаётся средневзвешенное — знаменатель должен совпадать с тем, которым пользуется сам эмитент."
+    "en": "History starts at 2023. Everything before that was reported by Yandex N.V. — a different entity, before the restructuring and including businesses since sold — and is not comparable with what follows. Market capitalisation is priced on the count outstanding at each period end, from the share-movement note in the statements: 379 453 797 at 31.12.2023, 373 391 901 at 31.12.2024, 380 783 546 at 31.12.2025 and 380 885 255 at 30.06.2026. That is net of the shares Yandex holds against its motivation programme — 16 021 827 of the 396 907 079 issued at the last of those dates — and it is not the weighted average the earnings-per-share line divides by, which moves with when in the year shares were issued and bought back rather than with how many exist. P/E keeps the average, because it has to match the denominator the issuer used. The diluted P/E beside the basic one is the curriculum's definition of the ratio. Yandex's dilution has grown from nothing in 2023 to 5.1% of the basic count in the half to 30 June 2026 — 401 723 579 shares against 382 084 149 — which is the incentive programme, and it is why the two columns diverge.",
+    "ru": "История начинается с 2023 года. Всё, что было раньше, отчитывалось компанией Yandex N.V. — другим лицом, до реструктуризации и включая проданные с тех пор бизнесы, — и несопоставимо с последующими периодами. Капитализация считается по количеству акций в обращении на конец каждого периода — из примечания о движении акций в отчётности: 379 453 797 на 31.12.2023, 373 391 901 на 31.12.2024, 380 783 546 на 31.12.2025 и 380 885 255 на 30.06.2026. Это за вычетом акций, которые «Яндекс» держит под программу мотивации, — 16 021 827 из 396 907 079 размещённых на последнюю из этих дат, — и это не средневзвешенное количество, на которое делится прибыль на акцию: оно зависит от того, когда именно в течение года акции выпускались и выкупались, а не от того, сколько их есть. В P/E остаётся средневзвешенное — знаменатель должен совпадать с тем, которым пользуется сам эмитент. Разводнённый P/E рядом с базовым — это определение показателя из учебной программы CFA. Разводнение у «Яндекса» выросло с нуля в 2023 году до 5,1% базового количества за полугодие к 30 июня 2026 года — 401 723 579 акций против 382 084 149, — и это программа мотивации; именно поэтому две колонки расходятся."
   },
   "sources": [
     {
@@ -57,7 +57,7 @@
     },
     {
       "document": "2024-FY__yandex-ifrs-report-fy2024__2907cc44.md",
-      "values": 8
+      "values": 10
     },
     {
       "document": "2024-Q4__mkpao-q4-2024-press-release-rus__f6c2ad47.md",
@@ -65,7 +65,7 @@
     },
     {
       "document": "2025-FY__yandex-ifrs-report-fy2025__e9206ea9.md",
-      "values": 26
+      "values": 30
     },
     {
       "document": "2025-Q4__4q25-ydex-press-release-rus-77ac__b229aeb1.md",
@@ -73,10 +73,10 @@
     },
     {
       "document": "2026__yandex-ifrs-review-6m2026__797e4083.md",
-      "values": 51
+      "values": 59
     }
   ],
-  "facts": 156,
+  "facts": 170,
   "sections": [
     {
       "key": "enterprise_value",
@@ -324,6 +324,18 @@
             131.0847,
             21.7793,
             8.5111
+          ]
+        },
+        {
+          "key": "pe_diluted",
+          "label": "P/E (diluted)",
+          "kind": "ratio",
+          "note": "",
+          "values": [
+            17.9481,
+            132.6427,
+            22.8663,
+            8.9486
           ]
         },
         {

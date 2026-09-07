@@ -47,28 +47,28 @@
     "ltm": true
   },
   "note": {
-    "en": "HeadHunter's disclosure centre files material facts, not financial statements, so everything here comes from the quarterly earnings releases on its own investor site. Those releases lay their statements out as separate runs of captions and figures, which ordinary text extraction cannot pair up, so each statement page is rebuilt from its geometry and every cash-flow column is cross-footed to the subtotals the issuer prints. Net income is the share attributable to owners of the Company: non-controlling interests took 15% of group profit in 2025, and market capitalisation is a claim on the parent's share alone. Equity, by contrast, is the group total including those interests, as it is for every other issuer here — so return on equity and price to book are not on a like-for-like basis with net income, and the 2024 figures are dominated by the 40.0 bn dividend paid that year, which left year-end equity at a fraction of the profit earned against it. No line in these statements is captioned as a number of shares, but the balance sheet prints charter capital and treasury shares, and the ordinary share carries a par value of one rouble — so in a statement kept in thousands those two lines are the count. 47 185 less 3 063 gives 44 121 918 shares outstanding at the end of 2024, and less 2 691 gives 44 493 918 at the end of 2025, against 47 184 918 registered. The reading is confirmed from outside the accounts: a material-fact filing of 9 December 2024 puts a holder at 2 404 630 votes and 5.45% of the voting shares, which makes the voting total 44 121 651 — 267 shares from the balance-sheet figure, since shares held against the company carry no vote. The trailing column uses the 43 370 413 the company publishes for 3 August 2026, after the buyback that began on 18 May 2026. 2023 is the one column struck on a weighted average, and that is right rather than a fallback: it prices HHRU, a depositary receipt over one HeadHunter Group PLC share, and the PLC issued no shares that year, so the average and the year-end count are the same number.",
-    "ru": "Центр раскрытия, через который отчитывается «Хэдхантер», публикует существенные факты, а не финансовую отчётность, поэтому всё здесь взято из квартальных релизов на его собственном сайте для инвесторов. В этих релизах подписи строк и цифры набраны двумя отдельными потоками текста, которые обычное извлечение не соединяет, поэтому каждая страница отчётности восстановлена по геометрии страницы, а каждая колонка отчёта о движении денежных средств сведена с промежуточными итогами самого эмитента. Чистая прибыль — доля, причитающаяся собственникам Компании: на неконтролирующие доли в 2025 году пришлось 15% прибыли группы, а рыночная капитализация — требование только на долю материнской компании. Капитал, напротив, взят по группе целиком, включая неконтролирующие доли, — как и у всех остальных эмитентов здесь, — поэтому рентабельность капитала и P/B несопоставимы с чистой прибылью напрямую, а показатели 2024 года определяются выплаченными в том году дивидендами на 40,0 млрд рублей, после которых капитал на конец года оказался много меньше заработанной за год прибыли. Ни одна строка этой отчётности не названа количеством акций, но в балансе есть уставный капитал и собственные акции, а номинал обыкновенной акции — один рубль, поэтому в отчётности, которая ведётся в тысячах, эти две строки и есть количество. 47 185 минус 3 063 даёт 44 121 918 акций в обращении на конец 2024 года, минус 2 691 — 44 493 918 на конец 2025-го, при 47 184 918 размещённых. Это подтверждается и вне отчётности: в сообщении о существенном факте от 9 декабря 2024 года у одного владельца 2 404 630 голосов, или 5,45% голосующих акций, откуда голосующих всего 44 121 651 — на 267 акций меньше балансовой цифры, поскольку акции, принадлежащие самой компании, не голосуют. В скользящей колонке — 43 370 413 акций, опубликованные эмитентом на 3 августа 2026 года, уже после обратного выкупа, начатого 18 мая 2026 года. 2023 год — единственная колонка на средневзвешенном количестве, и это верно, а не вынужденно: он оценён по HHRU, депозитарной расписке на одну акцию HeadHunter Group PLC, а PLC в том году акций не выпускала, поэтому среднее и количество на конец года совпадают."
+    "en": "HeadHunter's disclosure centre files material facts, not financial statements, so everything here comes from the quarterly earnings releases on its own investor site. Those releases lay their statements out as separate runs of captions and figures, which ordinary text extraction cannot pair up, so each statement page is rebuilt from its geometry and every cash-flow column is cross-footed to the subtotals the issuer prints. Net income is the share attributable to owners of the Company: non-controlling interests took 15% of group profit in 2025, and market capitalisation is a claim on the parent's share alone. Equity, by contrast, is the group total including those interests, as it is for every other issuer here — so return on equity and price to book are not on a like-for-like basis with net income, and the 2024 figures are dominated by the 40.0 bn dividend paid that year, which left year-end equity at a fraction of the profit earned against it. No line in these statements is captioned as a number of shares, but the balance sheet prints charter capital and treasury shares, and the ordinary share carries a par value of one rouble — so in a statement kept in thousands those two lines are the count. 47 185 less 3 063 gives 44 121 918 shares outstanding at the end of 2024, and less 2 691 gives 44 493 918 at the end of 2025, against 47 184 918 registered. The reading is confirmed from outside the accounts: a material-fact filing of 9 December 2024 puts a holder at 2 404 630 votes and 5.45% of the voting shares, which makes the voting total 44 121 651 — 267 shares from the balance-sheet figure, since shares held against the company carry no vote. The trailing column uses the 43 370 413 the company publishes for 3 August 2026, after the buyback that began on 18 May 2026. 2023 is the one column struck on a weighted average, and that is right rather than a fallback: it prices HHRU, a depositary receipt over one HeadHunter Group PLC share, and the PLC issued no shares that year, so the average and the year-end count are the same number. HeadHunter publishes no weighted-average share count of either kind, only the two earnings-per-share figures, so both counts are recovered by dividing profit by each of them. Its diluted P/E runs about 2% above its basic one.",
+    "ru": "Центр раскрытия, через который отчитывается «Хэдхантер», публикует существенные факты, а не финансовую отчётность, поэтому всё здесь взято из квартальных релизов на его собственном сайте для инвесторов. В этих релизах подписи строк и цифры набраны двумя отдельными потоками текста, которые обычное извлечение не соединяет, поэтому каждая страница отчётности восстановлена по геометрии страницы, а каждая колонка отчёта о движении денежных средств сведена с промежуточными итогами самого эмитента. Чистая прибыль — доля, причитающаяся собственникам Компании: на неконтролирующие доли в 2025 году пришлось 15% прибыли группы, а рыночная капитализация — требование только на долю материнской компании. Капитал, напротив, взят по группе целиком, включая неконтролирующие доли, — как и у всех остальных эмитентов здесь, — поэтому рентабельность капитала и P/B несопоставимы с чистой прибылью напрямую, а показатели 2024 года определяются выплаченными в том году дивидендами на 40,0 млрд рублей, после которых капитал на конец года оказался много меньше заработанной за год прибыли. Ни одна строка этой отчётности не названа количеством акций, но в балансе есть уставный капитал и собственные акции, а номинал обыкновенной акции — один рубль, поэтому в отчётности, которая ведётся в тысячах, эти две строки и есть количество. 47 185 минус 3 063 даёт 44 121 918 акций в обращении на конец 2024 года, минус 2 691 — 44 493 918 на конец 2025-го, при 47 184 918 размещённых. Это подтверждается и вне отчётности: в сообщении о существенном факте от 9 декабря 2024 года у одного владельца 2 404 630 голосов, или 5,45% голосующих акций, откуда голосующих всего 44 121 651 — на 267 акций меньше балансовой цифры, поскольку акции, принадлежащие самой компании, не голосуют. В скользящей колонке — 43 370 413 акций, опубликованные эмитентом на 3 августа 2026 года, уже после обратного выкупа, начатого 18 мая 2026 года. 2023 год — единственная колонка на средневзвешенном количестве, и это верно, а не вынужденно: он оценён по HHRU, депозитарной расписке на одну акцию HeadHunter Group PLC, а PLC в том году акций не выпускала, поэтому среднее и количество на конец года совпадают. «Хэдхантер» не публикует средневзвешенного количества акций ни в одном из вариантов — только две величины прибыли на акцию, — поэтому оба количества восстановлены делением прибыли на каждую из них. Разводнённый P/E примерно на 2% выше базового."
   },
   "sources": [
     {
       "document": "2023__20240306-fin-result-2023-pdf__390ea045.md",
-      "values": 60
+      "values": 64
     },
     {
       "document": "2025-FY__hedhanter-obyavlyaet-finansovye-rezultaty-za-iv-kvartal-2025__ddb2f63d.md",
-      "values": 62
+      "values": 66
     },
     {
       "document": "2026-Q2__head-reliz-2-kv-2026-pdf__5e53e16e.md",
-      "values": 53
+      "values": 57
     },
     {
       "document": "2026__aktsionernyi-kapital__sharecap.md",
       "values": 1
     }
   ],
-  "facts": 176,
+  "facts": 188,
   "sections": [
     {
       "key": "enterprise_value",
@@ -316,6 +316,18 @@
             7.8404,
             8.4607,
             7.8127
+          ]
+        },
+        {
+          "key": "pe_diluted",
+          "label": "P/E (diluted)",
+          "kind": "ratio",
+          "note": "",
+          "values": [
+            12.4153,
+            7.8992,
+            8.5672,
+            7.9127
           ]
         },
         {

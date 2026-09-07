@@ -104,6 +104,7 @@ export const en = {
       mult:             "Multiples",
       ev_ebitda:        "EV/EBITDA",
       pe:               "P/E (basic)",
+      pe_diluted:       "P/E (diluted)",
       nd_ebitda:        "Net debt/EBITDA",
       pb:               "P/B",
       yield:            "Yields and returns",

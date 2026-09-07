@@ -47,8 +47,8 @@
     "ltm": true
   },
   "note": {
-    "en": "CIAN's investor site is a separate host, ir.ciangroup.ru, which renders its document lists with JavaScript — the files themselves come down over ordinary HTTP. History runs to 2023 because each quarterly release restates only the prior year. CIAN carries no borrowings, so net debt is negative throughout: the company holds net cash. The trailing-twelve-month column adds the half-year to 30 June 2026 and takes off the same half of 2025; note that the interim release prints the current period first while the annual releases print the comparative year first. The dividend figures are the amounts actually paid in each period, not declared: CIAN paid nothing in the first half of 2025 and 4.3 bn in the first half of 2026.",
-    "ru": "Сайт «Циана» для инвесторов — отдельный хост ir.ciangroup.ru, списки документов на нём формирует JavaScript, тогда как сами файлы отдаются по обычному HTTP. История доходит до 2023 года, поскольку каждый квартальный релиз пересчитывает только предыдущий год. У «Циана» нет заёмных средств, поэтому чистый долг отрицателен во всех периодах: у компании чистая денежная позиция. Колонка LTM прибавляет полугодие до 30 июня 2026 года и вычитает то же полугодие 2025 года; обратите внимание, что в промежуточном релизе текущий период печатается первым, а в годовых — первым идёт сравнительный год. Дивиденды — это фактически выплаченные за период суммы, а не объявленные: в первом полугодии 2025 года «Циан» не платил ничего, а в первом полугодии 2026 года выплатил 4,3 млрд руб."
+    "en": "CIAN's investor site is a separate host, ir.ciangroup.ru, which renders its document lists with JavaScript — the files themselves come down over ordinary HTTP. History runs to 2023 because each quarterly release restates only the prior year. CIAN carries no borrowings, so net debt is negative throughout: the company holds net cash. The trailing-twelve-month column adds the half-year to 30 June 2026 and takes off the same half of 2025; note that the interim release prints the current period first while the annual releases print the comparative year first. The dividend figures are the amounts actually paid in each period, not declared: CIAN paid nothing in the first half of 2025 and 4.3 bn in the first half of 2026. Only the fourth-quarter 2025 release prints weighted-average share counts, so the diluted P/E is shown for 2024 and 2025 alone. Those two are not alike: the counts are identical for 2024 and 3.4% apart for 2025, the МКПАО restructuring's award pool having opened the gap.",
+    "ru": "Сайт «Циана» для инвесторов — отдельный хост ir.ciangroup.ru, списки документов на нём формирует JavaScript, тогда как сами файлы отдаются по обычному HTTP. История доходит до 2023 года, поскольку каждый квартальный релиз пересчитывает только предыдущий год. У «Циана» нет заёмных средств, поэтому чистый долг отрицателен во всех периодах: у компании чистая денежная позиция. Колонка LTM прибавляет полугодие до 30 июня 2026 года и вычитает то же полугодие 2025 года; обратите внимание, что в промежуточном релизе текущий период печатается первым, а в годовых — первым идёт сравнительный год. Дивиденды — это фактически выплаченные за период суммы, а не объявленные: в первом полугодии 2025 года «Циан» не платил ничего, а в первом полугодии 2026 года выплатил 4,3 млрд руб. Средневзвешенное количество акций приводится только в релизе за четвёртый квартал 2025 года, поэтому разводнённый P/E показан лишь за 2024 и 2025 годы. Эти два года несопоставимы между собой: за 2024-й количества совпадают, за 2025-й расходятся на 3,4% — разрыв открыл пул вознаграждений в рамках реструктуризации в МКПАО."
   },
   "sources": [
     {
@@ -57,14 +57,14 @@
     },
     {
       "document": "2025__cian-q4-2025-financial-results-rus__bf5c5cd3.md",
-      "values": 34
+      "values": 36
     },
     {
       "document": "2026__cian-q2-2026-financial-results-rus__8291d981.md",
       "values": 27
     }
   ],
-  "facts": 76,
+  "facts": 78,
   "sections": [
     {
       "key": "enterprise_value",
@@ -312,6 +312,18 @@
             15.1532,
             14.349,
             13.1357
+          ]
+        },
+        {
+          "key": "pe_diluted",
+          "label": "P/E (diluted)",
+          "kind": "ratio",
+          "note": "",
+          "values": [
+            null,
+            15.1532,
+            14.8372,
+            null
           ]
         },
         {
