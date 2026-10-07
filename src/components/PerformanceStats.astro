@@ -3,7 +3,7 @@
 
 import { t } from "../i18n";
 
-interface ReturnPair { index: number; benchmark: number; }
+interface ReturnPair { index: number; benchmark: number | null; }
 interface DrawdownInfo { value_pct: number; peak_date: string; trough_date: string; }
 
 export interface StatsData {
@@ -41,14 +41,24 @@ const s = t.performanceStats;
 
 const ru = import.meta.env.PUBLIC_LANG === "ru";
 type Tone = "positive" | "negative" | "neutral";
-function tone(v: number): Tone { return v > 0 ? "positive" : v < 0 ? "negative" : "neutral"; }
-function pct(v: number): string { const s = v.toFixed(2); return ru ? s.replace(".", ",") : s; }
-function fmt(v: number): string { return (v >= 0 ? "+" : "") + pct(v) + "%"; }
+function tone(v: number | null): Tone {
+  if (v === null) return "neutral";
+  return v > 0 ? "positive" : v < 0 ? "negative" : "neutral";
+}
+function pct(v: number | null): string {
+  if (v === null) return "—";
+  const s = v.toFixed(2);
+  return ru ? s.replace(".", ",") : s;
+}
+function fmt(v: number | null): string {
+  if (v === null) return "—";
+  return (v >= 0 ? "+" : "") + pct(v) + "%";
+}
 function fmtDD(dd: DrawdownInfo): string {
   return pct(dd.value_pct) + "% (" + dd.peak_date + (ru ? " — " : " to ") + dd.trough_date + ")";
 }
 
-const periodRows: Array<{ label: string; iv: number; bv: number }> = [
+const periodRows: Array<{ label: string; iv: number; bv: number | null }> = [
   { label: s.periodReturns["1m"], iv: stats.returns["1m"].index, bv: stats.returns["1m"].benchmark },
   { label: s.periodReturns["3m"], iv: stats.returns["3m"].index, bv: stats.returns["3m"].benchmark },
   { label: s.periodReturns.ytd,   iv: stats.returns.ytd.index,   bv: stats.returns.ytd.benchmark },
